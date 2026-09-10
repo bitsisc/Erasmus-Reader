@@ -1,0 +1,310 @@
+1,szeretem,Műveletek
+2,uborka,Élelmiszer
+3,tehén,Állatok
+4,ölelni,Akciók/Absztrakt
+5,horgony,Objektumok
+6,hall,Objektumok/Helyek
+7,Emilia,Emberek/Nevek
+8,sót,Élelmiszer
+9,róka,Állatok
+10,ló,Állatok
+11,Anna,Emberek/Nevek
+12,tavasz,Idő/Természet
+13,kiváló,Leíró jellegű
+14,tojás,Élelmiszer
+15,udvar,Objektumok/Helyek
+16,fül,Testrészek
+17,ők,Absztrakt fogalmak
+18,autó,Tárgyak/közlekedés
+19,ő,Absztrakt fogalmak
+20,tettem,Műveletek
+21,csónak,Tárgyak/közlekedés
+22,kiveszem,Műveletek
+23,Vivi,Emberek/Nevek
+24,könyvet,Objektumok
+25,csavar,Objektumok
+26,látom,Műveletek
+27,sétálni,Műveletek
+28,hegy,Természet
+29,találok,Műveletek
+30,szamár,Állatok
+31,tejet,Élelmiszer
+32,világoskék,Színek
+33,Nyugalom,Emberek/Nevek
+34,kesztyűt,Objektumok
+35,kat,Állatok
+36,sziasztok,Absztrakt fogalmak
+37,nevetek,Műveletek
+38,nagymama,Emberek/Család
+39,cél,Absztrakt fogalmak
+40,édes,Élelmiszer/Leíró
+41,disznó,Állatok
+42,Danae,Emberek/Nevek
+43,tanár,Emberek/Szakma
+44,tanár,Emberek/Szakma
+45,erdő,Természet
+46,kettőt,Számok
+47,három,Számok
+48,négy,Számok
+49,öt,Számok
+50,hat,Számok
+51,hét,Számok
+52,nyolc,Számok
+53,kilenc,Számok
+54,tíz,Számok
+55,egyet,Számok
+56,csomag,Objektumok
+57,adok,Műveletek
+58,foga,Testrészek
+59,szoba,Objektumok/Helyek
+60,ajándékot,Objektumok
+61,én,Absztrakt fogalmak
+62,itt,Absztrakt fogalmak
+63,kép,Objektumok
+64,ez új,Absztrakt fogalmak
+65,Béke,Emberek/Nevek
+66,ott,Absztrakt fogalmak
+67,gyerünk,Műveletek
+68,gyerünk,Műveletek
+69,fenyőfa,Természet
+70,Helen,Emberek/Nevek
+71,mi,Absztrakt fogalmak
+72,én,Absztrakt fogalmak
+73,egyet,Absztrakt fogalmak
+74,te,Absztrakt fogalmak
+75,te,Absztrakt fogalmak
+76,Evie,Emberek/Nevek
+77,eurót,Absztrakt fogalmak
+78,nekem van,Műveletek
+79,kocka,Tárgyak/Játékok
+80,egyet,Számok
+81,kettőt,Számok
+82,három,Számok
+83,négy,Számok
+84,öt,Számok
+85,hat,Számok
+86,hét,Számok
+87,nyolc,Számok
+88,kilenc,Számok
+89,tíz,Számok
+90,cukor,Élelmiszer
+91,zebra,Állatok
+92,hőség,Természet/Érzések
+93,forró,Leíró jellegű
+94,zúg,Állatok
+95,Élet,Emberek/Nevek
+96,zóna,Objektumok
+97,Ilias,Emberek/Nevek
+98,nap,Természet
+99,tenger,Természet
+100,Thanos,Emberek/Nevek
+101,néni,Emberek/Család
+102,bácsi,Emberek/Család
+103,akarom,Műveletek
+104,lovag,Emberek/Szakma
+105,és,Absztrakt fogalmak
+106,kakaó,Élelmiszer
+107,rossz,Leíró jellegű
+108,kosár,Objektumok
+109,jó,Leíró jellegű
+110,nyár,Idő/Természet
+111,csengő,Objektumok
+112,én igen,Műveletek
+113,Karagiozis,Emberek/Kultúra
+114,szék,Objektumok
+115,sárgarépa,Élelmiszer
+116,gesztenye,Élelmiszer
+117,kecske,Állatok
+118,lefelé,Absztrakt fogalmak
+119,kávé,Élelmiszer
+120,cseresznye,Élelmiszer
+121,gyertyát,Objektumok
+122,gitár,Objektumok
+123,Kiki,Emberek/Nevek
+124,mobil,Objektumok/Tech
+125,sárga,Színek
+126,vágom,Műveletek
+127,alszom,Műveletek
+128,nézd,Műveletek
+129,piros,Színek
+130,tyúk,Állatok
+131,bagel,Élelmiszer
+132,kanállal,Objektumok
+133,kört,Alakzatok
+134,nyúl,Állatok
+135,olajat,Élelmiszer
+136,nyak,Testrészek
+137,lámpa,Objektumok
+138,citrom,Élelmiszer
+139,Lena,Emberek/Nevek
+140,Lefteris,Emberek/Nevek
+141,virág,Természet
+142,farkas,Állatok
+143,tanulok,Műveletek
+144,leckét,Absztrakt fogalmak
+145,majom,Állatok
+146,spagetti,Élelmiszer
+147,anya,Emberek/Család
+148,Manos,Emberek/Nevek
+149,saláta,Élelmiszer
+150,szem,Testrészek
+151,kést,Objektumok
+152,az én nevem,Absztrakt fogalmak
+153,nagy,Leíró jellegű
+154,édesem,Élelmiszer
+155,Melina,Emberek/Nevek
+156,méhecske,Állatok
+157,napon,Idő
+158,belül,Absztrakt fogalmak
+159,alma,Élelmiszer
+160,egyet,Absztrakt fogalmak
+161,kicsi,Leíró jellegű
+162,én beszélek,Műveletek
+163,osztom,Műveletek
+164,ceruza,Objektumok
+165,zene,Absztrakt fogalmak
+166,labdát,Tárgyak/Játékok
+167,léggömb,Objektumok
+168,apa,Emberek/Család
+169,Babis,Emberek/Nevek
+170,banán,Élelmiszer
+171,fürdőszoba,Objektumok/Helyek
+172,sétapálca,Objektumok
+173,kék,Színek
+174,orr,Testrészek
+175,lila,Színek
+176,bébi,Emberek/Család
+177,hogy,Absztrakt fogalmak
+178,igen,Absztrakt fogalmak
+179,Naná,Emberek/Nevek
+180,törpe,Emberek/Kultúra
+181,víz,Élelmiszer/Természet
+182,ninny,Emberek/Család
+183,Dina,Emberek/Nevek
+184,paradicsom,Élelmiszer
+185,gardrób,Objektumok
+186,körmök,Testrészek
+187,Idegen,Emberek/Nevek
+188,tudom,Műveletek
+189,ecetet,Élelmiszer
+190,kardvívás,Állatok
+191,fa,Természet
+192,felébredek,Műveletek
+193,kaparó,Objektumok
+194,család,Emberek/Család
+195,esernyő,Objektumok
+196,farok,Testrészek
+197,nem,Absztrakt fogalmak
+198,padon,Objektumok
+199,bordák,Élelmiszer
+200,gyerek,Emberek
+201,srácok,Emberek
+202,játszunk,Műveletek
+203,játszom,Műveletek
+204,játékok,Objektumok
+205,menjünk,Műveletek
+206,cékla,Élelmiszer
+207,fentebb,Absztrakt fogalmak
+208,papagáj,Állatok
+209,kacsa,Állatok
+210,nagyapa,Emberek/Család
+211,ablakot,Objektumok
+212,mese,Tárgyak/Kultúra
+213,burgonya,Élelmiszer
+214,korcsolyázni,Objektumok
+215,megyek,Műveletek
+216,dinnye,Élelmiszer
+217,dobja el,Műveletek
+218,fenyőfa,Természet
+219,lemez,Objektumok
+220,táblázat,Objektumok
+221,iszom,Műveletek
+222,bors,Élelmiszer
+223,cumi,Objektumok
+224,villát,Objektumok
+225,pite,Élelmiszer
+226,pizza,Élelmiszer
+227,kivéve,Absztrakt fogalmak
+228,hajót,Tárgyak/közlekedés
+229,kerékpár,Tárgyak/közlekedés
+230,láb,Testrészek
+231,verset,Tárgyak/Kultúra
+232,egér,Állatok
+233,pápa,Emberek/Nevek
+234,narancssárga,Színek
+235,narancssárga,Élelmiszer
+236,üveg,Objektumok
+237,madár,Állatok
+238,zöld,Színek
+239,Rena,Emberek/Nevek
+240,őszibarack,Élelmiszer
+241,rózsaszín,Színek
+242,óra,Objektumok
+243,ruhákat,Objektumok
+244,rizst,Élelmiszer
+245,szalámi,Élelmiszer
+246,saláta,Élelmiszer
+247,Sasha,Emberek/Nevek
+248,gyík,Állatok
+249,nyereg,Objektumok
+250,zeller,Élelmiszer
+251,létra,Objektumok
+252,sündisznó,Állatok
+253,kutya,Állatok
+254,csokoládé,Élelmiszer
+255,leves,Élelmiszer
+256,mérkőzés,Objektumok
+257,haza,Objektumok/Helyek
+258,abbahagyom,Műveletek
+259,szőlő,Élelmiszer
+260,koszorú,Objektumok
+261,száját,Testrészek
+262,állj meg,Objektumok
+263,plusz,Absztrakt fogalmak
+264,szivacs,Objektumok
+265,iskola,Objektumok/Helyek
+266,osztályban,Absztrakt fogalmak
+267,taxi,Tárgyak/közlekedés
+268,téren,Alakzatok
+269,kandalló,Objektumok
+270,üveg,Objektumok
+271,kabóca,Állatok
+272,televízió,Objektumok/Tech
+273,kormánykerék,Objektumok
+274,Tina,Emberek/Nevek
+275,fal,Objektumok
+276,helyen,Objektumok
+277,torta,Élelmiszer
+278,táblázat,Objektumok
+279,háromszög,Alakzatok
+280,eszek,Műveletek
+281,tea,Élelmiszer
+282,táska,Objektumok
+283,cirkusz,Tárgyak/Kultúra
+284,sajt,Élelmiszer
+285,Yvonne,Emberek/Nevek
+286,számítógép,Objektumok/Tech
+287,élelmiszer,Élelmiszer
+288,Fanis,Emberek/Nevek
+289,világítótorony,Objektumok
+290,bab,Élelmiszer
+291,hold,Természet
+292,barátja,Emberek
+293,ruha,Objektumok
+294,fény,Természet
+295,tűz,Természet
+296,Harry,Emberek/Nevek
+297,télen,Idő/Természet
+298,teknős,Állatok
+299,kéz,Testrészek
+300,táncolok,Műveletek
+301,gyümölcslé,Élelmiszer
+302,olló,Objektumok
+303,hal,Élelmiszer/Állatok
+304,keresem,Műveletek
+305,én sütök,Műveletek
+306,grill,Objektumok
+307,Psipsina,Állatok/nevek
+308,kenyeret,Élelmiszer
+309,vásárlás,Műveletek
+310,idő,Idő

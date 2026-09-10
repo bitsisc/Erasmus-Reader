@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Εργαλείο Ανάγνωσης / Reading Tool</title>
+    
+    <!-- Import Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto:wght@400;700&family=Comic+Neue:wght@400;700&family=Vollkorn:wght@400;700&family=Playpen+Sans:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Import FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Import Flag Icons for Cross-Browser/Windows compatibility -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.0.0/css/flag-icons.min.css"/>
+    
+    <!-- Import Libertinus Fonts -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/libertinus-sans/400.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/libertinus-serif/400.css">
+
+    <!-- Import Custom Fonts (Kidmedia OpenDyslexic & Kids) -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Accessibility Scan Overlay -->
+    <div id="scan-overlay"></div>
+
+    <!-- Top Right Language Button -->
+    <button id="btn-lang-selector" data-i18n-title="title_lang_selector" title="Επιλογή Γλώσσας">
+        <span id="current-lang-flag" class="fi fi-gr"></span>
+    </button>
+
+    <!-- Modal for Help / Instructions -->
+    <div id="help-modal" class="modal-overlay">
+        <div class="modal-content" style="max-width: 700px; position: relative;">
+            <button id="btn-close-help-corner" style="position: absolute; top: 15px; right: 15px; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: #555;"><i class="fa-solid fa-xmark"></i></button>
+            <h2 data-i18n="modal_help_title">ℹ️ Οδηγίες Εισαγωγής Κειμένου</h2>
+            <div id="help-content-body" style="text-align: left; max-height: 60vh; overflow-y: auto; padding-right: 10px; font-size: 1rem; line-height: 1.6;" data-i18n="help_modal_content_html">
+<h4>1. 📥 Εισαγωγή & Διαχείριση Κειμένου</h4>
+<ul>
+    <li><strong>Σύνδεση Google Sheet:</strong> Μπορείτε να συνδέσετε δημόσιο Google Sheet σε οποιαδήποτε γλώσσα.
+        <ul>
+            <li><strong>Στήλη Α (<code>ID</code>):</strong> Αύξων αριθμός κειμένου (1, 2, 3...).</li>
+            <li><strong>Στήλη Β (<code>Story_Text</code>):</strong> Το αντίστοιχο κείμενο ή προτάσεις.</li>
+            <li><strong>Στήλη C (<code>word</code> - <em>Προαιρετικό</em>):</strong> Λέξεις-στόχοι για εικονογράφηση στη λειτουργία «Άγνωστες», διαχωρισμένες με κάτω παύλα (<code>_</code>, π.χ. <code>αγελάδα_αγγούρι_άγκυρα</code>).</li>
+        </ul>
+    </li>
+    <li><strong>Απευθείας Πληκτρολόγηση / Επικόλληση:</strong> Γράψτε ή επικολλήστε κείμενο στο πλαίσιο. Η εφαρμογή εφαρμόζει αυτόματη συλλαβοποίηση με τον χαρακτήρα <code>|</code>.</li>
+    <li><strong>Άνοιγμα / Αποθήκευση (.txt):</strong> Φορτώστε ή αποθηκεύστε το κείμενο τοπικά σε αρχείο <code>.txt</code>.</li>
+    <li><strong>🔗 Διαμοιρασμός Άσκησης:</strong> Δημιουργεί άμεσο σύνδεσμο (URL) με όλες τις ρυθμίσεις και το κείμενο για απευθείας εκκίνηση από τον μαθητή.</li>
+</ul>
+
+<h4>2. 🖼️ Χρήση Εικόνων (Εικονογράφηση Λέξεων & Δικό σας Google Sheet)</h4>
+<ul>
+    <li><strong>Καμία:</strong> Κανονική προβολή κειμένου χωρίς εικόνες.</li>
+    <li><strong>Όλες:</strong> Εμφάνιση εικονογράμματος πάνω από κάθε λέξη που υπάρχει στο λεξικό.</li>
+    <li><strong>Άγνωστες:</strong> Εμφάνιση εικόνων αποκλειστικά για τις λέξεις της στήλης C (<code>word</code>) του Google Sheet.</li>
+    <li><strong>Μέγεθος Εικόνων:</strong> Αυξομείωση μεγέθους εικονογραμμάτων (40px – 100px).</li>
+    <li><strong>🎨 Προσαρμοσμένο Λεξικό (Δικό σας Google Sheet σε 4 Απλά Βήματα):</strong>
+        <p style="margin: 4px 0 6px 0;">Μπορείτε να ορίσετε τις δικές σας λέξεις για κάθε εικόνα και στη δική σας γλώσσα, χωρίς τεχνικές γνώσεις:</p>
+        <ol style="margin-left: 15px; margin-bottom: 5px;">
+            <li>Πατήστε το κουμπί <strong>«🎨 Προσαρμογή Εικόνων / Λεξικού»</strong> στις Ρυθμίσεις Εικόνων.</li>
+            <li>Πατήστε <strong>«📋 Αντιγραφή για Sheets»</strong> (ή «💾 Λήψη CSV»).</li>
+            <li>Ανοίξτε το <a href="https://sheets.google.com" target="_blank" rel="noopener">Google Sheets</a>, φτιάξτε ένα νέο κενό έγγραφο και κάντε <strong>Επικόλληση (Ctrl+V)</strong> στο κελί A1. Τροποποιήστε όποιες λέξεις θέλετε στη στήλη <code>Word</code>.</li>
+            <li>Στο μενού του Google Sheet επιλέξτε: <em>Αρχείο ➔ Κοινοποίηση ➔ Δημοσίευση στον ιστό ➔ Επιλογή: CSV (.csv) ➔ Δημοσίευση</em>. Αντιγράψτε τον σύνδεσμο, επικολλήστε τον στην εφαρμογή και πατήστε <strong>Εφαρμογή</strong>!</li>
+        </ol>
+        <small style="color:#555;">💡 <em>Σημείωση: Ο σύνδεσμος του δικού σας λεξικού ενσωματώνεται αυτόματα στο κουμπί 🔗 Διαμοιρασμός, ώστε οι μαθητές σας να βλέπουν αμέσως τις δικές σας λέξεις!</em></small>
+    </li>
+</ul>
+
+<h4>3. 🅰️ Εμφάνιση, Χρώματα & Πέπλο Ανάγνωσης</h4>
+<ul>
+    <li><strong>Γραμματοσειρές:</strong> Επιλογή ανάμεσα σε OpenDyslexic, Kidmedia Kids, Comic Sans, Roboto κ.ά., καθώς και φόρτωση δικής σας γραμματοσειράς (<code>.ttf</code>, <code>.otf</code>, <code>.woff</code>, <code>.woff2</code>).</li>
+    <li><strong>Χρώματα & Μέγεθος:</strong> Προσαρμογή μεγέθους, χρώματος γραμμάτων, φόντου κειμένου και γενικού φόντου για βέλτιστη αντίθεση.</li>
+    <li><strong>🌑 Πέπλο Ανάγνωσης:</strong> Σκιάζει το υπόλοιπο κείμενο και απομονώνει φωτεινά μόνο το ενεργό στοιχείο με ρυθμιζόμενη αδιαφάνεια και χρώμα.</li>
+</ul>
+
+<h4>4. 👁️ Προσβασιμότητα & Αυτόματη Σάρωση (Single-Switch Scanning)</h4>
+<ul>
+    <li><strong>Λειτουργία Σάρωσης:</strong> Διαδοχική αυτόματη σάρωση των πλήκτρων πλοήγησης με οπτικό πλαίσιο εστίασης για μαθητές με κινητικές δυσκολίες.</li>
+    <li><strong>Χρήση Διακόπτη:</strong> Επιλογή με κλικ οπουδήποτε στην οθόνη, πάτημα <code>Space</code>, <code>Enter</code> ή εξωτερικού διακόπτη (Switch Access).</li>
+    <li><strong>Ανάκτηση Ελέγχου Εκπαιδευτικού:</strong> Μετακίνηση ποντικιού, πάτημα 4 δευτερολέπτων ή πάτημα του <code>Escape</code>.</li>
+</ul>
+
+<h4>5. 🗣️ Φωνή & Διαδραστική Ακρόαση (Voice Tutor)</h4>
+<ul>
+    <li><strong>Εκφώνηση Κειμένου (TTS):</strong> Τοπικές φωνές συστήματος και Premium φωνές Google Cloud (Neural2, Wavenet, Standard) με API Key, μετρητή χρήσης και κλείδωμα PIN.</li>
+    <li><strong>👂 Ακρόαση Ανάγνωσης (Φωνητικός Βοηθός):</strong> Ο μαθητής διαβάζει μεγαλόφωνα στο μικρόφωνο. Η εφαρμογή αναγνωρίζει την ομιλία, χρωματίζει σωστές (πράσινες) και λανθασμένες (κόκκινες) λέξεις, επιβραβεύει με ρετρό arcade ήχους και κινούμενα σχέδια (emojis), και καθοδηγεί για επανάληψη.</li>
+</ul>
+
+<h4>6. 📖 Περιβάλλον Ανάγνωσης Μαθητή</h4>
+<ul>
+    <li><strong>Μονάδα Εστίασης:</strong> Εναλλαγή ανάμεσα σε <strong>Συλλαβή</strong>, <strong>Λέξη</strong> ή <strong>Πρόταση</strong>.</li>
+    <li><strong>Ροή Ανάγνωσης:</strong> <strong>Βήμα-Βήμα</strong> (διαδοχική πλοήγηση) ή <strong>Συνεχής Ροή</strong> (αυτόματη ανάγνωση με δυναμικό μαθηματικό συγχρονισμό υπογράμμισης).</li>
+    <li><strong>Πλοήγηση:</strong> Κουμπιά Επόμενο/Προηγούμενο, βέλη πληκτρολογίου (← / →), <code>Space</code> και πλήρης οθόνη (⛶).</li>
+</ul>
+
+<h4>7. 🖨️ Εκτύπωση Φύλλων Εργασίας (9 Τύποι Ασκήσεων)</h4>
+<p>Αυτόματη δημιουργία εκτυπώσιμων φύλλων εργασίας με εικονογραφημένο κείμενο, στοιχεία μαθητή, λογότυπα Erasmus+ και 9 επιλογές ασκήσεων:</p>
+<ol>
+    <li>Συμπλήρωσε τα γράμματα που λείπουν</li>
+    <li>Συμπλήρωσε τις λέξεις που λείπουν (με γραμμές ακριβούς μήκους)</li>
+    <li>Συμπλήρωσε τις λέξεις (πρώτο γράμμα + παύλες)</li>
+    <li>Σταυρόλεξο (3–8 λέξεις)</li>
+    <li>Κρυπτόλεξο (3–10 λέξεις, οριζόντια/κάθετα)</li>
+    <li>Τρένο των συλλαβών (ανακατεμένες συλλαβές σε βαγόνια)</li>
+    <li>Αρχικό Γράμμα (εντοπισμός συχνότερου αρχικού φωνήματος)</li>
+    <li>Ίδια Κατάληξη (ομοιοκαταληξία)</li>
+    <li>Γράψε τη λέξη για κάθε εικόνα (εικονογραφημένες κάρτες με κενές παύλες)</li>
+</ol>
+            </div>
+            <button id="btn-close-help" class="btn-secondary" style="width: 100%; margin-top: 20px;" data-i18n="btn_close">Κλείσιμο</button>
+        </div>
+    </div>
+
+    <!-- Modal for Language Selection -->
+    <div id="lang-modal" class="modal-overlay">
+        <div class="modal-content" style="max-width: 600px;">
+            <h2 data-i18n="modal_lang_title">🌍 Επιλογή Γλώσσας</h2>
+            <div class="flag-grid" id="flag-container"></div>
+            <button id="btn-close-lang" class="btn-secondary" style="width: 100%;" data-i18n="btn_cancel">Ακύρωση</button>
+        </div>
+    </div>
+
+    <!-- Modal for Filename -->
+    <div id="filename-modal" class="modal-overlay">
+        <div class="modal-content">
+            <h2 data-i18n="modal_save_title">💾 Αποθήκευση</h2>
+            <p data-i18n="modal_save_desc">Εισάγετε όνομα αρχείου:</p>
+            <input type="text" id="filename-input" data-i18n="ph_filename" placeholder="π.χ. ασκηση_1">
+            <div style="display: flex; gap: 10px; justify-content: center;">
+                <button id="btn-cancel-save" class="btn-secondary" data-i18n="btn_cancel">Ακύρωση</button>
+                <button id="btn-confirm-save" class="btn-primary" data-i18n="btn_save_confirm">Αποθήκευση</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Custom Google Sheet -->
+    <div id="sheet-link-modal" class="modal-overlay">
+        <div class="modal-content">
+            <h2 data-i18n="modal_sheet_title">🔗 Σύνδεση με Google Sheet</h2>
+            <p data-i18n="modal_sheet_desc">Επικολλήστε τον σύνδεσμο CSV από το δικό σας δημοσιευμένο Google Sheet:</p>
+            <input type="text" id="sheet-url-input" placeholder="https://docs.google.com/spreadsheets/...">
+            <div style="display: flex; gap: 10px; justify-content: center;">
+                <button id="btn-cancel-sheet" class="btn-secondary" data-i18n="btn_cancel">Ακύρωση</button>
+                <button id="btn-confirm-sheet" class="btn-primary" data-i18n="btn_save_confirm">Αποθήκευση</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for PIN -->
+    <div id="pin-modal" class="modal-overlay">
+        <div class="modal-content">
+            <h2 data-i18n="modal_pin_title">🔒 Ασφάλεια Κλειδιού (PIN)</h2>
+            <p id="pin-modal-desc" data-i18n="pin_modal_desc">Εισάγετε το PIN:</p>
+            <input type="password" id="pin-input" placeholder="****" maxlength="4" style="font-family: monospace; letter-spacing: 0.5em; text-align: center; font-size: 2rem;">
+            <div style="display: flex; gap: 10px; justify-content: center;">
+                <button id="btn-cancel-pin" class="btn-secondary" data-i18n="btn_cancel">Ακύρωση</button>
+                <button id="btn-confirm-pin" class="btn-primary" data-i18n="btn_ok">ΟΚ</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for API Key Info Guide -->
+    <div id="api-info-modal" class="modal-overlay">
+        <div class="modal-content" style="max-width: 680px; position: relative;">
+            <button id="btn-close-api-info-corner" style="position: absolute; top: 15px; right: 15px; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: #555;"><i class="fa-solid fa-xmark"></i></button>
+            <h2 data-i18n="modal_api_info_title" style="text-align: center;">🔑 Οδηγός Google TTS API Key</h2>
+            <div id="api-info-body" style="text-align: left; max-height: 60vh; overflow-y: auto; padding-right: 10px; font-size: 0.95rem; line-height: 1.6;" data-i18n="modal_api_info_html">
+<div style="padding: 5px 0;">
+    <div style="background: #e8f4fd; border-left: 4px solid #1976d2; padding: 10px 14px; border-radius: 4px; margin-bottom: 14px;">
+        <strong style="color: #0d47a1;">💡 Δωρεάν Όριο & Κόστος:</strong>
+        <p style="margin: 4px 0 0 0; font-size: 0.9rem; color: #1e293b;">
+            Η Google παρέχει <strong>1.000.000 χαρακτήρες δωρεάν κάθε μήνα</strong> (επαρκούν για χιλιάδες αναγνώσεις). Κατά την εγγραφή απαιτείται σύνδεση κάρτας για ταυτοποίηση, αλλά <strong>δεν γίνεται καμία χρέωση</strong> όσο παραμένετε εντός του δωρεάν ορίου.
+        </p>
+    </div>
+
+    <h4 style="margin: 12px 0 6px 0; color: #1565c0;">1. Σύνδεση & Δημιουργία Έργου (Project)</h4>
+    <p style="margin: 0 0 8px 0;">
+        • Συνδεθείτε στο <a href="https://console.cloud.google.com/" target="_blank" rel="noopener" style="color: #1976d2; font-weight: bold; text-decoration: underline;">Google Cloud Console</a> με λογαριασμό Google.<br>
+        • Μεταβείτε απευθείας στη σελίδα <a href="https://console.cloud.google.com/projectcreate" target="_blank" rel="noopener" style="color: #1976d2; font-weight: bold; text-decoration: underline;">Δημιουργίας Έργου (New Project)</a>, δώστε ένα όνομα (π.χ. <code>Reader-Voice</code>) και πατήστε <strong>CREATE</strong>.<br>
+        • Περιμένετε λίγα δευτερόλεπτα και βεβαιωθείτε από το καμπανάκι ειδοποιήσεων ή την κορυφή της οθόνης ότι το νέο έργο είναι επιλεγμένο.
+    </p>
+
+    <h4 style="margin: 12px 0 6px 0; color: #1565c0;">2. Ενεργοποίηση Text-to-Speech API</h4>
+    <p style="margin: 0 0 8px 0;">
+        • Ανοίξτε τη σελίδα <a href="https://console.cloud.google.com/marketplace/product/google/texttospeech.googleapis.com" target="_blank" rel="noopener" style="color: #1976d2; font-weight: bold; text-decoration: underline;">Cloud Text-to-Speech API</a>.<br>
+        • Πατήστε το μπλε κουμπί <strong>ENABLE (Ενεργοποίηση)</strong>.<br>
+        <em style="color: #64748b;">(Αν ζητηθεί "Enable Billing", ολοκληρώστε τη σύνδεση κάρτας ταυτοποίησης).</em>
+    </p>
+
+    <h4 style="margin: 12px 0 6px 0; color: #1565c0;">3. Δημιουργία API Key</h4>
+    <p style="margin: 0 0 8px 0;">
+        • Μεταβείτε στη σελίδα <a href="https://console.cloud.google.com/apis/credentials" target="_blank" rel="noopener" style="color: #1976d2; font-weight: bold; text-decoration: underline;">Διαπιστευτήρια (Credentials)</a>.<br>
+        • Πατήστε πάνω στο <strong>+ CREATE CREDENTIALS</strong> και επιλέξτε <strong>API key</strong>.<br>
+        • Αντιγράψτε τον κωδικό που εμφανίζεται (μορφή <code>AIzaSy...</code>) πατώντας το εικονίδιο αντιγραφής (📋).
+    </p>
+
+    <h4 style="margin: 12px 0 6px 0; color: #1565c0;">4. Χρήση στην Εφαρμογή</h4>
+    <p style="margin: 0 0 4px 0;">
+        • Επικολλήστε το κλειδί στο πεδίο <strong>«🔑 Premium Φωνή»</strong>.<br>
+        • Οι φυσικές φωνές (<strong>🌟 Neural2</strong> &amp; <strong>⭐ Wavenet</strong>) θα φορτώσουν αυτόματα.<br>
+        • Πατήστε το εικονίδιο <strong>κλειδαριάς (🔓)</strong> και ορίστε 4ψήφιο PIN για προστασία από ανεπιθύμητες αλλαγές από τους μαθητές.
+    </p>
+</div>
+            </div>
+            <button id="btn-close-api-info" class="btn-secondary" style="width: 100%; margin-top: 20px;" data-i18n="btn_close">Κλείσιμο</button>
+        </div>
+    </div>
+
+    <!-- Modal for Speech-to-Text (STT) Settings -->
+    <div id="stt-modal" class="modal-overlay">
+        <div class="modal-content" style="max-width: 620px; max-height: calc(100vh - 40px); overflow-y: auto; position: relative; box-sizing: border-box;">
+            <button id="btn-close-stt-corner" style="position: absolute; top: 15px; right: 15px; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: #555;"><i class="fa-solid fa-xmark"></i></button>
+            <div style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-top: 0; margin-bottom: 12px;">
+                <h2 data-i18n="modal_stt_title" style="margin: 0; display: inline-block;">🎙️ Ρυθμίσεις Ακρόασης (Speech-to-Text)</h2>
+                <span id="stt-status-badge" class="stt-status-badge inactive">
+                    <i class="fa-solid fa-circle-xmark"></i> <span id="stt-status-badge-text">Ανενεργό</span>
+                </span>
+            </div>
+            
+            <div id="stt-save-toast" class="stt-toast">
+                <i class="fa-solid fa-circle-check"></i> <span data-i18n="stt_saved_success">Αποθηκεύτηκε επιτυχώς!</span>
+            </div>
+            
+            <div style="text-align: left; padding: 5px 0;">
+                <!-- Sync with TTS Key Option -->
+                <div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 10px 14px; margin-bottom: 15px; display: flex; align-items: center; gap: 10px;">
+                    <input type="checkbox" id="sync-stt-with-tts-key" style="width: 18px; height: 18px; cursor: pointer;">
+                    <label for="sync-stt-with-tts-key" style="margin: 0; cursor: pointer; font-size: 0.95rem; font-weight: 600; color: #166534;" data-i18n="stt_sync_tts_key">
+                        Χρήση του ίδιου API Key με τις Φωνές (TTS)
+                    </label>
+                </div>
+
+                <!-- API Key Input Row -->
+                <div id="stt-key-input-container">
+                    <label style="font-weight: 600; font-size: 0.9rem; color: #334155; display: block; margin-bottom: 5px;" data-i18n="stt_key_label">
+                        🔑 Google Cloud Speech-to-Text Key:
+                    </label>
+                    <div style="display: flex; gap: 5px; margin-bottom: 12px;">
+                        <input type="password" id="stt-api-key" class="api-input" data-i18n-ph="stt_key_ph" placeholder="Επικόλληση Google STT Key...">
+                        <button id="btn-toggle-stt-key-view" class="btn-icon-small" data-i18n-title="title_toggle_key_view" title="Εμφάνιση/Απόκρυψη Κλειδιού" style="background:#e0e0e0;"><i class="fa-solid fa-eye"></i></button>
+                        <button id="btn-pin-lock-stt" class="btn-icon-small" data-i18n-title="title_lock_api" title="Κλείδωμα/Ξεκλείδωμα" style="background:#e0e0e0;"><i class="fa-solid fa-lock-open" style="color:#388e3c;"></i></button>
+                    </div>
+                </div>
+
+                <!-- STT Usage Tracker -->
+                <div id="stt-usage-tracker" class="usage-tracker" style="display: flex; flex-direction: column; gap: 6px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 10px 14px; margin-bottom: 12px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <span style="font-size: 0.92rem; font-weight: 600; color: #334155;">
+                            <i class="fa-solid fa-chart-pie" style="color: #2563eb;"></i> <span data-i18n="usage_monthly_stt">Μηνιαία Κατανάλωση (STT):</span> <strong id="stt-time-count">0</strong> / <span data-i18n="stt_free_limit">60 δωρεάν λεπτά</span>
+                        </span>
+                    </div>
+                    <!-- Progress Bar -->
+                    <div style="width: 100%; background: #e2e8f0; border-radius: 6px; height: 8px; overflow: hidden;">
+                        <div id="stt-usage-bar" style="width: 0%; height: 100%; background: #10b981; transition: width 0.3s, background-color 0.3s;"></div>
+                    </div>
+                    <div style="font-size: 0.74rem; color: #64748b; margin-top: 1px;" data-i18n="usage_auto_reset_note">Αυτόματη ανανέωση την 1η κάθε μήνα</div>
+                    <!-- Alert text when near or exceeding 60 mins -->
+                    <div id="stt-billing-alert" style="display: none; font-size: 0.85rem; padding: 6px 10px; border-radius: 6px; line-height: 1.3;"></div>
+                </div>
+
+                <!-- Info Guide Collapsible / Accordion -->
+                <div style="background: #e8f4fd; border-left: 4px solid #1976d2; padding: 10px 14px; border-radius: 4px; margin-top: 14px; font-size: 0.9rem; line-height: 1.5;">
+                    <strong style="color: #0d47a1; display: block; margin-bottom: 4px;" data-i18n="stt_guide_title">💡 Πώς να αποκτήσετε Google STT Key:</strong>
+                    <ol style="margin: 0; padding-left: 20px; color: #1e293b;">
+                        <li data-i18n="stt_guide_step1">Αν έχετε ήδη κλειδί για τις φωνές, ενεργοποιήστε το Cloud Speech-to-Text API στο ίδιο έργο σας στο Google Cloud Console και επιλέξτε το κουτάκι παραπάνω.</li>
+                        <li><span data-i18n="stt_guide_step2">Διαφορετικά, μεταβείτε στο Cloud Speech-to-Text API και πατήστε ENABLE (Ενεργοποίηση).</span> (<a href="https://console.cloud.google.com/marketplace/product/google/speech.googleapis.com" target="_blank" rel="noopener" style="color: #1976d2; font-weight: bold; text-decoration: underline;" data-i18n="stt_link_text">Σύνδεσμος</a>)</li>
+                        <li data-i18n="stt_guide_step3">Στο μενού Credentials (Διαπιστευτήρια) αντιγράψτε το API Key και επικολλήστε το εδώ.</li>
+                        <li data-i18n="stt_guide_step4">Η Google προσφέρει 60 δωρεάν λεπτά ακρόασης κάθε μήνα.</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div style="display: flex; gap: 10px; justify-content: center; margin-top: 18px;">
+                <button id="btn-save-stt-settings" class="btn-primary" style="flex-grow: 1;" data-i18n="btn_save_confirm">Αποθήκευση</button>
+                <button id="btn-close-stt" class="btn-secondary" style="flex-grow: 1;" data-i18n="btn_close">Κλείσιμο</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Sharing -->
+    <div id="share-modal" class="modal-overlay">
+        <div class="modal-content">
+            <h2 data-i18n="modal_share_title">🔗 Διαμοιρασμός Άσκησης</h2>
+            <p data-i18n="modal_share_desc">Χρησιμοποιήστε τον παρακάτω σύνδεσμο για άμεση πρόσβαση στην άσκηση:</p>
+            <input type="text" id="share-url-input" readonly style="font-size: 0.9rem; padding: 10px; width: 100%; border: 2px solid #eee; border-radius: 8px; margin: 15px 0; text-align: center;">
+            <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+                <button id="btn-copy-link" class="btn-primary" style="background-color: #9c27b0;" data-i18n="btn_copy_link">Αντιγραφή</button>
+                <button id="btn-send-email" class="btn-primary" style="background-color: #2e7d32;" data-i18n="btn_send_email">Αποστολή</button>
+                <button id="btn-close-share" class="btn-secondary" style="width: 100%; margin-top: 10px;" data-i18n="btn_close">Κλείσιμο</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Image Dictionary Manager -->
+    <div id="image-dict-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button id="btn-close-image-dict-corner" style="position: absolute; top: 15px; right: 15px; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: #555;"><i class="fa-solid fa-xmark"></i></button>
+            
+            <div class="dict-modal-header">
+                <h2 style="margin-top: 0; margin-bottom: 3px; display: flex; align-items: center; gap: 8px;">
+                    <span data-i18n="dict_title">🎨 Προσαρμογή Εικόνων & Λεξικού</span>
+                </h2>
+                <p class="dict-subtitle-text" data-i18n="dict_subtitle" style="margin-top: 0; margin-bottom: 8px; color: #666; font-size: 0.84rem;">
+                    Αντιστοιχίστε τις εικόνες με δικές σας λέξεις, εξάγετε το δικό σας Google Sheet (CSV) ή συνδέστε ένα έτοιμο δημόσιο CSV.
+                </p>
+
+                <!-- Top Action & URL Bar -->
+                <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 8px 12px; margin-bottom: 8px;">
+                    <label data-i18n="dict_sheet_label" style="font-weight: bold; font-size: 0.8rem; color: #334155; display: block; margin-bottom: 4px;">
+                        🔗 Σύνδεσμος Google Sheet (CSV) Λεξικού Εικόνων:
+                    </label>
+                    <div class="dict-url-row">
+                        <input type="text" id="custom-words-url-input" placeholder="https://docs.google.com/spreadsheets/d/.../pub?output=csv">
+                        <div class="dict-url-btns">
+                            <button id="btn-apply-custom-words" class="dict-action-btn dict-btn-primary">
+                                <i class="fa-solid fa-check"></i> <span data-i18n="dict_apply">Εφαρμογή</span>
+                            </button>
+                            <button id="btn-reset-custom-words" class="dict-action-btn dict-btn-secondary" data-i18n-title="title_reset_dict_words" title="Επαναφορά στο προεπιλεγμένο λεξικό της γλώσσας">
+                                <i class="fa-solid fa-rotate-left"></i> <span data-i18n="dict_reset">Επαναφορά</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div id="custom-words-status" style="font-size: 0.82rem; margin-top: 4px; color: #16a34a; font-weight: 500; display: none;"></div>
+                </div>
+
+                <!-- Quick Guide Collapsible Accordion (Closed by default with right button) -->
+                <div id="dict-guide-accordion" style="margin-bottom: 8px;">
+                    <div id="dict-guide-header" style="background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 7px 12px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; user-select: none;">
+                        <span data-i18n="dict_guide_title" style="font-weight: bold; font-size: 0.82rem; color: #1e3a8a;">💡 Οδηγίες 4 Βημάτων για Δημιουργία δικού σας Google Sheet</span>
+                        <button type="button" id="btn-toggle-dict-guide" style="background: none; border: none; cursor: pointer; color: #1e3a8a; font-size: 0.85rem; padding: 2px 6px;" data-i18n-title="title_dict_guide_toggle" title="Άνοιγμα/Κλείσιμο Οδηγιών">
+                            <i id="dict-guide-chevron" class="fa-solid fa-chevron-down"></i>
+                        </button>
+                    </div>
+                    <div id="dict-guide-body" style="display: none; background: #f8fafc; border: 1px solid #bfdbfe; border-top: none; border-bottom-left-radius: 8px; border-bottom-right-radius: 8px; padding: 10px 14px; font-size: 0.84rem; color: #1e293b;" data-i18n="dict_guide_html">
+                        <ol style="margin: 6px 0 0 16px; padding: 0; line-height: 1.5;">
+                            <li><strong>Συμπλήρωση:</strong> Πληκτρολογήστε τη λέξη κάτω από κάθε εικόνα στο παρακάτω πλέγμα (ή αφήστε τις προεπιλεγμένες).</li>
+                            <li><strong>Αντιγραφή ή Λήψη:</strong> Πατήστε <strong>«📋 Αντιγραφή για Sheets»</strong> (ή «💾 Λήψη CSV»).</li>
+                            <li><strong>Google Drive:</strong> Ανοίξτε το <a href="https://sheets.google.com" target="_blank" rel="noopener" style="color: #2563eb; text-decoration: underline;">Google Sheets</a>, φτιάξτε ένα νέο κενό έγγραφο και κάντε <strong>Επικόλληση (Ctrl+V)</strong> στο πρώτο κελί (A1).</li>
+                            <li><strong>Δημοσίευση & Σύνδεση:</strong> Στο Google Sheets επιλέξτε: <em>Αρχείο ➔ Κοινοποίηση ➔ Δημοσίευση στον ιστό ➔ Μορφή: CSV (.csv) ➔ Δημοσίευση</em>. Αντιγράψτε τον σύνδεσμο, επικολλήστε τον στο παραπάνω πεδίο και πατήστε <strong>Εφαρμογή</strong>!</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- Grid Controls / Filter Bar -->
+                <div class="dict-filter-row">
+                    <div class="dict-search-wrap">
+                        <div class="dict-search-box">
+                            <i class="fa-solid fa-magnifying-glass" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); color: #94a3b8; font-size: 0.85rem;"></i>
+                            <input type="text" id="dict-search-input" data-i18n="dict_search_ph" placeholder="Αναζήτηση λέξης ή ID...">
+                        </div>
+                        <span id="dict-count-badge" style="font-size: 0.8rem; background: #e2e8f0; color: #475569; padding: 4px 8px; border-radius: 12px; white-space: nowrap; flex-shrink: 0;">310 εικόνες</span>
+                    </div>
+                    <div class="dict-filter-btns">
+                        <button id="btn-copy-words-clipboard" class="dict-action-btn dict-btn-copy" data-i18n-title="title_copy_words_clipboard" title="Αντιγραφή όλων των γραμμών για άμεση επικόλληση στο Google Sheets">
+                            <i class="fa-solid fa-copy"></i> <span data-i18n="dict_copy_sheets">Αντιγραφή για Sheets</span>
+                        </button>
+                        <button id="btn-export-words-csv" class="dict-action-btn dict-btn-export" data-i18n-title="title_export_words_csv" title="Λήψη αρχείου CSV">
+                            <i class="fa-solid fa-download"></i> <span data-i18n="dict_export_csv">Λήψη CSV</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scrollable Cards Grid Container -->
+            <div id="dict-grid-container" style="flex: 1; overflow-y: auto; border: 1px solid #e2e8f0; border-radius: 8px; padding: 10px; background: #f8fafc; display: grid; grid-template-columns: repeat(auto-fill, minmax(125px, 1fr)); gap: 10px;">
+                <!-- Cards injected dynamically by JS -->
+            </div>
+
+            <div class="dict-modal-footer">
+                <button id="btn-close-image-dict" class="dict-action-btn dict-btn-primary" style="min-width: 100px;" data-i18n="btn_close">Κλείσιμο</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Print Configuration -->
+    <div id="print-modal" class="modal-overlay">
+        <div class="modal-content" style="max-width: 550px; text-align: left;">
+            <h2 style="text-align: center;" data-i18n="title_print">🖨️ Επιλογές Εκτύπωσης</h2>
+            <p style="text-align: center; color: #555; font-size: 0.95rem; margin-bottom: 15px;" data-i18n="print_modal_desc">Επιλέξτε το περιεχόμενο για το φύλλο εργασίας:</p>
+            
+            <div class="print-options-grid" style="display: flex; flex-direction: column; gap: 12px; padding-right: 5px;">
+                <label class="print-opt-item" style="background:#f0f7ff; padding:10px 12px; border-radius:8px; border:1px solid #c8e1fb; display:flex; align-items:center; gap:10px; cursor:pointer;">
+                    <input type="checkbox" id="print-opt-text" checked style="width:18px; height:18px; cursor:pointer;">
+                    <span style="font-weight:600; font-size:1rem; color:#1a2b4c;" data-i18n="print_opt_text">📖 Κείμενο Ανάγνωσης</span>
+                </label>
+
+                <label class="print-opt-item" style="background:#f0fdf4; padding:10px 12px; border-radius:8px; border:1px solid #bbf7d0; display:flex; align-items:center; gap:10px; cursor:pointer;">
+                    <input type="checkbox" id="print-opt-level1" checked style="width:18px; height:18px; cursor:pointer;">
+                    <div>
+                        <div style="font-weight:600; font-size:1rem; color:#166534;" data-i18n="print_level1_title">✏️ Επίπεδο 1: Ιχνηλάτηση (Αχνά γράμματα)</div>
+                        <small style="color:#4b5563;" data-i18n="print_level1_desc">Πάτημα γραμμάτων πάνω σε βοηθητικές γραμμές</small>
+                    </div>
+                </label>
+
+                <div style="background:#fff7ed; padding:10px 12px; border-radius:8px; border:1px solid #fed7aa;">
+                    <label class="print-opt-item" style="display:flex; align-items:center; gap:10px; cursor:pointer; margin-bottom:8px;">
+                        <input type="checkbox" id="print-opt-level2" checked style="width:18px; height:18px; cursor:pointer;">
+                        <div>
+                            <div style="font-weight:600; font-size:1rem; color:#9a3412;" data-i18n="print_level2_title">📝 Επίπεδο 2: Αντιγραφή (Κενές γραμμές)</div>
+                            <small style="color:#4b5563;" data-i18n="print_level2_desc">Πρότυπο κείμενο & κενές γραμμές για γράψιμο</small>
+                        </div>
+                    </label>
+                    <div style="display:flex; justify-content:flex-end; align-items:center; gap:8px; font-size:0.88rem; padding-left:28px;">
+                        <span data-i18n="print_lines_label" style="color:#555;">Γραμμές ανά πρόταση:</span>
+                        <select id="print-lines-level2" style="padding:4px 8px; border-radius:4px; border:1px solid #ccc; font-size:0.9rem; cursor:pointer;">
+                            <option value="1" selected>1 γραμμή</option>
+                            <option value="2">2 γραμμές</option>
+                            <option value="3">3 γραμμές</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div style="display: flex; gap: 10px; justify-content: center; margin-top: 20px;">
+                <button id="btn-cancel-print" class="btn-secondary" style="flex:1;" data-i18n="btn_cancel">Ακύρωση</button>
+                <button id="btn-confirm-print" class="btn-primary" style="flex:1; background-color:#00897b;" data-i18n="title_print">Εκτύπωση</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- SCREEN 1: Teacher Input & Settings -->
+    <div id="screen-teacher" class="container">
+        <!-- Top Left Fullscreen Button (Screen 1 Only) -->
+        <button id="btn-fullscreen-toggle" class="btn-fullscreen-trigger" title="Πλήρης Οθόνη" data-i18n-title="title_fullscreen">
+            <i class="fa-solid fa-expand"></i>
+        </button>
+
+        <div class="header-area">
+            <div class="header-logo logo-left">
+                <a href="https://kidmedia.net/" target="_blank" rel="noopener noreferrer">
+                    <img src="images/Sesat-kidmedia-net.png" alt="SESAT Ltd & KIDMEDIA.NET" style="max-height: 48px; width: auto;">
+                </a>
+            </div>
+            <div class="header-title">
+                <h1 data-i18n="main_title">Εργαλείο Ανάγνωσης</h1>
+                <p style="margin:0; opacity: 0.7;" data-i18n="main_subtitle">Διαμόρφωση κειμένου και ρυθμίσεις</p>
+            </div>
+        </div>
+        
+        <div class="main-layout">
+            <div class="input-section">
+
+                <textarea id="input-text" data-i18n-ph="textarea_ph" placeholder="Γράψτε ή επικολλήστε το κείμενο εδώ...">Να η Με|λί|να και ο Μά|νος.</textarea>
+                
+                <div class="textarea-actions">
+                    
+                    <div class="story-fetch-container">
+                        <button id="btn-open-google-sheet" class="btn-icon-small" style="margin-right: 5px; background: #e8f5e9; color:#2e7d32;" data-i18n-title="title_open_google_sheet" title="Άνοιγμα Google Sheet">
+                            <i class="fa-solid fa-table"></i>
+                        </button>
+                        <button id="btn-open-sheet-modal" class="btn-icon-small" style="margin-right: 10px; background: #e3f2fd; color:#1976d2;" data-i18n-title="title_change_sheet" title="Αλλαγή Πηγής Google Sheet">
+                            <i class="fa-solid fa-link"></i>
+                        </button>
+                        <input type="number" id="story-number-input" min="1" disabled placeholder="..." data-i18n-title="title_story_number" title="Επιλέξτε αριθμό ιστορίας">
+                        <span id="story-max-info">/ -</span>
+                    </div>
+
+                    <input type="file" id="file-load-input" accept=".txt" style="display:none;">
+                    
+                    <button id="btn-help" class="big-action-btn" data-i18n-title="title_help" title="Βοήθεια">
+                        <i class="fa-solid fa-circle-info"></i>
+                    </button>
+                    
+                    <button id="btn-print" class="big-action-btn" data-i18n-title="title_print" title="Εκτύπωση">
+                        <i class="fa-solid fa-print"></i>
+                    </button>
+
+                    <button id="btn-load-txt" class="big-action-btn" data-i18n-title="title_load_txt" title="Φόρτωση Κειμένου">
+                        <i class="fa-solid fa-folder-open"></i>
+                    </button>
+                    <button id="btn-save-txt" class="big-action-btn" data-i18n-title="title_save_txt" title="Αποθήκευση Κειμένου">
+                        <i class="fa-solid fa-floppy-disk"></i>
+                    </button>
+                    <button id="btn-share" class="big-action-btn" data-i18n-title="title_share_exercise" title="Διαμοιρασμός Άσκησης">
+                        <i class="fa-solid fa-share-nodes"></i>
+                    </button>
+                    <button id="btn-start" class="big-action-btn" data-i18n-title="title_start_reading" title="Έναρξη Ανάγνωσης">
+                        <i class="fa-solid fa-rocket"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="settings-panel">
+                <div class="setting-group">
+                    <h3 data-i18n="set_appearance">🅰️ Εμφάνιση</h3>
+                    <div class="controls-grid">
+                        <div class="full-width">
+                            <label data-i18n="set_font">Γραμματοσειρά</label>
+                            <select id="set-font">
+                                <option value="'OpenDyslexic', 'OpenDyslexicRegular', sans-serif">OpenDyslexic (Kidmedia)</option>
+                                <option value="'Kids', cursive">Kidmedia</option>
+                                <option value="'Comic Neue', 'Comic Sans MS', cursive">Comic Sans / Neue</option>
+                                <option value="'Open Sans', sans-serif">Open Sans</option>
+                                <option value="'Roboto', sans-serif">Google Sans / Roboto</option>
+                                <option value="'Vollkorn', serif">Vollkorn</option>
+                                <option value="'Playpen Sans', cursive">Playpen Sans</option>
+                                <option value="'Libertinus Sans', sans-serif">Libertinus Sans</option>
+                                <option value="'Libertinus Serif', serif">Libertinus Serif</option>
+                            </select>
+                        </div>
+                        
+                        <div class="full-width" style="display:flex; align-items:center; gap:10px; background: rgba(255,255,255,0.5); padding:5px; border-radius:6px;">
+                            <input type="file" id="font-upload-input" accept=".ttf, .otf, .woff, .woff2" style="display:none;">
+                            <button id="btn-upload-font" class="btn-icon-small" data-i18n-title="title_upload_font" title="Φόρτωση Γραμματοσειράς">
+                                <i class="fa-solid fa-file-arrow-up"></i>
+                            </button>
+                            <span id="font-file-status" style="font-size: 0.8rem; font-style: italic; opacity: 0.8;"></span>
+                        </div>
+
+                        <div>
+                            <label><span data-i18n="set_size">Μέγεθος</span>: <span id="size-val">3.0</span></label>
+                            <input type="range" id="set-size" min="1" max="5" step="0.1" value="3">
+                        </div>
+                        
+                        <div class="full-width" style="margin-top: 10px;">
+                            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px;">
+                                <div class="color-btn-card" data-i18n-title="title_color_text" title="Χρώμα Κειμένου">
+                                    <label data-i18n-title="title_color_text" title="Χρώμα Κειμένου">
+                                        <i class="fa-solid fa-signature" style="color: #1976d2; font-size: 1.2rem;"></i>
+                                    </label>
+                                    <input type="color" id="set-color" value="#333333" data-i18n-title="title_color_text" title="Χρώμα Κειμένου">
+                                </div>
+                                <div class="color-btn-card" data-i18n-title="title_color_text_bg" title="Φόντο Κειμένου">
+                                    <label data-i18n-title="title_color_text_bg" title="Φόντο Κειμένου">
+                                        <i class="fa-solid fa-font" style="color: #00897b; font-size: 1.2rem;"></i>
+                                    </label>
+                                    <input type="color" id="set-text-bg-color" value="#FDF9E3" data-i18n-title="title_color_text_bg" title="Φόντο Κειμένου">
+                                </div>
+                                <div class="color-btn-card" data-i18n-title="title_color_app_bg" title="Γενικό Φόντο">
+                                    <label data-i18n-title="title_color_app_bg" title="Γενικό Φόντο">
+                                        <i class="fa-solid fa-palette" style="color: #9c27b0; font-size: 1.2rem;"></i>
+                                    </label>
+                                    <input type="color" id="set-app-bg-color" value="#E8ECEF" data-i18n-title="title_color_app_bg" title="Γενικό Φόντο">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="full-width checkbox-wrapper">
+                            <input type="checkbox" id="set-bold">
+                            <label for="set-bold" style="margin:0; cursor:pointer;" data-i18n="set_bold">Έντονη Γραφή (Bold)</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="setting-group">
+                    <h3 data-i18n="set_images">🖼️ Χρήση Εικόνων</h3>
+                    <div class="controls-grid">
+                        <div class="full-width image-mode-options" style="display: flex; gap: 10px; justify-content: space-between; background: rgba(255,255,255,0.6); padding: 10px; border-radius: 8px;">
+                            <label class="radio-label" style="display: flex; align-items: center; gap: 6px; cursor: pointer; font-size: 0.95rem;">
+                                <input type="radio" name="image-mode" value="0" checked>
+                                <span data-i18n="image_mode_none">Καμία</span>
+                            </label>
+                            <label class="radio-label" style="display: flex; align-items: center; gap: 6px; cursor: pointer; font-size: 0.95rem;">
+                                <input type="radio" name="image-mode" value="1">
+                                <span data-i18n="image_mode_all">Όλες</span>
+                            </label>
+                            <label class="radio-label" style="display: flex; align-items: center; gap: 6px; cursor: pointer; font-size: 0.95rem;">
+                                <input type="radio" name="image-mode" value="2">
+                                <span data-i18n="image_mode_unknown">Άγνωστες</span>
+                            </label>
+                        </div>
+                        <div class="full-width" id="image-size-control-container" style="margin-top: 5px;">
+                            <label><span data-i18n="set_image_size">Μέγεθος Εικόνων</span>: <span id="image-size-val">50px</span></label>
+                            <input type="range" id="set-image-size" min="40" max="100" step="5" value="50">
+                        </div>
+                        <div class="full-width" style="margin-top: 6px;">
+                            <button type="button" id="btn-open-image-dict" class="btn-secondary" style="width: 100%; display: flex; align-items: center; justify-content: center; gap: 8px; font-weight: bold; background: #eef2ff; color: #3730a3; border: 1px solid #c7d2fe; padding: 8px; border-radius: 6px; cursor: pointer;" data-i18n-title="btn_custom_image_dict" title="Προσαρμογή Εικόνων / Λεξικού">
+                                <span data-i18n="btn_custom_image_dict">🎨 Προσαρμογή Εικόνων / Λεξικού</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="setting-group">
+                    <h3 data-i18n="set_veil">🌑 Πέπλο</h3>
+                    <div class="controls-grid">
+                        <div class="full-width color-row">
+                            <label data-i18n="set_veil_color">Χρώμα Πέπλου</label>
+                            <input type="color" id="set-veil-color" value="#000000">
+                        </div>
+                        <div class="full-width">
+                            <label><span data-i18n="set_veil_opacity">Αδιαφάνεια Πέπλου</span>: <span id="veil-opacity-val">50%</span></label>
+                            <input type="range" id="set-veil-opacity" min="0.10" max="0.95" step="0.05" value="0.50">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="setting-group">
+                    <h3 data-i18n="set_scanning">👁️ Σάρωση (Accessibility)</h3>
+                    <div class="controls-grid">
+                        <div class="full-width checkbox-wrapper">
+                            <input type="checkbox" id="set-scan">
+                            <label for="set-scan" style="margin:0; cursor:pointer;" data-i18n="set_scan_active">Λειτουργία Σάρωσης</label>
+                        </div>
+                        <div class="full-width">
+                            <label><span data-i18n="set_scan_speed">Ταχύτητα Σάρωσης (δευτ.)</span>: <span id="scan-speed-val">2.5 δευτ.</span></label>
+                            <input type="range" id="set-scan-speed" min="1.0" max="5.0" step="0.5" value="2.5">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="setting-group">
+                    <h3 data-i18n="set_voice">🗣️ Φωνή</h3>
+                    <div class="controls-grid">
+                        
+                        <!-- LOCAL VOICE CONTAINER (Hides when Premium is active) -->
+                        <div class="full-width" id="local-voice-settings">
+                            <select id="set-voice">
+                                <option value="" data-i18n="voice_loading">Φόρτωση...</option>
+                            </select>
+                            <div id="voice-warning" data-i18n="voice_warning">
+                                ⚠️ Google Chrome & Internet απαιτούνται για καλύτερες φωνές.
+                            </div>
+                        </div>
+
+                        <!-- SPEED SLIDER (Always visible) -->
+                        <div class="full-width">
+                            <label><span data-i18n="set_speed">Ταχύτητα</span>: <span id="rate-val">1.0</span></label>
+                            <input type="range" id="set-rate" min="0.5" max="1.5" step="0.1" value="1.0">
+                        </div>
+                        
+                        <!-- PREMIUM VOICE OPTION WITH DROPDOWN, TRACKER & PIN LOCK -->
+                        <div class="full-width" style="margin-top: 5px; padding-top: 15px; border-top: 1px dashed rgba(0,0,0,0.2);">
+                            <label data-i18n="set_premium_voice" data-i18n-title="title_premium_voice" title="Αφήστε κενό για τοπική φωνή">🔑 Premium Φωνή (API Key)</label>
+                            <div style="display: flex; gap: 5px;">
+                                <input type="password" id="google-api-key" class="api-input" data-i18n-ph="premium_ph" placeholder="Επικόλληση Google TTS Key...">
+                                <button id="btn-toggle-key-view" class="btn-icon-small" data-i18n-title="title_toggle_key_view" title="Εμφάνιση/Απόκρυψη Κλειδιού" style="background:#e0e0e0;"><i class="fa-solid fa-eye"></i></button>
+                                <!-- PIN LOCK BUTTON -->
+                                <button id="btn-pin-lock" class="btn-icon-small" data-i18n-title="title_lock_api" title="Κλείδωμα/Ξεκλείδωμα" style="background:#e0e0e0;"><i class="fa-solid fa-lock-open" style="color:#388e3c;"></i></button>
+                                <!-- API INFO GUIDE BUTTON -->
+                                <button id="btn-api-info" class="btn-icon-small" data-i18n-title="title_api_info" title="Οδηγός Απόκτησης Google TTS API Key" style="background:#e3f2fd; color:#1976d2;"><i class="fa-solid fa-circle-info"></i></button>
+                            </div>
+                            
+                            <!-- DYNAMIC PREMIUM VOICE SELECTOR -->
+                            <div id="premium-voice-container" style="display:none;">
+                                <select id="set-premium-voice" style="flex-grow: 1; font-weight: bold; color: #1976d2; border-color: #1976d2;">
+                                    <option value="" data-i18n="voice_loading">Φόρτωση...</option>
+                                </select>
+                                <button id="btn-load-premium-voices" class="btn-icon-small" data-i18n-title="title_load_voices" title="Ανανέωση Φωνών" style="background:#e3f2fd; color:#1976d2;"><i class="fa-solid fa-arrows-rotate"></i></button>
+                            </div>
+
+                            <!-- USAGE TRACKER -->
+                            <div id="tts-usage-tracker" class="usage-tracker" style="display:none; flex-direction: column; gap: 6px; align-items: stretch;">
+                                <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                                    <span style="font-size: 0.88rem; font-weight: 600; color: #334155;">
+                                        <i class="fa-solid fa-chart-pie" style="color: #2563eb;"></i> <span data-i18n="usage_monthly_tts">Μηνιαία Κατανάλωση (TTS):</span> <strong id="tts-char-count">0</strong> / <span data-i18n="tts_free_limit_chars">1.000.000 χαρακτήρες</span>
+                                    </span>
+                                </div>
+                                <!-- Progress Bar -->
+                                <div style="width: 100%; background: #e2e8f0; border-radius: 6px; height: 8px; overflow: hidden; margin-top: 2px;">
+                                    <div id="tts-usage-bar" style="width: 0%; height: 100%; background: #10b981; transition: width 0.3s, background-color 0.3s;"></div>
+                                </div>
+                                <div style="font-size: 0.74rem; color: #64748b; margin-top: 1px;" data-i18n="usage_auto_reset_note">Αυτόματη ανανέωση την 1η κάθε μήνα</div>
+                                <div id="tts-billing-alert" style="display:none; font-size: 0.82rem; padding: 6px 10px; border-radius: 6px; line-height: 1.3; margin-top: 4px;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PERSISTENT ERASMUS+ FOOTER (SCREEN 1) -->
+        <div id="teacher-footer" class="persistent-footer">
+            <div class="footer-left">
+                <img id="ui-eu-flag" src="images/EL_Co-fundedbytheEU_RGB_POS.png" alt="Co-funded by the EU">
+            </div>
+            <div class="footer-right">
+                <p id="ui-eu-disclaimer" class="disclaimer-text"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- SCREEN 2: Student View -->
+    <div id="screen-student" class="container">
+        <div class="top-bar">
+            <button id="btn-fullscreen-student" class="student-btn btn-fullscreen-trigger" data-i18n-title="title_fullscreen" title="Πλήρης Οθόνη">
+                <i class="fa-solid fa-expand"></i>
+            </button>
+
+            <button id="btn-back" class="student-btn" data-i18n-title="title_settings" title="Ρυθμίσεις">
+                <i class="fa-solid fa-gear"></i>
+            </button>
+
+            <button id="btn-stt-settings" class="student-btn" data-i18n-title="title_stt_settings" title="Ρυθμίσεις Ακρόασης (STT)">
+                <i class="fa-solid fa-microphone-lines"></i>
+            </button>
+            
+            <div class="veil-controls">
+                <button id="btn-toggle-veil" class="veil-on" data-i18n-title="title_toggle_veil" title="Εναλλαγή Πέπλου">
+                    <i class="fa-solid fa-check"></i>
+                </button>
+                <input type="range" id="veil-opacity-slider" min="0.1" max="0.95" step="0.05" value="0.5" style="width: 100px;">
+            </div>
+
+            <!-- READING FLOW TOGGLE (Always in fixed position) -->
+            <button id="btn-flow-toggle" class="student-btn student-btn-wide flow-step" data-i18n="flow_step" data-i18n-title="title_flow_toggle" title="Αλλαγή Ροής Ανάγνωσης">
+                Βήμα-Βήμα
+            </button>
+
+            <!-- Companion Slot: Same spot for Read-All (Natural Flow) and Mode Toggle (Step-by-Step) -->
+            <div class="flow-companion-slot">
+                <button id="btn-read-all" class="student-btn student-btn-wide" data-i18n-title="title_auto_read" title="Αυτόματη Ανάγνωση" style="display: none;">
+                    <i class="fa-solid fa-bullhorn"></i>
+                </button>
+
+                <button id="btn-mode-toggle" class="student-btn student-btn-wide mode-word" data-i18n="mode_word">
+                    Λέξη
+                </button>
+            </div>
+        </div>
+
+        <div id="reading-area">
+            
+            <!-- ΠΡΟΕΙΔΟΠΟΙΗΣΗ CHIRP -->
+            <div id="chirp-warning" style="display: none; background-color: #ffebee; color: #c62828; padding: 15px; border-radius: 12px; margin-bottom: 20px; text-align: center; border: 2px solid #ef9a9a; max-width: 600px; width: 90%; font-size: 1rem; flex-shrink: 0;">
+                <div style="font-weight: bold; margin-bottom: 5px;">
+                    <i class="fa-solid fa-triangle-exclamation"></i> <span data-i18n="warning_chirp_title">⚠️ Ενδέχεται να υπάρξουν παραλείψεις κατά την εκφώνηση!</span>
+                </div>
+                <div style="font-size: 0.9rem;" data-i18n="warning_chirp_desc">
+                    Για "Βήμα-Βήμα" σε "Συλλαβές", προτιμήστε φωνές τύπου <b>Wavenet</b> ή <b>Standard</b>.
+                </div>
+            </div>
+
+            <div id="text-display"></div>
+        </div>
+
+        <div class="bottom-nav">
+            <button id="btn-reset" class="nav-btn" data-i18n-title="title_reset" title="Επαναφορά" style="position: relative;">
+                <i class="fa-solid fa-arrow-rotate-left"></i>
+                <div id="restore-hand-prompt" class="restore-hand" style="display: none;">
+                    <i class="fa-solid fa-hand-point-down"></i>
+                </div>
+            </button>
+            <div class="nav-spacer"></div>
+
+            <button id="btn-prev" class="nav-btn" data-i18n-title="title_prev" title="Προηγούμενο">
+                <i class="fa-solid fa-hand-point-left"></i>
+            </button>
+            
+            <button id="btn-speak-current" class="btn-speaker" data-i18n-title="title_speak" title="Εκφώνηση">
+                <i class="fa-solid fa-volume-high"></i>
+            </button>
+            
+            <button id="btn-next" class="nav-btn" data-i18n-title="title_next" title="Επόμενο">
+                <i class="fa-solid fa-hand-point-right"></i>
+            </button>
+            <div class="nav-spacer"></div>
+
+            <button id="btn-listen" class="btn-listener" data-i18n-title="title_listen" title="Ακρόαση Ανάγνωσης">
+                <i class="fa-solid fa-ear-listen"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Overlay for Success Emoji Animations -->
+    <div id="emoji-animation-container"></div>
+
+    <!-- App Logic -->
+    <script src="js/state.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/i18n.js"></script>
+    <script src="js/tts.js"></script>
+    <script src="js/algorithms.js"></script>
+    <script src="js/parser.js"></script>
+    <script src="js/render.js"></script>
+    <script src="js/worksheet.js"></script>
+    <script src="js/events.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>

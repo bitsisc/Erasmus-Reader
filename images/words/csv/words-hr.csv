@@ -1,0 +1,310 @@
+1,ja volim,Radnje
+2,krastavac,hrana
+3,krava,Životinje
+4,zagrljaj,Radnje/Sažetak
+5,sidro,Predmeti
+6,dvorana,Objekti/Mjesta
+7,Emilija,Ljudi/imena
+8,sol,hrana
+9,lisica,Životinje
+10,konja,Životinje
+11,Anna,Ljudi/imena
+12,proljeće,Vrijeme/Priroda
+13,izvrsno,Opisno
+14,jaje,hrana
+15,dvorište,Objekti/Mjesta
+16,uho,Dijelovi tijela
+17,oni,Apstraktni pojmovi
+18,auto,Objekti/Transport
+19,on,Apstraktni pojmovi
+20,stavio sam,Radnje
+21,čamac,Objekti/Transport
+22,izvadim,Radnje
+23,Vivi,Ljudi/imena
+24,knjiga,Predmeti
+25,vijak,Predmeti
+26,vidim,Radnje
+27,hodati,Radnje
+28,planina,Priroda
+29,nalazim,Radnje
+30,magarac,Životinje
+31,mlijeko,hrana
+32,svijetloplava,Boje
+33,Vedrina,Ljudi/imena
+34,rukavice,Predmeti
+35,mačka,Životinje
+36,zdravo,Apstraktni pojmovi
+37,nasmijem se,Radnje
+38,baka,Ljudi/Obitelj
+39,cilj,Apstraktni pojmovi
+40,slatko,Hrana/Opisno
+41,svinja,Životinje
+42,Danaja,Ljudi/imena
+43,učiteljica,Ljudi/profesija
+44,učiteljica,Ljudi/profesija
+45,šuma,Priroda
+46,dvije,Brojke
+47,tri,Brojke
+48,četiri,Brojke
+49,pet,Brojke
+50,šest,Brojke
+51,sedam,Brojke
+52,osam,Brojke
+53,devet,Brojke
+54,deset,Brojke
+55,jedna,Brojke
+56,parcela,Predmeti
+57,dajem,Radnje
+58,zub,Dijelovi tijela
+59,soba,Objekti/Mjesta
+60,poklon,Predmeti
+61,mene,Apstraktni pojmovi
+62,ovdje,Apstraktni pojmovi
+63,slika,Predmeti
+64,novo je,Apstraktni pojmovi
+65,mir,Ljudi/imena
+66,ondje,Apstraktni pojmovi
+67,hajde,Radnje
+68,hajde,Radnje
+69,jelka,Priroda
+70,Helen,Ljudi/imena
+71,mi,Apstraktni pojmovi
+72,mene,Apstraktni pojmovi
+73,jedna,Apstraktni pojmovi
+74,tebe,Apstraktni pojmovi
+75,tebe,Apstraktni pojmovi
+76,Evie,Ljudi/imena
+77,eura,Apstraktni pojmovi
+78,ja imam,Radnje
+79,kockice,Predmeti/Igre
+80,jedna,Brojke
+81,dvije,Brojke
+82,tri,Brojke
+83,četiri,Brojke
+84,pet,Brojke
+85,šest,Brojke
+86,sedam,Brojke
+87,osam,Brojke
+88,devet,Brojke
+89,deset,Brojke
+90,šećera,hrana
+91,zebra,Životinje
+92,vrućina,Priroda/Osjećaji
+93,vruće,Opisno
+94,zujati,Životinje
+95,Život,Ljudi/imena
+96,zoni,Predmeti
+97,Ilias,Ljudi/imena
+98,sunce,Priroda
+99,more,Priroda
+100,Thanos,Ljudi/imena
+101,teta,Ljudi/Obitelj
+102,ujak,Ljudi/Obitelj
+103,želim,Radnje
+104,vitez,Ljudi/profesija
+105,i,Apstraktni pojmovi
+106,kakao,hrana
+107,loše,Opisno
+108,košarica,Predmeti
+109,dobar,Opisno
+110,ljeto,Vrijeme/Priroda
+111,zvono,Predmeti
+112,ja radim,Radnje
+113,Karagiozis,Ljudi/Kultura
+114,stolica,Predmeti
+115,mrkva,hrana
+116,kestenovi,hrana
+117,koza,Životinje
+118,dolje,Apstraktni pojmovi
+119,kava,hrana
+120,trešnja,hrana
+121,svijeća,Predmeti
+122,gitara,Predmeti
+123,Kiki,Ljudi/imena
+124,mobilni,Objekti/Tehn
+125,žuti,Boje
+126,rezao sam,Radnje
+127,ja spavam,Radnje
+128,pogledati,Radnje
+129,crvena,Boje
+130,kokoš,Životinje
+131,bagel,hrana
+132,žlica,Predmeti
+133,krug,Oblici
+134,zec,Životinje
+135,ulje,hrana
+136,vrat,Dijelovi tijela
+137,lampa,Predmeti
+138,limun,hrana
+139,Lena,Ljudi/imena
+140,Lefteris,Ljudi/imena
+141,cvijet,Priroda
+142,vuk,Životinje
+143,ja učim,Radnje
+144,lekcija,Apstraktni pojmovi
+145,majmun,Životinje
+146,špagete,hrana
+147,mama,Ljudi/Obitelj
+148,Manos,Ljudi/imena
+149,zelena salata,hrana
+150,oko,Dijelovi tijela
+151,nož,Predmeti
+152,moje ime je,Apstraktni pojmovi
+153,velika,Opisno
+154,dušo,hrana
+155,Melina,Ljudi/imena
+156,pčela,Životinje
+157,dan,Vrijeme
+158,iznutra,Apstraktni pojmovi
+159,jabuka,hrana
+160,jedna,Apstraktni pojmovi
+161,mali,Opisno
+162,ja govorim,Radnje
+163,dijelim,Radnje
+164,olovka,Predmeti
+165,glazba,Apstraktni pojmovi
+166,lopta,Predmeti/Igre
+167,balon,Predmeti
+168,tata,Ljudi/Obitelj
+169,Babis,Ljudi/imena
+170,banana,hrana
+171,kupaonica,Objekti/Mjesta
+172,štap za hodanje,Predmeti
+173,plava,Boje
+174,nos,Dijelovi tijela
+175,ljubičasta,Boje
+176,dijete,Ljudi/Obitelj
+177,do,Apstraktni pojmovi
+178,da,Apstraktni pojmovi
+179,Nana,Ljudi/imena
+180,patuljak,Ljudi/Kultura
+181,vodu,Hrana/Priroda
+182,glupača,Ljudi/Obitelj
+183,Dina,Ljudi/imena
+184,rajčica,hrana
+185,ormar za odjeću,Predmeti
+186,noktiju,Dijelovi tijela
+187,stranac,Ljudi/imena
+188,ja znam,Radnje
+189,ocat,hrana
+190,mačevanje,Životinje
+191,drvo,Priroda
+192,probudim se,Radnje
+193,strugač,Predmeti
+194,obitelji,Ljudi/Obitelj
+195,kišobran,Predmeti
+196,rep,Dijelovi tijela
+197,br,Apstraktni pojmovi
+198,klupa,Predmeti
+199,rebra,hrana
+200,dijete,Ljudi
+201,momci,Ljudi
+202,igramo se,Radnje
+203,ja igram,Radnje
+204,igre,Predmeti
+205,idemo,Radnje
+206,cikla,hrana
+207,iznad,Apstraktni pojmovi
+208,papiga,Životinje
+209,patka,Životinje
+210,djed,Ljudi/Obitelj
+211,prozor,Predmeti
+212,bajka,Objekti/Kultura
+213,krumpir,hrana
+214,klizati,Predmeti
+215,ja idem,Radnje
+216,dinja,hrana
+217,baciti,Radnje
+218,borovo drvo,Priroda
+219,ploča,Predmeti
+220,stol,Predmeti
+221,ja pijem,Radnje
+222,papar,hrana
+223,duda varalica,Predmeti
+224,vilica,Predmeti
+225,pita,hrana
+226,pizza,hrana
+227,osim,Apstraktni pojmovi
+228,brod,Objekti/Transport
+229,bicikl,Objekti/Transport
+230,noga,Dijelovi tijela
+231,pjesma,Objekti/Kultura
+232,miš,Životinje
+233,Papa,Ljudi/imena
+234,narančasta,Boje
+235,narančasta,hrana
+236,stakla,Predmeti
+237,ptica,Životinje
+238,zelena,Boje
+239,Rena,Ljudi/imena
+240,breskva,hrana
+241,ružičasta,Boje
+242,sat,Predmeti
+243,odjeća,Predmeti
+244,riža,hrana
+245,salama,hrana
+246,salata,hrana
+247,Sasha,Ljudi/imena
+248,gušter,Životinje
+249,sedlo,Predmeti
+250,celer,hrana
+251,ljestve,Predmeti
+252,ježić,Životinje
+253,pas,Životinje
+254,čokolada,hrana
+255,juha,hrana
+256,odgovarati,Predmeti
+257,kući,Objekti/Mjesta
+258,stajem,Radnje
+259,grožđe,hrana
+260,vijenac,Predmeti
+261,usta,Dijelovi tijela
+262,zaustaviti se,Predmeti
+263,plus,Apstraktni pojmovi
+264,spužva,Predmeti
+265,škola,Objekti/Mjesta
+266,razreda,Apstraktni pojmovi
+267,taksi,Objekti/Transport
+268,trg,Oblici
+269,kamin,Predmeti
+270,stakla,Predmeti
+271,cvrčak,Životinje
+272,televiziji,Objekti/Tehn
+273,volan,Predmeti
+274,Tina,Ljudi/imena
+275,zid,Predmeti
+276,mjesto,Predmeti
+277,kolač,hrana
+278,stol,Predmeti
+279,trokut,Oblici
+280,ja jedem,Radnje
+281,čaj,hrana
+282,vrećica,Predmeti
+283,cirkus,Objekti/Kultura
+284,sir,hrana
+285,Yvonne,Ljudi/imena
+286,računalo,Objekti/Tehn
+287,hrane,hrana
+288,Fanis,Ljudi/imena
+289,svjetionik,Predmeti
+290,grah,hrana
+291,mjesec,Priroda
+292,prijatelju,Ljudi
+293,haljina,Predmeti
+294,svjetlo,Priroda
+295,požara,Priroda
+296,Harry,Ljudi/imena
+297,zima,Vrijeme/Priroda
+298,kornjača,Životinje
+299,ruku,Dijelovi tijela
+300,ja plešem,Radnje
+301,sok,hrana
+302,škare,Predmeti
+303,riba,Hrana/životinje
+304,tražim,Radnje
+305,pečem,Radnje
+306,roštiljati,Predmeti
+307,Psipsina,Životinje/imena
+308,kruh,hrana
+309,shopping,Radnje
+310,vremena,Vrijeme

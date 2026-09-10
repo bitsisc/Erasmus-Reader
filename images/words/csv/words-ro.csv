@@ -1,0 +1,310 @@
+1,iubesc,Acțiuni
+2,castravete,Mâncare
+3,vacă,Animale
+4,îmbrățișare,Acțiuni/Rezumat
+5,ancora,Obiecte
+6,hol,Obiecte/Locuri
+7,Emilia,Persoane/Nume
+8,sare,Mâncare
+9,vulpea,Animale
+10,cal,Animale
+11,Anna,Persoane/Nume
+12,primavara,Timp/Natura
+13,excelent,descriptiv
+14,ou,Mâncare
+15,curte,Obiecte/Locuri
+16,urechea,Părți ale corpului
+17,ei,Concepte abstracte
+18,masina,Obiecte/Transport
+19,el,Concepte abstracte
+20,am pus,Acțiuni
+21,barca,Obiecte/Transport
+22,scot,Acțiuni
+23,Vivi,Persoane/Nume
+24,carte,Obiecte
+25,surub,Obiecte
+26,văd,Acțiuni
+27,plimbare,Acțiuni
+28,munte,Natura
+29,gasesc,Acțiuni
+30,măgar,Animale
+31,lapte,Mâncare
+32,albastru deschis,Culori
+33,Serenitatea,Persoane/Nume
+34,mănuși,Obiecte
+35,pisica,Animale
+36,buna ziua,Concepte abstracte
+37,râd,Acțiuni
+38,bunica,Oameni/Familie
+39,obiectiv,Concepte abstracte
+40,dulce,Alimente/Descriptiv
+41,porc,Animale
+42,Danae,Persoane/Nume
+43,profesor,Oameni/Profesie
+44,profesor,Oameni/Profesie
+45,pădure,Natura
+46,doi,Numerele
+47,trei,Numerele
+48,patru,Numerele
+49,cinci,Numerele
+50,şase,Numerele
+51,şapte,Numerele
+52,opt,Numerele
+53,nouă,Numerele
+54,zece,Numerele
+55,unul,Numerele
+56,colet,Obiecte
+57,dau,Acțiuni
+58,dinte,Părți ale corpului
+59,camera,Obiecte/Locuri
+60,cadou,Obiecte
+61,eu,Concepte abstracte
+62,aici,Concepte abstracte
+63,imagine,Obiecte
+64,este nou,Concepte abstracte
+65,Pace,Persoane/Nume
+66,acolo,Concepte abstracte
+67,haide,Acțiuni
+68,haide,Acțiuni
+69,brad,Natura
+70,Helen,Persoane/Nume
+71,noi,Concepte abstracte
+72,eu,Concepte abstracte
+73,unul,Concepte abstracte
+74,tu,Concepte abstracte
+75,tu,Concepte abstracte
+76,Evie,Persoane/Nume
+77,euro,Concepte abstracte
+78,am,Acțiuni
+79,zaruri,Obiecte/Jocuri
+80,unul,Numerele
+81,doi,Numerele
+82,trei,Numerele
+83,patru,Numerele
+84,cinci,Numerele
+85,şase,Numerele
+86,şapte,Numerele
+87,opt,Numerele
+88,nouă,Numerele
+89,zece,Numerele
+90,zahăr,Mâncare
+91,zebră,Animale
+92,căldură,Natura/Sentimente
+93,fierbinte,descriptiv
+94,zumzet,Animale
+95,Viața,Persoane/Nume
+96,zona,Obiecte
+97,Ilias,Persoane/Nume
+98,soare,Natura
+99,mare,Natura
+100,Thanos,Persoane/Nume
+101,mătușă,Oameni/Familie
+102,unchiul,Oameni/Familie
+103,vreau,Acțiuni
+104,cavaler,Oameni/Profesie
+105,şi,Concepte abstracte
+106,cacao,Mâncare
+107,rău,descriptiv
+108,coș,Obiecte
+109,bine,descriptiv
+110,vara,Timp/Natura
+111,clopot,Obiecte
+112,eu fac,Acțiuni
+113,Karagiozis,Oameni/Cultură
+114,scaun,Obiecte
+115,morcov,Mâncare
+116,castane,Mâncare
+117,capra,Animale
+118,jos,Concepte abstracte
+119,cafea,Mâncare
+120,cireș,Mâncare
+121,lumânare,Obiecte
+122,chitara,Obiecte
+123,Kiki,Persoane/Nume
+124,mobil,Obiecte/Teh
+125,galbenă,Culori
+126,am tăiat,Acțiuni
+127,eu dorm,Acțiuni
+128,uite,Acțiuni
+129,roșu,Culori
+130,găină,Animale
+131,covrigi,Mâncare
+132,lingura,Obiecte
+133,cerc,Forme
+134,iepure de câmp,Animale
+135,ulei,Mâncare
+136,gât,Părți ale corpului
+137,lampă,Obiecte
+138,lamaie,Mâncare
+139,Lena,Persoane/Nume
+140,Lefteris,Persoane/Nume
+141,floare,Natura
+142,lup,Animale
+143,eu invat,Acțiuni
+144,lectie,Concepte abstracte
+145,maimuta,Animale
+146,spaghete,Mâncare
+147,mama,Oameni/Familie
+148,Manos,Persoane/Nume
+149,salata verde,Mâncare
+150,ochi,Părți ale corpului
+151,cuțit,Obiecte
+152,numele meu este,Concepte abstracte
+153,mare,descriptiv
+154,miere,Mâncare
+155,Melina,Persoane/Nume
+156,albina,Animale
+157,zi,timpul
+158,înăuntru,Concepte abstracte
+159,măr,Mâncare
+160,unul,Concepte abstracte
+161,mici,descriptiv
+162,vorbesc,Acțiuni
+163,împărtășesc,Acțiuni
+164,creion,Obiecte
+165,muzica,Concepte abstracte
+166,minge,Obiecte/Jocuri
+167,balon,Obiecte
+168,tata,Oameni/Familie
+169,Babis,Persoane/Nume
+170,banana,Mâncare
+171,baie,Obiecte/Locuri
+172,baston de mers,Obiecte
+173,albastru,Culori
+174,nasul,Părți ale corpului
+175,violet,Culori
+176,copilul,Oameni/Familie
+177,la,Concepte abstracte
+178,da,Concepte abstracte
+179,Nana,Persoane/Nume
+180,pitic,Oameni/Cultură
+181,apă,Mâncare/Natura
+182,ninny,Oameni/Familie
+183,Dina,Persoane/Nume
+184,roșie,Mâncare
+185,garderoba,Obiecte
+186,unghiile,Părți ale corpului
+187,Străin,Persoane/Nume
+188,stiu,Acțiuni
+189,otet,Mâncare
+190,manevrarea sabiei,Animale
+191,lemn,Natura
+192,ma trezesc,Acțiuni
+193,racleta,Obiecte
+194,familie,Oameni/Familie
+195,umbrela,Obiecte
+196,coada,Părți ale corpului
+197,nu,Concepte abstracte
+198,bancă,Obiecte
+199,coaste,Mâncare
+200,copil,Oameni
+201,baieti,Oameni
+202,ne jucăm,Acțiuni
+203,joc,Acțiuni
+204,jocuri,Obiecte
+205,hai sa mergem,Acțiuni
+206,sfecla rosie,Mâncare
+207,mai sus,Concepte abstracte
+208,papagal,Animale
+209,rață,Animale
+210,bunicul,Oameni/Familie
+211,fereastra,Obiecte
+212,basm,Obiecte/Cultură
+213,cartof,Mâncare
+214,patinează,Obiecte
+215,eu merg,Acțiuni
+216,pepene galben,Mâncare
+217,arunca,Acțiuni
+218,pin,Natura
+219,farfurie,Obiecte
+220,masa,Obiecte
+221,beau,Acțiuni
+222,piper,Mâncare
+223,suzeta,Obiecte
+224,furca,Obiecte
+225,plăcintă,Mâncare
+226,pizza,Mâncare
+227,cu exceptia,Concepte abstracte
+228,navă,Obiecte/Transport
+229,bicicleta,Obiecte/Transport
+230,piciorului,Părți ale corpului
+231,poem,Obiecte/Cultură
+232,mouse-ul,Animale
+233,Papa,Persoane/Nume
+234,portocaliu,Culori
+235,portocaliu,Mâncare
+236,sticla,Obiecte
+237,pasăre,Animale
+238,verde,Culori
+239,Rena,Persoane/Nume
+240,piersic,Mâncare
+241,roz,Culori
+242,ceas,Obiecte
+243,haine,Obiecte
+244,orez,Mâncare
+245,salam,Mâncare
+246,salata,Mâncare
+247,Sasha,Persoane/Nume
+248,șopârlă,Animale
+249,şa,Obiecte
+250,telina,Mâncare
+251,scara,Obiecte
+252,ariciul,Animale
+253,câine,Animale
+254,ciocolata,Mâncare
+255,supă,Mâncare
+256,meci,Obiecte
+257,acasă,Obiecte/Locuri
+258,ma opresc,Acțiuni
+259,struguri,Mâncare
+260,coroană,Obiecte
+261,gura,Părți ale corpului
+262,opriți,Obiecte
+263,plus,Concepte abstracte
+264,burete,Obiecte
+265,scoala,Obiecte/Locuri
+266,clasa,Concepte abstracte
+267,taxi,Obiecte/Transport
+268,pătrat,Forme
+269,șemineu,Obiecte
+270,sticla,Obiecte
+271,cicada,Animale
+272,televiziune,Obiecte/Teh
+273,volanul,Obiecte
+274,Tina,Persoane/Nume
+275,perete,Obiecte
+276,loc,Obiecte
+277,tort,Mâncare
+278,masa,Obiecte
+279,triunghi,Forme
+280,eu mananc,Acțiuni
+281,ceai,Mâncare
+282,geanta,Obiecte
+283,circ,Obiecte/Cultură
+284,brânză,Mâncare
+285,Yvonne,Persoane/Nume
+286,calculator,Obiecte/Teh
+287,alimente,Mâncare
+288,Fanis,Persoane/Nume
+289,far,Obiecte
+290,fasole,Mâncare
+291,lună,Natura
+292,prieten,Oameni
+293,rochie,Obiecte
+294,lumina,Natura
+295,foc,Natura
+296,Harry,Persoane/Nume
+297,iarna,Timp/Natura
+298,broasca testoasa,Animale
+299,mână,Părți ale corpului
+300,dansez,Acțiuni
+301,suc,Mâncare
+302,foarfece,Obiecte
+303,peste,Alimente/Animale
+304,caut,Acțiuni
+305,coc,Acțiuni
+306,gratar,Obiecte
+307,Psipsina,Animale/Nume
+308,pâine,Mâncare
+309,cumpărături,Acțiuni
+310,timp,timpul

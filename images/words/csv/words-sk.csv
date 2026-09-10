@@ -1,0 +1,310 @@
+1,milujem,Akcie
+2,uhorka,Jedlo
+3,krava,Zvieratá
+4,objatie,Akcie/Abstrakt
+5,kotva,Objekty
+6,hala,Objekty/Miesta
+7,Emília,Ľudia/mená
+8,soľ,Jedlo
+9,líška,Zvieratá
+10,kôň,Zvieratá
+11,Anna,Ľudia/mená
+12,jar,Čas/Príroda
+13,vynikajúce,Opisné
+14,vajce,Jedlo
+15,dvore,Objekty/Miesta
+16,ucho,Časti tela
+17,oni,Abstraktné pojmy
+18,auto,Objekty/Doprava
+19,on,Abstraktné pojmy
+20,dal som,Akcie
+21,čln,Objekty/Doprava
+22,vytiahnem,Akcie
+23,Vivi,Ľudia/mená
+24,kniha,Objekty
+25,skrutka,Objekty
+26,vidím,Akcie
+27,chodiť,Akcie
+28,hora,Príroda
+29,nachádzam,Akcie
+30,somár,Zvieratá
+31,mlieko,Jedlo
+32,svetlo modrá,Farby
+33,pokoj,Ľudia/mená
+34,rukavice,Objekty
+35,kat,Zvieratá
+36,ahoj,Abstraktné pojmy
+37,smejem sa,Akcie
+38,babička,Ľudia/rodina
+39,cieľ,Abstraktné pojmy
+40,sladké,Jedlo/Popisné
+41,prasa,Zvieratá
+42,Danae,Ľudia/mená
+43,učiteľ,Ľudia / Profesia
+44,učiteľ,Ľudia / Profesia
+45,les,Príroda
+46,dve,čísla
+47,tri,čísla
+48,štyri,čísla
+49,päť,čísla
+50,šesť,čísla
+51,sedem,čísla
+52,osem,čísla
+53,deväť,čísla
+54,desať,čísla
+55,jeden,čísla
+56,parcela,Objekty
+57,dávam,Akcie
+58,zub,Časti tela
+59,miestnosť,Objekty/Miesta
+60,dar,Objekty
+61,ja,Abstraktné pojmy
+62,tu,Abstraktné pojmy
+63,obrázok,Objekty
+64,je to nové,Abstraktné pojmy
+65,Mier,Ľudia/mená
+66,tam,Abstraktné pojmy
+67,no tak,Akcie
+68,no tak,Akcie
+69,jedľa,Príroda
+70,Helen,Ľudia/mená
+71,my,Abstraktné pojmy
+72,ja,Abstraktné pojmy
+73,jeden,Abstraktné pojmy
+74,vy,Abstraktné pojmy
+75,vy,Abstraktné pojmy
+76,Evie,Ľudia/mená
+77,eur,Abstraktné pojmy
+78,mám,Akcie
+79,kocky,Objekty/hry
+80,jeden,čísla
+81,dve,čísla
+82,tri,čísla
+83,štyri,čísla
+84,päť,čísla
+85,šesť,čísla
+86,sedem,čísla
+87,osem,čísla
+88,deväť,čísla
+89,desať,čísla
+90,cukor,Jedlo
+91,zebra,Zvieratá
+92,teplo,Príroda/Pocity
+93,horúce,Opisné
+94,bzučať,Zvieratá
+95,Život,Ľudia/mená
+96,zónu,Objekty
+97,Ilias,Ľudia/mená
+98,slnko,Príroda
+99,more,Príroda
+100,Thanos,Ľudia/mená
+101,teta,Ľudia/rodina
+102,strýko,Ľudia/rodina
+103,chcem,Akcie
+104,rytier,Ľudia / Profesia
+105,a,Abstraktné pojmy
+106,kakao,Jedlo
+107,zlý,Opisné
+108,košík,Objekty
+109,dobre,Opisné
+110,leto,Čas/Príroda
+111,zvonček,Objekty
+112,ja áno,Akcie
+113,Karagiozis,Ľudia/Kultúra
+114,stolička,Objekty
+115,mrkva,Jedlo
+116,gaštany,Jedlo
+117,koza,Zvieratá
+118,dole,Abstraktné pojmy
+119,kávu,Jedlo
+120,čerešňa,Jedlo
+121,sviečka,Objekty
+122,gitaru,Objekty
+123,Kiki,Ľudia/mená
+124,mobilné,Objekty/Tech
+125,žltá,Farby
+126,strihám,Akcie
+127,ja spim,Akcie
+128,pozri,Akcie
+129,červená,Farby
+130,sliepka,Zvieratá
+131,bagel,Jedlo
+132,lyžička,Objekty
+133,kruh,Tvary
+134,zajac,Zvieratá
+135,oleja,Jedlo
+136,krku,Časti tela
+137,lampa,Objekty
+138,citrón,Jedlo
+139,Lena,Ľudia/mená
+140,Lefteris,Ľudia/mená
+141,kvet,Príroda
+142,vlk,Zvieratá
+143,učím sa,Akcie
+144,lekciu,Abstraktné pojmy
+145,opice,Zvieratá
+146,špagety,Jedlo
+147,mama,Ľudia/rodina
+148,Manos,Ľudia/mená
+149,hlávkový šalát,Jedlo
+150,oko,Časti tela
+151,nôž,Objekty
+152,moje meno je,Abstraktné pojmy
+153,veľký,Opisné
+154,med,Jedlo
+155,Melina,Ľudia/mená
+156,včela,Zvieratá
+157,deň,Čas
+158,vnútri,Abstraktné pojmy
+159,jablko,Jedlo
+160,jeden,Abstraktné pojmy
+161,malý,Opisné
+162,hovorím,Akcie
+163,zdieľam,Akcie
+164,ceruzka,Objekty
+165,hudba,Abstraktné pojmy
+166,loptu,Objekty/hry
+167,balón,Objekty
+168,otec,Ľudia/rodina
+169,Babis,Ľudia/mená
+170,banán,Jedlo
+171,kúpeľňa,Objekty/Miesta
+172,vychádzková palica,Objekty
+173,modrá,Farby
+174,nos,Časti tela
+175,fialová,Farby
+176,dieťa,Ľudia/rodina
+177,do,Abstraktné pojmy
+178,áno,Abstraktné pojmy
+179,Nana,Ľudia/mená
+180,trpaslík,Ľudia/Kultúra
+181,voda,Jedlo/Príroda
+182,ninny,Ľudia/rodina
+183,Dina,Ľudia/mená
+184,paradajka,Jedlo
+185,šatník,Objekty
+186,nechty,Časti tela
+187,Cudzinec,Ľudia/mená
+188,ja viem,Akcie
+189,ocot,Jedlo
+190,mečiarizmu,Zvieratá
+191,drevo,Príroda
+192,zobudím sa,Akcie
+193,škrabka,Objekty
+194,rodina,Ľudia/rodina
+195,dáždnik,Objekty
+196,chvost,Časti tela
+197,č,Abstraktné pojmy
+198,lavica,Objekty
+199,rebrá,Jedlo
+200,dieťa,Ľudia
+201,chlapi,Ľudia
+202,hráme sa,Akcie
+203,hrám,Akcie
+204,hry,Objekty
+205,poďme,Akcie
+206,cvikla,Jedlo
+207,vyššie,Abstraktné pojmy
+208,papagáj,Zvieratá
+209,kačica,Zvieratá
+210,starý otec,Ľudia/rodina
+211,okno,Objekty
+212,rozprávka,Objekty/Kultúra
+213,zemiak,Jedlo
+214,korčuľovať,Objekty
+215,idem,Akcie
+216,melón,Jedlo
+217,vyhodiť,Akcie
+218,borovica,Príroda
+219,tanier,Objekty
+220,tabuľky,Objekty
+221,pijem,Akcie
+222,korenie,Jedlo
+223,cumlík,Objekty
+224,vidlica,Objekty
+225,koláč,Jedlo
+226,pizza,Jedlo
+227,okrem,Abstraktné pojmy
+228,loď,Objekty/Doprava
+229,bicykel,Objekty/Doprava
+230,chodidlo,Časti tela
+231,báseň,Objekty/Kultúra
+232,myš,Zvieratá
+233,pápež,Ľudia/mená
+234,oranžová,Farby
+235,oranžová,Jedlo
+236,sklo,Objekty
+237,vtáka,Zvieratá
+238,zelená,Farby
+239,Rena,Ľudia/mená
+240,broskyňa,Jedlo
+241,ružová,Farby
+242,hodiny,Objekty
+243,oblečenie,Objekty
+244,ryža,Jedlo
+245,saláma,Jedlo
+246,šalát,Jedlo
+247,Saša,Ľudia/mená
+248,jašterica,Zvieratá
+249,sedlo,Objekty
+250,zeler,Jedlo
+251,rebrík,Objekty
+252,ježko,Zvieratá
+253,pes,Zvieratá
+254,čokoláda,Jedlo
+255,polievka,Jedlo
+256,zápas,Objekty
+257,domov,Objekty/Miesta
+258,zastavím sa,Akcie
+259,hrozno,Jedlo
+260,veniec,Objekty
+261,ústa,Časti tela
+262,zastaviť,Objekty
+263,plus,Abstraktné pojmy
+264,špongia,Objekty
+265,školy,Objekty/Miesta
+266,trieda,Abstraktné pojmy
+267,taxi,Objekty/Doprava
+268,štvorec,Tvary
+269,krb,Objekty
+270,sklo,Objekty
+271,cikáda,Zvieratá
+272,televízia,Objekty/Tech
+273,volant,Objekty
+274,Tina,Ľudia/mená
+275,stena,Objekty
+276,miesto,Objekty
+277,koláč,Jedlo
+278,tabuľky,Objekty
+279,trojuholník,Tvary
+280,jem,Akcie
+281,čaj,Jedlo
+282,taška,Objekty
+283,cirkus,Objekty/Kultúra
+284,syr,Jedlo
+285,Yvonne,Ľudia/mená
+286,počítač,Objekty/Tech
+287,jedlo,Jedlo
+288,Fanis,Ľudia/mená
+289,maják,Objekty
+290,fazuľa,Jedlo
+291,mesiac,Príroda
+292,priateľ,Ľudia
+293,šaty,Objekty
+294,svetlo,Príroda
+295,oheň,Príroda
+296,Harry,Ľudia/mená
+297,zima,Čas/Príroda
+298,korytnačka,Zvieratá
+299,ruka,Časti tela
+300,tancujem,Akcie
+301,šťavy,Jedlo
+302,nožnice,Objekty
+303,ryby,Jedlo/Zvieratá
+304,hľadám,Akcie
+305,pečiem,Akcie
+306,gril,Objekty
+307,Psipsina,Zvieratá/mená
+308,chlieb,Jedlo
+309,nakupovanie,Akcie
+310,čas,Čas

@@ -1,0 +1,310 @@
+1,j'aime,Actions
+2,concombre,Nourriture
+3,vache,Animaux
+4,câlin,Actions/Résumé
+5,ancre,Objets
+6,salle,Objets/Lieux
+7,Émilie,Personnes/Noms
+8,sel,Nourriture
+9,renard,Animaux
+10,cheval,Animaux
+11,Anna,Personnes/Noms
+12,printemps,Temps/Nature
+13,excellent,Descriptif
+14,oeuf,Nourriture
+15,cour,Objets/Lieux
+16,oreille,Parties du corps
+17,ils,Concepts abstraits
+18,voiture,Objets/Transport
+19,il,Concepts abstraits
+20,je mets,Actions
+21,bateau,Objets/Transport
+22,je sors,Actions
+23,Vivi,Personnes/Noms
+24,livre,Objets
+25,vis,Objets
+26,je vois,Actions
+27,marcher,Actions
+28,montagne,Nature
+29,je trouve,Actions
+30,âne,Animaux
+31,lait,Nourriture
+32,bleu clair,Couleurs
+33,Sérénité,Personnes/Noms
+34,gants,Objets
+35,chat,Animaux
+36,bonjour,Concepts abstraits
+37,je ris,Actions
+38,grand-mère,Personnes/Famille
+39,objectif,Concepts abstraits
+40,doux,Nourriture/descriptif
+41,cochon,Animaux
+42,Danaé,Personnes/Noms
+43,professeur,Personnes/Profession
+44,professeur,Personnes/Profession
+45,forêt,Nature
+46,deux,Numéros
+47,trois,Numéros
+48,quatre,Numéros
+49,cinq,Numéros
+50,six,Numéros
+51,sept,Numéros
+52,huit,Numéros
+53,neuf,Numéros
+54,dix,Numéros
+55,un,Numéros
+56,colis,Objets
+57,je donne,Actions
+58,dent,Parties du corps
+59,chambre,Objets/Lieux
+60,cadeau,Objets
+61,moi,Concepts abstraits
+62,ici,Concepts abstraits
+63,photo,Objets
+64,c'est nouveau,Concepts abstraits
+65,Paix,Personnes/Noms
+66,là,Concepts abstraits
+67,allez,Actions
+68,allez,Actions
+69,sapin,Nature
+70,Hélène,Personnes/Noms
+71,nous,Concepts abstraits
+72,moi,Concepts abstraits
+73,un,Concepts abstraits
+74,tu,Concepts abstraits
+75,tu,Concepts abstraits
+76,Evie,Personnes/Noms
+77,euros,Concepts abstraits
+78,j'ai,Actions
+79,dés,Objets/Jeux
+80,un,Numéros
+81,deux,Numéros
+82,trois,Numéros
+83,quatre,Numéros
+84,cinq,Numéros
+85,six,Numéros
+86,sept,Numéros
+87,huit,Numéros
+88,neuf,Numéros
+89,dix,Numéros
+90,sucre,Nourriture
+91,zèbre,Animaux
+92,chaleur,Nature/Sentiments
+93,chaud,Descriptif
+94,bourdonnement,Animaux
+95,La vie,Personnes/Noms
+96,zone,Objets
+97,Ilias,Personnes/Noms
+98,soleil,Nature
+99,mer,Nature
+100,Thanos,Personnes/Noms
+101,tante,Personnes/Famille
+102,oncle,Personnes/Famille
+103,je veux,Actions
+104,chevalier,Personnes/Profession
+105,et,Concepts abstraits
+106,cacao,Nourriture
+107,mauvais,Descriptif
+108,panier,Objets
+109,bien,Descriptif
+110,l'été,Temps/Nature
+111,cloche,Objets
+112,je fais,Actions
+113,Karagiozis,Personnes/Culture
+114,chaise,Objets
+115,carotte,Nourriture
+116,châtaignes,Nourriture
+117,chèvre,Animaux
+118,vers le bas,Concepts abstraits
+119,café,Nourriture
+120,cerise,Nourriture
+121,bougie,Objets
+122,guitare,Objets
+123,Kiki,Personnes/Noms
+124,mobile,Objets/Technologie
+125,jaune,Couleurs
+126,j'ai coupé,Actions
+127,je dors,Actions
+128,regarde,Actions
+129,rouge,Couleurs
+130,poule,Animaux
+131,bagel,Nourriture
+132,cuillère,Objets
+133,cercle,Formes
+134,lièvre,Animaux
+135,huile,Nourriture
+136,cou,Parties du corps
+137,lampe,Objets
+138,citron,Nourriture
+139,Léna,Personnes/Noms
+140,Gaucheris,Personnes/Noms
+141,fleur,Nature
+142,loup,Animaux
+143,j'apprends,Actions
+144,leçon,Concepts abstraits
+145,singe,Animaux
+146,spaghettis,Nourriture
+147,maman,Personnes/Famille
+148,Manos,Personnes/Noms
+149,laitue,Nourriture
+150,oeil,Parties du corps
+151,couteau,Objets
+152,je m'appelle,Concepts abstraits
+153,grand,Descriptif
+154,chérie,Nourriture
+155,Mélina,Personnes/Noms
+156,abeille,Animaux
+157,jour,Temps
+158,à l'intérieur,Concepts abstraits
+159,pomme,Nourriture
+160,un,Concepts abstraits
+161,petit,Descriptif
+162,je parle,Actions
+163,je partage,Actions
+164,crayon,Objets
+165,musique,Concepts abstraits
+166,balle,Objets/Jeux
+167,ballon,Objets
+168,papa,Personnes/Famille
+169,Babis,Personnes/Noms
+170,banane,Nourriture
+171,salle de bain,Objets/Lieux
+172,bâton de marche,Objets
+173,bleu,Couleurs
+174,nez,Parties du corps
+175,violet,Couleurs
+176,bébé,Personnes/Famille
+177,à,Concepts abstraits
+178,oui,Concepts abstraits
+179,Mamie,Personnes/Noms
+180,nain,Personnes/Culture
+181,eau,Alimentation/Nature
+182,ninny,Personnes/Famille
+183,Dinah,Personnes/Noms
+184,tomate,Nourriture
+185,garde-robe,Objets
+186,ongles,Parties du corps
+187,Étranger,Personnes/Noms
+188,je sais,Actions
+189,vinaigre,Nourriture
+190,escrime,Animaux
+191,bois,Nature
+192,je me réveille,Actions
+193,grattoir,Objets
+194,famille,Personnes/Famille
+195,parapluie,Objets
+196,queue,Parties du corps
+197,non,Concepts abstraits
+198,banc,Objets
+199,côtes,Nourriture
+200,enfant,Les gens
+201,les gars,Les gens
+202,nous jouons,Actions
+203,je joue,Actions
+204,jeux,Objets
+205,allons-y,Actions
+206,betterave,Nourriture
+207,ci-dessus,Concepts abstraits
+208,perroquet,Animaux
+209,canard,Animaux
+210,grand-père,Personnes/Famille
+211,fenêtre,Objets
+212,conte de fée,Objets/Culture
+213,pomme de terre,Nourriture
+214,patiner,Objets
+215,je vais,Actions
+216,melon,Nourriture
+217,jeter,Actions
+218,pin,Nature
+219,plaque,Objets
+220,tableau,Objets
+221,je bois,Actions
+222,poivre,Nourriture
+223,sucette,Objets
+224,fourchette,Objets
+225,tarte,Nourriture
+226,pizza,Nourriture
+227,sauf,Concepts abstraits
+228,navire,Objets/Transport
+229,vélo,Objets/Transport
+230,pied,Parties du corps
+231,poème,Objets/Culture
+232,souris,Animaux
+233,Pape,Personnes/Noms
+234,orange,Couleurs
+235,orange,Nourriture
+236,verre,Objets
+237,oiseau,Animaux
+238,vert,Couleurs
+239,Réna,Personnes/Noms
+240,pêche,Nourriture
+241,rose,Couleurs
+242,horloge,Objets
+243,vêtements,Objets
+244,riz,Nourriture
+245,salami,Nourriture
+246,salade,Nourriture
+247,Sacha,Personnes/Noms
+248,lézard,Animaux
+249,selle,Objets
+250,céleri,Nourriture
+251,échelle,Objets
+252,hérisson,Animaux
+253,chien,Animaux
+254,chocolat,Nourriture
+255,soupe,Nourriture
+256,correspondre,Objets
+257,maison,Objets/Lieux
+258,j'arrête,Actions
+259,raisin,Nourriture
+260,couronne,Objets
+261,bouche,Parties du corps
+262,arrêter,Objets
+263,plus,Concepts abstraits
+264,éponge,Objets
+265,école,Objets/Lieux
+266,classe,Concepts abstraits
+267,taxi,Objets/Transport
+268,carré,Formes
+269,cheminée,Objets
+270,verre,Objets
+271,cigale,Animaux
+272,télévision,Objets/Technologie
+273,volant,Objets
+274,Tina,Personnes/Noms
+275,mur,Objets
+276,endroit,Objets
+277,gâteau,Nourriture
+278,tableau,Objets
+279,triangle,Formes
+280,je mange,Actions
+281,thé,Nourriture
+282,sac,Objets
+283,cirque,Objets/Culture
+284,fromage,Nourriture
+285,Yvonne,Personnes/Noms
+286,ordinateur,Objets/Technologie
+287,nourriture,Nourriture
+288,Fanis,Personnes/Noms
+289,phare,Objets
+290,haricots,Nourriture
+291,lune,Nature
+292,ami,Les gens
+293,robe,Objets
+294,lumière,Nature
+295,feu,Nature
+296,Harry,Personnes/Noms
+297,hiver,Temps/Nature
+298,tortue,Animaux
+299,main,Parties du corps
+300,je danse,Actions
+301,jus,Nourriture
+302,ciseaux,Objets
+303,poisson,Nourriture/Animaux
+304,je cherche,Actions
+305,je fais cuire,Actions
+306,gril,Objets
+307,Psipsine,Animaux/Noms
+308,pain,Nourriture
+309,achats,Actions
+310,temps,Temps

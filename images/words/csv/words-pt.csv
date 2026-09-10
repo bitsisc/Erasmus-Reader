@@ -1,0 +1,310 @@
+1,eu amo,Ações
+2,pepino,Comida
+3,vaca,Animais
+4,abraço,Ações/Resumo
+5,âncora,Objetos
+6,salão,Objetos/Lugares
+7,Emília,Pessoas/Nomes
+8,sal,Comida
+9,raposa,Animais
+10,cavalo,Animais
+11,Ana,Pessoas/Nomes
+12,primavera,Tempo/Natureza
+13,excelente,Descritivo
+14,ovo,Comida
+15,quintal,Objetos/Lugares
+16,orelha,Partes do corpo
+17,eles,Conceitos Abstratos
+18,carro,Objetos/Transporte
+19,ele,Conceitos Abstratos
+20,eu coloquei,Ações
+21,barco,Objetos/Transporte
+22,eu tiro,Ações
+23,Vivi,Pessoas/Nomes
+24,livro,Objetos
+25,parafuso,Objetos
+26,eu vejo,Ações
+27,caminhar,Ações
+28,montanha,Natureza
+29,eu acho,Ações
+30,burro,Animais
+31,leite,Comida
+32,azul claro,Cores
+33,Serenidade,Pessoas/Nomes
+34,luvas,Objetos
+35,gato,Animais
+36,olá,Conceitos Abstratos
+37,eu rio,Ações
+38,avó,Pessoas/Família
+39,objetivo,Conceitos Abstratos
+40,doce,Comida/Descritivo
+41,porco,Animais
+42,Danae,Pessoas/Nomes
+43,professor,Pessoas/Profissão
+44,professor,Pessoas/Profissão
+45,floresta,Natureza
+46,dois,Números
+47,três,Números
+48,quatro,Números
+49,cinco,Números
+50,seis,Números
+51,sete,Números
+52,oito,Números
+53,nove,Números
+54,dez,Números
+55,um,Números
+56,pacote,Objetos
+57,eu dou,Ações
+58,dente,Partes do corpo
+59,quarto,Objetos/Lugares
+60,presente,Objetos
+61,eu,Conceitos Abstratos
+62,aqui,Conceitos Abstratos
+63,imagem,Objetos
+64,é novo,Conceitos Abstratos
+65,Paz,Pessoas/Nomes
+66,lá,Conceitos Abstratos
+67,vamos lá,Ações
+68,vamos lá,Ações
+69,abeto,Natureza
+70,Helena,Pessoas/Nomes
+71,nós,Conceitos Abstratos
+72,eu,Conceitos Abstratos
+73,um,Conceitos Abstratos
+74,você,Conceitos Abstratos
+75,você,Conceitos Abstratos
+76,Eva,Pessoas/Nomes
+77,euro,Conceitos Abstratos
+78,eu tenho,Ações
+79,dados,Objetos/Jogos
+80,um,Números
+81,dois,Números
+82,três,Números
+83,quatro,Números
+84,cinco,Números
+85,seis,Números
+86,sete,Números
+87,oito,Números
+88,nove,Números
+89,dez,Números
+90,açúcar,Comida
+91,zebra,Animais
+92,calor,Natureza/Sentimentos
+93,quente,Descritivo
+94,zumbido,Animais
+95,Vida,Pessoas/Nomes
+96,zona,Objetos
+97,Ilias,Pessoas/Nomes
+98,sol,Natureza
+99,mar,Natureza
+100,Thanos,Pessoas/Nomes
+101,tia,Pessoas/Família
+102,tio,Pessoas/Família
+103,eu quero,Ações
+104,cavaleiro,Pessoas/Profissão
+105,e,Conceitos Abstratos
+106,cacau,Comida
+107,ruim,Descritivo
+108,cesta,Objetos
+109,bom,Descritivo
+110,verão,Tempo/Natureza
+111,sino,Objetos
+112,eu faço,Ações
+113,Karagiozis,Pessoas/Cultura
+114,cadeira,Objetos
+115,cenoura,Comida
+116,castanhas,Comida
+117,cabra,Animais
+118,para baixo,Conceitos Abstratos
+119,café,Comida
+120,cereja,Comida
+121,vela,Objetos
+122,guitarra,Objetos
+123,Kiki,Pessoas/Nomes
+124,móvel,Objetos/Tecnologia
+125,amarelo,Cores
+126,eu cortei,Ações
+127,estou dormindo,Ações
+128,olha,Ações
+129,vermelho,Cores
+130,galinha,Animais
+131,bagel,Comida
+132,colher,Objetos
+133,círculo,Formas
+134,lebre,Animais
+135,óleo,Comida
+136,pescoço,Partes do corpo
+137,lâmpada,Objetos
+138,limão,Comida
+139,Lena,Pessoas/Nomes
+140,Esquerda,Pessoas/Nomes
+141,flor,Natureza
+142,lobo,Animais
+143,estou aprendendo,Ações
+144,lição,Conceitos Abstratos
+145,macaco,Animais
+146,espaguete,Comida
+147,mãe,Pessoas/Família
+148,Manos,Pessoas/Nomes
+149,alface,Comida
+150,olho,Partes do corpo
+151,faca,Objetos
+152,meu nome é,Conceitos Abstratos
+153,grande,Descritivo
+154,querido,Comida
+155,Melina,Pessoas/Nomes
+156,abelha,Animais
+157,dia,Hora
+158,dentro,Conceitos Abstratos
+159,maçã,Comida
+160,um,Conceitos Abstratos
+161,pequeno,Descritivo
+162,eu falo,Ações
+163,eu compartilho,Ações
+164,lápis,Objetos
+165,música,Conceitos Abstratos
+166,bola,Objetos/Jogos
+167,balão,Objetos
+168,pai,Pessoas/Família
+169,Babis,Pessoas/Nomes
+170,banana,Comida
+171,banheiro,Objetos/Lugares
+172,bengala,Objetos
+173,azul,Cores
+174,nariz,Partes do corpo
+175,roxo,Cores
+176,querido,Pessoas/Família
+177,para,Conceitos Abstratos
+178,sim,Conceitos Abstratos
+179,Naná,Pessoas/Nomes
+180,anão,Pessoas/Cultura
+181,água,Comida/Natureza
+182,idiota,Pessoas/Família
+183,Diná,Pessoas/Nomes
+184,tomate,Comida
+185,guarda-roupa,Objetos
+186,unhas,Partes do corpo
+187,Estranho,Pessoas/Nomes
+188,eu sei,Ações
+189,vinagre,Comida
+190,esgrima,Animais
+191,madeira,Natureza
+192,eu acordo,Ações
+193,raspador,Objetos
+194,família,Pessoas/Família
+195,guarda-chuva,Objetos
+196,cauda,Partes do corpo
+197,não,Conceitos Abstratos
+198,banco,Objetos
+199,costelas,Comida
+200,criança,Pessoas
+201,pessoal,Pessoas
+202,nós jogamos,Ações
+203,eu jogo,Ações
+204,jogos,Objetos
+205,vamos,Ações
+206,beterraba,Comida
+207,acima,Conceitos Abstratos
+208,papagaio,Animais
+209,pato,Animais
+210,avô,Pessoas/Família
+211,janela,Objetos
+212,conto de fadas,Objetos/Cultura
+213,batata,Comida
+214,patinar,Objetos
+215,eu vou,Ações
+216,melão,Comida
+217,jogar fora,Ações
+218,pinheiro,Natureza
+219,prato,Objetos
+220,mesa,Objetos
+221,eu bebo,Ações
+222,pimenta,Comida
+223,chupeta,Objetos
+224,garfo,Objetos
+225,torta,Comida
+226,pizza,Comida
+227,exceto,Conceitos Abstratos
+228,navio,Objetos/Transporte
+229,bicicleta,Objetos/Transporte
+230,pé,Partes do corpo
+231,poema,Objetos/Cultura
+232,rato,Animais
+233,Papa,Pessoas/Nomes
+234,laranja,Cores
+235,laranja,Comida
+236,vidro,Objetos
+237,pássaro,Animais
+238,verde,Cores
+239,Rena,Pessoas/Nomes
+240,pêssego,Comida
+241,rosa,Cores
+242,relógio,Objetos
+243,roupas,Objetos
+244,arroz,Comida
+245,salame,Comida
+246,salada,Comida
+247,Sasha,Pessoas/Nomes
+248,lagarto,Animais
+249,sela,Objetos
+250,aipo,Comida
+251,escada,Objetos
+252,ouriço,Animais
+253,cachorro,Animais
+254,chocolate,Comida
+255,sopa,Comida
+256,combinar,Objetos
+257,casa,Objetos/Lugares
+258,eu paro,Ações
+259,uva,Comida
+260,guirlanda,Objetos
+261,boca,Partes do corpo
+262,pare,Objetos
+263,mais,Conceitos Abstratos
+264,esponja,Objetos
+265,escola,Objetos/Lugares
+266,aula,Conceitos Abstratos
+267,táxi,Objetos/Transporte
+268,quadrado,Formas
+269,lareira,Objetos
+270,vidro,Objetos
+271,cigarra,Animais
+272,televisão,Objetos/Tecnologia
+273,volante,Objetos
+274,Tina,Pessoas/Nomes
+275,parede,Objetos
+276,lugar,Objetos
+277,bolo,Comida
+278,mesa,Objetos
+279,triângulo,Formas
+280,eu como,Ações
+281,chá,Comida
+282,bolsa,Objetos
+283,circo,Objetos/Cultura
+284,queijo,Comida
+285,Yvone,Pessoas/Nomes
+286,computador,Objetos/Tecnologia
+287,comida,Comida
+288,Fanis,Pessoas/Nomes
+289,farol,Objetos
+290,feijão,Comida
+291,lua,Natureza
+292,amigo,Pessoas
+293,vestido,Objetos
+294,luz,Natureza
+295,fogo,Natureza
+296,Harry,Pessoas/Nomes
+297,inverno,Tempo/Natureza
+298,tartaruga,Animais
+299,mão,Partes do corpo
+300,eu danço,Ações
+301,suco,Comida
+302,tesoura,Objetos
+303,peixe,Alimentos/Animais
+304,estou procurando,Ações
+305,eu asso,Ações
+306,grelha,Objetos
+307,psipsina,Animais/Nomes
+308,pão,Comida
+309,compras,Ações
+310,hora,Hora

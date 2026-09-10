@@ -1,0 +1,310 @@
+1,minä rakastan,Toiminnot
+2,kurkkua,Ruokaa
+3,lehmä,Eläimet
+4,halata,Actions/Abstract
+5,ankkuri,Objektit
+6,sali,Objektit/paikat
+7,Emilia,Ihmiset/Nimet
+8,suolaa,Ruokaa
+9,kettu,Eläimet
+10,hevonen,Eläimet
+11,Anna,Ihmiset/Nimet
+12,kevät,Aika/luonto
+13,erinomainen,Kuvaileva
+14,muna,Ruokaa
+15,piha,Objektit/paikat
+16,korva,Kehon osat
+17,he,Abstraktit käsitteet
+18,auto,Esineet/kuljetus
+19,hän,Abstraktit käsitteet
+20,laitoin,Toiminnot
+21,vene,Esineet/kuljetus
+22,otan pois,Toiminnot
+23,Vivi,Ihmiset/Nimet
+24,kirja,Objektit
+25,ruuvi,Objektit
+26,minä näen,Toiminnot
+27,kävellä,Toiminnot
+28,vuori,Luonto
+29,minä löydän,Toiminnot
+30,aasi,Eläimet
+31,maitoa,Ruokaa
+32,vaaleansininen,värit
+33,tyyneyttä,Ihmiset/Nimet
+34,käsineet,Objektit
+35,kissa,Eläimet
+36,hei,Abstraktit käsitteet
+37,nauran,Toiminnot
+38,isoäiti,Ihmiset/perhe
+39,tavoite,Abstraktit käsitteet
+40,makea,Ruoka/kuvaus
+41,sika,Eläimet
+42,Danae,Ihmiset/Nimet
+43,opettaja,Ihmiset/Ammatti
+44,opettaja,Ihmiset/Ammatti
+45,metsää,Luonto
+46,kaksi,Numerot
+47,kolme,Numerot
+48,neljä,Numerot
+49,viisi,Numerot
+50,kuusi,Numerot
+51,seitsemän,Numerot
+52,kahdeksan,Numerot
+53,yhdeksän,Numerot
+54,kymmenen,Numerot
+55,yksi,Numerot
+56,paketti,Objektit
+57,minä annan,Toiminnot
+58,hammas,Kehon osat
+59,huone,Objektit/paikat
+60,lahja,Objektit
+61,minä,Abstraktit käsitteet
+62,täällä,Abstraktit käsitteet
+63,kuva,Objektit
+64,se on uusi,Abstraktit käsitteet
+65,Rauha,Ihmiset/Nimet
+66,siellä,Abstraktit käsitteet
+67,tule,Toiminnot
+68,tule,Toiminnot
+69,kuusi,Luonto
+70,Helen,Ihmiset/Nimet
+71,me,Abstraktit käsitteet
+72,minä,Abstraktit käsitteet
+73,yksi,Abstraktit käsitteet
+74,sinä,Abstraktit käsitteet
+75,sinä,Abstraktit käsitteet
+76,Evie,Ihmiset/Nimet
+77,euroa,Abstraktit käsitteet
+78,minulla on,Toiminnot
+79,noppaa,Esineet/pelit
+80,yksi,Numerot
+81,kaksi,Numerot
+82,kolme,Numerot
+83,neljä,Numerot
+84,viisi,Numerot
+85,kuusi,Numerot
+86,seitsemän,Numerot
+87,kahdeksan,Numerot
+88,yhdeksän,Numerot
+89,kymmenen,Numerot
+90,sokeria,Ruokaa
+91,seepra,Eläimet
+92,lämpöä,Luonto/Tunteet
+93,kuuma,Kuvaileva
+94,surina,Eläimet
+95,Elämä,Ihmiset/Nimet
+96,vyöhyke,Objektit
+97,Ilias,Ihmiset/Nimet
+98,aurinko,Luonto
+99,meri,Luonto
+100,Thanos,Ihmiset/Nimet
+101,täti,Ihmiset/perhe
+102,setä,Ihmiset/perhe
+103,haluan,Toiminnot
+104,ritari,Ihmiset/Ammatti
+105,ja,Abstraktit käsitteet
+106,kaakao,Ruokaa
+107,huono,Kuvaileva
+108,kori,Objektit
+109,hyvä,Kuvaileva
+110,kesä,Aika/luonto
+111,kello,Objektit
+112,minä teen,Toiminnot
+113,Karagiozis,Ihmiset/kulttuuri
+114,tuoli,Objektit
+115,porkkana,Ruokaa
+116,kastanjat,Ruokaa
+117,vuohi,Eläimet
+118,alas,Abstraktit käsitteet
+119,kahvia,Ruokaa
+120,kirsikka,Ruokaa
+121,kynttilä,Objektit
+122,kitara,Objektit
+123,Kiki,Ihmiset/Nimet
+124,mobiili,Objektit/tekniikka
+125,keltainen,värit
+126,minä leikkasin,Toiminnot
+127,nukun,Toiminnot
+128,katso,Toiminnot
+129,punainen,värit
+130,kana,Eläimet
+131,bageli,Ruokaa
+132,lusikka,Objektit
+133,ympyrä,Muodot
+134,jänis,Eläimet
+135,öljyä,Ruokaa
+136,kaula,Kehon osat
+137,lamppu,Objektit
+138,sitruuna,Ruokaa
+139,Lena,Ihmiset/Nimet
+140,Lefteris,Ihmiset/Nimet
+141,kukka,Luonto
+142,susi,Eläimet
+143,Olen oppimassa,Toiminnot
+144,oppitunti,Abstraktit käsitteet
+145,apina,Eläimet
+146,spagettia,Ruokaa
+147,äiti,Ihmiset/perhe
+148,Manos,Ihmiset/Nimet
+149,salaattia,Ruokaa
+150,silmä,Kehon osat
+151,veitsi,Objektit
+152,minun nimeni on,Abstraktit käsitteet
+153,iso,Kuvaileva
+154,kulta,Ruokaa
+155,Melina,Ihmiset/Nimet
+156,mehiläinen,Eläimet
+157,päivä,Aika
+158,sisällä,Abstraktit käsitteet
+159,omena,Ruokaa
+160,yksi,Abstraktit käsitteet
+161,pieni,Kuvaileva
+162,minä puhun,Toiminnot
+163,jaan,Toiminnot
+164,kynä,Objektit
+165,musiikkia,Abstraktit käsitteet
+166,pallo,Esineet/pelit
+167,ilmapallo,Objektit
+168,isä,Ihmiset/perhe
+169,Babis,Ihmiset/Nimet
+170,banaani,Ruokaa
+171,kylpyhuone,Objektit/paikat
+172,kävelykeppi,Objektit
+173,sininen,värit
+174,nenä,Kehon osat
+175,violetti,värit
+176,vauva,Ihmiset/perhe
+177,to,Abstraktit käsitteet
+178,kyllä,Abstraktit käsitteet
+179,Nana,Ihmiset/Nimet
+180,kääpiö,Ihmiset/kulttuuri
+181,vettä,Ruoka/luonto
+182,ninny,Ihmiset/perhe
+183,Dina,Ihmiset/Nimet
+184,tomaatti,Ruokaa
+185,vaatekaappi,Objektit
+186,kynnet,Kehon osat
+187,Vieras,Ihmiset/Nimet
+188,minä tiedän,Toiminnot
+189,etikkaa,Ruokaa
+190,miekkailu,Eläimet
+191,puuta,Luonto
+192,herään,Toiminnot
+193,kaavin,Objektit
+194,perhe,Ihmiset/perhe
+195,sateenvarjo,Objektit
+196,häntää,Kehon osat
+197,ei,Abstraktit käsitteet
+198,penkki,Objektit
+199,kylkiluut,Ruokaa
+200,lapsi,Ihmiset
+201,kaverit,Ihmiset
+202,me pelaamme,Toiminnot
+203,minä pelaan,Toiminnot
+204,pelejä,Objektit
+205,mennään,Toiminnot
+206,punajuurta,Ruokaa
+207,edellä,Abstraktit käsitteet
+208,papukaija,Eläimet
+209,ankka,Eläimet
+210,isoisä,Ihmiset/perhe
+211,ikkuna,Objektit
+212,satu,Esineet/Kulttuuri
+213,peruna,Ruokaa
+214,luistella,Objektit
+215,minä menen,Toiminnot
+216,meloni,Ruokaa
+217,heittää pois,Toiminnot
+218,mänty,Luonto
+219,levy,Objektit
+220,pöytään,Objektit
+221,minä juon,Toiminnot
+222,pippuria,Ruokaa
+223,tutti,Objektit
+224,haarukka,Objektit
+225,piirakka,Ruokaa
+226,pizzaa,Ruokaa
+227,paitsi,Abstraktit käsitteet
+228,laiva,Esineet/kuljetus
+229,polkupyörä,Esineet/kuljetus
+230,jalka,Kehon osat
+231,runo,Esineet/Kulttuuri
+232,hiiri,Eläimet
+233,paavi,Ihmiset/Nimet
+234,oranssi,värit
+235,oranssi,Ruokaa
+236,lasia,Objektit
+237,lintu,Eläimet
+238,vihreä,värit
+239,Rena,Ihmiset/Nimet
+240,persikka,Ruokaa
+241,vaaleanpunainen,värit
+242,kello,Objektit
+243,vaatteita,Objektit
+244,riisi,Ruokaa
+245,salamia,Ruokaa
+246,salaattia,Ruokaa
+247,Sasha,Ihmiset/Nimet
+248,lisko,Eläimet
+249,satula,Objektit
+250,selleri,Ruokaa
+251,tikkaat,Objektit
+252,siili,Eläimet
+253,koira,Eläimet
+254,suklaata,Ruokaa
+255,keittoa,Ruokaa
+256,ottelu,Objektit
+257,kotiin,Objektit/paikat
+258,lopetan,Toiminnot
+259,rypäleen,Ruokaa
+260,seppele,Objektit
+261,suuhun,Kehon osat
+262,lopeta,Objektit
+263,plus,Abstraktit käsitteet
+264,sienellä,Objektit
+265,kouluun,Objektit/paikat
+266,luokkaa,Abstraktit käsitteet
+267,taksi,Esineet/kuljetus
+268,neliö,Muodot
+269,takka,Objektit
+270,lasia,Objektit
+271,cicada,Eläimet
+272,televisio,Objektit/tekniikka
+273,ohjauspyörä,Objektit
+274,Tina,Ihmiset/Nimet
+275,seinään,Objektit
+276,paikka,Objektit
+277,kakku,Ruokaa
+278,pöytään,Objektit
+279,kolmio,Muodot
+280,minä syön,Toiminnot
+281,teetä,Ruokaa
+282,laukku,Objektit
+283,sirkus,Esineet/Kulttuuri
+284,juustoa,Ruokaa
+285,Yvonne,Ihmiset/Nimet
+286,tietokone,Objektit/tekniikka
+287,ruokaa,Ruokaa
+288,Fanis,Ihmiset/Nimet
+289,majakka,Objektit
+290,pavut,Ruokaa
+291,kuu,Luonto
+292,ystävä,Ihmiset
+293,pukeutua,Objektit
+294,valoa,Luonto
+295,tulipalo,Luonto
+296,Harry,Ihmiset/Nimet
+297,talvi,Aika/luonto
+298,kilpikonna,Eläimet
+299,käsi,Kehon osat
+300,minä tanssin,Toiminnot
+301,mehua,Ruokaa
+302,sakset,Objektit
+303,kalaa,Ruoka/eläimet
+304,minä etsin,Toiminnot
+305,minä leivon,Toiminnot
+306,grilli,Objektit
+307,Psipsina,Eläimet/Nimet
+308,leipää,Ruokaa
+309,ostoksilla,Toiminnot
+310,aika,Aika

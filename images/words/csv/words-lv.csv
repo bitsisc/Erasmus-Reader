@@ -1,0 +1,310 @@
+1,es mīlu,Darbības
+2,gurķi,Pārtika
+3,govs,Dzīvnieki
+4,apskāviens,Darbības/Abstract
+5,enkurs,Objekti
+6,zāle,Objekti/vietas
+7,Emīlija,Cilvēki/vārdi
+8,sāls,Pārtika
+9,lapsa,Dzīvnieki
+10,zirgs,Dzīvnieki
+11,Anna,Cilvēki/vārdi
+12,pavasaris,Laiks/daba
+13,izcili,Aprakstošs
+14,olu,Pārtika
+15,pagalms,Objekti/vietas
+16,auss,Ķermeņa daļas
+17,viņi,Abstraktie jēdzieni
+18,auto,Objekti/Transports
+19,viņš,Abstraktie jēdzieni
+20,Es ieliku,Darbības
+21,laiva,Objekti/Transports
+22,es izņemu,Darbības
+23,Vivi,Cilvēki/vārdi
+24,grāmatu,Objekti
+25,skrūve,Objekti
+26,es redzu,Darbības
+27,staigāt,Darbības
+28,kalns,Daba
+29,es atrodu,Darbības
+30,ēzelis,Dzīvnieki
+31,pienu,Pārtika
+32,gaiši zils,Krāsas
+33,Rāmums,Cilvēki/vārdi
+34,cimdi,Objekti
+35,kaķis,Dzīvnieki
+36,sveiki,Abstraktie jēdzieni
+37,Es smejos,Darbības
+38,vecmāmiņa,Cilvēki/Ģimene
+39,mērķis,Abstraktie jēdzieni
+40,salds,Ēdiens/aprakstošs
+41,cūka,Dzīvnieki
+42,Danae,Cilvēki/vārdi
+43,skolotājs,Cilvēki/profesija
+44,skolotājs,Cilvēki/profesija
+45,mežs,Daba
+46,divi,Skaitļi
+47,trīs,Skaitļi
+48,četri,Skaitļi
+49,pieci,Skaitļi
+50,seši,Skaitļi
+51,septiņi,Skaitļi
+52,astoņi,Skaitļi
+53,deviņi,Skaitļi
+54,desmit,Skaitļi
+55,viens,Skaitļi
+56,paku,Objekti
+57,es dodu,Darbības
+58,zobs,Ķermeņa daļas
+59,telpa,Objekti/vietas
+60,dāvana,Objekti
+61,es,Abstraktie jēdzieni
+62,šeit,Abstraktie jēdzieni
+63,attēlu,Objekti
+64,tas ir jauns,Abstraktie jēdzieni
+65,Miers,Cilvēki/vārdi
+66,tur,Abstraktie jēdzieni
+67,nāc,Darbības
+68,nāc,Darbības
+69,egle,Daba
+70,Helēna,Cilvēki/vārdi
+71,mēs,Abstraktie jēdzieni
+72,es,Abstraktie jēdzieni
+73,viens,Abstraktie jēdzieni
+74,tu,Abstraktie jēdzieni
+75,tu,Abstraktie jēdzieni
+76,Evija,Cilvēki/vārdi
+77,eiro,Abstraktie jēdzieni
+78,man ir,Darbības
+79,kauliņi,Objekti/spēles
+80,viens,Skaitļi
+81,divi,Skaitļi
+82,trīs,Skaitļi
+83,četri,Skaitļi
+84,pieci,Skaitļi
+85,seši,Skaitļi
+86,septiņi,Skaitļi
+87,astoņi,Skaitļi
+88,deviņi,Skaitļi
+89,desmit,Skaitļi
+90,cukurs,Pārtika
+91,zebra,Dzīvnieki
+92,karstums,Daba/Sajūtas
+93,karsts,Aprakstošs
+94,buzz,Dzīvnieki
+95,Dzīve,Cilvēki/vārdi
+96,zonā,Objekti
+97,Iliass,Cilvēki/vārdi
+98,saule,Daba
+99,jūra,Daba
+100,Thanos,Cilvēki/vārdi
+101,tante,Cilvēki/Ģimene
+102,onkulis,Cilvēki/Ģimene
+103,es gribu,Darbības
+104,bruņinieks,Cilvēki/profesija
+105,un,Abstraktie jēdzieni
+106,kakao,Pārtika
+107,slikti,Aprakstošs
+108,grozs,Objekti
+109,labi,Aprakstošs
+110,vasara,Laiks/daba
+111,zvans,Objekti
+112,es daru,Darbības
+113,Karagiozis,Cilvēki/Kultūra
+114,krēsls,Objekti
+115,burkāns,Pārtika
+116,kastaņi,Pārtika
+117,kaza,Dzīvnieki
+118,uz leju,Abstraktie jēdzieni
+119,kafija,Pārtika
+120,ķirsis,Pārtika
+121,svece,Objekti
+122,ģitāra,Objekti
+123,Kiki,Cilvēki/vārdi
+124,mobilais,Objekti/Tech
+125,dzeltens,Krāsas
+126,es griezu,Darbības
+127,es guļu,Darbības
+128,paskaties,Darbības
+129,sarkans,Krāsas
+130,vista,Dzīvnieki
+131,bagele,Pārtika
+132,karote,Objekti
+133,aplis,Formas
+134,zaķis,Dzīvnieki
+135,eļļa,Pārtika
+136,kakls,Ķermeņa daļas
+137,lampa,Objekti
+138,citronu,Pārtika
+139,Ļena,Cilvēki/vārdi
+140,Lefteris,Cilvēki/vārdi
+141,zieds,Daba
+142,vilks,Dzīvnieki
+143,es mācos,Darbības
+144,nodarbība,Abstraktie jēdzieni
+145,mērkaķis,Dzīvnieki
+146,spageti,Pārtika
+147,mamma,Cilvēki/Ģimene
+148,Manos,Cilvēki/vārdi
+149,salāti,Pārtika
+150,acs,Ķermeņa daļas
+151,nazis,Objekti
+152,mani sauc,Abstraktie jēdzieni
+153,liels,Aprakstošs
+154,medus,Pārtika
+155,Melīna,Cilvēki/vārdi
+156,bite,Dzīvnieki
+157,diena,Laiks
+158,iekšā,Abstraktie jēdzieni
+159,ābolu,Pārtika
+160,viens,Abstraktie jēdzieni
+161,mazs,Aprakstošs
+162,es runāju,Darbības
+163,es dalos,Darbības
+164,zīmulis,Objekti
+165,mūzika,Abstraktie jēdzieni
+166,bumba,Objekti/spēles
+167,balons,Objekti
+168,tētis,Cilvēki/Ģimene
+169,Babis,Cilvēki/vārdi
+170,banāns,Pārtika
+171,vannas istaba,Objekti/vietas
+172,spieķis,Objekti
+173,zils,Krāsas
+174,deguns,Ķermeņa daļas
+175,violets,Krāsas
+176,mazulis,Cilvēki/Ģimene
+177,uz,Abstraktie jēdzieni
+178,jā,Abstraktie jēdzieni
+179,Nana,Cilvēki/vārdi
+180,punduris,Cilvēki/Kultūra
+181,ūdens,Ēdiens/daba
+182,mānīte,Cilvēki/Ģimene
+183,Dina,Cilvēki/vārdi
+184,tomāts,Pārtika
+185,skapis,Objekti
+186,nagus,Ķermeņa daļas
+187,Svešinieks,Cilvēki/vārdi
+188,es zinu,Darbības
+189,etiķis,Pārtika
+190,zobenmeistara,Dzīvnieki
+191,koka,Daba
+192,es pamostos,Darbības
+193,skrāpis,Objekti
+194,ģimene,Cilvēki/Ģimene
+195,lietussargs,Objekti
+196,asti,Ķermeņa daļas
+197,nē,Abstraktie jēdzieni
+198,sols,Objekti
+199,ribas,Pārtika
+200,bērns,Cilvēki
+201,puiši,Cilvēki
+202,mēs spēlējam,Darbības
+203,es spēlēju,Darbības
+204,spēles,Objekti
+205,iesim,Darbības
+206,bietes,Pārtika
+207,augstāk,Abstraktie jēdzieni
+208,papagailis,Dzīvnieki
+209,pīle,Dzīvnieki
+210,vectēvs,Cilvēki/Ģimene
+211,logs,Objekti
+212,pasaka,Objekti/Kultūra
+213,kartupelis,Pārtika
+214,slidot,Objekti
+215,es eju,Darbības
+216,melone,Pārtika
+217,izmest,Darbības
+218,priede,Daba
+219,plāksne,Objekti
+220,tabula,Objekti
+221,es dzeru,Darbības
+222,pipari,Pārtika
+223,knupis,Objekti
+224,dakša,Objekti
+225,pīrāgs,Pārtika
+226,pica,Pārtika
+227,izņemot,Abstraktie jēdzieni
+228,kuģis,Objekti/Transports
+229,velosipēds,Objekti/Transports
+230,pēda,Ķermeņa daļas
+231,dzejolis,Objekti/Kultūra
+232,pele,Dzīvnieki
+233,Pāvests,Cilvēki/vārdi
+234,oranža,Krāsas
+235,oranža,Pārtika
+236,stikls,Objekti
+237,putns,Dzīvnieki
+238,zaļš,Krāsas
+239,Rena,Cilvēki/vārdi
+240,persiku,Pārtika
+241,rozā,Krāsas
+242,pulkstenis,Objekti
+243,drēbes,Objekti
+244,rīsi,Pārtika
+245,salami,Pārtika
+246,salāti,Pārtika
+247,Saša,Cilvēki/vārdi
+248,ķirzaka,Dzīvnieki
+249,seglu,Objekti
+250,selerijas,Pārtika
+251,kāpnes,Objekti
+252,ezis,Dzīvnieki
+253,suns,Dzīvnieki
+254,šokolāde,Pārtika
+255,zupa,Pārtika
+256,atbilst,Objekti
+257,mājās,Objekti/vietas
+258,es apstājos,Darbības
+259,vīnogas,Pārtika
+260,vainags,Objekti
+261,mute,Ķermeņa daļas
+262,stop,Objekti
+263,plus,Abstraktie jēdzieni
+264,sūklis,Objekti
+265,skola,Objekti/vietas
+266,klasē,Abstraktie jēdzieni
+267,taksometrs,Objekti/Transports
+268,kvadrāts,Formas
+269,kamīns,Objekti
+270,stikls,Objekti
+271,cikāde,Dzīvnieki
+272,televīzija,Objekti/Tech
+273,stūre,Objekti
+274,Tīna,Cilvēki/vārdi
+275,siena,Objekti
+276,vieta,Objekti
+277,kūka,Pārtika
+278,tabula,Objekti
+279,trīsstūris,Formas
+280,es ēdu,Darbības
+281,tēja,Pārtika
+282,soma,Objekti
+283,cirks,Objekti/Kultūra
+284,siers,Pārtika
+285,Ivonna,Cilvēki/vārdi
+286,dators,Objekti/Tech
+287,pārtiku,Pārtika
+288,Fanis,Cilvēki/vārdi
+289,bāka,Objekti
+290,pupiņas,Pārtika
+291,mēness,Daba
+292,draugs,Cilvēki
+293,kleita,Objekti
+294,gaisma,Daba
+295,uguns,Daba
+296,Harijs,Cilvēki/vārdi
+297,ziema,Laiks/daba
+298,bruņurupucis,Dzīvnieki
+299,roku,Ķermeņa daļas
+300,es dejoju,Darbības
+301,sula,Pārtika
+302,šķēres,Objekti
+303,zivis,Pārtika/dzīvnieki
+304,es meklēju,Darbības
+305,es cepu,Darbības
+306,grils,Objekti
+307,Psipsina,Dzīvnieki/vārdi
+308,maize,Pārtika
+309,iepirkšanās,Darbības
+310,laiks,Laiks

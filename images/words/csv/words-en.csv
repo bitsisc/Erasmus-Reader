@@ -1,0 +1,310 @@
+1,i love,Actions
+2,cucumber,Food
+3,cow,Animals
+4,hug,Actions/Abstract
+5,anchor,Objects
+6,hall,Objects/Places
+7,Emilia,People/Names
+8,salt,Food
+9,fox,Animals
+10,horse,Animals
+11,Anna,People/Names
+12,spring,Time/Nature
+13,excellent,Descriptive
+14,egg,Food
+15,yard,Objects/Places
+16,ear,Body Parts
+17,they,Abstract Concepts
+18,car,Objects/Transport
+19,he,Abstract Concepts
+20,I put,Actions
+21,boat,Objects/Transport
+22,i take out,Actions
+23,Vivi,People/Names
+24,book,Objects
+25,screw,Objects
+26,i see,Actions
+27,walk,Actions
+28,mountain,Nature
+29,i find,Actions
+30,donkey,Animals
+31,milk,Food
+32,light blue,Colors
+33,Serenity,People/Names
+34,gloves,Objects
+35,cat,Animals
+36,hello,Abstract Concepts
+37,I laugh,Actions
+38,grandmother,People/Family
+39,goal,Abstract Concepts
+40,sweet,Food/Descriptive
+41,pig,Animals
+42,Danae,People/Names
+43,teacher,People/Profession
+44,teacher,People/Profession
+45,forest,Nature
+46,two,Numbers
+47,three,Numbers
+48,four,Numbers
+49,five,Numbers
+50,six,Numbers
+51,seven,Numbers
+52,eight,Numbers
+53,nine,Numbers
+54,ten,Numbers
+55,one,Numbers
+56,parcel,Objects
+57,i give,Actions
+58,tooth,Body Parts
+59,room,Objects/Places
+60,gift,Objects
+61,me,Abstract Concepts
+62,here,Abstract Concepts
+63,image,Objects
+64,it is new,Abstract Concepts
+65,Peace,People/Names
+66,there,Abstract Concepts
+67,come on,Actions
+68,come on,Actions
+69,fir tree,Nature
+70,Helen,People/Names
+71,we,Abstract Concepts
+72,me,Abstract Concepts
+73,one,Abstract Concepts
+74,you,Abstract Concepts
+75,you,Abstract Concepts
+76,Evie,People/Names
+77,euro,Abstract Concepts
+78,i have,Actions
+79,dice,Objects/Games
+80,one,Numbers
+81,two,Numbers
+82,three,Numbers
+83,four,Numbers
+84,five,Numbers
+85,six,Numbers
+86,seven,Numbers
+87,eight,Numbers
+88,nine,Numbers
+89,ten,Numbers
+90,sugar,Food
+91,zebra,Animals
+92,heat,Nature/Feelings
+93,hot,Descriptive
+94,buzz,Animals
+95,Life,People/Names
+96,zone,Objects
+97,Ilias,People/Names
+98,sun,Nature
+99,sea,Nature
+100,Thanos,People/Names
+101,aunt,People/Family
+102,uncle,People/Family
+103,i want,Actions
+104,knight,People/Profession
+105,and,Abstract Concepts
+106,cocoa,Food
+107,bad,Descriptive
+108,basket,Objects
+109,good,Descriptive
+110,summer,Time/Nature
+111,bell,Objects
+112,i do,Actions
+113,Karagiozis,People/Culture
+114,chair,Objects
+115,carrot,Food
+116,chestnuts,Food
+117,goat,Animals
+118,down,Abstract Concepts
+119,coffee,Food
+120,cherry,Food
+121,candle,Objects
+122,guitar,Objects
+123,Kiki,People/Names
+124,mobile,Objects/Tech
+125,yellow,Colors
+126,i cut,Actions
+127,I'm sleeping,Actions
+128,look,Actions
+129,red,Colors
+130,hen,Animals
+131,bagel,Food
+132,spoon,Objects
+133,circle,Shapes
+134,hare,Animals
+135,oil,Food
+136,neck,Body Parts
+137,lamp,Objects
+138,lemon,Food
+139,Lena,People/Names
+140,Lefteris,People/Names
+141,flower,Nature
+142,wolf,Animals
+143,I'm learning,Actions
+144,lesson,Abstract Concepts
+145,monkey,Animals
+146,spaghetti,Food
+147,mom,People/Family
+148,Manos,People/Names
+149,lettuce,Food
+150,eye,Body Parts
+151,knife,Objects
+152,my name is,Abstract Concepts
+153,big,Descriptive
+154,honey,Food
+155,Melina,People/Names
+156,bee,Animals
+157,day,Time
+158,inside,Abstract Concepts
+159,apple,Food
+160,one,Abstract Concepts
+161,small,Descriptive
+162,i speak,Actions
+163,I share,Actions
+164,pencil,Objects
+165,music,Abstract Concepts
+166,ball,Objects/Games
+167,balloon,Objects
+168,dad,People/Family
+169,Babis,People/Names
+170,banana,Food
+171,bathroom,Objects/Places
+172,walking stick,Objects
+173,blue,Colors
+174,nose,Body Parts
+175,purple,Colors
+176,baby,People/Family
+177,to,Abstract Concepts
+178,yes,Abstract Concepts
+179,Nana,People/Names
+180,dwarf,People/Culture
+181,water,Food/Nature
+182,ninny,People/Family
+183,Dina,People/Names
+184,tomato,Food
+185,wardrobe,Objects
+186,fingernails,Body Parts
+187,Stranger,People/Names
+188,i know,Actions
+189,vinegar,Food
+190,swordsmanship,Animals
+191,wood,Nature
+192,i wake up,Actions
+193,scraper,Objects
+194,family,People/Family
+195,umbrella,Objects
+196,tail,Body Parts
+197,no,Abstract Concepts
+198,bench,Objects
+199,ribs,Food
+200,child,People
+201,guys,People
+202,we play,Actions
+203,i play,Actions
+204,games,Objects
+205,let's go,Actions
+206,beetroot,Food
+207,above,Abstract Concepts
+208,parrot,Animals
+209,duck,Animals
+210,grandfather,People/Family
+211,window,Objects
+212,fairy tale,Objects/Culture
+213,potato,Food
+214,skate,Objects
+215,i go,Actions
+216,melon,Food
+217,throw away,Actions
+218,pine tree,Nature
+219,plate,Objects
+220,table,Objects
+221,i drink,Actions
+222,pepper,Food
+223,pacifier,Objects
+224,fork,Objects
+225,pie,Food
+226,pizza,Food
+227,except,Abstract Concepts
+228,ship,Objects/Transport
+229,bicycle,Objects/Transport
+230,foot,Body Parts
+231,poem,Objects/Culture
+232,mouse,Animals
+233,Pope,People/Names
+234,orange,Colors
+235,orange,Food
+236,glass,Objects
+237,bird,Animals
+238,green,Colors
+239,Rena,People/Names
+240,peach,Food
+241,pink,Colors
+242,clock,Objects
+243,clothes,Objects
+244,rice,Food
+245,salami,Food
+246,salad,Food
+247,Sasha,People/Names
+248,lizard,Animals
+249,saddle,Objects
+250,celery,Food
+251,ladder,Objects
+252,hedgehog,Animals
+253,dog,Animals
+254,chocolate,Food
+255,soup,Food
+256,match,Objects
+257,home,Objects/Places
+258,i stop,Actions
+259,grape,Food
+260,wreath,Objects
+261,mouth,Body Parts
+262,stop,Objects
+263,plus,Abstract Concepts
+264,sponge,Objects
+265,school,Objects/Places
+266,class,Abstract Concepts
+267,taxi,Objects/Transport
+268,square,Shapes
+269,fireplace,Objects
+270,glass,Objects
+271,cicada,Animals
+272,television,Objects/Tech
+273,steering wheel,Objects
+274,Tina,People/Names
+275,wall,Objects
+276,place,Objects
+277,cake,Food
+278,table,Objects
+279,triangle,Shapes
+280,i eat,Actions
+281,tea,Food
+282,bag,Objects
+283,circus,Objects/Culture
+284,cheese,Food
+285,Yvonne,People/Names
+286,computer,Objects/Tech
+287,food,Food
+288,Fanis,People/Names
+289,lighthouse,Objects
+290,beans,Food
+291,moon,Nature
+292,friend,People
+293,dress,Objects
+294,light,Nature
+295,fire,Nature
+296,Harry,People/Names
+297,winter,Time/Nature
+298,turtle,Animals
+299,hand,Body Parts
+300,i dance,Actions
+301,juice,Food
+302,scissors,Objects
+303,fish,Food/Animals
+304,i'm looking,Actions
+305,I bake,Actions
+306,grill,Objects
+307,Psipsina,Animals/Names
+308,bread,Food
+309,shopping,Actions
+310,time,Time

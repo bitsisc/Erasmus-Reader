@@ -1,0 +1,310 @@
+1,ik hou van,Acties
+2,komkommer,Voedsel
+3,koe,Dieren
+4,knuffel,Acties/samenvatting
+5,anker,Objecten
+6,hal,Objecten/Plaatsen
+7,Emilia,Mensen/namen
+8,zout,Voedsel
+9,vos,Dieren
+10,paard,Dieren
+11,Anna,Mensen/namen
+12,lente,Tijd/Natuur
+13,uitstekend,Beschrijvend
+14,ei,Voedsel
+15,tuin,Objecten/Plaatsen
+16,oor,Lichaamsdelen
+17,zij,Abstracte concepten
+18,auto,Voorwerpen/Transport
+19,hij,Abstracte concepten
+20,Ik zette,Acties
+21,boot,Voorwerpen/Transport
+22,ik haal eruit,Acties
+23,Vivi,Mensen/namen
+24,boek,Objecten
+25,schroef,Objecten
+26,ik zie het,Acties
+27,lopen,Acties
+28,berg,Natuur
+29,ik vind,Acties
+30,ezel,Dieren
+31,melk,Voedsel
+32,lichtblauw,Kleuren
+33,Sereniteit,Mensen/namen
+34,handschoenen,Objecten
+35,kat,Dieren
+36,hallo,Abstracte concepten
+37,Ik lach,Acties
+38,grootmoeder,Mensen/Familie
+39,doel,Abstracte concepten
+40,zoet,Eten/Beschrijvend
+41,varken,Dieren
+42,Danaë,Mensen/namen
+43,leraar,Mensen/beroep
+44,leraar,Mensen/beroep
+45,bos,Natuur
+46,twee,Nummers
+47,drie,Nummers
+48,vier,Nummers
+49,vijf,Nummers
+50,zes,Nummers
+51,zeven,Nummers
+52,acht,Nummers
+53,negen,Nummers
+54,tien,Nummers
+55,één,Nummers
+56,pakketje,Objecten
+57,ik geef,Acties
+58,tand,Lichaamsdelen
+59,kamer,Objecten/Plaatsen
+60,geschenk,Objecten
+61,ik,Abstracte concepten
+62,hier,Abstracte concepten
+63,afbeelding,Objecten
+64,het is nieuw,Abstracte concepten
+65,Vrede,Mensen/namen
+66,daar,Abstracte concepten
+67,kom op,Acties
+68,kom op,Acties
+69,dennenboom,Natuur
+70,Helena,Mensen/namen
+71,wij,Abstracte concepten
+72,ik,Abstracte concepten
+73,één,Abstracte concepten
+74,jij,Abstracte concepten
+75,jij,Abstracte concepten
+76,Evie,Mensen/namen
+77,euro,Abstracte concepten
+78,ik heb,Acties
+79,dobbelstenen,Voorwerpen/Spellen
+80,één,Nummers
+81,twee,Nummers
+82,drie,Nummers
+83,vier,Nummers
+84,vijf,Nummers
+85,zes,Nummers
+86,zeven,Nummers
+87,acht,Nummers
+88,negen,Nummers
+89,tien,Nummers
+90,suiker,Voedsel
+91,zebra,Dieren
+92,hitte,Natuur/gevoelens
+93,heet,Beschrijvend
+94,zoem,Dieren
+95,Leven,Mensen/namen
+96,zone,Objecten
+97,Ilias,Mensen/namen
+98,zon,Natuur
+99,zee,Natuur
+100,Thanos,Mensen/namen
+101,tante,Mensen/Familie
+102,oom,Mensen/Familie
+103,ik wil,Acties
+104,ridder,Mensen/beroep
+105,en,Abstracte concepten
+106,cacao,Voedsel
+107,slecht,Beschrijvend
+108,mand,Objecten
+109,goed,Beschrijvend
+110,zomer,Tijd/Natuur
+111,bel,Objecten
+112,ik doe het,Acties
+113,Karagiozi's,Mensen/cultuur
+114,stoel,Objecten
+115,wortel,Voedsel
+116,kastanjes,Voedsel
+117,geit,Dieren
+118,naar beneden,Abstracte concepten
+119,koffie,Voedsel
+120,kers,Voedsel
+121,kaars,Objecten
+122,gitaar,Objecten
+123,Kiki,Mensen/namen
+124,mobiel,Objecten/Tech
+125,geel,Kleuren
+126,ik knip,Acties
+127,Ik slaap,Acties
+128,kijk,Acties
+129,rood,Kleuren
+130,kip,Dieren
+131,bagel,Voedsel
+132,lepel,Objecten
+133,cirkel,Vormen
+134,haas,Dieren
+135,olie,Voedsel
+136,nek,Lichaamsdelen
+137,lamp,Objecten
+138,citroen,Voedsel
+139,Lena,Mensen/namen
+140,Linkseris,Mensen/namen
+141,bloem,Natuur
+142,wolf,Dieren
+143,Ik ben aan het leren,Acties
+144,les,Abstracte concepten
+145,aap,Dieren
+146,spaghetti,Voedsel
+147,moeder,Mensen/Familie
+148,Manos,Mensen/namen
+149,sla,Voedsel
+150,oog,Lichaamsdelen
+151,mes,Objecten
+152,mijn naam is,Abstracte concepten
+153,groot,Beschrijvend
+154,honing,Voedsel
+155,Melina,Mensen/namen
+156,bij,Dieren
+157,dag,Tijd
+158,binnen,Abstracte concepten
+159,appel,Voedsel
+160,één,Abstracte concepten
+161,klein,Beschrijvend
+162,ik spreek,Acties
+163,Ik deel,Acties
+164,potlood,Objecten
+165,muziek,Abstracte concepten
+166,bal,Voorwerpen/Spellen
+167,ballon,Objecten
+168,papa,Mensen/Familie
+169,Baby's,Mensen/namen
+170,banaan,Voedsel
+171,badkamer,Objecten/Plaatsen
+172,wandelstok,Objecten
+173,blauw,Kleuren
+174,neus,Lichaamsdelen
+175,paars,Kleuren
+176,schatje,Mensen/Familie
+177,naar,Abstracte concepten
+178,ja,Abstracte concepten
+179,Nana,Mensen/namen
+180,dwerg,Mensen/cultuur
+181,water,Voedsel/Natuur
+182,ninny,Mensen/Familie
+183,Dina,Mensen/namen
+184,tomaat,Voedsel
+185,kledingkast,Objecten
+186,vingernagels,Lichaamsdelen
+187,Vreemdeling,Mensen/namen
+188,ik weet het,Acties
+189,azijn,Voedsel
+190,zwaardvechten,Dieren
+191,hout,Natuur
+192,ik word wakker,Acties
+193,schraper,Objecten
+194,familie,Mensen/Familie
+195,paraplu,Objecten
+196,staart,Lichaamsdelen
+197,nee,Abstracte concepten
+198,bank,Objecten
+199,ribben,Voedsel
+200,kind,Mensen
+201,jongens,Mensen
+202,wij spelen,Acties
+203,ik speel,Acties
+204,spellen,Objecten
+205,laten we gaan,Acties
+206,rode biet,Voedsel
+207,hierboven,Abstracte concepten
+208,papegaai,Dieren
+209,eend,Dieren
+210,grootvader,Mensen/Familie
+211,venster,Objecten
+212,sprookje,Objecten/cultuur
+213,aardappel,Voedsel
+214,schaatsen,Objecten
+215,ik ga,Acties
+216,meloen,Voedsel
+217,weggooien,Acties
+218,pijnboom,Natuur
+219,plaat,Objecten
+220,tafel,Objecten
+221,ik drink,Acties
+222,peper,Voedsel
+223,fopspeen,Objecten
+224,vork,Objecten
+225,taart,Voedsel
+226,pizza,Voedsel
+227,behalve,Abstracte concepten
+228,schip,Voorwerpen/Transport
+229,fiets,Voorwerpen/Transport
+230,voet,Lichaamsdelen
+231,gedicht,Objecten/cultuur
+232,muis,Dieren
+233,Paus,Mensen/namen
+234,oranje,Kleuren
+235,oranje,Voedsel
+236,glas,Objecten
+237,vogel,Dieren
+238,groen,Kleuren
+239,René,Mensen/namen
+240,perzik,Voedsel
+241,roze,Kleuren
+242,klok,Objecten
+243,kleding,Objecten
+244,rijst,Voedsel
+245,salami,Voedsel
+246,salade,Voedsel
+247,Sasha,Mensen/namen
+248,hagedis,Dieren
+249,zadel,Objecten
+250,selderij,Voedsel
+251,ladder,Objecten
+252,egel,Dieren
+253,hond,Dieren
+254,chocolade,Voedsel
+255,soep,Voedsel
+256,overeenkomen,Objecten
+257,thuis,Objecten/Plaatsen
+258,ik stop,Acties
+259,druif,Voedsel
+260,krans,Objecten
+261,mond,Lichaamsdelen
+262,stop,Objecten
+263,plus,Abstracte concepten
+264,spons,Objecten
+265,scholen,Objecten/Plaatsen
+266,klasse,Abstracte concepten
+267,taxi,Voorwerpen/Transport
+268,vierkant,Vormen
+269,open haard,Objecten
+270,glas,Objecten
+271,cicade,Dieren
+272,televisie,Objecten/Tech
+273,stuur,Objecten
+274,Tine,Mensen/namen
+275,muur,Objecten
+276,plaats,Objecten
+277,taart,Voedsel
+278,tafel,Objecten
+279,driehoek,Vormen
+280,ik eet,Acties
+281,thee,Voedsel
+282,tas,Objecten
+283,circus,Objecten/cultuur
+284,kaas,Voedsel
+285,Yvonne,Mensen/namen
+286,computer,Objecten/Tech
+287,eten,Voedsel
+288,Fanis,Mensen/namen
+289,vuurtoren,Objecten
+290,bonen,Voedsel
+291,maan,Natuur
+292,vriend,Mensen
+293,jurk,Objecten
+294,licht,Natuur
+295,vuur,Natuur
+296,Harry,Mensen/namen
+297,winter,Tijd/Natuur
+298,schildpad,Dieren
+299,hand,Lichaamsdelen
+300,ik dans,Acties
+301,sap,Voedsel
+302,schaar,Objecten
+303,vis,Voedsel/dieren
+304,ik ben op zoek,Acties
+305,Ik bak,Acties
+306,grillen,Objecten
+307,Psipsina,Dieren/Namen
+308,brood,Voedsel
+309,winkelen,Acties
+310,tijd,Tijd

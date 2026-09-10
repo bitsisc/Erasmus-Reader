@@ -1,0 +1,310 @@
+1,kocham,Działania
+2,ogórek,Jedzenie
+3,krowa,Zwierzęta
+4,przytulić,Działania/Streszczenie
+5,kotwica,Obiekty
+6,sala,Obiekty/Miejsca
+7,Emilia,Ludzie/imiona
+8,sól,Jedzenie
+9,lis,Zwierzęta
+10,koń,Zwierzęta
+11,Anna,Ludzie/imiona
+12,wiosna,Czas/Natura
+13,doskonałe,Opisowy
+14,jajko,Jedzenie
+15,podwórko,Obiekty/Miejsca
+16,ucho,Części ciała
+17,oni,Pojęcia abstrakcyjne
+18,samochód,Obiekty/Transport
+19,on,Pojęcia abstrakcyjne
+20,umieściłem,Działania
+21,łódź,Obiekty/Transport
+22,wyjmuję,Działania
+23,Vivi,Ludzie/imiona
+24,książka,Obiekty
+25,śruba,Obiekty
+26,widzę,Działania
+27,chodzić,Działania
+28,góra,Natura
+29,znajduję,Działania
+30,osioł,Zwierzęta
+31,mleko,Jedzenie
+32,jasnoniebieski,Kolory
+33,Spokój,Ludzie/imiona
+34,rękawiczki,Obiekty
+35,kot,Zwierzęta
+36,cześć,Pojęcia abstrakcyjne
+37,śmieję się,Działania
+38,babcia,Ludzie/Rodzina
+39,cel,Pojęcia abstrakcyjne
+40,słodki,Jedzenie/Opis
+41,świnia,Zwierzęta
+42,Danae,Ludzie/imiona
+43,nauczyciel,Ludzie/Zawód
+44,nauczyciel,Ludzie/Zawód
+45,las,Natura
+46,dwa,Liczby
+47,trzy,Liczby
+48,cztery,Liczby
+49,pięć,Liczby
+50,sześć,Liczby
+51,siedem,Liczby
+52,osiem,Liczby
+53,dziewięć,Liczby
+54,dziesięć,Liczby
+55,jeden,Liczby
+56,paczka,Obiekty
+57,daję,Działania
+58,ząb,Części ciała
+59,pokój,Obiekty/Miejsca
+60,prezent,Obiekty
+61,ja,Pojęcia abstrakcyjne
+62,tutaj,Pojęcia abstrakcyjne
+63,obraz,Obiekty
+64,to jest nowe,Pojęcia abstrakcyjne
+65,Pokój,Ludzie/imiona
+66,tam,Pojęcia abstrakcyjne
+67,daj spokój,Działania
+68,daj spokój,Działania
+69,jodła,Natura
+70,Helena,Ludzie/imiona
+71,my,Pojęcia abstrakcyjne
+72,ja,Pojęcia abstrakcyjne
+73,jeden,Pojęcia abstrakcyjne
+74,ty,Pojęcia abstrakcyjne
+75,ty,Pojęcia abstrakcyjne
+76,Evie,Ludzie/imiona
+77,euro,Pojęcia abstrakcyjne
+78,mam,Działania
+79,kostki,Przedmioty/Gry
+80,jeden,Liczby
+81,dwa,Liczby
+82,trzy,Liczby
+83,cztery,Liczby
+84,pięć,Liczby
+85,sześć,Liczby
+86,siedem,Liczby
+87,osiem,Liczby
+88,dziewięć,Liczby
+89,dziesięć,Liczby
+90,cukier,Jedzenie
+91,zebra,Zwierzęta
+92,ciepło,Natura/Uczucia
+93,gorąco,Opisowy
+94,szum,Zwierzęta
+95,Życie,Ludzie/imiona
+96,strefa,Obiekty
+97,Iliasz,Ludzie/imiona
+98,słońce,Natura
+99,morze,Natura
+100,Thanos,Ludzie/imiona
+101,ciocia,Ludzie/Rodzina
+102,wujek,Ludzie/Rodzina
+103,chcę,Działania
+104,rycerz,Ludzie/Zawód
+105,i,Pojęcia abstrakcyjne
+106,kakao,Jedzenie
+107,źle,Opisowy
+108,kosz,Obiekty
+109,dobrze,Opisowy
+110,lato,Czas/Natura
+111,dzwonek,Obiekty
+112,robię,Działania
+113,Karagiozis,Ludzie/Kultura
+114,krzesło,Obiekty
+115,marchewka,Jedzenie
+116,kasztany,Jedzenie
+117,koza,Zwierzęta
+118,w dół,Pojęcia abstrakcyjne
+119,kawa,Jedzenie
+120,wiśnia,Jedzenie
+121,świeca,Obiekty
+122,gitara,Obiekty
+123,Kiki,Ludzie/imiona
+124,mobilny,Obiekty/Technologia
+125,żółty,Kolory
+126,tnę,Działania
+127,śpię,Działania
+128,spójrz,Działania
+129,czerwony,Kolory
+130,kura,Zwierzęta
+131,bajgiel,Jedzenie
+132,łyżka,Obiekty
+133,okrąg,Kształty
+134,zając,Zwierzęta
+135,olej,Jedzenie
+136,szyja,Części ciała
+137,lampa,Obiekty
+138,cytryna,Jedzenie
+139,Lena,Ludzie/imiona
+140,Lefterisa,Ludzie/imiona
+141,kwiat,Natura
+142,wilk,Zwierzęta
+143,uczę się,Działania
+144,lekcja,Pojęcia abstrakcyjne
+145,małpa,Zwierzęta
+146,spaghetti,Jedzenie
+147,mama,Ludzie/Rodzina
+148,Manos,Ludzie/imiona
+149,sałata,Jedzenie
+150,oko,Części ciała
+151,nóż,Obiekty
+152,mam na imię,Pojęcia abstrakcyjne
+153,duży,Opisowy
+154,kochanie,Jedzenie
+155,Melina,Ludzie/imiona
+156,pszczoła,Zwierzęta
+157,dzień,Czas
+158,wewnątrz,Pojęcia abstrakcyjne
+159,jabłko,Jedzenie
+160,jeden,Pojęcia abstrakcyjne
+161,mały,Opisowy
+162,mówię,Działania
+163,Dzielę się,Działania
+164,ołówek,Obiekty
+165,muzyka,Pojęcia abstrakcyjne
+166,piłka,Przedmioty/Gry
+167,balon,Obiekty
+168,tata,Ludzie/Rodzina
+169,Babis,Ludzie/imiona
+170,banan,Jedzenie
+171,łazienka,Obiekty/Miejsca
+172,laska,Obiekty
+173,niebieski,Kolory
+174,nos,Części ciała
+175,fioletowy,Kolory
+176,kochanie,Ludzie/Rodzina
+177,do,Pojęcia abstrakcyjne
+178,tak,Pojęcia abstrakcyjne
+179,Nana,Ludzie/imiona
+180,karzeł,Ludzie/Kultura
+181,woda,Jedzenie/Natura
+182,Ninny,Ludzie/Rodzina
+183,Dina,Ludzie/imiona
+184,pomidor,Jedzenie
+185,szafa,Obiekty
+186,paznokcie,Części ciała
+187,Nieznajomy,Ludzie/imiona
+188,wiem,Działania
+189,ocet,Jedzenie
+190,szermierka,Zwierzęta
+191,drewno,Natura
+192,budzę się,Działania
+193,skrobak,Obiekty
+194,rodzina,Ludzie/Rodzina
+195,parasol,Obiekty
+196,ogon,Części ciała
+197,nie,Pojęcia abstrakcyjne
+198,ławka,Obiekty
+199,żeberka,Jedzenie
+200,dziecko,Ludzie
+201,chłopaki,Ludzie
+202,gramy,Działania
+203,gram,Działania
+204,gry,Obiekty
+205,chodźmy,Działania
+206,burak,Jedzenie
+207,powyżej,Pojęcia abstrakcyjne
+208,papuga,Zwierzęta
+209,kaczka,Zwierzęta
+210,dziadek,Ludzie/Rodzina
+211,okno,Obiekty
+212,bajka,Przedmioty/Kultura
+213,ziemniak,Jedzenie
+214,jeździć na łyżwach,Obiekty
+215,idę,Działania
+216,melon,Jedzenie
+217,wyrzucić,Działania
+218,sosna,Natura
+219,talerz,Obiekty
+220,stół,Obiekty
+221,piję,Działania
+222,pieprz,Jedzenie
+223,smoczek,Obiekty
+224,widelec,Obiekty
+225,ciasto,Jedzenie
+226,pizzę,Jedzenie
+227,z wyjątkiem,Pojęcia abstrakcyjne
+228,statek,Obiekty/Transport
+229,rower,Obiekty/Transport
+230,stopa,Części ciała
+231,wiersz,Przedmioty/Kultura
+232,mysz,Zwierzęta
+233,Papież,Ludzie/imiona
+234,pomarańczowy,Kolory
+235,pomarańczowy,Jedzenie
+236,szkło,Obiekty
+237,ptak,Zwierzęta
+238,zielony,Kolory
+239,Rena,Ludzie/imiona
+240,brzoskwinia,Jedzenie
+241,różowy,Kolory
+242,zegar,Obiekty
+243,ubrania,Obiekty
+244,ryż,Jedzenie
+245,salami,Jedzenie
+246,sałatka,Jedzenie
+247,Sasza,Ludzie/imiona
+248,jaszczurka,Zwierzęta
+249,siodło,Obiekty
+250,seler,Jedzenie
+251,drabina,Obiekty
+252,jeż,Zwierzęta
+253,pies,Zwierzęta
+254,czekolada,Jedzenie
+255,zupa,Jedzenie
+256,mecz,Obiekty
+257,dom,Obiekty/Miejsca
+258,przestaję,Działania
+259,winogrono,Jedzenie
+260,wieniec,Obiekty
+261,usta,Części ciała
+262,przestań,Obiekty
+263,plus,Pojęcia abstrakcyjne
+264,gąbka,Obiekty
+265,szkoła,Obiekty/Miejsca
+266,klasa,Pojęcia abstrakcyjne
+267,taksówka,Obiekty/Transport
+268,kwadrat,Kształty
+269,kominek,Obiekty
+270,szkło,Obiekty
+271,cykada,Zwierzęta
+272,telewizja,Obiekty/Technologia
+273,kierownica,Obiekty
+274,Tina,Ludzie/imiona
+275,ściana,Obiekty
+276,miejsce,Obiekty
+277,ciasto,Jedzenie
+278,stół,Obiekty
+279,trójkąt,Kształty
+280,jem,Działania
+281,herbata,Jedzenie
+282,torba,Obiekty
+283,cyrk,Przedmioty/Kultura
+284,ser,Jedzenie
+285,Iwona,Ludzie/imiona
+286,komputer,Obiekty/Technologia
+287,jedzenie,Jedzenie
+288,Fanis,Ludzie/imiona
+289,latarnia morska,Obiekty
+290,fasola,Jedzenie
+291,księżyc,Natura
+292,przyjaciel,Ludzie
+293,sukienka,Obiekty
+294,światło,Natura
+295,ogień,Natura
+296,Harry,Ludzie/imiona
+297,zima,Czas/Natura
+298,żółw,Zwierzęta
+299,ręka,Części ciała
+300,tańczę,Działania
+301,sok,Jedzenie
+302,nożyczki,Obiekty
+303,ryba,Jedzenie/Zwierzęta
+304,szukam,Działania
+305,Piekę,Działania
+306,grillować,Obiekty
+307,Psipsina,Zwierzęta/Imiona
+308,chleb,Jedzenie
+309,zakupy,Działania
+310,czas,Czas

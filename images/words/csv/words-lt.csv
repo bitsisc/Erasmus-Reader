@@ -1,0 +1,310 @@
+1,aš myliu,Veiksmai
+2,agurkas,Maistas
+3,karvė,Gyvūnai
+4,apkabinti,Veiksmai / Santrauka
+5,inkaras,Objektai
+6,salė,Objektai/Vietos
+7,Emilija,Žmonės/Vardai
+8,druskos,Maistas
+9,lapė,Gyvūnai
+10,arklys,Gyvūnai
+11,Ana,Žmonės/Vardai
+12,pavasaris,Laikas/Gamta
+13,puikiai,Aprašomasis
+14,kiaušinis,Maistas
+15,kiemas,Objektai/Vietos
+16,ausis,Kūno dalys
+17,jie,Abstrakčios sąvokos
+18,automobilis,Objektai/Transportas
+19,jis,Abstrakčios sąvokos
+20,įdėjau,Veiksmai
+21,valtis,Objektai/Transportas
+22,aš išimu,Veiksmai
+23,Vivi,Žmonės/Vardai
+24,knyga,Objektai
+25,varžtas,Objektai
+26,matau,Veiksmai
+27,vaikščioti,Veiksmai
+28,kalnas,Gamta
+29,randu,Veiksmai
+30,asilas,Gyvūnai
+31,pieno,Maistas
+32,šviesiai mėlyna,Spalvos
+33,Ramybė,Žmonės/Vardai
+34,pirštines,Objektai
+35,katė,Gyvūnai
+36,sveiki,Abstrakčios sąvokos
+37,juokiuosi,Veiksmai
+38,močiutė,Žmonės/Šeima
+39,tikslas,Abstrakčios sąvokos
+40,saldus,Maistas / aprašomasis
+41,kiaulė,Gyvūnai
+42,Danae,Žmonės/Vardai
+43,mokytojas,Žmonės/profesija
+44,mokytojas,Žmonės/profesija
+45,miškas,Gamta
+46,du,Skaičiai
+47,trys,Skaičiai
+48,keturi,Skaičiai
+49,penkios,Skaičiai
+50,šeši,Skaičiai
+51,septyni,Skaičiai
+52,aštuoni,Skaičiai
+53,devynios,Skaičiai
+54,dešimt,Skaičiai
+55,vienas,Skaičiai
+56,siuntinys,Objektai
+57,aš duodu,Veiksmai
+58,dantis,Kūno dalys
+59,kambarys,Objektai/Vietos
+60,dovana,Objektai
+61,aš,Abstrakčios sąvokos
+62,čia,Abstrakčios sąvokos
+63,vaizdas,Objektai
+64,tai nauja,Abstrakčios sąvokos
+65,Ramybė,Žmonės/Vardai
+66,ten,Abstrakčios sąvokos
+67,eik,Veiksmai
+68,eik,Veiksmai
+69,eglė,Gamta
+70,Helen,Žmonės/Vardai
+71,mes,Abstrakčios sąvokos
+72,aš,Abstrakčios sąvokos
+73,vienas,Abstrakčios sąvokos
+74,tu,Abstrakčios sąvokos
+75,tu,Abstrakčios sąvokos
+76,Evie,Žmonės/Vardai
+77,eurų,Abstrakčios sąvokos
+78,aš turiu,Veiksmai
+79,kauliukai,Objektai/žaidimai
+80,vienas,Skaičiai
+81,du,Skaičiai
+82,trys,Skaičiai
+83,keturi,Skaičiai
+84,penkios,Skaičiai
+85,šeši,Skaičiai
+86,septyni,Skaičiai
+87,aštuoni,Skaičiai
+88,devynios,Skaičiai
+89,dešimt,Skaičiai
+90,cukraus,Maistas
+91,zebras,Gyvūnai
+92,karštis,Gamta/Jausmai
+93,karšta,Aprašomasis
+94,zvimbimas,Gyvūnai
+95,Gyvenimas,Žmonės/Vardai
+96,zona,Objektai
+97,Ilias,Žmonės/Vardai
+98,saulė,Gamta
+99,jūra,Gamta
+100,Thanos,Žmonės/Vardai
+101,teta,Žmonės/Šeima
+102,dėdė,Žmonės/Šeima
+103,aš noriu,Veiksmai
+104,riteris,Žmonės/profesija
+105,ir,Abstrakčios sąvokos
+106,kakavos,Maistas
+107,blogai,Aprašomasis
+108,krepšelis,Objektai
+109,geras,Aprašomasis
+110,vasara,Laikas/Gamta
+111,varpas,Objektai
+112,aš darau,Veiksmai
+113,Karagiozis,Žmonės/Kultūra
+114,kėdė,Objektai
+115,morkų,Maistas
+116,kaštonai,Maistas
+117,ožka,Gyvūnai
+118,žemyn,Abstrakčios sąvokos
+119,kavos,Maistas
+120,vyšnia,Maistas
+121,žvakė,Objektai
+122,gitara,Objektai
+123,Kiki,Žmonės/Vardai
+124,mobilusis,Objektai/Tech
+125,geltona,Spalvos
+126,aš supjaustau,Veiksmai
+127,aš miegu,Veiksmai
+128,žiūrėk,Veiksmai
+129,raudona,Spalvos
+130,višta,Gyvūnai
+131,riestainis,Maistas
+132,šaukštas,Objektai
+133,ratas,Formos
+134,kiškis,Gyvūnai
+135,aliejus,Maistas
+136,kaklas,Kūno dalys
+137,lempa,Objektai
+138,citrina,Maistas
+139,Lena,Žmonės/Vardai
+140,Lefteris,Žmonės/Vardai
+141,gėlė,Gamta
+142,vilkas,Gyvūnai
+143,Aš mokausi,Veiksmai
+144,pamoka,Abstrakčios sąvokos
+145,beždžionė,Gyvūnai
+146,spagečiai,Maistas
+147,mama,Žmonės/Šeima
+148,Manos,Žmonės/Vardai
+149,salotos,Maistas
+150,akis,Kūno dalys
+151,peilis,Objektai
+152,mano vardas,Abstrakčios sąvokos
+153,didelis,Aprašomasis
+154,medus,Maistas
+155,Melina,Žmonės/Vardai
+156,bitė,Gyvūnai
+157,dieną,Laikas
+158,viduje,Abstrakčios sąvokos
+159,obuolys,Maistas
+160,vienas,Abstrakčios sąvokos
+161,mažas,Aprašomasis
+162,aš kalbu,Veiksmai
+163,dalinuosi,Veiksmai
+164,pieštukas,Objektai
+165,muzika,Abstrakčios sąvokos
+166,kamuolys,Objektai/žaidimai
+167,balionas,Objektai
+168,tėtis,Žmonės/Šeima
+169,Babis,Žmonės/Vardai
+170,bananas,Maistas
+171,vonios kambarys,Objektai/Vietos
+172,lazda,Objektai
+173,mėlyna,Spalvos
+174,nosies,Kūno dalys
+175,violetinė,Spalvos
+176,kūdikis,Žmonės/Šeima
+177,į,Abstrakčios sąvokos
+178,taip,Abstrakčios sąvokos
+179,Nana,Žmonės/Vardai
+180,nykštukas,Žmonės/Kultūra
+181,vandens,Maistas/Gamta
+182,niekšelis,Žmonės/Šeima
+183,Dina,Žmonės/Vardai
+184,pomidoras,Maistas
+185,drabužių spinta,Objektai
+186,rankų nagai,Kūno dalys
+187,Svetimas,Žmonės/Vardai
+188,aš žinau,Veiksmai
+189,acto,Maistas
+190,kalavijavimas,Gyvūnai
+191,medienos,Gamta
+192,aš pabundu,Veiksmai
+193,grandiklis,Objektai
+194,šeima,Žmonės/Šeima
+195,skėtis,Objektai
+196,uodega,Kūno dalys
+197,ne,Abstrakčios sąvokos
+198,suoliukas,Objektai
+199,šonkauliai,Maistas
+200,vaikas,Žmonės
+201,vaikinai,Žmonės
+202,žaidžiame,Veiksmai
+203,aš žaidžiu,Veiksmai
+204,žaidimai,Objektai
+205,eime,Veiksmai
+206,burokėlių,Maistas
+207,aukščiau,Abstrakčios sąvokos
+208,papūga,Gyvūnai
+209,antis,Gyvūnai
+210,senelis,Žmonės/Šeima
+211,langas,Objektai
+212,pasaka,Objektai/Kultūra
+213,bulvė,Maistas
+214,čiuožti,Objektai
+215,aš einu,Veiksmai
+216,melionas,Maistas
+217,išmesti,Veiksmai
+218,pušis,Gamta
+219,plokštelė,Objektai
+220,stalo,Objektai
+221,aš geriu,Veiksmai
+222,pipirų,Maistas
+223,čiulptukas,Objektai
+224,šakutė,Objektai
+225,pyragas,Maistas
+226,pica,Maistas
+227,išskyrus,Abstrakčios sąvokos
+228,laivas,Objektai/Transportas
+229,dviratis,Objektai/Transportas
+230,pėda,Kūno dalys
+231,eilėraštis,Objektai/Kultūra
+232,pelė,Gyvūnai
+233,popiežius,Žmonės/Vardai
+234,oranžinė,Spalvos
+235,oranžinė,Maistas
+236,stiklo,Objektai
+237,paukštis,Gyvūnai
+238,žalias,Spalvos
+239,Rena,Žmonės/Vardai
+240,persikų,Maistas
+241,rožinė,Spalvos
+242,laikrodis,Objektai
+243,drabužius,Objektai
+244,ryžių,Maistas
+245,saliamis,Maistas
+246,salotos,Maistas
+247,Sasha,Žmonės/Vardai
+248,driežas,Gyvūnai
+249,balnas,Objektai
+250,salierų,Maistas
+251,kopėčios,Objektai
+252,ežiukas,Gyvūnai
+253,šuo,Gyvūnai
+254,šokolado,Maistas
+255,sriuba,Maistas
+256,rungtynės,Objektai
+257,namo,Objektai/Vietos
+258,aš sustoju,Veiksmai
+259,vynuogių,Maistas
+260,vainikas,Objektai
+261,burną,Kūno dalys
+262,sustoti,Objektai
+263,pliusas,Abstrakčios sąvokos
+264,kempine,Objektai
+265,mokykla,Objektai/Vietos
+266,klasė,Abstrakčios sąvokos
+267,taksi,Objektai/Transportas
+268,kvadratas,Formos
+269,židinys,Objektai
+270,stiklo,Objektai
+271,cikada,Gyvūnai
+272,televizija,Objektai/Tech
+273,vairas,Objektai
+274,Tina,Žmonės/Vardai
+275,siena,Objektai
+276,vieta,Objektai
+277,tortas,Maistas
+278,stalo,Objektai
+279,trikampis,Formos
+280,aš valgau,Veiksmai
+281,arbata,Maistas
+282,krepšys,Objektai
+283,cirkas,Objektai/Kultūra
+284,sūris,Maistas
+285,Yvonne,Žmonės/Vardai
+286,kompiuteris,Objektai/Tech
+287,maistas,Maistas
+288,Fanis,Žmonės/Vardai
+289,švyturys,Objektai
+290,pupelės,Maistas
+291,mėnulis,Gamta
+292,draugas,Žmonės
+293,suknele,Objektai
+294,šviesos,Gamta
+295,gaisras,Gamta
+296,Hari,Žmonės/Vardai
+297,žiema,Laikas/Gamta
+298,vėžlys,Gyvūnai
+299,ranka,Kūno dalys
+300,aš šokau,Veiksmai
+301,sulčių,Maistas
+302,žirklės,Objektai
+303,žuvis,Maistas/gyvūnai
+304,aš ieškau,Veiksmai
+305,aš kepu,Veiksmai
+306,grilis,Objektai
+307,Psipsina,Gyvūnai/Vardai
+308,duona,Maistas
+309,apsipirkti,Veiksmai
+310,laiko,Laikas

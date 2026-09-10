@@ -1,0 +1,310 @@
+1,amo,Azioni
+2,cetriolo,Cibo
+3,mucca,Animali
+4,abbraccio,Azioni/Astratto
+5,ancora,Oggetti
+6,sala,Oggetti/Luoghi
+7,Emilia,Persone/Nomi
+8,sale,Cibo
+9,volpe,Animali
+10,cavallo,Animali
+11,Anna,Persone/Nomi
+12,primavera,Tempo/Natura
+13,eccellente,Descrittivo
+14,uovo,Cibo
+15,cortile,Oggetti/Luoghi
+16,orecchio,Parti del corpo
+17,loro,Concetti astratti
+18,macchina,Oggetti/Trasporti
+19,lui,Concetti astratti
+20,ho messo,Azioni
+21,barca,Oggetti/Trasporti
+22,tiro fuori,Azioni
+23,Vivi,Persone/Nomi
+24,libro,Oggetti
+25,vite,Oggetti
+26,vedo,Azioni
+27,camminare,Azioni
+28,montagna,Natura
+29,trovo,Azioni
+30,asino,Animali
+31,latte,Cibo
+32,azzurro,Colori
+33,Serenità,Persone/Nomi
+34,guanti,Oggetti
+35,gatto,Animali
+36,ciao,Concetti astratti
+37,Rido,Azioni
+38,nonna,Persone/Famiglia
+39,obiettivo,Concetti astratti
+40,dolce,Cibo/Descrittivo
+41,maiale,Animali
+42,Danae,Persone/Nomi
+43,insegnante,Persone/Professione
+44,insegnante,Persone/Professione
+45,foresta,Natura
+46,due,Numeri
+47,tre,Numeri
+48,quattro,Numeri
+49,cinque,Numeri
+50,sei,Numeri
+51,sette,Numeri
+52,otto,Numeri
+53,nove,Numeri
+54,dieci,Numeri
+55,uno,Numeri
+56,pacco,Oggetti
+57,do,Azioni
+58,dente,Parti del corpo
+59,stanza,Oggetti/Luoghi
+60,regalo,Oggetti
+61,io,Concetti astratti
+62,qui,Concetti astratti
+63,immagine,Oggetti
+64,è nuovo,Concetti astratti
+65,Pace,Persone/Nomi
+66,lì,Concetti astratti
+67,andiamo,Azioni
+68,andiamo,Azioni
+69,abete,Natura
+70,Elena,Persone/Nomi
+71,noi,Concetti astratti
+72,io,Concetti astratti
+73,uno,Concetti astratti
+74,tu,Concetti astratti
+75,tu,Concetti astratti
+76,Evie,Persone/Nomi
+77,euro,Concetti astratti
+78,ho,Azioni
+79,dadi,Oggetti/Giochi
+80,uno,Numeri
+81,due,Numeri
+82,tre,Numeri
+83,quattro,Numeri
+84,cinque,Numeri
+85,sei,Numeri
+86,sette,Numeri
+87,otto,Numeri
+88,nove,Numeri
+89,dieci,Numeri
+90,zucchero,Cibo
+91,zebra,Animali
+92,calore,Natura/Sentimenti
+93,caldo,Descrittivo
+94,ronzio,Animali
+95,La vita,Persone/Nomi
+96,zona,Oggetti
+97,Ilias,Persone/Nomi
+98,sole,Natura
+99,mare,Natura
+100,Thanos,Persone/Nomi
+101,zia,Persone/Famiglia
+102,zio,Persone/Famiglia
+103,voglio,Azioni
+104,cavaliere,Persone/Professione
+105,e,Concetti astratti
+106,cacao,Cibo
+107,cattivo,Descrittivo
+108,cestino,Oggetti
+109,bene,Descrittivo
+110,estate,Tempo/Natura
+111,campana,Oggetti
+112,lo faccio,Azioni
+113,Karagiozis,Persone/Cultura
+114,sedia,Oggetti
+115,carota,Cibo
+116,castagne,Cibo
+117,capra,Animali
+118,giù,Concetti astratti
+119,caffè,Cibo
+120,ciliegia,Cibo
+121,candela,Oggetti
+122,chitarra,Oggetti
+123,Kiki,Persone/Nomi
+124,mobile,Oggetti/tecnologia
+125,giallo,Colori
+126,ho tagliato,Azioni
+127,Sto dormendo,Azioni
+128,guarda,Azioni
+129,rosso,Colori
+130,gallina,Animali
+131,bagel,Cibo
+132,cucchiaio,Oggetti
+133,cerchio,Forme
+134,lepre,Animali
+135,olio,Cibo
+136,collo,Parti del corpo
+137,lampada,Oggetti
+138,limone,Cibo
+139,Lena,Persone/Nomi
+140,Lefteris,Persone/Nomi
+141,fiore,Natura
+142,lupo,Animali
+143,Sto imparando,Azioni
+144,lezione,Concetti astratti
+145,scimmia,Animali
+146,spaghetti,Cibo
+147,mamma,Persone/Famiglia
+148,Manos,Persone/Nomi
+149,lattuga,Cibo
+150,occhio,Parti del corpo
+151,coltello,Oggetti
+152,il mio nome è,Concetti astratti
+153,grande,Descrittivo
+154,tesoro,Cibo
+155,Melina,Persone/Nomi
+156,ape,Animali
+157,giorno,Tempo
+158,dentro,Concetti astratti
+159,mela,Cibo
+160,uno,Concetti astratti
+161,piccolo,Descrittivo
+162,parlo,Azioni
+163,Condivido,Azioni
+164,matita,Oggetti
+165,musica,Concetti astratti
+166,palla,Oggetti/Giochi
+167,palloncino,Oggetti
+168,papà,Persone/Famiglia
+169,Babi,Persone/Nomi
+170,banana,Cibo
+171,bagno,Oggetti/Luoghi
+172,bastone da passeggio,Oggetti
+173,blu,Colori
+174,naso,Parti del corpo
+175,viola,Colori
+176,bambino,Persone/Famiglia
+177,a,Concetti astratti
+178,sì,Concetti astratti
+179,Nonna,Persone/Nomi
+180,nano,Persone/Cultura
+181,acqua,Cibo/Natura
+182,stupido,Persone/Famiglia
+183,Dina,Persone/Nomi
+184,pomodoro,Cibo
+185,guardaroba,Oggetti
+186,unghie,Parti del corpo
+187,Straniero,Persone/Nomi
+188,lo so,Azioni
+189,aceto,Cibo
+190,abilità con la spada,Animali
+191,legno,Natura
+192,mi sveglio,Azioni
+193,raschietto,Oggetti
+194,famiglia,Persone/Famiglia
+195,ombrello,Oggetti
+196,coda,Parti del corpo
+197,no,Concetti astratti
+198,panca,Oggetti
+199,costole,Cibo
+200,bambino,Persone
+201,ragazzi,Persone
+202,giochiamo,Azioni
+203,gioco,Azioni
+204,giochi,Oggetti
+205,andiamo,Azioni
+206,barbabietola,Cibo
+207,sopra,Concetti astratti
+208,pappagallo,Animali
+209,anatra,Animali
+210,nonno,Persone/Famiglia
+211,finestra,Oggetti
+212,fiaba,Oggetti/Cultura
+213,patata,Cibo
+214,pattinare,Oggetti
+215,vado,Azioni
+216,melone,Cibo
+217,buttare via,Azioni
+218,pino,Natura
+219,piatto,Oggetti
+220,tavolo,Oggetti
+221,bevo,Azioni
+222,pepe,Cibo
+223,ciuccio,Oggetti
+224,forchetta,Oggetti
+225,torta,Cibo
+226,pizza,Cibo
+227,tranne,Concetti astratti
+228,nave,Oggetti/Trasporti
+229,bicicletta,Oggetti/Trasporti
+230,piede,Parti del corpo
+231,poesia,Oggetti/Cultura
+232,topo,Animali
+233,Papa,Persone/Nomi
+234,arancione,Colori
+235,arancione,Cibo
+236,vetro,Oggetti
+237,uccello,Animali
+238,verde,Colori
+239,Rena,Persone/Nomi
+240,pesca,Cibo
+241,rosa,Colori
+242,orologio,Oggetti
+243,vestiti,Oggetti
+244,riso,Cibo
+245,salame,Cibo
+246,insalata,Cibo
+247,Sasha,Persone/Nomi
+248,lucertola,Animali
+249,sella,Oggetti
+250,sedano,Cibo
+251,scala,Oggetti
+252,riccio,Animali
+253,cane,Animali
+254,cioccolato,Cibo
+255,zuppa,Cibo
+256,partita,Oggetti
+257,casa,Oggetti/Luoghi
+258,mi fermo,Azioni
+259,uva,Cibo
+260,ghirlanda,Oggetti
+261,bocca,Parti del corpo
+262,fermati,Oggetti
+263,inoltre,Concetti astratti
+264,spugna,Oggetti
+265,scuola,Oggetti/Luoghi
+266,classe,Concetti astratti
+267,taxi,Oggetti/Trasporti
+268,quadrato,Forme
+269,camino,Oggetti
+270,vetro,Oggetti
+271,cicala,Animali
+272,televisione,Oggetti/tecnologia
+273,volante,Oggetti
+274,Tina,Persone/Nomi
+275,muro,Oggetti
+276,posto,Oggetti
+277,torta,Cibo
+278,tavolo,Oggetti
+279,triangolo,Forme
+280,mangio,Azioni
+281,tè,Cibo
+282,borsa,Oggetti
+283,circo,Oggetti/Cultura
+284,formaggio,Cibo
+285,Yvonne,Persone/Nomi
+286,computer,Oggetti/tecnologia
+287,cibo,Cibo
+288,Fanis,Persone/Nomi
+289,faro,Oggetti
+290,fagioli,Cibo
+291,luna,Natura
+292,amico,Persone
+293,vestito,Oggetti
+294,luce,Natura
+295,fuoco,Natura
+296,Harry,Persone/Nomi
+297,inverno,Tempo/Natura
+298,tartaruga,Animali
+299,mano,Parti del corpo
+300,ballo,Azioni
+301,succo,Cibo
+302,forbici,Oggetti
+303,pesce,Cibo/Animali
+304,sto cercando,Azioni
+305,Cucino,Azioni
+306,griglia,Oggetti
+307,Psipsina,Animali/Nomi
+308,pane,Cibo
+309,fare acquisti,Azioni
+310,tempo,Tempo

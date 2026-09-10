@@ -1,0 +1,310 @@
+1,ljubim,Dejanja
+2,kumare,hrana
+3,krava,Živali
+4,objem,Dejanja/Povzetek
+5,sidro,Predmeti
+6,dvorana,Predmeti/Kraji
+7,Emilija,Ljudje/Imena
+8,sol,hrana
+9,lisica,Živali
+10,konj,Živali
+11,Anna,Ljudje/Imena
+12,pomlad,Čas/Narava
+13,odlično,Opisno
+14,jajce,hrana
+15,dvorišče,Predmeti/Kraji
+16,uho,Deli telesa
+17,oni,Abstraktni pojmi
+18,avto,Predmeti/Transport
+19,on,Abstraktni pojmi
+20,sem dal,Dejanja
+21,čoln,Predmeti/Transport
+22,vzamem ven,Dejanja
+23,Vivi,Ljudje/Imena
+24,knjiga,Predmeti
+25,vijak,Predmeti
+26,vidim,Dejanja
+27,hoditi,Dejanja
+28,gora,Narava
+29,najdem,Dejanja
+30,osel,Živali
+31,mleko,hrana
+32,svetlo modra,Barve
+33,Umirjenost,Ljudje/Imena
+34,rokavice,Predmeti
+35,mačka,Živali
+36,zdravo,Abstraktni pojmi
+37,smejim se,Dejanja
+38,babica,Ljudje/družina
+39,cilj,Abstraktni pojmi
+40,sladko,Hrana/Opisno
+41,prašič,Živali
+42,Danaja,Ljudje/Imena
+43,učiteljica,Ljudje/poklic
+44,učiteljica,Ljudje/poklic
+45,gozd,Narava
+46,dva,Številke
+47,tri,Številke
+48,štiri,Številke
+49,pet,Številke
+50,šest,Številke
+51,sedem,Številke
+52,osem,Številke
+53,devet,Številke
+54,deset,Številke
+55,eno,Številke
+56,paket,Predmeti
+57,dajem,Dejanja
+58,zob,Deli telesa
+59,soba,Predmeti/Kraji
+60,darilo,Predmeti
+61,jaz,Abstraktni pojmi
+62,tukaj,Abstraktni pojmi
+63,slika,Predmeti
+64,je nov,Abstraktni pojmi
+65,Mir,Ljudje/Imena
+66,tam,Abstraktni pojmi
+67,pridi no,Dejanja
+68,pridi no,Dejanja
+69,jelka,Narava
+70,Helen,Ljudje/Imena
+71,mi,Abstraktni pojmi
+72,jaz,Abstraktni pojmi
+73,eno,Abstraktni pojmi
+74,ti,Abstraktni pojmi
+75,ti,Abstraktni pojmi
+76,Evie,Ljudje/Imena
+77,evro,Abstraktni pojmi
+78,imam,Dejanja
+79,kocke,Predmeti/Igre
+80,eno,Številke
+81,dva,Številke
+82,tri,Številke
+83,štiri,Številke
+84,pet,Številke
+85,šest,Številke
+86,sedem,Številke
+87,osem,Številke
+88,devet,Številke
+89,deset,Številke
+90,sladkor,hrana
+91,zebra,Živali
+92,toplota,Narava/Občutki
+93,vroče,Opisno
+94,buzz,Živali
+95,življenje,Ljudje/Imena
+96,območje,Predmeti
+97,Ilias,Ljudje/Imena
+98,sonce,Narava
+99,morje,Narava
+100,Thanos,Ljudje/Imena
+101,teta,Ljudje/družina
+102,stric,Ljudje/družina
+103,hočem,Dejanja
+104,vitez,Ljudje/poklic
+105,in,Abstraktni pojmi
+106,kakav,hrana
+107,slabo,Opisno
+108,košarica,Predmeti
+109,dobro,Opisno
+110,poletje,Čas/Narava
+111,zvonec,Predmeti
+112,jaz delam,Dejanja
+113,Karagiozis,Ljudje/Kultura
+114,stol,Predmeti
+115,korenček,hrana
+116,kostanji,hrana
+117,koza,Živali
+118,navzdol,Abstraktni pojmi
+119,kava,hrana
+120,češnja,hrana
+121,sveča,Predmeti
+122,kitara,Predmeti
+123,Kiki,Ljudje/Imena
+124,mobilni,Predmeti/Tehn
+125,rumena,Barve
+126,sem rezal,Dejanja
+127,spim,Dejanja
+128,poglej,Dejanja
+129,rdeča,Barve
+130,kokoš,Živali
+131,bagel,hrana
+132,žlica,Predmeti
+133,krog,Oblike
+134,zajec,Živali
+135,olje,hrana
+136,vratu,Deli telesa
+137,svetilka,Predmeti
+138,limona,hrana
+139,Lena,Ljudje/Imena
+140,Lefteris,Ljudje/Imena
+141,cvet,Narava
+142,volk,Živali
+143,jaz se učim,Dejanja
+144,lekcija,Abstraktni pojmi
+145,opica,Živali
+146,špageti,hrana
+147,mama,Ljudje/družina
+148,Manos,Ljudje/Imena
+149,zelena solata,hrana
+150,oko,Deli telesa
+151,nož,Predmeti
+152,moje ime je,Abstraktni pojmi
+153,velik,Opisno
+154,med,hrana
+155,Melina,Ljudje/Imena
+156,čebela,Živali
+157,dan,Čas
+158,znotraj,Abstraktni pojmi
+159,jabolko,hrana
+160,eno,Abstraktni pojmi
+161,majhna,Opisno
+162,jaz govorim,Dejanja
+163,delim,Dejanja
+164,svinčnik,Predmeti
+165,glasba,Abstraktni pojmi
+166,žoga,Predmeti/Igre
+167,balon,Predmeti
+168,oče,Ljudje/družina
+169,Babis,Ljudje/Imena
+170,banana,hrana
+171,kopalnica,Predmeti/Kraji
+172,sprehajalna palica,Predmeti
+173,modra,Barve
+174,nos,Deli telesa
+175,vijolična,Barve
+176,dojenček,Ljudje/družina
+177,do,Abstraktni pojmi
+178,ja,Abstraktni pojmi
+179,Nana,Ljudje/Imena
+180,pritlikavec,Ljudje/Kultura
+181,vodo,Hrana/Narava
+182,Ninny,Ljudje/družina
+183,Dina,Ljudje/Imena
+184,paradižnik,hrana
+185,garderoba,Predmeti
+186,nohti,Deli telesa
+187,tujec,Ljudje/Imena
+188,vem,Dejanja
+189,kis,hrana
+190,mečevanje,Živali
+191,les,Narava
+192,zbudim se,Dejanja
+193,strgalo,Predmeti
+194,družina,Ljudje/družina
+195,dežnik,Predmeti
+196,rep,Deli telesa
+197,št,Abstraktni pojmi
+198,klop,Predmeti
+199,rebra,hrana
+200,otrok,Ljudje
+201,fantje,Ljudje
+202,igramo se,Dejanja
+203,igram,Dejanja
+204,igre,Predmeti
+205,gremo,Dejanja
+206,rdeča pesa,hrana
+207,zgoraj,Abstraktni pojmi
+208,papiga,Živali
+209,raca,Živali
+210,dedek,Ljudje/družina
+211,okno,Predmeti
+212,pravljica,Predmeti/Kultura
+213,krompir,hrana
+214,drsati,Predmeti
+215,grem,Dejanja
+216,melona,hrana
+217,zavreči stran,Dejanja
+218,bor,Narava
+219,plošča,Predmeti
+220,tabela,Predmeti
+221,pijem,Dejanja
+222,poper,hrana
+223,dudo,Predmeti
+224,vilice,Predmeti
+225,pita,hrana
+226,pica,hrana
+227,razen,Abstraktni pojmi
+228,ladja,Predmeti/Transport
+229,kolo,Predmeti/Transport
+230,noga,Deli telesa
+231,pesem,Predmeti/Kultura
+232,miško,Živali
+233,Papež,Ljudje/Imena
+234,oranžna,Barve
+235,oranžna,hrana
+236,steklo,Predmeti
+237,ptica,Živali
+238,zelena,Barve
+239,Rena,Ljudje/Imena
+240,breskev,hrana
+241,roza,Barve
+242,ura,Predmeti
+243,oblačila,Predmeti
+244,riž,hrana
+245,salama,hrana
+246,solata,hrana
+247,Saša,Ljudje/Imena
+248,kuščar,Živali
+249,sedlo,Predmeti
+250,zelena,hrana
+251,lestev,Predmeti
+252,jež,Živali
+253,pes,Živali
+254,čokolada,hrana
+255,juha,hrana
+256,tekma,Predmeti
+257,domov,Predmeti/Kraji
+258,ustavim se,Dejanja
+259,grozdje,hrana
+260,venec,Predmeti
+261,usta,Deli telesa
+262,stop,Predmeti
+263,plus,Abstraktni pojmi
+264,goba,Predmeti
+265,šola,Predmeti/Kraji
+266,razred,Abstraktni pojmi
+267,taksi,Predmeti/Transport
+268,kvadrat,Oblike
+269,kamin,Predmeti
+270,steklo,Predmeti
+271,cikada,Živali
+272,televizija,Predmeti/Tehn
+273,volan,Predmeti
+274,Tina,Ljudje/Imena
+275,zid,Predmeti
+276,mesto,Predmeti
+277,torta,hrana
+278,tabela,Predmeti
+279,trikotnik,Oblike
+280,jaz jem,Dejanja
+281,čaj,hrana
+282,torba,Predmeti
+283,cirkus,Predmeti/Kultura
+284,sir,hrana
+285,Yvonne,Ljudje/Imena
+286,računalnik,Predmeti/Tehn
+287,hrano,hrana
+288,Fanis,Ljudje/Imena
+289,svetilnik,Predmeti
+290,fižol,hrana
+291,luna,Narava
+292,prijatelj,Ljudje
+293,obleka,Predmeti
+294,svetloba,Narava
+295,ogenj,Narava
+296,Harry,Ljudje/Imena
+297,pozimi,Čas/Narava
+298,želva,Živali
+299,roko,Deli telesa
+300,jaz plešem,Dejanja
+301,sok,hrana
+302,škarje,Predmeti
+303,ribe,Hrana/živali
+304,iščem,Dejanja
+305,jaz pečem,Dejanja
+306,žar,Predmeti
+307,Psipsina,Živali/Imena
+308,kruh,hrana
+309,nakupovanje,Dejanja
+310,čas,Čas

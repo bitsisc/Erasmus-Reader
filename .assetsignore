@@ -1,0 +1,7 @@
+﻿.git
+.git/**
+.agents
+.agents/**
+not_needed
+not_needed/**
+server.js

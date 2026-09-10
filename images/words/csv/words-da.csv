@@ -1,0 +1,310 @@
+1,jeg elsker,Handlinger
+2,agurk,Mad
+3,ko,Dyr
+4,kram,Handlinger/Abstrakt
+5,anker,Objekter
+6,sal,Objekter/Steder
+7,Emilia,Personer/navne
+8,salt,Mad
+9,ræv,Dyr
+10,hest,Dyr
+11,Anna,Personer/navne
+12,forår,Tid/natur
+13,fremragende,Beskrivende
+14,æg,Mad
+15,gård,Objekter/Steder
+16,øre,Kropsdele
+17,de,Abstrakte begreber
+18,bil,Objekter/Transport
+19,han,Abstrakte begreber
+20,jeg sætter,Handlinger
+21,båd,Objekter/Transport
+22,jeg tager ud,Handlinger
+23,Vivi,Personer/navne
+24,bog,Objekter
+25,skrue,Objekter
+26,jeg kan se,Handlinger
+27,gå,Handlinger
+28,bjerg,Naturen
+29,jeg finder,Handlinger
+30,æsel,Dyr
+31,mælk,Mad
+32,lyseblå,Farver
+33,sindsro,Personer/navne
+34,handsker,Objekter
+35,kat,Dyr
+36,hej,Abstrakte begreber
+37,jeg griner,Handlinger
+38,bedstemor,Mennesker/familie
+39,mål,Abstrakte begreber
+40,sød,Mad/Beskrivende
+41,gris,Dyr
+42,Danae,Personer/navne
+43,lærer,Mennesker/Fag
+44,lærer,Mennesker/Fag
+45,skov,Naturen
+46,to,Tal
+47,tre,Tal
+48,fire,Tal
+49,fem,Tal
+50,seks,Tal
+51,syv,Tal
+52,otte,Tal
+53,ni,Tal
+54,ti,Tal
+55,en,Tal
+56,pakke,Objekter
+57,jeg giver,Handlinger
+58,tand,Kropsdele
+59,værelse,Objekter/Steder
+60,gave,Objekter
+61,mig,Abstrakte begreber
+62,her,Abstrakte begreber
+63,billede,Objekter
+64,det er nyt,Abstrakte begreber
+65,Fred,Personer/navne
+66,der,Abstrakte begreber
+67,kom nu,Handlinger
+68,kom nu,Handlinger
+69,grantræ,Naturen
+70,Helen,Personer/navne
+71,vi,Abstrakte begreber
+72,mig,Abstrakte begreber
+73,en,Abstrakte begreber
+74,dig,Abstrakte begreber
+75,dig,Abstrakte begreber
+76,Evie,Personer/navne
+77,euro,Abstrakte begreber
+78,jeg har,Handlinger
+79,terninger,Objekter/spil
+80,en,Tal
+81,to,Tal
+82,tre,Tal
+83,fire,Tal
+84,fem,Tal
+85,seks,Tal
+86,syv,Tal
+87,otte,Tal
+88,ni,Tal
+89,ti,Tal
+90,sukker,Mad
+91,zebra,Dyr
+92,varme,Natur/Følelser
+93,varmt,Beskrivende
+94,buzz,Dyr
+95,Livet,Personer/navne
+96,zone,Objekter
+97,Ilias,Personer/navne
+98,sol,Naturen
+99,hav,Naturen
+100,Thanos,Personer/navne
+101,moster,Mennesker/familie
+102,onkel,Mennesker/familie
+103,jeg vil have,Handlinger
+104,ridder,Mennesker/Fag
+105,og,Abstrakte begreber
+106,kakao,Mad
+107,dårligt,Beskrivende
+108,kurv,Objekter
+109,godt,Beskrivende
+110,sommer,Tid/natur
+111,klokke,Objekter
+112,jeg gør,Handlinger
+113,Karagiozis,Mennesker/Kultur
+114,stol,Objekter
+115,gulerod,Mad
+116,kastanjer,Mad
+117,ged,Dyr
+118,ned,Abstrakte begreber
+119,kaffe,Mad
+120,kirsebær,Mad
+121,stearinlys,Objekter
+122,guitar,Objekter
+123,Kiki,Personer/navne
+124,mobil,Objekter/Tech
+125,gul,Farver
+126,jeg skærer,Handlinger
+127,Jeg sover,Handlinger
+128,se,Handlinger
+129,rød,Farver
+130,høne,Dyr
+131,bagel,Mad
+132,ske,Objekter
+133,cirkel,Former
+134,hare,Dyr
+135,olie,Mad
+136,hals,Kropsdele
+137,lampe,Objekter
+138,citron,Mad
+139,Lena,Personer/navne
+140,Lefteris,Personer/navne
+141,blomst,Naturen
+142,ulv,Dyr
+143,Jeg er ved at lære,Handlinger
+144,lektion,Abstrakte begreber
+145,abe,Dyr
+146,spaghetti,Mad
+147,mor,Mennesker/familie
+148,Manos,Personer/navne
+149,salat,Mad
+150,øje,Kropsdele
+151,kniv,Objekter
+152,mit navn er,Abstrakte begreber
+153,store,Beskrivende
+154,honning,Mad
+155,Melina,Personer/navne
+156,bi,Dyr
+157,dag,Tid
+158,indeni,Abstrakte begreber
+159,æble,Mad
+160,en,Abstrakte begreber
+161,lille,Beskrivende
+162,jeg taler,Handlinger
+163,jeg deler,Handlinger
+164,blyant,Objekter
+165,musik,Abstrakte begreber
+166,bold,Objekter/spil
+167,ballon,Objekter
+168,far,Mennesker/familie
+169,Babis,Personer/navne
+170,banan,Mad
+171,badeværelse,Objekter/Steder
+172,vandrestav,Objekter
+173,blå,Farver
+174,næse,Kropsdele
+175,lilla,Farver
+176,baby,Mennesker/familie
+177,til,Abstrakte begreber
+178,ja,Abstrakte begreber
+179,Nana,Personer/navne
+180,dværg,Mennesker/Kultur
+181,vand,Mad/Natur
+182,ninny,Mennesker/familie
+183,Dina,Personer/navne
+184,tomat,Mad
+185,garderobe,Objekter
+186,fingernegle,Kropsdele
+187,Fremmed,Personer/navne
+188,jeg ved det,Handlinger
+189,eddike,Mad
+190,sværdkæmpelse,Dyr
+191,træ,Naturen
+192,jeg vågner,Handlinger
+193,skraber,Objekter
+194,familie,Mennesker/familie
+195,paraply,Objekter
+196,hale,Kropsdele
+197,nej,Abstrakte begreber
+198,bænk,Objekter
+199,ribben,Mad
+200,barn,Mennesker
+201,fyre,Mennesker
+202,vi spiller,Handlinger
+203,jeg spiller,Handlinger
+204,spil,Objekter
+205,lad os gå,Handlinger
+206,rødbeder,Mad
+207,ovenfor,Abstrakte begreber
+208,papegøje,Dyr
+209,and,Dyr
+210,bedstefar,Mennesker/familie
+211,vindue,Objekter
+212,eventyr,Genstande/Kultur
+213,kartoffel,Mad
+214,skøjte,Objekter
+215,jeg går,Handlinger
+216,melon,Mad
+217,smide væk,Handlinger
+218,fyrretræ,Naturen
+219,plade,Objekter
+220,bord,Objekter
+221,jeg drikker,Handlinger
+222,peber,Mad
+223,sut,Objekter
+224,gaffel,Objekter
+225,tærte,Mad
+226,pizza,Mad
+227,undtagen,Abstrakte begreber
+228,skib,Objekter/Transport
+229,cykel,Objekter/Transport
+230,fod,Kropsdele
+231,digt,Genstande/Kultur
+232,mus,Dyr
+233,Pave,Personer/navne
+234,orange,Farver
+235,orange,Mad
+236,glas,Objekter
+237,fugl,Dyr
+238,grøn,Farver
+239,Rena,Personer/navne
+240,fersken,Mad
+241,pink,Farver
+242,ur,Objekter
+243,tøj,Objekter
+244,ris,Mad
+245,salami,Mad
+246,salat,Mad
+247,Sasha,Personer/navne
+248,firben,Dyr
+249,sadel,Objekter
+250,selleri,Mad
+251,stige,Objekter
+252,pindsvin,Dyr
+253,hund,Dyr
+254,chokolade,Mad
+255,suppe,Mad
+256,match,Objekter
+257,hjem,Objekter/Steder
+258,jeg stopper,Handlinger
+259,drue,Mad
+260,krans,Objekter
+261,mund,Kropsdele
+262,stoppe,Objekter
+263,plus,Abstrakte begreber
+264,svamp,Objekter
+265,skole,Objekter/Steder
+266,klasse,Abstrakte begreber
+267,taxa,Objekter/Transport
+268,firkantet,Former
+269,pejs,Objekter
+270,glas,Objekter
+271,cikade,Dyr
+272,fjernsyn,Objekter/Tech
+273,rat,Objekter
+274,Tina,Personer/navne
+275,væg,Objekter
+276,sted,Objekter
+277,kage,Mad
+278,bord,Objekter
+279,trekant,Former
+280,jeg spiser,Handlinger
+281,te,Mad
+282,taske,Objekter
+283,cirkus,Genstande/Kultur
+284,ost,Mad
+285,Yvonne,Personer/navne
+286,computer,Objekter/Tech
+287,mad,Mad
+288,Fanis,Personer/navne
+289,fyrtårn,Objekter
+290,bønner,Mad
+291,månen,Naturen
+292,ven,Mennesker
+293,kjole,Objekter
+294,lys,Naturen
+295,brand,Naturen
+296,Harry,Personer/navne
+297,vinter,Tid/natur
+298,skildpadde,Dyr
+299,hånd,Kropsdele
+300,jeg danser,Handlinger
+301,juice,Mad
+302,saks,Objekter
+303,fisk,Mad/Dyr
+304,jeg kigger,Handlinger
+305,jeg bager,Handlinger
+306,grill,Objekter
+307,Psipsina,Dyr/navne
+308,brød,Mad
+309,shopping,Handlinger
+310,tid,Tid

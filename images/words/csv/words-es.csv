@@ -1,0 +1,310 @@
+1,me encanta,Acciones
+2,pepino,comida
+3,vaca,animales
+4,abrazo,Acciones/Resumen
+5,ancla,Objetos
+6,pasillo,Objetos/Lugares
+7,emilia,Personas/Nombres
+8,sal,comida
+9,zorro,animales
+10,caballo,animales
+11,ana,Personas/Nombres
+12,primavera,Tiempo/Naturaleza
+13,excelente,Descriptivo
+14,huevo,comida
+15,patio,Objetos/Lugares
+16,oreja,Partes del cuerpo
+17,ellos,Conceptos abstractos
+18,coche,Objetos/Transporte
+19,el,Conceptos abstractos
+20,yo puse,Acciones
+21,barco,Objetos/Transporte
+22,yo saco,Acciones
+23,vivi,Personas/Nombres
+24,libro,Objetos
+25,tornillo,Objetos
+26,ya veo,Acciones
+27,caminar,Acciones
+28,montaña,naturaleza
+29,encuentro,Acciones
+30,burro,animales
+31,leche,comida
+32,azul claro,Colores
+33,serenidad,Personas/Nombres
+34,guantes,Objetos
+35,gato,animales
+36,hola,Conceptos abstractos
+37,me río,Acciones
+38,abuela,Personas/Familia
+39,objetivo,Conceptos abstractos
+40,dulce,Comida/Descriptivo
+41,cerdo,animales
+42,Dánae,Personas/Nombres
+43,maestro,Personas/Profesión
+44,maestro,Personas/Profesión
+45,bosque,naturaleza
+46,dos,Números
+47,tres,Números
+48,cuatro,Números
+49,cinco,Números
+50,seis,Números
+51,siete,Números
+52,ocho,Números
+53,nueve,Números
+54,diez,Números
+55,uno,Números
+56,paquete,Objetos
+57,yo doy,Acciones
+58,diente,Partes del cuerpo
+59,habitación,Objetos/Lugares
+60,regalo,Objetos
+61,yo,Conceptos abstractos
+62,aquí,Conceptos abstractos
+63,imagen,Objetos
+64,es nuevo,Conceptos abstractos
+65,paz,Personas/Nombres
+66,allí,Conceptos abstractos
+67,vamos,Acciones
+68,vamos,Acciones
+69,abeto,naturaleza
+70,helen,Personas/Nombres
+71,nosotros,Conceptos abstractos
+72,yo,Conceptos abstractos
+73,uno,Conceptos abstractos
+74,tu,Conceptos abstractos
+75,tu,Conceptos abstractos
+76,Evie,Personas/Nombres
+77,euros,Conceptos abstractos
+78,tengo,Acciones
+79,dados,Objetos/Juegos
+80,uno,Números
+81,dos,Números
+82,tres,Números
+83,cuatro,Números
+84,cinco,Números
+85,seis,Números
+86,siete,Números
+87,ocho,Números
+88,nueve,Números
+89,diez,Números
+90,azúcar,comida
+91,cebra,animales
+92,calor,Naturaleza/Sentimientos
+93,caliente,Descriptivo
+94,zumbido,animales
+95,vida,Personas/Nombres
+96,zona,Objetos
+97,Ilias,Personas/Nombres
+98,sol,naturaleza
+99,mar,naturaleza
+100,Thanos,Personas/Nombres
+101,tía,Personas/Familia
+102,tío,Personas/Familia
+103,quiero,Acciones
+104,caballero,Personas/Profesión
+105,y,Conceptos abstractos
+106,cacao,comida
+107,malo,Descriptivo
+108,cesta,Objetos
+109,bueno,Descriptivo
+110,verano,Tiempo/Naturaleza
+111,campana,Objetos
+112,yo hago,Acciones
+113,Karagiozis,Gente/Cultura
+114,silla,Objetos
+115,zanahoria,comida
+116,castañas,comida
+117,cabra,animales
+118,abajo,Conceptos abstractos
+119,café,comida
+120,cereza,comida
+121,vela,Objetos
+122,guitarra,Objetos
+123,Kiki,Personas/Nombres
+124,móvil,Objetos/Tecnología
+125,amarillo,Colores
+126,corté,Acciones
+127,estoy durmiendo,Acciones
+128,mira,Acciones
+129,rojo,Colores
+130,gallina,animales
+131,panecillo,comida
+132,cuchara,Objetos
+133,circulo,formas
+134,liebre,animales
+135,aceite,comida
+136,cuello,Partes del cuerpo
+137,lámpara,Objetos
+138,limon,comida
+139,lena,Personas/Nombres
+140,Lefteris,Personas/Nombres
+141,flor,naturaleza
+142,lobo,animales
+143,estoy aprendiendo,Acciones
+144,lección,Conceptos abstractos
+145,mono,animales
+146,espaguetis,comida
+147,mamá,Personas/Familia
+148,Manos,Personas/Nombres
+149,lechuga,comida
+150,ojo,Partes del cuerpo
+151,cuchillo,Objetos
+152,mi nombre es,Conceptos abstractos
+153,grande,Descriptivo
+154,miel,comida
+155,melina,Personas/Nombres
+156,abeja,animales
+157,dia,tiempo
+158,dentro,Conceptos abstractos
+159,manzana,comida
+160,uno,Conceptos abstractos
+161,pequeño,Descriptivo
+162,yo hablo,Acciones
+163,yo comparto,Acciones
+164,lápiz,Objetos
+165,musica,Conceptos abstractos
+166,pelota,Objetos/Juegos
+167,globo,Objetos
+168,papá,Personas/Familia
+169,babis,Personas/Nombres
+170,plátano,comida
+171,cuarto de baño,Objetos/Lugares
+172,bastón,Objetos
+173,azul,Colores
+174,nariz,Partes del cuerpo
+175,morado,Colores
+176,bebe,Personas/Familia
+177,a,Conceptos abstractos
+178,si,Conceptos abstractos
+179,nana,Personas/Nombres
+180,enano,Gente/Cultura
+181,agua,Comida/Naturaleza
+182,tonto,Personas/Familia
+183,dina,Personas/Nombres
+184,tomate,comida
+185,armario,Objetos
+186,uñas,Partes del cuerpo
+187,extraño,Personas/Nombres
+188,lo se,Acciones
+189,vinagre,comida
+190,manejo de la espada,animales
+191,madera,naturaleza
+192,me despierto,Acciones
+193,raspador,Objetos
+194,familia,Personas/Familia
+195,paraguas,Objetos
+196,cola,Partes del cuerpo
+197,no,Conceptos abstractos
+198,banco,Objetos
+199,costillas,comida
+200,niño,gente
+201,chicos,gente
+202,jugamos,Acciones
+203,yo juego,Acciones
+204,juegos,Objetos
+205,vamos,Acciones
+206,remolacha,comida
+207,arriba,Conceptos abstractos
+208,loro,animales
+209,pato,animales
+210,abuelo,Personas/Familia
+211,ventana,Objetos
+212,cuento de hadas,Objetos/Cultura
+213,patata,comida
+214,patinar,Objetos
+215,voy,Acciones
+216,melón,comida
+217,tirar a la basura,Acciones
+218,pino,naturaleza
+219,plato,Objetos
+220,mesa,Objetos
+221,yo bebo,Acciones
+222,pimienta,comida
+223,chupete,Objetos
+224,tenedor,Objetos
+225,pastel,comida
+226,pizza,comida
+227,excepto,Conceptos abstractos
+228,barco,Objetos/Transporte
+229,bicicleta,Objetos/Transporte
+230,pie,Partes del cuerpo
+231,poema,Objetos/Cultura
+232,ratón,animales
+233,papa,Personas/Nombres
+234,naranja,Colores
+235,naranja,comida
+236,vidrio,Objetos
+237,pájaro,animales
+238,verde,Colores
+239,rena,Personas/Nombres
+240,durazno,comida
+241,rosa,Colores
+242,reloj,Objetos
+243,ropa,Objetos
+244,arroz,comida
+245,salami,comida
+246,ensalada,comida
+247,sasha,Personas/Nombres
+248,lagarto,animales
+249,silla de montar,Objetos
+250,apio,comida
+251,escalera,Objetos
+252,erizo,animales
+253,perro,animales
+254,chocolate,comida
+255,sopa,comida
+256,partido,Objetos
+257,casa,Objetos/Lugares
+258,me detengo,Acciones
+259,uva,comida
+260,corona,Objetos
+261,boca,Partes del cuerpo
+262,detenerse,Objetos
+263,más,Conceptos abstractos
+264,esponja,Objetos
+265,escuela,Objetos/Lugares
+266,clase,Conceptos abstractos
+267,taxi,Objetos/Transporte
+268,cuadrado,formas
+269,chimenea,Objetos
+270,vidrio,Objetos
+271,cigarra,animales
+272,televisión,Objetos/Tecnología
+273,volante,Objetos
+274,tina,Personas/Nombres
+275,pared,Objetos
+276,lugar,Objetos
+277,pastel,comida
+278,mesa,Objetos
+279,triangulo,formas
+280,yo como,Acciones
+281,té,comida
+282,bolsa,Objetos
+283,circo,Objetos/Cultura
+284,queso,comida
+285,yvonne,Personas/Nombres
+286,computadora,Objetos/Tecnología
+287,comida,comida
+288,fanis,Personas/Nombres
+289,faro,Objetos
+290,frijoles,comida
+291,luna,naturaleza
+292,amigo,gente
+293,vestir,Objetos
+294,luz,naturaleza
+295,fuego,naturaleza
+296,harry,Personas/Nombres
+297,invierno,Tiempo/Naturaleza
+298,tortuga,animales
+299,mano,Partes del cuerpo
+300,yo bailo,Acciones
+301,jugo,comida
+302,tijeras,Objetos
+303,pez,Alimentos/Animales
+304,estoy buscando,Acciones
+305,yo horneo,Acciones
+306,parrilla,Objetos
+307,psipsina,Animales/Nombres
+308,pan,comida
+309,compras,Acciones
+310,tiempo,tiempo

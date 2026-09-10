@@ -1,0 +1,310 @@
+1,Ich liebe,Aktionen
+2,Gurke,Essen
+3,Kuh,Tiere
+4,umarmen,Aktionen/Zusammenfassung
+5,Anker,Objekte
+6,Halle,Objekte/Orte
+7,Emilia,Personen/Namen
+8,Salz,Essen
+9,Fuchs,Tiere
+10,Pferd,Tiere
+11,Anna,Personen/Namen
+12,Frühling,Zeit/Natur
+13,ausgezeichnet,Beschreibend
+14,Ei,Essen
+15,Hof,Objekte/Orte
+16,Ohr,Körperteile
+17,sie,Abstrakte Konzepte
+18,Auto,Objekte/Transport
+19,er,Abstrakte Konzepte
+20,Ich habe gesagt,Aktionen
+21,Boot,Objekte/Transport
+22,ich nehme raus,Aktionen
+23,Vivi,Personen/Namen
+24,Buch,Objekte
+25,Schraube,Objekte
+26,Ich verstehe,Aktionen
+27,gehen,Aktionen
+28,Berg,Natur
+29,finde ich,Aktionen
+30,Esel,Tiere
+31,Milch,Essen
+32,hellblau,Farben
+33,Gelassenheit,Personen/Namen
+34,Handschuhe,Objekte
+35,Katze,Tiere
+36,Hallo,Abstrakte Konzepte
+37,Ich lache,Aktionen
+38,Großmutter,Personen/Familie
+39,Ziel,Abstrakte Konzepte
+40,süß,Essen/Beschreibend
+41,Schwein,Tiere
+42,Danae,Personen/Namen
+43,Lehrer,Personen/Beruf
+44,Lehrer,Personen/Beruf
+45,Wald,Natur
+46,zwei,Zahlen
+47,drei,Zahlen
+48,vier,Zahlen
+49,fünf,Zahlen
+50,sechs,Zahlen
+51,sieben,Zahlen
+52,acht,Zahlen
+53,neun,Zahlen
+54,zehn,Zahlen
+55,eins,Zahlen
+56,Paket,Objekte
+57,ich gebe,Aktionen
+58,Zahn,Körperteile
+59,Zimmer,Objekte/Orte
+60,Geschenk,Objekte
+61,ich,Abstrakte Konzepte
+62,hier,Abstrakte Konzepte
+63,Bild,Objekte
+64,es ist neu,Abstrakte Konzepte
+65,Frieden,Personen/Namen
+66,dort,Abstrakte Konzepte
+67,komm schon,Aktionen
+68,komm schon,Aktionen
+69,Tanne,Natur
+70,Helen,Personen/Namen
+71,wir,Abstrakte Konzepte
+72,ich,Abstrakte Konzepte
+73,eins,Abstrakte Konzepte
+74,Du,Abstrakte Konzepte
+75,Du,Abstrakte Konzepte
+76,Evie,Personen/Namen
+77,Euro,Abstrakte Konzepte
+78,Ich habe,Aktionen
+79,Würfel,Objekte/Spiele
+80,eins,Zahlen
+81,zwei,Zahlen
+82,drei,Zahlen
+83,vier,Zahlen
+84,fünf,Zahlen
+85,sechs,Zahlen
+86,sieben,Zahlen
+87,acht,Zahlen
+88,neun,Zahlen
+89,zehn,Zahlen
+90,Zucker,Essen
+91,Zebra,Tiere
+92,Hitze,Natur/Gefühle
+93,heiß,Beschreibend
+94,Summen,Tiere
+95,Leben,Personen/Namen
+96,Zone,Objekte
+97,Ilias,Personen/Namen
+98,Sonne,Natur
+99,Meer,Natur
+100,Thanos,Personen/Namen
+101,Tante,Personen/Familie
+102,Onkel,Personen/Familie
+103,ich will,Aktionen
+104,Ritter,Personen/Beruf
+105,und,Abstrakte Konzepte
+106,Kakao,Essen
+107,schlecht,Beschreibend
+108,Korb,Objekte
+109,gut,Beschreibend
+110,Sommer,Zeit/Natur
+111,Glocke,Objekte
+112,Das tue ich,Aktionen
+113,Karagiozis,Menschen/Kultur
+114,Stuhl,Objekte
+115,Karotte,Essen
+116,Kastanien,Essen
+117,Ziege,Tiere
+118,unten,Abstrakte Konzepte
+119,Kaffee,Essen
+120,Kirsche,Essen
+121,Kerze,Objekte
+122,Gitarre,Objekte
+123,Kiki,Personen/Namen
+124,mobil,Objekte/Tech
+125,gelb,Farben
+126,ich habe geschnitten,Aktionen
+127,Ich schlafe,Aktionen
+128,schau,Aktionen
+129,rot,Farben
+130,Henne,Tiere
+131,Bagel,Essen
+132,Löffel,Objekte
+133,Kreis,Formen
+134,Hase,Tiere
+135,Öl,Essen
+136,Hals,Körperteile
+137,Lampe,Objekte
+138,Zitrone,Essen
+139,Lena,Personen/Namen
+140,Lefteris,Personen/Namen
+141,Blume,Natur
+142,Wolf,Tiere
+143,Ich lerne,Aktionen
+144,Lektion,Abstrakte Konzepte
+145,Affe,Tiere
+146,Spaghetti,Essen
+147,Mama,Personen/Familie
+148,Manos,Personen/Namen
+149,Salat,Essen
+150,Auge,Körperteile
+151,Messer,Objekte
+152,mein Name ist,Abstrakte Konzepte
+153,groß,Beschreibend
+154,Schatz,Essen
+155,Melina,Personen/Namen
+156,Biene,Tiere
+157,Tag,Zeit
+158,drinnen,Abstrakte Konzepte
+159,Apfel,Essen
+160,eins,Abstrakte Konzepte
+161,klein,Beschreibend
+162,ich spreche,Aktionen
+163,Ich teile,Aktionen
+164,Bleistift,Objekte
+165,Musik,Abstrakte Konzepte
+166,Kugel,Objekte/Spiele
+167,Ballon,Objekte
+168,Papa,Personen/Familie
+169,Babis,Personen/Namen
+170,Banane,Essen
+171,Badezimmer,Objekte/Orte
+172,Spazierstock,Objekte
+173,blau,Farben
+174,Nase,Körperteile
+175,lila,Farben
+176,Baby,Personen/Familie
+177,zu,Abstrakte Konzepte
+178,ja,Abstrakte Konzepte
+179,Oma,Personen/Namen
+180,Zwerg,Menschen/Kultur
+181,Wasser,Essen/Natur
+182,Ninny,Personen/Familie
+183,Dina,Personen/Namen
+184,Tomate,Essen
+185,Kleiderschrank,Objekte
+186,Fingernägel,Körperteile
+187,Fremder,Personen/Namen
+188,Ich weiß,Aktionen
+189,Essig,Essen
+190,Schwertkunst,Tiere
+191,Holz,Natur
+192,Ich wache auf,Aktionen
+193,Schaber,Objekte
+194,Familie,Personen/Familie
+195,Regenschirm,Objekte
+196,Schwanz,Körperteile
+197,Nein,Abstrakte Konzepte
+198,Bank,Objekte
+199,Rippen,Essen
+200,Kind,Menschen
+201,Jungs,Menschen
+202,wir spielen,Aktionen
+203,ich spiele,Aktionen
+204,Spiele,Objekte
+205,Lass uns gehen,Aktionen
+206,Rote Bete,Essen
+207,oben,Abstrakte Konzepte
+208,Papagei,Tiere
+209,Ente,Tiere
+210,Großvater,Personen/Familie
+211,Fenster,Objekte
+212,Märchen,Objekte/Kultur
+213,Kartoffel,Essen
+214,Schlittschuhlaufen,Objekte
+215,Ich gehe,Aktionen
+216,Melone,Essen
+217,wegwerfen,Aktionen
+218,Kiefer,Natur
+219,Platte,Objekte
+220,Tisch,Objekte
+221,ich trinke,Aktionen
+222,Pfeffer,Essen
+223,Schnuller,Objekte
+224,Gabel,Objekte
+225,Kuchen,Essen
+226,Pizza,Essen
+227,außer,Abstrakte Konzepte
+228,Schiff,Objekte/Transport
+229,Fahrrad,Objekte/Transport
+230,Fuß,Körperteile
+231,Gedicht,Objekte/Kultur
+232,Maus,Tiere
+233,Papst,Personen/Namen
+234,orange,Farben
+235,orange,Essen
+236,Glas,Objekte
+237,Vogel,Tiere
+238,grün,Farben
+239,Rena,Personen/Namen
+240,Pfirsich,Essen
+241,rosa,Farben
+242,Uhr,Objekte
+243,Kleidung,Objekte
+244,Reis,Essen
+245,Salami,Essen
+246,Salat,Essen
+247,Sascha,Personen/Namen
+248,Eidechse,Tiere
+249,Sattel,Objekte
+250,Sellerie,Essen
+251,Leiter,Objekte
+252,Igel,Tiere
+253,Hund,Tiere
+254,Schokolade,Essen
+255,Suppe,Essen
+256,Spiel,Objekte
+257,Zuhause,Objekte/Orte
+258,Ich höre auf,Aktionen
+259,Traube,Essen
+260,Kranz,Objekte
+261,Mund,Körperteile
+262,hör auf,Objekte
+263,plus,Abstrakte Konzepte
+264,Schwamm,Objekte
+265,Schule,Objekte/Orte
+266,Klasse,Abstrakte Konzepte
+267,Taxi,Objekte/Transport
+268,quadratisch,Formen
+269,Kamin,Objekte
+270,Glas,Objekte
+271,Zikade,Tiere
+272,Fernsehen,Objekte/Tech
+273,Lenkrad,Objekte
+274,Tina,Personen/Namen
+275,Wand,Objekte
+276,Ort,Objekte
+277,Kuchen,Essen
+278,Tisch,Objekte
+279,Dreieck,Formen
+280,ich esse,Aktionen
+281,Tee,Essen
+282,Tasche,Objekte
+283,Zirkus,Objekte/Kultur
+284,Käse,Essen
+285,Yvonne,Personen/Namen
+286,Computer,Objekte/Tech
+287,Essen,Essen
+288,Fanis,Personen/Namen
+289,Leuchtturm,Objekte
+290,Bohnen,Essen
+291,Mond,Natur
+292,Freund,Menschen
+293,Kleid,Objekte
+294,Licht,Natur
+295,Feuer,Natur
+296,Harry,Personen/Namen
+297,Winter,Zeit/Natur
+298,Schildkröte,Tiere
+299,Hand,Körperteile
+300,ich tanze,Aktionen
+301,Saft,Essen
+302,Schere,Objekte
+303,Fisch,Essen/Tiere
+304,ich suche,Aktionen
+305,Ich backe,Aktionen
+306,grillen,Objekte
+307,Psipsina,Tiere/Namen
+308,Brot,Essen
+309,Einkaufen,Aktionen
+310,Zeit,Zeit

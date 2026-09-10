@@ -1,0 +1,310 @@
+1,jag älskar,Åtgärder
+2,gurka,Mat
+3,ko,Djur
+4,kram,Actions/Abstract
+5,ankare,Objekt
+6,hall,Objekt/platser
+7,Emilia,Människor/namn
+8,salt,Mat
+9,räv,Djur
+10,häst,Djur
+11,Anna,Människor/namn
+12,våren,Tid/Natur
+13,utmärkt,Beskrivande
+14,ägg,Mat
+15,gård,Objekt/platser
+16,öra,Kroppsdelar
+17,de,Abstrakta begrepp
+18,bil,Objekt/Transport
+19,han,Abstrakta begrepp
+20,jag satte,Åtgärder
+21,båt,Objekt/Transport
+22,jag tar ut,Åtgärder
+23,Vivi,Människor/namn
+24,bok,Objekt
+25,skruv,Objekt
+26,jag förstår,Åtgärder
+27,gå,Åtgärder
+28,berg,Naturen
+29,jag hittar,Åtgärder
+30,åsna,Djur
+31,mjölk,Mat
+32,ljusblå,Färger
+33,Serenity,Människor/namn
+34,handskar,Objekt
+35,katt,Djur
+36,hej,Abstrakta begrepp
+37,Jag skrattar,Åtgärder
+38,mormor,Människor/Familj
+39,mål,Abstrakta begrepp
+40,söt,Mat/Beskrivande
+41,gris,Djur
+42,Danae,Människor/namn
+43,lärare,Människor/Yrke
+44,lärare,Människor/Yrke
+45,skog,Naturen
+46,två,Siffror
+47,tre,Siffror
+48,fyra,Siffror
+49,fem,Siffror
+50,sex,Siffror
+51,sju,Siffror
+52,åtta,Siffror
+53,nio,Siffror
+54,tio,Siffror
+55,en,Siffror
+56,paket,Objekt
+57,jag ger,Åtgärder
+58,tand,Kroppsdelar
+59,rum,Objekt/platser
+60,gåva,Objekt
+61,mig,Abstrakta begrepp
+62,här,Abstrakta begrepp
+63,bild,Objekt
+64,det är nytt,Abstrakta begrepp
+65,Fred,Människor/namn
+66,där,Abstrakta begrepp
+67,kom igen,Åtgärder
+68,kom igen,Åtgärder
+69,gran,Naturen
+70,Helen,Människor/namn
+71,vi,Abstrakta begrepp
+72,mig,Abstrakta begrepp
+73,en,Abstrakta begrepp
+74,du,Abstrakta begrepp
+75,du,Abstrakta begrepp
+76,Evie,Människor/namn
+77,euro,Abstrakta begrepp
+78,jag har,Åtgärder
+79,tärningar,Objekt/spel
+80,en,Siffror
+81,två,Siffror
+82,tre,Siffror
+83,fyra,Siffror
+84,fem,Siffror
+85,sex,Siffror
+86,sju,Siffror
+87,åtta,Siffror
+88,nio,Siffror
+89,tio,Siffror
+90,socker,Mat
+91,zebra,Djur
+92,värme,Natur/Känslor
+93,varmt,Beskrivande
+94,surr,Djur
+95,Livet,Människor/namn
+96,zon,Objekt
+97,Ilias,Människor/namn
+98,sol,Naturen
+99,havet,Naturen
+100,Thanos,Människor/namn
+101,faster,Människor/Familj
+102,farbror,Människor/Familj
+103,jag vill,Åtgärder
+104,riddare,Människor/Yrke
+105,och,Abstrakta begrepp
+106,kakao,Mat
+107,dåligt,Beskrivande
+108,korg,Objekt
+109,bra,Beskrivande
+110,sommar,Tid/Natur
+111,klocka,Objekt
+112,jag gör,Åtgärder
+113,Karagiozis,Människor/Kultur
+114,stol,Objekt
+115,morot,Mat
+116,kastanjer,Mat
+117,get,Djur
+118,ner,Abstrakta begrepp
+119,kaffe,Mat
+120,körsbär,Mat
+121,ljus,Objekt
+122,gitarr,Objekt
+123,Kiki,Människor/namn
+124,mobil,Objekt/Tekn
+125,gul,Färger
+126,jag skär,Åtgärder
+127,Jag sover,Åtgärder
+128,titta,Åtgärder
+129,rött,Färger
+130,hen,Djur
+131,bagel,Mat
+132,sked,Objekt
+133,cirkel,Former
+134,hare,Djur
+135,olja,Mat
+136,halsen,Kroppsdelar
+137,lampa,Objekt
+138,citron,Mat
+139,Lena,Människor/namn
+140,Lefteris,Människor/namn
+141,blomma,Naturen
+142,varg,Djur
+143,Jag lär mig,Åtgärder
+144,lektion,Abstrakta begrepp
+145,apa,Djur
+146,spagetti,Mat
+147,mamma,Människor/Familj
+148,Manos,Människor/namn
+149,sallad,Mat
+150,öga,Kroppsdelar
+151,kniv,Objekt
+152,jag heter,Abstrakta begrepp
+153,stor,Beskrivande
+154,honung,Mat
+155,Melina,Människor/namn
+156,bi,Djur
+157,dag,Tid
+158,inuti,Abstrakta begrepp
+159,äpple,Mat
+160,en,Abstrakta begrepp
+161,liten,Beskrivande
+162,jag talar,Åtgärder
+163,Jag delar,Åtgärder
+164,penna,Objekt
+165,musik,Abstrakta begrepp
+166,boll,Objekt/spel
+167,ballong,Objekt
+168,pappa,Människor/Familj
+169,Babis,Människor/namn
+170,banan,Mat
+171,badrum,Objekt/platser
+172,promenadkäpp,Objekt
+173,blått,Färger
+174,näsan,Kroppsdelar
+175,lila,Färger
+176,bebis,Människor/Familj
+177,till,Abstrakta begrepp
+178,ja,Abstrakta begrepp
+179,Nana,Människor/namn
+180,dvärg,Människor/Kultur
+181,vatten,Mat/Natur
+182,ninny,Människor/Familj
+183,Dina,Människor/namn
+184,tomat,Mat
+185,garderob,Objekt
+186,fingernaglar,Kroppsdelar
+187,Främling,Människor/namn
+188,jag vet,Åtgärder
+189,vinäger,Mat
+190,svärdsmanskap,Djur
+191,trä,Naturen
+192,jag vaknar,Åtgärder
+193,skrapa,Objekt
+194,familj,Människor/Familj
+195,paraply,Objekt
+196,svans,Kroppsdelar
+197,nej,Abstrakta begrepp
+198,bänk,Objekt
+199,revben,Mat
+200,barn,Människor
+201,killar,Människor
+202,vi spelar,Åtgärder
+203,jag spelar,Åtgärder
+204,spel,Objekt
+205,låt oss gå,Åtgärder
+206,rödbetor,Mat
+207,ovan,Abstrakta begrepp
+208,papegoja,Djur
+209,anka,Djur
+210,farfar,Människor/Familj
+211,fönster,Objekt
+212,saga,Objekt/Kultur
+213,potatis,Mat
+214,skridskor,Objekt
+215,jag går,Åtgärder
+216,melon,Mat
+217,kasta bort,Åtgärder
+218,tall,Naturen
+219,tallrik,Objekt
+220,bord,Objekt
+221,jag dricker,Åtgärder
+222,peppar,Mat
+223,napp,Objekt
+224,gaffel,Objekt
+225,paj,Mat
+226,pizza,Mat
+227,förutom,Abstrakta begrepp
+228,fartyg,Objekt/Transport
+229,cykel,Objekt/Transport
+230,fot,Kroppsdelar
+231,dikt,Objekt/Kultur
+232,mus,Djur
+233,Påven,Människor/namn
+234,orange,Färger
+235,orange,Mat
+236,glas,Objekt
+237,fågel,Djur
+238,grönt,Färger
+239,Rena,Människor/namn
+240,persika,Mat
+241,rosa,Färger
+242,klocka,Objekt
+243,kläder,Objekt
+244,ris,Mat
+245,salami,Mat
+246,sallad,Mat
+247,Sasha,Människor/namn
+248,ödla,Djur
+249,sadel,Objekt
+250,selleri,Mat
+251,stege,Objekt
+252,igelkott,Djur
+253,hund,Djur
+254,choklad,Mat
+255,soppa,Mat
+256,matcha,Objekt
+257,hem,Objekt/platser
+258,jag slutar,Åtgärder
+259,druva,Mat
+260,krans,Objekt
+261,mun,Kroppsdelar
+262,sluta,Objekt
+263,plus,Abstrakta begrepp
+264,svamp,Objekt
+265,skolan,Objekt/platser
+266,klass,Abstrakta begrepp
+267,taxi,Objekt/Transport
+268,kvadrat,Former
+269,öppen spis,Objekt
+270,glas,Objekt
+271,cikada,Djur
+272,tv,Objekt/Tekn
+273,ratten,Objekt
+274,Tina,Människor/namn
+275,vägg,Objekt
+276,plats,Objekt
+277,tårta,Mat
+278,bord,Objekt
+279,triangel,Former
+280,jag äter,Åtgärder
+281,te,Mat
+282,väska,Objekt
+283,cirkus,Objekt/Kultur
+284,ost,Mat
+285,Yvonne,Människor/namn
+286,dator,Objekt/Tekn
+287,mat,Mat
+288,Fanis,Människor/namn
+289,fyr,Objekt
+290,bönor,Mat
+291,månen,Naturen
+292,vän,Människor
+293,klänning,Objekt
+294,ljus,Naturen
+295,eld,Naturen
+296,Harry,Människor/namn
+297,vintern,Tid/Natur
+298,sköldpadda,Djur
+299,hand,Kroppsdelar
+300,jag dansar,Åtgärder
+301,juice,Mat
+302,sax,Objekt
+303,fisk,Mat/djur
+304,jag letar,Åtgärder
+305,jag bakar,Åtgärder
+306,grilla,Objekt
+307,Psipsina,Djur/namn
+308,bröd,Mat
+309,shopping,Åtgärder
+310,tid,Tid

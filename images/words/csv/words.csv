@@ -1,0 +1,310 @@
+1,αγαπώ,Actions
+2,αγγούρι,Food
+3,αγελάδα,Animals
+4,αγκαλιά,Actions/Abstract
+5,άγκυρα,Objects
+6,αίθουσα,Objects/Places
+7,Αιμιλία,People/Names
+8,αλάτι,Food
+9,αλεπού,Animals
+10,άλογο,Animals
+11,Άννα,People/Names
+12,άνοιξη,Time/Nature
+13,άριστα,Descriptive
+14,αυγό,Food
+15,αυλή,Objects/Places
+16,αυτί,Body Parts
+17,αυτοί,Abstract Concepts
+18,αυτοκίνητο,Objects/Transport
+19,αυτός,Abstract Concepts
+20,βάζω,Actions
+21,βάρκα,Objects/Transport
+22,βγάζω,Actions
+23,Βιβή,People/Names
+24,βιβλίο,Objects
+25,βίδα,Objects
+26,βλέπω,Actions
+27,βόλτα,Actions
+28,βουνό,Nature
+29,βρίσκω,Actions
+30,γάιδαρος,Animals
+31,γάλα,Food
+32,γαλάζιο,Colors
+33,Γαλήνη,People/Names
+34,γάντια,Objects
+35,γάτα,Animals
+36,γεια,Abstract Concepts
+37,γελώ,Actions
+38,γιαγιά,People/Family
+39,γκολ,Abstract Concepts
+40,γλυκό,Food/Descriptive
+41,γουρούνι,Animals
+42,Δανάη,People/Names
+43,δασκάλα,People/Profession
+44,δάσκαλος,People/Profession
+45,δάσος,Nature
+46,δύο,Αριθμοί
+47,τρία,Αριθμοί
+48,τέσσερα,Αριθμοί
+49,πέντε,Αριθμοί
+50,έξι,Αριθμοί
+51,επτά,Αριθμοί
+52,οκτώ,Αριθμοί
+53,εννέα,Αριθμοί
+54,δέκα,Αριθμοί
+55,ένα,Αριθμοί
+56,δέμα,Objects
+57,δίνω,Actions
+58,δόντι,Body Parts
+59,δωμάτιο,Objects/Places
+60,δώρο,Objects
+61,εγώ,Abstract Concepts
+62,εδώ,Abstract Concepts
+63,εικόνα,Objects
+64,είναι νέο,Abstract Concepts
+65,Ειρήνη,People/Names
+66,εκεί,Abstract Concepts
+67,έλα,Actions
+68,ελάτε,Actions
+69,έλατο,Nature
+70,Ελένη,People/Names
+71,εμείς,Abstract Concepts
+72,εμένα,Abstract Concepts
+73,ένα,Abstract Concepts
+74,εσένα,Abstract Concepts
+75,εσύ,Abstract Concepts
+76,Εύη,People/Names
+77,ευρώ,Abstract Concepts
+78,έχω,Actions
+79,ζάρι,Objects/Games
+80,ένα,Αριθμοί
+81,δύο,Αριθμοί
+82,τρία,Αριθμοί
+83,τέσσερα,Αριθμοί
+84,πέντε,Αριθμοί
+85,έξι,Αριθμοί
+86,επτά,Αριθμοί
+87,οκτώ,Αριθμοί
+88,εννέα,Αριθμοί
+89,δέκα,Αριθμοί
+90,ζάχαρη,Food
+91,ζέβρα,Animals
+92,ζέστη,Nature/Feelings
+93,ζεστό,Descriptive
+94,ζουζούνι,Animals
+95,Ζωή,People/Names
+96,ζώνη,Objects
+97,Ηλίας,People/Names
+98,ήλιος,Nature
+99,θάλασσα,Nature
+100,Θάνος,People/Names
+101,θεία,People/Family
+102,θείος,People/Family
+103,θελω,Actions
+104,ιππότης,People/Profession
+105,και,Abstract Concepts
+106,κακάο,Food
+107,κακό,Descriptive
+108,καλάθι,Objects
+109,καλό,Descriptive
+110,καλοκαίρι,Time/Nature
+111,καμπάνα,Objects
+112,κάνω,Actions
+113,Καραγκιόζης,People/Culture
+114,καρέκλα,Objects
+115,καρότο,Food
+116,κάστανα,Food
+117,κατσίκα,Animals
+118,κάτω,Abstract Concepts
+119,καφέ,Food
+120,κεράσι,Food
+121,κερί,Objects
+122,κιθάρα,Objects
+123,Κική,People/Names
+124,κινητό,Objects/Tech
+125,κίτρινο,Colors
+126,κόβω,Actions
+127,κοιμάμαι,Actions
+128,κοίτα,Actions
+129,κόκκινο,Colors
+130,κότα,Animals
+131,κουλούρι,Food
+132,κουτάλι,Objects
+133,κύκλος,Shapes
+134,λαγός,Animals
+135,λάδι,Food
+136,λαιμός,Body Parts
+137,λαμπάδα,Objects
+138,λεμόνι,Food
+139,Λένα,People/Names
+140,Λευτέρης,People/Names
+141,λουλούδι,Nature
+142,λύκος,Animals
+143,μαθαίνω,Actions
+144,μάθημα,Abstract Concepts
+145,μαϊμού,Animals
+146,μακαρόνια,Food
+147,μαμά,People/Family
+148,Μάνος,People/Names
+149,μαρούλι,Food
+150,μάτι,Body Parts
+151,μαχαίρι,Objects
+152,με λένε,Abstract Concepts
+153,μεγάλη,Descriptive
+154,μέλι,Food
+155,Μελίνα,People/Names
+156,μέλισσα,Animals
+157,μέρα,Time
+158,μέσα,Abstract Concepts
+159,μήλο,Food
+160,μία,Abstract Concepts
+161,μικρή,Descriptive
+162,μιλώ,Actions
+163,μοιράζω,Actions
+164,μολύβι,Objects
+165,μουσική,Abstract Concepts
+166,μπάλα,Objects/Games
+167,μπαλόνι,Objects
+168,μπαμπάς,People/Family
+169,Μπάμπης,People/Names
+170,μπανάνα,Food
+171,μπάνιο,Objects/Places
+172,μπαστούνι,Objects
+173,μπλε,Colors
+174,μύτη,Body Parts
+175,μωβ,Colors
+176,μωρό,People/Family
+177,να,Abstract Concepts
+178,ναι,Abstract Concepts
+179,Νανά,People/Names
+180,νάνος,People/Culture
+181,νερό,Food/Nature
+182,νινί,People/Family
+183,Ντίνα,People/Names
+184,ντομάτα,Food
+185,ντουλάπα,Objects
+186,νύχια,Body Parts
+187,Ξένη,People/Names
+188,ξέρω,Actions
+189,ξίδι,Food
+190,ξιφίας,Animals
+191,ξύλο,Nature
+192,ξυπνώ,Actions
+193,ξύστρα,Objects
+194,οικογένεια,People/Family
+195,ομπρέλα,Objects
+196,ουρά,Body Parts
+197,όχι,Abstract Concepts
+198,παγκάκι,Objects
+199,παϊδάκια,Food
+200,παιδί,People
+201,παιδιά,People
+202,παίζουμε,Actions
+203,παίζω,Actions
+204,παιχνίδια,Objects
+205,πάμε,Actions
+206,παντζάρι,Food
+207,πάνω,Abstract Concepts
+208,παπαγάλος,Animals
+209,παπί,Animals
+210,παππούς,People/Family
+211,παράθυρο,Objects
+212,παραμύθι,Objects/Culture
+213,πατάτα,Food
+214,πατίνι,Objects
+215,πάω,Actions
+216,πεπόνι,Food
+217,πέτα,Actions
+218,πεύκο,Nature
+219,πιάτο,Objects
+220,πίνακας,Objects
+221,πίνω,Actions
+222,πιπέρι,Food
+223,πιπίλα,Objects
+224,πιρούνι,Objects
+225,πίτα,Food
+226,πίτσα,Food
+227,πλην,Abstract Concepts
+228,πλοίο,Objects/Transport
+229,ποδήλατο,Objects/Transport
+230,πόδι,Body Parts
+231,ποίημα,Objects/Culture
+232,ποντίκι,Animals
+233,Πόπη,People/Names
+234,πορτοκαλί,Colors
+235,πορτοκάλι,Food
+236,ποτήρι,Objects
+237,πουλί,Animals
+238,πράσινο,Colors
+239,Ρένα,People/Names
+240,ροδακινο,Food
+241,ροζ,Colors
+242,ρολόι,Objects
+243,ρούχα,Objects
+244,ρύζι,Food
+245,σαλάμι,Food
+246,σαλάτα,Food
+247,Σάσα,People/Names
+248,σαύρα,Animals
+249,σέλα,Objects
+250,σέλινο,Food
+251,σκάλα,Objects
+252,σκαντζόχοιρος,Animals
+253,σκύλος,Animals
+254,σοκολάτα,Food
+255,σούπα,Food
+256,σπίρτο,Objects
+257,σπίτι,Objects/Places
+258,σταματώ,Actions
+259,σταφύλι,Food
+260,στεφάνι,Objects
+261,στόμα,Body Parts
+262,στοπ,Objects
+263,συν,Abstract Concepts
+264,σφουγγάρι,Objects
+265,σχολείο,Objects/Places
+266,τάξη,Abstract Concepts
+267,ταξί,Objects/Transport
+268,τετράγωνο,Shapes
+269,τζάκι,Objects
+270,τζάμι,Objects
+271,τζίτζικας,Animals
+272,τηλεόραση,Objects/Tech
+273,τιμόνι,Objects
+274,Τίνα,People/Names
+275,τοίχος,Objects
+276,τόπι,Objects
+277,τούρτα,Food
+278,τραπέζι,Objects
+279,τρίγωνο,Shapes
+280,τρώω,Actions
+281,τσάι,Food
+282,τσάντα,Objects
+283,τσίρκο,Objects/Culture
+284,τυρί,Food
+285,Υβόννη,People/Names
+286,υπολογιστής,Objects/Tech
+287,φαγητό,Food
+288,Φάνης,People/Names
+289,φάρος,Objects
+290,φασόλια,Food
+291,φεγγάρι,Nature
+292,φίλος,People
+293,φόρεμα,Objects
+294,φως,Nature
+295,φωτιά,Nature
+296,Χάρης,People/Names
+297,χειμώνας,Time/Nature
+298,χελώνα,Animals
+299,χέρι,Body Parts
+300,χορεύω,Actions
+301,χυμός,Food
+302,ψαλίδι,Objects
+303,ψάρι,Food/Animals
+304,ψάχνω,Actions
+305,ψήνω,Actions
+306,ψησταριά,Objects
+307,Ψιψίνα,Animals/Names
+308,ψωμιί,Food
+309,ψώνια,Actions
+310,ώρα,Time

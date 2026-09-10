@@ -1,0 +1,18 @@
+﻿# Dependencies & Runtime
+node_modules/
+npm-debug.log*
+
+# Tooling & Caches
+.codegraph/
+.gemini/
+
+# OS Files
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.bak

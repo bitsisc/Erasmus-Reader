@@ -1,0 +1,310 @@
+1,ma armastan,Tegevused
+2,kurk,Toit
+3,lehm,Loomad
+4,kallistama,Tegevused/Abstrakt
+5,ankur,Objektid
+6,saal,Objektid/kohad
+7,Emilia,Inimesed/nimed
+8,soola,Toit
+9,rebane,Loomad
+10,hobune,Loomad
+11,Anna,Inimesed/nimed
+12,kevad,Aeg/Loodus
+13,suurepärane,Kirjeldav
+14,muna,Toit
+15,õue,Objektid/kohad
+16,kõrva,Kereosad
+17,nad,Abstraktsed mõisted
+18,auto,Objektid/transport
+19,ta,Abstraktsed mõisted
+20,panin,Tegevused
+21,paat,Objektid/transport
+22,võtan välja,Tegevused
+23,Vivi,Inimesed/nimed
+24,raamat,Objektid
+25,kruvi,Objektid
+26,ma näen,Tegevused
+27,kõndima,Tegevused
+28,mägi,Loodus
+29,ma leian,Tegevused
+30,eesel,Loomad
+31,piima,Toit
+32,helesinine,Värvid
+33,Rahulikkus,Inimesed/nimed
+34,kindad,Objektid
+35,kass,Loomad
+36,tere,Abstraktsed mõisted
+37,ma naeran,Tegevused
+38,vanaema,Inimesed/perekond
+39,eesmärk,Abstraktsed mõisted
+40,magus,Toit/kirjeldav
+41,siga,Loomad
+42,Danae,Inimesed/nimed
+43,õpetaja,Inimesed/Elukutse
+44,õpetaja,Inimesed/Elukutse
+45,metsa,Loodus
+46,kaks,Numbrid
+47,kolm,Numbrid
+48,neli,Numbrid
+49,viis,Numbrid
+50,kuus,Numbrid
+51,seitse,Numbrid
+52,kaheksa,Numbrid
+53,üheksa,Numbrid
+54,kümme,Numbrid
+55,üks,Numbrid
+56,pakk,Objektid
+57,ma annan,Tegevused
+58,hammas,Kereosad
+59,tuba,Objektid/kohad
+60,kingitus,Objektid
+61,mina,Abstraktsed mõisted
+62,siin,Abstraktsed mõisted
+63,pilt,Objektid
+64,see on uus,Abstraktsed mõisted
+65,Rahu,Inimesed/nimed
+66,seal,Abstraktsed mõisted
+67,tule nüüd,Tegevused
+68,tule nüüd,Tegevused
+69,kuusepuu,Loodus
+70,Helen,Inimesed/nimed
+71,meie,Abstraktsed mõisted
+72,mina,Abstraktsed mõisted
+73,üks,Abstraktsed mõisted
+74,sina,Abstraktsed mõisted
+75,sina,Abstraktsed mõisted
+76,Evie,Inimesed/nimed
+77,euro,Abstraktsed mõisted
+78,mul on,Tegevused
+79,täringut,Objektid/mängud
+80,üks,Numbrid
+81,kaks,Numbrid
+82,kolm,Numbrid
+83,neli,Numbrid
+84,viis,Numbrid
+85,kuus,Numbrid
+86,seitse,Numbrid
+87,kaheksa,Numbrid
+88,üheksa,Numbrid
+89,kümme,Numbrid
+90,suhkur,Toit
+91,sebra,Loomad
+92,soojust,Loodus / tunded
+93,kuum,Kirjeldav
+94,sumin,Loomad
+95,Elu,Inimesed/nimed
+96,tsooni,Objektid
+97,Ilias,Inimesed/nimed
+98,päike,Loodus
+99,meri,Loodus
+100,Thanos,Inimesed/nimed
+101,tädi,Inimesed/perekond
+102,onu,Inimesed/perekond
+103,ma tahan,Tegevused
+104,rüütel,Inimesed/Elukutse
+105,ja,Abstraktsed mõisted
+106,kakao,Toit
+107,halb,Kirjeldav
+108,korv,Objektid
+109,hea,Kirjeldav
+110,suvi,Aeg/Loodus
+111,kelluke,Objektid
+112,mina küll,Tegevused
+113,Karagiozis,Inimesed/kultuur
+114,tool,Objektid
+115,porgand,Toit
+116,kastanid,Toit
+117,kits,Loomad
+118,alla,Abstraktsed mõisted
+119,kohvi,Toit
+120,kirss,Toit
+121,küünal,Objektid
+122,kitarr,Objektid
+123,Kiki,Inimesed/nimed
+124,mobiilne,Objektid/Tech
+125,kollane,Värvid
+126,ma lõikasin,Tegevused
+127,ma magan,Tegevused
+128,vaata,Tegevused
+129,punane,Värvid
+130,kana,Loomad
+131,bagel,Toit
+132,lusikas,Objektid
+133,ring,Kujundid
+134,jänes,Loomad
+135,õli,Toit
+136,kaela,Kereosad
+137,lamp,Objektid
+138,sidrun,Toit
+139,Lena,Inimesed/nimed
+140,Lefteris,Inimesed/nimed
+141,lill,Loodus
+142,hunt,Loomad
+143,ma õpin,Tegevused
+144,õppetund,Abstraktsed mõisted
+145,ahv,Loomad
+146,spagetid,Toit
+147,ema,Inimesed/perekond
+148,Manos,Inimesed/nimed
+149,salat,Toit
+150,silma,Kereosad
+151,nuga,Objektid
+152,minu nimi on,Abstraktsed mõisted
+153,suur,Kirjeldav
+154,kallis,Toit
+155,Melina,Inimesed/nimed
+156,mesilane,Loomad
+157,päeval,Aeg
+158,sees,Abstraktsed mõisted
+159,õun,Toit
+160,üks,Abstraktsed mõisted
+161,väike,Kirjeldav
+162,ma räägin,Tegevused
+163,jagan,Tegevused
+164,pliiats,Objektid
+165,muusika,Abstraktsed mõisted
+166,pall,Objektid/mängud
+167,õhupall,Objektid
+168,isa,Inimesed/perekond
+169,Babis,Inimesed/nimed
+170,banaan,Toit
+171,vannituba,Objektid/kohad
+172,jalutuskepp,Objektid
+173,sinine,Värvid
+174,nina,Kereosad
+175,lilla,Värvid
+176,beebi,Inimesed/perekond
+177,juurde,Abstraktsed mõisted
+178,jah,Abstraktsed mõisted
+179,Nana,Inimesed/nimed
+180,kääbus,Inimesed/kultuur
+181,vesi,Toit/Loodus
+182,nännu,Inimesed/perekond
+183,Dina,Inimesed/nimed
+184,tomat,Toit
+185,riidekapp,Objektid
+186,küüned,Kereosad
+187,Võõras,Inimesed/nimed
+188,ma tean,Tegevused
+189,äädikas,Toit
+190,vehklemisoskus,Loomad
+191,puit,Loodus
+192,ma ärkan üles,Tegevused
+193,kaabits,Objektid
+194,perekond,Inimesed/perekond
+195,vihmavari,Objektid
+196,saba,Kereosad
+197,ei,Abstraktsed mõisted
+198,pink,Objektid
+199,ribid,Toit
+200,laps,Inimesed
+201,poisid,Inimesed
+202,mängime,Tegevused
+203,ma mängin,Tegevused
+204,mängud,Objektid
+205,lähme,Tegevused
+206,punapeet,Toit
+207,eespool,Abstraktsed mõisted
+208,papagoi,Loomad
+209,part,Loomad
+210,vanaisa,Inimesed/perekond
+211,aken,Objektid
+212,muinasjutt,Objektid/kultuur
+213,kartul,Toit
+214,uisutada,Objektid
+215,ma lähen,Tegevused
+216,melon,Toit
+217,ära viskama,Tegevused
+218,männipuu,Loodus
+219,plaat,Objektid
+220,laud,Objektid
+221,ma joon,Tegevused
+222,pipar,Toit
+223,lutt,Objektid
+224,kahvel,Objektid
+225,pirukas,Toit
+226,pitsa,Toit
+227,välja arvatud,Abstraktsed mõisted
+228,laev,Objektid/transport
+229,jalgratas,Objektid/transport
+230,jalg,Kereosad
+231,luuletus,Objektid/kultuur
+232,hiir,Loomad
+233,paavst,Inimesed/nimed
+234,oranž,Värvid
+235,oranž,Toit
+236,klaasist,Objektid
+237,lind,Loomad
+238,roheline,Värvid
+239,Rena,Inimesed/nimed
+240,virsik,Toit
+241,roosa,Värvid
+242,kella,Objektid
+243,riided,Objektid
+244,riis,Toit
+245,salaami,Toit
+246,salat,Toit
+247,Sasha,Inimesed/nimed
+248,sisalik,Loomad
+249,sadul,Objektid
+250,seller,Toit
+251,redel,Objektid
+252,siil,Loomad
+253,koer,Loomad
+254,šokolaadi,Toit
+255,supp,Toit
+256,vaste,Objektid
+257,koju,Objektid/kohad
+258,ma lõpetan,Tegevused
+259,viinamari,Toit
+260,pärg,Objektid
+261,suu,Kereosad
+262,peatus,Objektid
+263,pluss,Abstraktsed mõisted
+264,käsn,Objektid
+265,kool,Objektid/kohad
+266,klass,Abstraktsed mõisted
+267,takso,Objektid/transport
+268,ruut,Kujundid
+269,kamin,Objektid
+270,klaasist,Objektid
+271,tsikaadid,Loomad
+272,televiisor,Objektid/Tech
+273,rool,Objektid
+274,Tina,Inimesed/nimed
+275,seina,Objektid
+276,koht,Objektid
+277,kook,Toit
+278,laud,Objektid
+279,kolmnurk,Kujundid
+280,ma söön,Tegevused
+281,tee,Toit
+282,kott,Objektid
+283,tsirkus,Objektid/kultuur
+284,juust,Toit
+285,Yvonne,Inimesed/nimed
+286,arvuti,Objektid/Tech
+287,toit,Toit
+288,Fanis,Inimesed/nimed
+289,tuletorn,Objektid
+290,oad,Toit
+291,kuu,Loodus
+292,sõber,Inimesed
+293,kleit,Objektid
+294,kerge,Loodus
+295,tulekahju,Loodus
+296,Harry,Inimesed/nimed
+297,talvel,Aeg/Loodus
+298,kilpkonn,Loomad
+299,käsi,Kereosad
+300,ma tantsin,Tegevused
+301,mahla,Toit
+302,käärid,Objektid
+303,kala,Toit/loomad
+304,ma otsin,Tegevused
+305,ma küpsetan,Tegevused
+306,grill,Objektid
+307,Psipsina,Loomad/nimed
+308,leiba,Toit
+309,ostlemine,Tegevused
+310,aega,Aeg
