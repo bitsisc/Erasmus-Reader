@@ -209,7 +209,9 @@
             applySettings();
             screens.teacher.style.display = 'none';
             screens.student.style.display = 'flex';
-            document.getElementById('btn-lang-selector').style.display = 'none'; 
+            const topRight = document.getElementById('top-right-actions');
+            if (topRight) topRight.style.display = 'none';
+            else document.getElementById('btn-lang-selector').style.display = 'none'; 
             state.currentIndex = -1;
             
             const btnMode = document.getElementById('btn-mode-toggle');
@@ -250,7 +252,9 @@
             stopScanningLoop();
             screens.student.style.display = 'none';
             screens.teacher.style.display = 'flex';
-            document.getElementById('btn-lang-selector').style.display = 'flex'; 
+            const topRight = document.getElementById('top-right-actions');
+            if (topRight) topRight.style.display = 'flex';
+            else document.getElementById('btn-lang-selector').style.display = 'flex'; 
             stopSpeech();
             document.body.classList.remove('veil-active');
             display.root.style.setProperty('--veil-opacity', 0); 

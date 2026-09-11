@@ -183,7 +183,16 @@
         "print_level1_prompt": "Πάτησε επάνω στα αχνά γράμματα:",
         "print_level2_prompt": "Αντίγραψε το κείμενο στις γραμμές:",
         "print_name_label": "Όνομα:",
-        "print_date_label": "Ημερομηνία:"
+        "print_date_label": "Ημερομηνία:",
+        "title_install_pwa": "Εγκατάσταση Εφαρμογής (PWA)",
+        "modal_pwa_title": "📱 Εγκατάσταση Εφαρμογής",
+        "pwa_modal_desc": "Εγκαταστήστε την εφαρμογή στη συσκευή σας για άμεση πρόσβαση και λειτουργία εκτός σύνδεσης (Offline PWA).",
+        "pwa_ios_title": "🍎 Για iPhone / iPad (Safari):",
+        "pwa_ios_step1": "Πατήστε το κουμπί Κοινοποίηση (Share) στο κάτω μέρος του Safari.",
+        "pwa_ios_step2": "Επιλέξτε «Προσθήκη στην οθόνη αφετηρίας» (Add to Home Screen ➕).",
+        "pwa_android_title": "🤖 Για Android / Υπολογιστή (Chrome / Edge):",
+        "pwa_android_desc": "Πατήστε «Εγκατάσταση Τώρα» παρακάτω ή από το μενού του φυλλομετρητή (⋮) επιλέξτε «Εγκατάσταση εφαρμογής».",
+        "btn_install_now": "📥 Εγκατάσταση Τώρα"
     },
     "en": {
         "modal_lang_title": "🌍 Select Language",
@@ -369,7 +378,16 @@
         "print_level1_prompt": "Trace over the faint letters:",
         "print_level2_prompt": "Copy the text onto the lines:",
         "print_name_label": "Name:",
-        "print_date_label": "Date:"
+        "print_date_label": "Date:",
+        "title_install_pwa": "Install App (PWA)",
+        "modal_pwa_title": "📱 Install Application",
+        "pwa_modal_desc": "Install the app on your device for instant access and full offline support (PWA).",
+        "pwa_ios_title": "🍎 For iPhone / iPad (Safari):",
+        "pwa_ios_step1": "Tap the Share button at the bottom of Safari.",
+        "pwa_ios_step2": "Select 'Add to Home Screen' (➕).",
+        "pwa_android_title": "🤖 For Android / Desktop (Chrome / Edge):",
+        "pwa_android_desc": "Tap 'Install Now' below, or open the browser menu (⋮) and select 'Install app'.",
+        "btn_install_now": "📥 Install Now"
     },
     "fr": {
         "modal_lang_title": "🌍 Choisir la langue",
@@ -555,7 +573,16 @@
         "print_level1_prompt": "Trace over the faint letters:",
         "print_level2_prompt": "Copy the text onto the lines:",
         "print_name_label": "Name:",
-        "print_date_label": "Date:"
+        "print_date_label": "Date:",
+        "title_install_pwa": "Install App (PWA)",
+        "modal_pwa_title": "📱 Install Application",
+        "pwa_modal_desc": "Install the app on your device for instant access and full offline support (PWA).",
+        "pwa_ios_title": "🍎 For iPhone / iPad (Safari):",
+        "pwa_ios_step1": "Tap the Share button at the bottom of Safari.",
+        "pwa_ios_step2": "Select 'Add to Home Screen' (➕).",
+        "pwa_android_title": "🤖 For Android / Desktop (Chrome / Edge):",
+        "pwa_android_desc": "Tap 'Install Now' below, or open the browser menu (⋮) and select 'Install app'.",
+        "btn_install_now": "📥 Install Now"
     },
     "de": {
         "modal_lang_title": "🌍 Sprache auswählen",
@@ -741,7 +768,16 @@
         "print_level1_prompt": "Trace over the faint letters:",
         "print_level2_prompt": "Copy the text onto the lines:",
         "print_name_label": "Name:",
-        "print_date_label": "Date:"
+        "print_date_label": "Date:",
+        "title_install_pwa": "Install App (PWA)",
+        "modal_pwa_title": "📱 Install Application",
+        "pwa_modal_desc": "Install the app on your device for instant access and full offline support (PWA).",
+        "pwa_ios_title": "🍎 For iPhone / iPad (Safari):",
+        "pwa_ios_step1": "Tap the Share button at the bottom of Safari.",
+        "pwa_ios_step2": "Select 'Add to Home Screen' (➕).",
+        "pwa_android_title": "🤖 For Android / Desktop (Chrome / Edge):",
+        "pwa_android_desc": "Tap 'Install Now' below, or open the browser menu (⋮) and select 'Install app'.",
+        "btn_install_now": "📥 Install Now"
     },
     "es": {
         "modal_lang_title": "🌍 Seleccionar Idioma",
@@ -927,7 +963,16 @@
         "print_level1_prompt": "Trace over the faint letters:",
         "print_level2_prompt": "Copy the text onto the lines:",
         "print_name_label": "Name:",
-        "print_date_label": "Date:"
+        "print_date_label": "Date:",
+        "title_install_pwa": "Install App (PWA)",
+        "modal_pwa_title": "📱 Install Application",
+        "pwa_modal_desc": "Install the app on your device for instant access and full offline support (PWA).",
+        "pwa_ios_title": "🍎 For iPhone / iPad (Safari):",
+        "pwa_ios_step1": "Tap the Share button at the bottom of Safari.",
+        "pwa_ios_step2": "Select 'Add to Home Screen' (➕).",
+        "pwa_android_title": "🤖 For Android / Desktop (Chrome / Edge):",
+        "pwa_android_desc": "Tap 'Install Now' below, or open the browser menu (⋮) and select 'Install app'.",
+        "btn_install_now": "📥 Install Now"
     },
     "it": {
         "modal_lang_title": "🌍 Seleziona Lingua",
@@ -1113,7 +1158,16 @@
         "print_level1_prompt": "Trace over the faint letters:",
         "print_level2_prompt": "Copy the text onto the lines:",
         "print_name_label": "Name:",
-        "print_date_label": "Date:"
+        "print_date_label": "Date:",
+        "title_install_pwa": "Install App (PWA)",
+        "modal_pwa_title": "📱 Install Application",
+        "pwa_modal_desc": "Install the app on your device for instant access and full offline support (PWA).",
+        "pwa_ios_title": "🍎 For iPhone / iPad (Safari):",
+        "pwa_ios_step1": "Tap the Share button at the bottom of Safari.",
+        "pwa_ios_step2": "Select 'Add to Home Screen' (➕).",
+        "pwa_android_title": "🤖 For Android / Desktop (Chrome / Edge):",
+        "pwa_android_desc": "Tap 'Install Now' below, or open the browser menu (⋮) and select 'Install app'.",
+        "btn_install_now": "📥 Install Now"
     },
     "pt": {
         "modal_lang_title": "🌍 Selecionar Idioma",
@@ -1299,7 +1353,16 @@
         "print_level1_prompt": "Trace over the faint letters:",
         "print_level2_prompt": "Copy the text onto the lines:",
         "print_name_label": "Name:",
-        "print_date_label": "Date:"
+        "print_date_label": "Date:",
+        "title_install_pwa": "Install App (PWA)",
+        "modal_pwa_title": "📱 Install Application",
+        "pwa_modal_desc": "Install the app on your device for instant access and full offline support (PWA).",
+        "pwa_ios_title": "🍎 For iPhone / iPad (Safari):",
+        "pwa_ios_step1": "Tap the Share button at the bottom of Safari.",
+        "pwa_ios_step2": "Select 'Add to Home Screen' (➕).",
+        "pwa_android_title": "🤖 For Android / Desktop (Chrome / Edge):",
+        "pwa_android_desc": "Tap 'Install Now' below, or open the browser menu (⋮) and select 'Install app'.",
+        "btn_install_now": "📥 Install Now"
     },
     "nl": {
         "modal_lang_title": "🌍 Taal",
@@ -1485,7 +1548,16 @@
         "print_level1_prompt": "Trace over the faint letters:",
         "print_level2_prompt": "Copy the text onto the lines:",
         "print_name_label": "Name:",
-        "print_date_label": "Date:"
+        "print_date_label": "Date:",
+        "title_install_pwa": "Install App (PWA)",
+        "modal_pwa_title": "📱 Install Application",
+        "pwa_modal_desc": "Install the app on your device for instant access and full offline support (PWA).",
+        "pwa_ios_title": "🍎 For iPhone / iPad (Safari):",
+        "pwa_ios_step1": "Tap the Share button at the bottom of Safari.",
+        "pwa_ios_step2": "Select 'Add to Home Screen' (➕).",
+        "pwa_android_title": "🤖 For Android / Desktop (Chrome / Edge):",
+        "pwa_android_desc": "Tap 'Install Now' below, or open the browser menu (⋮) and select 'Install app'.",
+        "btn_install_now": "📥 Install Now"
     },
     "pl": {
         "modal_lang_title": "🌍 Język",
@@ -1671,7 +1743,16 @@
         "print_level1_prompt": "Trace over the faint letters:",
         "print_level2_prompt": "Copy the text onto the lines:",
         "print_name_label": "Name:",
-        "print_date_label": "Date:"
+        "print_date_label": "Date:",
+        "title_install_pwa": "Install App (PWA)",
+        "modal_pwa_title": "📱 Install Application",
+        "pwa_modal_desc": "Install the app on your device for instant access and full offline support (PWA).",
+        "pwa_ios_title": "🍎 For iPhone / iPad (Safari):",
+        "pwa_ios_step1": "Tap the Share button at the bottom of Safari.",
+        "pwa_ios_step2": "Select 'Add to Home Screen' (➕).",
+        "pwa_android_title": "🤖 For Android / Desktop (Chrome / Edge):",
+        "pwa_android_desc": "Tap 'Install Now' below, or open the browser menu (⋮) and select 'Install app'.",
+        "btn_install_now": "📥 Install Now"
     },
     "ro": {
         "modal_lang_title": "🌍 Limbă",
@@ -1857,7 +1938,16 @@
         "print_level1_prompt": "Trace over the faint letters:",
         "print_level2_prompt": "Copy the text onto the lines:",
         "print_name_label": "Name:",
-        "print_date_label": "Date:"
+        "print_date_label": "Date:",
+        "title_install_pwa": "Install App (PWA)",
+        "modal_pwa_title": "📱 Install Application",
+        "pwa_modal_desc": "Install the app on your device for instant access and full offline support (PWA).",
+        "pwa_ios_title": "🍎 For iPhone / iPad (Safari):",
+        "pwa_ios_step1": "Tap the Share button at the bottom of Safari.",
+        "pwa_ios_step2": "Select 'Add to Home Screen' (➕).",
+        "pwa_android_title": "🤖 For Android / Desktop (Chrome / Edge):",
+        "pwa_android_desc": "Tap 'Install Now' below, or open the browser menu (⋮) and select 'Install app'.",
+        "btn_install_now": "📥 Install Now"
     },
     "sv": {
         "modal_lang_title": "🌍 Språk",
@@ -2043,7 +2133,16 @@
         "print_level1_prompt": "Trace over the faint letters:",
         "print_level2_prompt": "Copy the text onto the lines:",
         "print_name_label": "Name:",
-        "print_date_label": "Date:"
+        "print_date_label": "Date:",
+        "title_install_pwa": "Install App (PWA)",
+        "modal_pwa_title": "📱 Install Application",
+        "pwa_modal_desc": "Install the app on your device for instant access and full offline support (PWA).",
+        "pwa_ios_title": "🍎 For iPhone / iPad (Safari):",
+        "pwa_ios_step1": "Tap the Share button at the bottom of Safari.",
+        "pwa_ios_step2": "Select 'Add to Home Screen' (➕).",
+        "pwa_android_title": "🤖 For Android / Desktop (Chrome / Edge):",
+        "pwa_android_desc": "Tap 'Install Now' below, or open the browser menu (⋮) and select 'Install app'.",
+        "btn_install_now": "📥 Install Now"
     },
     "da": {
         "modal_lang_title": "🌍 Sprog",
@@ -2229,7 +2328,16 @@
         "print_level1_prompt": "Trace over the faint letters:",
         "print_level2_prompt": "Copy the text onto the lines:",
         "print_name_label": "Name:",
-        "print_date_label": "Date:"
+        "print_date_label": "Date:",
+        "title_install_pwa": "Install App (PWA)",
+        "modal_pwa_title": "📱 Install Application",
+        "pwa_modal_desc": "Install the app on your device for instant access and full offline support (PWA).",
+        "pwa_ios_title": "🍎 For iPhone / iPad (Safari):",
+        "pwa_ios_step1": "Tap the Share button at the bottom of Safari.",
+        "pwa_ios_step2": "Select 'Add to Home Screen' (➕).",
+        "pwa_android_title": "🤖 For Android / Desktop (Chrome / Edge):",
+        "pwa_android_desc": "Tap 'Install Now' below, or open the browser menu (⋮) and select 'Install app'.",
+        "btn_install_now": "📥 Install Now"
     },
     "fi": {
         "modal_lang_title": "🌍 Kieli",
@@ -2415,7 +2523,16 @@
         "print_level1_prompt": "Trace over the faint letters:",
         "print_level2_prompt": "Copy the text onto the lines:",
         "print_name_label": "Name:",
-        "print_date_label": "Date:"
+        "print_date_label": "Date:",
+        "title_install_pwa": "Install App (PWA)",
+        "modal_pwa_title": "📱 Install Application",
+        "pwa_modal_desc": "Install the app on your device for instant access and full offline support (PWA).",
+        "pwa_ios_title": "🍎 For iPhone / iPad (Safari):",
+        "pwa_ios_step1": "Tap the Share button at the bottom of Safari.",
+        "pwa_ios_step2": "Select 'Add to Home Screen' (➕).",
+        "pwa_android_title": "🤖 For Android / Desktop (Chrome / Edge):",
+        "pwa_android_desc": "Tap 'Install Now' below, or open the browser menu (⋮) and select 'Install app'.",
+        "btn_install_now": "📥 Install Now"
     },
     "cs": {
         "modal_lang_title": "🌍 Jazyk",
@@ -2601,7 +2718,16 @@
         "print_level1_prompt": "Trace over the faint letters:",
         "print_level2_prompt": "Copy the text onto the lines:",
         "print_name_label": "Name:",
-        "print_date_label": "Date:"
+        "print_date_label": "Date:",
+        "title_install_pwa": "Install App (PWA)",
+        "modal_pwa_title": "📱 Install Application",
+        "pwa_modal_desc": "Install the app on your device for instant access and full offline support (PWA).",
+        "pwa_ios_title": "🍎 For iPhone / iPad (Safari):",
+        "pwa_ios_step1": "Tap the Share button at the bottom of Safari.",
+        "pwa_ios_step2": "Select 'Add to Home Screen' (➕).",
+        "pwa_android_title": "🤖 For Android / Desktop (Chrome / Edge):",
+        "pwa_android_desc": "Tap 'Install Now' below, or open the browser menu (⋮) and select 'Install app'.",
+        "btn_install_now": "📥 Install Now"
     },
     "hu": {
         "modal_lang_title": "🌍 Nyelv",
@@ -2787,7 +2913,16 @@
         "print_level1_prompt": "Trace over the faint letters:",
         "print_level2_prompt": "Copy the text onto the lines:",
         "print_name_label": "Name:",
-        "print_date_label": "Date:"
+        "print_date_label": "Date:",
+        "title_install_pwa": "Install App (PWA)",
+        "modal_pwa_title": "📱 Install Application",
+        "pwa_modal_desc": "Install the app on your device for instant access and full offline support (PWA).",
+        "pwa_ios_title": "🍎 For iPhone / iPad (Safari):",
+        "pwa_ios_step1": "Tap the Share button at the bottom of Safari.",
+        "pwa_ios_step2": "Select 'Add to Home Screen' (➕).",
+        "pwa_android_title": "🤖 For Android / Desktop (Chrome / Edge):",
+        "pwa_android_desc": "Tap 'Install Now' below, or open the browser menu (⋮) and select 'Install app'.",
+        "btn_install_now": "📥 Install Now"
     },
     "sk": {
         "modal_lang_title": "🌍 Jazyk",
@@ -2973,7 +3108,16 @@
         "print_level1_prompt": "Trace over the faint letters:",
         "print_level2_prompt": "Copy the text onto the lines:",
         "print_name_label": "Name:",
-        "print_date_label": "Date:"
+        "print_date_label": "Date:",
+        "title_install_pwa": "Install App (PWA)",
+        "modal_pwa_title": "📱 Install Application",
+        "pwa_modal_desc": "Install the app on your device for instant access and full offline support (PWA).",
+        "pwa_ios_title": "🍎 For iPhone / iPad (Safari):",
+        "pwa_ios_step1": "Tap the Share button at the bottom of Safari.",
+        "pwa_ios_step2": "Select 'Add to Home Screen' (➕).",
+        "pwa_android_title": "🤖 For Android / Desktop (Chrome / Edge):",
+        "pwa_android_desc": "Tap 'Install Now' below, or open the browser menu (⋮) and select 'Install app'.",
+        "btn_install_now": "📥 Install Now"
     },
     "bg": {
         "modal_lang_title": "🌍 Избор на език",
@@ -3159,7 +3303,16 @@
         "print_level1_prompt": "Trace over the faint letters:",
         "print_level2_prompt": "Copy the text onto the lines:",
         "print_name_label": "Name:",
-        "print_date_label": "Date:"
+        "print_date_label": "Date:",
+        "title_install_pwa": "Install App (PWA)",
+        "modal_pwa_title": "📱 Install Application",
+        "pwa_modal_desc": "Install the app on your device for instant access and full offline support (PWA).",
+        "pwa_ios_title": "🍎 For iPhone / iPad (Safari):",
+        "pwa_ios_step1": "Tap the Share button at the bottom of Safari.",
+        "pwa_ios_step2": "Select 'Add to Home Screen' (➕).",
+        "pwa_android_title": "🤖 For Android / Desktop (Chrome / Edge):",
+        "pwa_android_desc": "Tap 'Install Now' below, or open the browser menu (⋮) and select 'Install app'.",
+        "btn_install_now": "📥 Install Now"
     },
     "hr": {
         "modal_lang_title": "🌍 Odabir jezika",
@@ -3345,7 +3498,16 @@
         "print_level1_prompt": "Trace over the faint letters:",
         "print_level2_prompt": "Copy the text onto the lines:",
         "print_name_label": "Name:",
-        "print_date_label": "Date:"
+        "print_date_label": "Date:",
+        "title_install_pwa": "Install App (PWA)",
+        "modal_pwa_title": "📱 Install Application",
+        "pwa_modal_desc": "Install the app on your device for instant access and full offline support (PWA).",
+        "pwa_ios_title": "🍎 For iPhone / iPad (Safari):",
+        "pwa_ios_step1": "Tap the Share button at the bottom of Safari.",
+        "pwa_ios_step2": "Select 'Add to Home Screen' (➕).",
+        "pwa_android_title": "🤖 For Android / Desktop (Chrome / Edge):",
+        "pwa_android_desc": "Tap 'Install Now' below, or open the browser menu (⋮) and select 'Install app'.",
+        "btn_install_now": "📥 Install Now"
     },
     "lt": {
         "modal_lang_title": "🌍 Kalba",
@@ -3531,7 +3693,16 @@
         "print_level1_prompt": "Trace over the faint letters:",
         "print_level2_prompt": "Copy the text onto the lines:",
         "print_name_label": "Name:",
-        "print_date_label": "Date:"
+        "print_date_label": "Date:",
+        "title_install_pwa": "Install App (PWA)",
+        "modal_pwa_title": "📱 Install Application",
+        "pwa_modal_desc": "Install the app on your device for instant access and full offline support (PWA).",
+        "pwa_ios_title": "🍎 For iPhone / iPad (Safari):",
+        "pwa_ios_step1": "Tap the Share button at the bottom of Safari.",
+        "pwa_ios_step2": "Select 'Add to Home Screen' (➕).",
+        "pwa_android_title": "🤖 For Android / Desktop (Chrome / Edge):",
+        "pwa_android_desc": "Tap 'Install Now' below, or open the browser menu (⋮) and select 'Install app'.",
+        "btn_install_now": "📥 Install Now"
     },
     "lv": {
         "modal_lang_title": "🌍 Valoda",
@@ -3717,7 +3888,16 @@
         "print_level1_prompt": "Trace over the faint letters:",
         "print_level2_prompt": "Copy the text onto the lines:",
         "print_name_label": "Name:",
-        "print_date_label": "Date:"
+        "print_date_label": "Date:",
+        "title_install_pwa": "Install App (PWA)",
+        "modal_pwa_title": "📱 Install Application",
+        "pwa_modal_desc": "Install the app on your device for instant access and full offline support (PWA).",
+        "pwa_ios_title": "🍎 For iPhone / iPad (Safari):",
+        "pwa_ios_step1": "Tap the Share button at the bottom of Safari.",
+        "pwa_ios_step2": "Select 'Add to Home Screen' (➕).",
+        "pwa_android_title": "🤖 For Android / Desktop (Chrome / Edge):",
+        "pwa_android_desc": "Tap 'Install Now' below, or open the browser menu (⋮) and select 'Install app'.",
+        "btn_install_now": "📥 Install Now"
     },
     "et": {
         "modal_lang_title": "🌍 Keel",
@@ -3903,7 +4083,16 @@
         "print_level1_prompt": "Trace over the faint letters:",
         "print_level2_prompt": "Copy the text onto the lines:",
         "print_name_label": "Name:",
-        "print_date_label": "Date:"
+        "print_date_label": "Date:",
+        "title_install_pwa": "Install App (PWA)",
+        "modal_pwa_title": "📱 Install Application",
+        "pwa_modal_desc": "Install the app on your device for instant access and full offline support (PWA).",
+        "pwa_ios_title": "🍎 For iPhone / iPad (Safari):",
+        "pwa_ios_step1": "Tap the Share button at the bottom of Safari.",
+        "pwa_ios_step2": "Select 'Add to Home Screen' (➕).",
+        "pwa_android_title": "🤖 For Android / Desktop (Chrome / Edge):",
+        "pwa_android_desc": "Tap 'Install Now' below, or open the browser menu (⋮) and select 'Install app'.",
+        "btn_install_now": "📥 Install Now"
     },
     "mt": {
         "modal_lang_title": "🌍 Lingwa",
@@ -4089,7 +4278,16 @@
         "print_level1_prompt": "Trace over the faint letters:",
         "print_level2_prompt": "Copy the text onto the lines:",
         "print_name_label": "Name:",
-        "print_date_label": "Date:"
+        "print_date_label": "Date:",
+        "title_install_pwa": "Install App (PWA)",
+        "modal_pwa_title": "📱 Install Application",
+        "pwa_modal_desc": "Install the app on your device for instant access and full offline support (PWA).",
+        "pwa_ios_title": "🍎 For iPhone / iPad (Safari):",
+        "pwa_ios_step1": "Tap the Share button at the bottom of Safari.",
+        "pwa_ios_step2": "Select 'Add to Home Screen' (➕).",
+        "pwa_android_title": "🤖 For Android / Desktop (Chrome / Edge):",
+        "pwa_android_desc": "Tap 'Install Now' below, or open the browser menu (⋮) and select 'Install app'.",
+        "btn_install_now": "📥 Install Now"
     },
     "ga": {
         "modal_lang_title": "🌍 Teanga",
@@ -4275,7 +4473,16 @@
         "print_level1_prompt": "Trace over the faint letters:",
         "print_level2_prompt": "Copy the text onto the lines:",
         "print_name_label": "Name:",
-        "print_date_label": "Date:"
+        "print_date_label": "Date:",
+        "title_install_pwa": "Install App (PWA)",
+        "modal_pwa_title": "📱 Install Application",
+        "pwa_modal_desc": "Install the app on your device for instant access and full offline support (PWA).",
+        "pwa_ios_title": "🍎 For iPhone / iPad (Safari):",
+        "pwa_ios_step1": "Tap the Share button at the bottom of Safari.",
+        "pwa_ios_step2": "Select 'Add to Home Screen' (➕).",
+        "pwa_android_title": "🤖 For Android / Desktop (Chrome / Edge):",
+        "pwa_android_desc": "Tap 'Install Now' below, or open the browser menu (⋮) and select 'Install app'.",
+        "btn_install_now": "📥 Install Now"
     },
     "sl": {
         "modal_lang_title": "🌍 Izberite jezik",
@@ -4461,6 +4668,15 @@
         "print_level1_prompt": "Trace over the faint letters:",
         "print_level2_prompt": "Copy the text onto the lines:",
         "print_name_label": "Name:",
-        "print_date_label": "Date:"
+        "print_date_label": "Date:",
+        "title_install_pwa": "Install App (PWA)",
+        "modal_pwa_title": "📱 Install Application",
+        "pwa_modal_desc": "Install the app on your device for instant access and full offline support (PWA).",
+        "pwa_ios_title": "🍎 For iPhone / iPad (Safari):",
+        "pwa_ios_step1": "Tap the Share button at the bottom of Safari.",
+        "pwa_ios_step2": "Select 'Add to Home Screen' (➕).",
+        "pwa_android_title": "🤖 For Android / Desktop (Chrome / Edge):",
+        "pwa_android_desc": "Tap 'Install Now' below, or open the browser menu (⋮) and select 'Install app'.",
+        "btn_install_now": "📥 Install Now"
     }
 }

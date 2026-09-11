@@ -20,6 +20,14 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/libertinus-sans/400.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/libertinus-serif/400.css">
 
+    <!-- PWA Manifest & Mobile Icons -->
+    <link rel="manifest" href="./manifest.webmanifest">
+    <meta name="theme-color" content="#1976d2">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="ErasmusReader">
+    <link rel="apple-touch-icon" href="images/icon-192.png">
+
     <!-- Import Custom Fonts (Kidmedia OpenDyslexic & Kids) -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -28,10 +36,15 @@
     <!-- Accessibility Scan Overlay -->
     <div id="scan-overlay"></div>
 
-    <!-- Top Right Language Button -->
-    <button id="btn-lang-selector" data-i18n-title="title_lang_selector" title="Επιλογή Γλώσσας">
-        <span id="current-lang-flag" class="fi fi-gr"></span>
-    </button>
+    <!-- Top Right Language & PWA Install Buttons -->
+    <div id="top-right-actions">
+        <button id="btn-pwa-install-header" class="top-action-circle-btn pwa-btn" data-i18n-title="title_install_pwa" title="Εγκατάσταση Εφαρμογής (PWA)" style="display: none;">
+            <i class="fa-solid fa-download"></i>
+        </button>
+        <button id="btn-lang-selector" data-i18n-title="title_lang_selector" title="Επιλογή Γλώσσας">
+            <span id="current-lang-flag" class="fi fi-gr"></span>
+        </button>
+    </div>
 
     <!-- Modal for Help / Instructions -->
     <div id="help-modal" class="modal-overlay">
@@ -147,6 +160,31 @@
             <div style="display: flex; gap: 10px; justify-content: center;">
                 <button id="btn-cancel-sheet" class="btn-secondary" data-i18n="btn_cancel">Ακύρωση</button>
                 <button id="btn-confirm-sheet" class="btn-primary" data-i18n="btn_save_confirm">Αποθήκευση</button>
+            </div>
+        </div>
+    <!-- Modal for PWA Installation Guidance -->
+    <div id="pwa-modal" class="modal-overlay">
+        <div class="modal-content" style="max-width: 500px; text-align: left; position: relative;">
+            <button id="btn-close-pwa-corner" style="position: absolute; top: 15px; right: 15px; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: #555;"><i class="fa-solid fa-xmark"></i></button>
+            <h2 style="text-align: center; margin-top: 5px;" data-i18n="modal_pwa_title">📱 Εγκατάσταση Εφαρμογής</h2>
+            <p style="text-align: center; color: #555; font-size: 0.92rem; margin-bottom: 15px;" data-i18n="pwa_modal_desc">Εγκαταστήστε την εφαρμογή στη συσκευή σας για άμεση πρόσβαση και λειτουργία εκτός σύνδεσης (Offline PWA).</p>
+            
+            <div id="pwa-guide-ios" style="display: none; background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 12px 14px; font-size: 0.95rem; line-height: 1.6; margin-bottom: 15px;">
+                <strong style="color: #0369a1; display: block; margin-bottom: 6px;" data-i18n="pwa_ios_title">🍎 Για iPhone / iPad (Safari):</strong>
+                <ol style="margin: 0; padding-left: 20px; color: #1e293b;">
+                    <li data-i18n="pwa_ios_step1">Πατήστε το κουμπί Κοινοποίηση (Share) στο κάτω μέρος του Safari.</li>
+                    <li data-i18n="pwa_ios_step2">Επιλέξτε «Προσθήκη στην οθόνη αφετηρίας» (Add to Home Screen ➕).</li>
+                </ol>
+            </div>
+
+            <div id="pwa-guide-android" style="display: none; background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 12px 14px; font-size: 0.95rem; line-height: 1.6; margin-bottom: 15px;">
+                <strong style="color: #15803d; display: block; margin-bottom: 6px;" data-i18n="pwa_android_title">🤖 Για Android / Υπολογιστή (Chrome / Edge):</strong>
+                <p style="margin: 0; color: #1e293b;" data-i18n="pwa_android_desc">Πατήστε «Εγκατάσταση Τώρα» παρακάτω ή από το μενού του φυλλομετρητή (⋮) επιλέξτε «Εγκατάσταση εφαρμογής».</p>
+            </div>
+
+            <div style="display: flex; gap: 10px; justify-content: center; margin-top: 15px;">
+                <button id="btn-pwa-modal-install" class="btn-primary" style="flex: 1; display: none;" data-i18n="btn_install_now">📥 Εγκατάσταση Τώρα</button>
+                <button id="btn-close-pwa" class="btn-secondary" style="flex: 1;" data-i18n="btn_close">Κλείσιμο</button>
             </div>
         </div>
     </div>
@@ -462,6 +500,10 @@
 
                     <input type="file" id="file-load-input" accept=".txt" style="display:none;">
                     
+                    <button id="btn-pwa-install" class="big-action-btn pwa-btn" data-i18n-title="title_install_pwa" title="Εγκατάσταση Εφαρμογής (PWA)" style="display: none; background: #e0f2fe; color: #0284c7;">
+                        <i class="fa-solid fa-download"></i>
+                    </button>
+
                     <button id="btn-help" class="big-action-btn" data-i18n-title="title_help" title="Βοήθεια">
                         <i class="fa-solid fa-circle-info"></i>
                     </button>
@@ -682,6 +724,10 @@
                 <i class="fa-solid fa-expand"></i>
             </button>
 
+            <button id="btn-pwa-install-student" class="student-btn pwa-btn" data-i18n-title="title_install_pwa" title="Εγκατάσταση Εφαρμογής (PWA)" style="display: none; background: #e0f2fe; color: #0284c7;">
+                <i class="fa-solid fa-download"></i>
+            </button>
+
             <button id="btn-back" class="student-btn" data-i18n-title="title_settings" title="Ρυθμίσεις">
                 <i class="fa-solid fa-gear"></i>
             </button>
@@ -770,6 +816,7 @@
     <script src="js/render.js"></script>
     <script src="js/worksheet.js"></script>
     <script src="js/events.js"></script>
+    <script src="js/pwa.js"></script>
     <script src="js/main.js"></script>
 
 </body>

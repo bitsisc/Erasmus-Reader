@@ -326,12 +326,34 @@
             background-color: #f5f5f5;
         }
 
-        /* --- Language Button (Top Right) --- */
-        #btn-lang-selector {
+        /* --- Top Right Actions (Language & PWA Install) --- */
+        #top-right-actions {
             position: absolute;
             top: 15px;
             right: 20px;
             z-index: 50;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .top-action-circle-btn {
+            width: 55px;
+            height: 55px;
+            font-size: 1.4rem;
+            border-radius: 50%;
+            background-color: #fff;
+            color: #1976d2;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            transition: transform 0.2s, background-color 0.2s;
+        }
+        .top-action-circle-btn:hover {
+            transform: scale(1.1);
+            background-color: #f0f7ff;
+        }
+
+        /* --- Language Button (Top Right) --- */
+        #btn-lang-selector {
             width: 55px;
             height: 55px;
             font-size: 1.8rem;
@@ -958,22 +980,162 @@
             background-color: #f57c00; color: white;
         }
 
+        /* --- Responsive Styles --- */
+
+        /* 1. General Tablet & Mobile (max-width: 900px) */
         @media (max-width: 900px) {
             #screen-teacher { height: auto; overflow-y: auto; }
             .main-layout { grid-template-columns: 1fr; min-height: auto; }
             .settings-panel { max-height: none; overflow: visible; }
-            #text-display { font-size: calc(var(--dynamic-font-size) * 0.7); padding: 20px; }
-            .top-bar { justify-content: center; flex-wrap: wrap; gap: 10px;}
-            .veil-controls { order: 4; width: 100%; justify-content: center; margin-top: 10px;}
-            #btn-flow-toggle { order: 3; }
-            #btn-mode-toggle { order: 2; }
-            #btn-read-all { order: 1; }
-            #btn-back { order: 0; }
-            .bottom-nav { gap: 8px; padding: 10px 5px; flex-wrap: nowrap; justify-content: space-evenly; width: 100%; } 
-            .nav-btn { width: 50px; height: 50px; font-size: 1.4rem; border-radius: 10px; }
+            
+            /* Screen 1 top buttons */
+            #btn-fullscreen-toggle { top: 10px; left: 10px; width: 44px; height: 44px; font-size: 1.15rem; }
+            #top-right-actions { top: 10px; right: 10px; gap: 8px; }
+            .top-action-circle-btn, #btn-lang-selector { width: 44px; height: 44px; font-size: 1.3rem; }
+
+            /* Screen 2 Buttons: slightly smaller, legible & comfortable */
+            .student-btn { width: 44px; height: 44px; font-size: 1.25rem; border-radius: 10px; }
+            .student-btn-wide { height: 44px; min-width: 88px; padding: 0 10px; font-size: 0.88rem; border-radius: 10px; }
+            .flow-companion-slot { height: 44px; min-width: 88px; }
+            #btn-read-all { height: 44px; font-size: 1.15rem; }
+
+            .veil-controls { padding: 3px 10px; gap: 8px; }
+            #btn-toggle-veil { width: 36px; height: 36px; font-size: 1rem; }
+            #veil-opacity-slider { width: 70px; }
+
+            .bottom-nav { gap: 8px; padding: 8px 10px; flex-wrap: nowrap; justify-content: space-evenly; width: 100%; } 
+            .nav-btn { width: 46px; height: 44px; font-size: 1.25rem; border-radius: 10px; }
             .nav-spacer { display: none; }
-            .btn-speaker, .btn-listener { width: 58px; height: 58px; font-size: 1.6rem; flex-shrink: 0; }
-            textarea { min-height: 180px; }
+            .btn-speaker, .btn-listener { width: 48px; height: 48px; font-size: 1.35rem; flex-shrink: 0; }
+            
+            textarea { min-height: 160px; }
+            #text-display { font-size: calc(var(--dynamic-font-size) * 0.75); padding: 20px; }
+        }
+
+        /* 2. Mobile Portrait (max-width: 650px) */
+        @media (max-width: 650px) and (orientation: portrait) {
+            .top-bar { justify-content: center; flex-wrap: wrap; gap: 6px; padding: 8px 10px; }
+            .veil-controls { order: 4; width: auto; justify-content: center; margin-top: 4px; }
+            #reading-area { padding: 12px 10px; }
+        }
+
+        /* 3. Mobile Landscape & Compact Vertical Viewports (Fix for Issue 2) */
+        @media (orientation: landscape) and (max-height: 600px), (max-height: 520px) {
+            #screen-student.container {
+                padding: 2px 10px !important;
+                height: 100vh !important;
+                max-height: 100vh !important;
+            }
+
+            /* Single-line Top Bar: NO 2nd row for veil! */
+            .top-bar {
+                flex-wrap: nowrap !important;
+                justify-content: space-between !important;
+                padding: 3px 8px !important;
+                gap: 5px !important;
+                border-radius: 0 0 10px 10px !important;
+            }
+
+            .veil-controls {
+                order: initial !important;
+                width: auto !important;
+                margin-top: 0 !important;
+                padding: 2px 6px !important;
+                gap: 4px !important;
+            }
+
+            #btn-toggle-veil {
+                width: 30px !important;
+                height: 30px !important;
+                font-size: 0.9rem !important;
+            }
+
+            #veil-opacity-slider {
+                width: 50px !important;
+                height: 12px !important;
+            }
+
+            /* Proportional, slightly smaller buttons */
+            .student-btn {
+                width: 36px !important;
+                height: 36px !important;
+                font-size: 1.1rem !important;
+                border-radius: 8px !important;
+            }
+
+            .student-btn-wide {
+                height: 36px !important;
+                min-width: 74px !important;
+                padding: 0 6px !important;
+                font-size: 0.8rem !important;
+                border-radius: 8px !important;
+            }
+
+            .flow-companion-slot {
+                height: 36px !important;
+                min-width: 74px !important;
+            }
+
+            #btn-read-all {
+                height: 36px !important;
+                font-size: 1rem !important;
+            }
+
+            /* Reading Area & Text Display: Maximum breathing room */
+            #reading-area {
+                padding: 4px 8px !important;
+                justify-content: center !important;
+                flex-grow: 1 !important;
+                overflow-y: auto !important;
+            }
+
+            #text-display {
+                padding: 6px 14px !important;
+                border-radius: 12px !important;
+                line-height: 1.35 !important;
+                letter-spacing: 0.03em !important;
+                font-size: min(calc(var(--dynamic-font-size) * 0.62), 5.5vh) !important;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.08) !important;
+                max-height: calc(100vh - 96px) !important;
+                overflow-y: auto !important;
+            }
+
+            .word-image {
+                max-height: clamp(22px, 6.5vh, 38px) !important;
+            }
+
+            .paragraph-block {
+                margin-bottom: 0.5rem !important;
+            }
+
+            /* Bottom Nav: Compact height without sacrificing touchability */
+            .bottom-nav {
+                padding: 3px 8px !important;
+                gap: 8px !important;
+                border-radius: 10px 10px 0 0 !important;
+            }
+
+            .nav-btn {
+                width: 42px !important;
+                height: 36px !important;
+                font-size: 1.2rem !important;
+                border-radius: 8px !important;
+            }
+
+            .nav-spacer {
+                display: none !important;
+            }
+
+            .btn-speaker, .btn-listener {
+                width: 42px !important;
+                height: 42px !important;
+                font-size: 1.2rem !important;
+            }
+
+            .restore-hand {
+                top: -26px !important;
+                font-size: 1.3rem !important;
+            }
         }
 
         /* Auto-Scanning focus style */

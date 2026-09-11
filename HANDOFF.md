@@ -1,29 +1,31 @@
 # Session Handoff Log
 
-## Current Status: SYNCED
-- **Last Updated**: 2026-09-10 20:05:00 (Local Time)
+## Current Status: PENDING GIT SYNC
+- **Last Updated**: 2026-09-11 18:05:00 (Local Time)
 - **Workstation**: Home PC
 - **Active Branch**: main
 - **GitHub Repo**: https://github.com/bitsisc/Erasmus-Reader
 
 ## What Was Completed in This Session
-- Refactored worksheet printouts (`js/worksheet.js`, `index.html`, `js/events.js`, `i18n/translations.json`):
-  - Retained ONLY Reading Text and 2 handwriting levels:
-    - Level 1: Tracing with faint letters on pedagogical ruled lines (solid baseline + dashed midline).
-    - Level 2: Model sentence + blank ruled handwriting lines for independent copying (with customizable line count).
-  - Lifted minimum length restriction (`allWords.length < 3`): Printing is now fully functional even for a single word or short phrase.
-  - Implemented unified partner logo `SESAT Ltd & KIDMEDIA.NET` (`images/Sesat-kidmedia-net.png`) on print header (left) and web header, linked to `https://kidmedia.net/`.
-- Deleted temporary video file per user instructions.
-- Initialized local git repo and successfully published to new GitHub repository: `bitsisc/Erasmus-Reader`.
+- **1-Click PWA & Offline Support**:
+  - Incorporated user's official icons (`Reader-Icon-192.png` and `Reader-Icon.png`) into `images/icon-192.png` and `images/icon-512.png`.
+  - Created `manifest.webmanifest` conforming to Kidmedia PWA standards.
+  - Implemented `sw.js` (Cache-First static assets + Network-First dynamic assets).
+  - Implemented `js/pwa.js` for Service Worker registration, `beforeinstallprompt` handling, and iOS 2-step home screen guidance modal.
+  - Added PWA installation buttons in Screen 1 header, Screen 1 action bar, and Screen 2 student top-bar.
+  - Added multilingual PWA translation keys to `i18n/translations.json`.
+- **Screen 2 Mobile Landscape Responsiveness**:
+  - Fixed veil controls dropping into a 2nd row: constrained `.top-bar` to `flex-wrap: nowrap` with inline veil controls.
+  - Reduced button sizes proportionally for touch readability without being overly small (36px student buttons, 42px speaker/listener).
+  - Optimized reading area paddings, line-height (1.35), responsive font scaling (`5.5vh`), and word image heights for comfortable reading without fullscreen.
 
 ## Key Architectural Decisions Made
-- Printout layout: Left unified logo, Right student name/date fields, followed by optional reading text box, Level 1 tracing rows, and Level 2 copying rows.
-- Complete removal of old exercises 1-9 from printout and print modal to maintain minimal, focused pedagogical tool.
-- Cloudflare deployment ready via GitHub Pages integration (`wrangler.jsonc` configured with `"name": "erasmus-reader"`).
+- PWA install buttons stay visible in non-standalone browser mode on mobile/desktop, triggering either the native install prompt or a friendly modal guide for iOS Safari.
+- Landscape orientation on mobile devices prioritizes viewport height: top and bottom UI bars are reduced to under 95px combined, leaving abundant vertical room for text.
 
 ## Next Immediate Steps
-- Connect `bitsisc/Erasmus-Reader` to Cloudflare Pages via Cloudflare Dashboard.
-- Add `manifest.webmanifest` and `sw.js` for 1-Click PWA offline capability.
+- Push changes to GitHub repository.
+- Connect `bitsisc/Erasmus-Reader` to Cloudflare Pages via Cloudflare Dashboard (if not already connected).
 
 ## Known Issues / Blockers
 - None.

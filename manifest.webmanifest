@@ -1,0 +1,26 @@
+{
+  "name": "Εργαλείο Ανάγνωσης / Reading Tool (Erasmus+)",
+  "short_name": "ErasmusReader",
+  "description": "Accessible Educational Reading Tool by Kidmedia & SESAT (Erasmus+)",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#E8ECEF",
+  "theme_color": "#1976d2",
+  "lang": "el",
+  "icons": [
+    {
+      "src": "images/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "images/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
