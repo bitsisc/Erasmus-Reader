@@ -19,6 +19,10 @@
   - Restored full DOM hierarchy: Screen 1 and all modals display normally.
   - Device-aware PWA button display: on Desktop PC the PWA button remains hidden unless the browser provides a desktop install prompt, while on mobile devices it is clearly visible and fully functional.
   - Added `.webmanifest` MIME type to `server.js`.
+- **PWA Name & Root URL Correction**:
+  - Renamed PWA to `Reader Kidmedia - Sesat` per user instruction (`manifest.webmanifest`, `index.html` apple title).
+  - Changed `start_url` from `./index.html` to `./` so launching the installed PWA directs cleanly to root (`https://reader-tool.kidmedia.workers.dev/`).
+  - Bumped Service Worker cache version to `erasmus-reader-v2`.
 
 ## Key Architectural Decisions Made
 - PWA install buttons stay visible in non-standalone browser mode on mobile/desktop, triggering either the native install prompt or a friendly modal guide for iOS Safari.
