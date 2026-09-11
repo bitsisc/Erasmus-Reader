@@ -21,11 +21,24 @@ function parseCsvIntoDictionary(csvText) {
     wordToImageMap = {};
     imageToWordMap = {};
 
+    // Detect primary delimiter from first non-empty line (supports Comma, Tab TSV, Semicolon)
+    let delimiter = ',';
+    for (const line of lines) {
+        const trimmed = line.trim();
+        if (!trimmed) continue;
+        if (trimmed.includes('\t')) {
+            delimiter = '\t';
+        } else if (trimmed.includes(';') && !trimmed.includes(',')) {
+            delimiter = ';';
+        }
+        break;
+    }
+
     lines.forEach(line => {
         const trimmed = line.trim();
         if (!trimmed) return;
         
-        // Basic CSV split supporting quoted items
+        // Flexible split supporting quoted items and detected delimiter
         let parts = [];
         let curr = '';
         let inQuotes = false;
@@ -33,7 +46,7 @@ function parseCsvIntoDictionary(csvText) {
             const ch = trimmed[i];
             if (ch === '"') {
                 inQuotes = !inQuotes;
-            } else if (ch === ',' && !inQuotes) {
+            } else if (ch === delimiter && !inQuotes) {
                 parts.push(curr.trim().replace(/^"|"$/g, ''));
                 curr = '';
             } else {

@@ -1248,7 +1248,7 @@
                     if (sttSaveToastTimer) clearTimeout(sttSaveToastTimer);
                     sttSaveToastTimer = setTimeout(() => {
                         toast.style.display = 'none';
-                    }, 3000);
+                    }, 1500);
                 }
             });
         }

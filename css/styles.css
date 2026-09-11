@@ -1140,7 +1140,7 @@
                 border-radius: 12px !important;
                 line-height: 1.35 !important;
                 letter-spacing: 0.03em !important;
-                font-size: min(calc(var(--dynamic-font-size) * 0.62), 5.5dvh, 5.5vh) !important;
+                font-size: var(--dynamic-font-size) !important;
                 box-shadow: 0 4px 12px rgba(0,0,0,0.08) !important;
                 max-height: calc(100vh - 80px) !important;
                 max-height: calc(100dvh - 80px) !important;
