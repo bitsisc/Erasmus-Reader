@@ -12,6 +12,11 @@ function isIosDevice() {
     return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
 }
 
+function isMobileDevice() {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ||
+           (navigator.maxTouchPoints && navigator.maxTouchPoints > 1 && window.innerWidth <= 1024);
+}
+
 function showPwaButtons() {
     if (isPwaStandalone()) {
         hidePwaButtons();
@@ -58,12 +63,17 @@ function closePwaModal() {
 
 async function triggerPwaInstall() {
     if (deferredPrompt) {
-        deferredPrompt.prompt();
-        const { outcome } = await deferredPrompt.userChoice;
-        if (outcome === 'accepted') {
-            console.log('[PWA] User accepted installation prompt');
-            hidePwaButtons();
-            closePwaModal();
+        try {
+            deferredPrompt.prompt();
+            const { outcome } = await deferredPrompt.userChoice;
+            if (outcome === 'accepted') {
+                console.log('[PWA] User accepted installation prompt');
+                hidePwaButtons();
+                closePwaModal();
+            }
+        } catch (err) {
+            console.warn('[PWA] Error triggering prompt:', err);
+            openPwaModal();
         }
         deferredPrompt = null;
     } else {
@@ -96,13 +106,16 @@ function initPwa() {
     document.querySelectorAll('.pwa-btn').forEach(btn => {
         btn.addEventListener('click', (e) => {
             e.stopPropagation();
+            e.preventDefault();
             triggerPwaInstall();
         });
     });
 
     const btnDirectInstall = document.getElementById('btn-pwa-modal-install');
     if (btnDirectInstall) {
-        btnDirectInstall.addEventListener('click', () => {
+        btnDirectInstall.addEventListener('click', (e) => {
+            e.stopPropagation();
+            e.preventDefault();
             triggerPwaInstall();
         });
     }
@@ -124,12 +137,16 @@ function initPwa() {
         deferredPrompt = null;
     });
 
-    // 5. Initial display check
+    // 5. Display check:
+    // If standalone -> always hide
+    // If mobile device -> show button so user can install (either direct or via guide)
+    // If desktop -> only show if beforeinstallprompt fired (handled in listener)
     if (isPwaStandalone()) {
         hidePwaButtons();
-    } else {
-        // Show button on mobile devices & desktop
+    } else if (isMobileDevice()) {
         showPwaButtons();
+    } else {
+        hidePwaButtons();
     }
 }
 

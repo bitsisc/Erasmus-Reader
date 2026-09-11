@@ -14,10 +14,11 @@
   - Implemented `js/pwa.js` for Service Worker registration, `beforeinstallprompt` handling, and iOS 2-step home screen guidance modal.
   - Added PWA installation buttons in Screen 1 header, Screen 1 action bar, and Screen 2 student top-bar.
   - Added multilingual PWA translation keys to `i18n/translations.json`.
-- **Screen 2 Mobile Landscape Responsiveness**:
-  - Fixed veil controls dropping into a 2nd row: constrained `.top-bar` to `flex-wrap: nowrap` with inline veil controls.
-  - Reduced button sizes proportionally for touch readability without being overly small (36px student buttons, 42px speaker/listener).
-  - Optimized reading area paddings, line-height (1.35), responsive font scaling (`5.5vh`), and word image heights for comfortable reading without fullscreen.
+- **Bugfix for Blank Screen & PWA Modal**:
+  - Resolved unclosed `<div>` in `index.html` on `#sheet-link-modal` which unintentionally wrapped Screen 1 and modals inside an invisible container (`display: none`).
+  - Restored full DOM hierarchy: Screen 1 and all modals display normally.
+  - Device-aware PWA button display: on Desktop PC the PWA button remains hidden unless the browser provides a desktop install prompt, while on mobile devices it is clearly visible and fully functional.
+  - Added `.webmanifest` MIME type to `server.js`.
 
 ## Key Architectural Decisions Made
 - PWA install buttons stay visible in non-standalone browser mode on mobile/desktop, triggering either the native install prompt or a friendly modal guide for iOS Safari.
