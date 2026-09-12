@@ -122,7 +122,15 @@ const state = {
     imageMode: 0,
     imageSize: '50px',
     sheetUnknownWords: new Set(),
-    failedCurrentTarget: false
+    failedCurrentTarget: false,
+    rewardsEnabled: true,
+    currentStudent: 'Μαθητής',
+    studentsList: ['Μαθητής'],
+    studentProfiles: {
+        'Μαθητής': { score: 0, stickers: 0 }
+    },
+    activeStickerEmoji: '🏆',
+    activeStickerPhoto: null
 };
 
 const screens = {
@@ -158,7 +166,10 @@ const inputs = {
     shareUrlInput: document.getElementById('share-url-input'),
     customWordsUrlInput: document.getElementById('custom-words-url-input'),
     sttApiKey: document.getElementById('stt-api-key'),
-    syncSttWithTtsKey: document.getElementById('sync-stt-with-tts-key')
+    syncSttWithTtsKey: document.getElementById('sync-stt-with-tts-key'),
+    rewardsEnabled: document.getElementById('set-rewards-enabled'),
+    newStudentName: document.getElementById('new-student-name-input'),
+    btnAddStudent: document.getElementById('btn-add-student')
 };
 const display = {
     area: document.getElementById('text-display'),
@@ -173,5 +184,6 @@ const modals = {
     help: document.getElementById('help-modal'),
     imageDict: document.getElementById('image-dict-modal'),
     apiInfo: document.getElementById('api-info-modal'),
-    stt: document.getElementById('stt-modal')
+    stt: document.getElementById('stt-modal'),
+    sticker: document.getElementById('sticker-modal')
 };

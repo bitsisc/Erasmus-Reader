@@ -203,6 +203,16 @@ async function initApp() {
     if (typeof updateSliderValDisplays === 'function') {
         updateSliderValDisplays();
     }
+
+    // Check for external referrer exit button ('X')
+    if (typeof checkExternalReferrer === 'function') {
+        checkExternalReferrer();
+    }
+
+    // Load rewards and student profiles
+    if (typeof loadRewardsData === 'function') {
+        loadRewardsData();
+    }
 }
 
 window.addEventListener('DOMContentLoaded', () => {

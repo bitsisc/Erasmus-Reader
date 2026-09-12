@@ -402,13 +402,34 @@
             }
         });
 
-        document.getElementById('btn-reset').addEventListener('click', () => {
+        const btnReset = document.getElementById('btn-reset');
+        let resetHoldTimer = null;
+        let isResetLongPressTriggered = false;
+
+        function executeResetToStart() {
+            stopAutoRead();
+            state.currentIndex = 0;
+            state.failedCurrentTarget = false;
+            
+            if (typeof clearWordColoring === 'function') clearWordColoring();
+            if (typeof hideRestorePrompt === 'function') hideRestorePrompt();
+            
+            if (state.readFlow === 'continuous') {
+                state.veilActive = false;
+            } else {
+                state.veilActive = true;
+            }
+            updateVeilUI();
+            updateHighlight();
+        }
+
+        function executeStepBack() {
             stopAutoRead();
             
             if (state.readFlow === 'continuous') {
                 // In continuous flow: reset to the beginning
-                state.currentIndex = 0;
-                state.failedCurrentTarget = false;
+                executeResetToStart();
+                return;
             } else {
                 if (state.failedCurrentTarget) {
                     // 1st click on failure: stay on current word, giving the opportunity to re-read it
@@ -427,14 +448,69 @@
             if (typeof clearWordColoring === 'function') clearWordColoring();
             if (typeof hideRestorePrompt === 'function') hideRestorePrompt();
             
-            if (state.readFlow === 'continuous') {
-                state.veilActive = false;
-            } else {
-                state.veilActive = true;
-            }
+            state.veilActive = true;
             updateVeilUI();
             updateHighlight();
-        });
+        }
+
+        function startResetHold() {
+            isResetLongPressTriggered = false;
+            if (resetHoldTimer) clearTimeout(resetHoldTimer);
+            if (btnReset) btnReset.classList.add('holding');
+
+            resetHoldTimer = setTimeout(() => {
+                isResetLongPressTriggered = true;
+                if (btnReset) {
+                    btnReset.classList.remove('holding');
+                    btnReset.classList.add('reset-complete');
+                    setTimeout(() => btnReset.classList.remove('reset-complete'), 600);
+                }
+                
+                if (typeof playResetChime === 'function') {
+                    playResetChime();
+                }
+                if (navigator.vibrate) {
+                    try { navigator.vibrate(50); } catch (e) {}
+                }
+                executeResetToStart();
+            }, 1500);
+        }
+
+        function cancelResetHold() {
+            if (btnReset) btnReset.classList.remove('holding');
+            if (resetHoldTimer) {
+                clearTimeout(resetHoldTimer);
+                resetHoldTimer = null;
+            }
+        }
+
+        if (btnReset) {
+            btnReset.addEventListener('pointerdown', (e) => {
+                if (e.button !== undefined && e.button !== 0) return;
+                startResetHold();
+            });
+
+            btnReset.addEventListener('pointerup', () => {
+                cancelResetHold();
+            });
+
+            btnReset.addEventListener('pointercancel', () => {
+                cancelResetHold();
+            });
+
+            btnReset.addEventListener('pointerleave', () => {
+                cancelResetHold();
+            });
+
+            btnReset.addEventListener('click', () => {
+                if (isResetLongPressTriggered) {
+                    isResetLongPressTriggered = false;
+                    return;
+                }
+                cancelResetHold();
+                executeStepBack();
+            });
+        }
 
         const btnReadAll = document.getElementById('btn-read-all');
         btnReadAll.addEventListener('click', () => {
@@ -1250,5 +1326,433 @@
                         toast.style.display = 'none';
                     }, 1500);
                 }
+            });
+        }
+
+        /* ==========================================================================
+           EXTERNAL REFERRER EXIT BUTTON ('X') LOGIC
+           ========================================================================== */
+        function returnToHub() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const exitUrl = urlParams.get('exit') || urlParams.get('hub') || urlParams.get('ref');
+            
+            if (window.history.length > 1) {
+                window.history.back();
+            } else if (exitUrl && exitUrl.startsWith('http')) {
+                window.location.href = exitUrl;
+            } else if (document.referrer && !document.referrer.includes(window.location.hostname)) {
+                window.location.href = document.referrer;
+            } else {
+                try { window.close(); } catch (e) {}
+                setTimeout(() => { window.location.href = 'https://kidmedia.net/'; }, 300);
+            }
+        }
+
+        function checkExternalReferrer() {
+            const isPWA = window.matchMedia('(display-mode: standalone)').matches || 
+                          window.navigator.standalone === true ||
+                          (document.referrer && document.referrer.includes('android-app://'));
+            if (isPWA) return; // NEVER show in PWA
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const hasRefParam = urlParams.has('ref') || urlParams.has('hub') || urlParams.has('from') || urlParams.has('exit');
+            const hasExternalReferrer = document.referrer && !document.referrer.includes(window.location.hostname);
+
+            if (hasRefParam || hasExternalReferrer) {
+                const btn = document.getElementById('btn-return-hub');
+                const teacherScreen = document.getElementById('screen-teacher');
+                if (btn) btn.style.display = 'inline-flex';
+                if (teacherScreen) teacherScreen.classList.add('has-return-hub');
+            }
+        }
+
+        const btnReturnHub = document.getElementById('btn-return-hub');
+        if (btnReturnHub) {
+            btnReturnHub.addEventListener('click', returnToHub);
+        }
+
+        /* ==========================================================================
+           REWARDS & STUDENT PROFILES EVENT LISTENERS
+           ========================================================================== */
+        const chkRewards = document.getElementById('set-rewards-enabled');
+        if (chkRewards) {
+            chkRewards.addEventListener('change', () => {
+                state.rewardsEnabled = chkRewards.checked;
+                saveRewardsData();
+                updateRewardsUI();
+            });
+        }
+
+        const btnAddStudent = document.getElementById('btn-add-student');
+        const inputNewStudent = document.getElementById('new-student-name-input');
+        if (btnAddStudent && inputNewStudent) {
+            const handleAdd = () => {
+                const val = inputNewStudent.value.trim();
+                if (val) {
+                    addNewStudent(val);
+                    inputNewStudent.value = '';
+                }
+            };
+            btnAddStudent.addEventListener('click', handleAdd);
+            inputNewStudent.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter') {
+                    e.preventDefault();
+                    handleAdd();
+                }
+            });
+        }
+
+        // Screen 2 Student Pill & Quick-Switch Popover
+        const btnStudentPill = document.getElementById('btn-student-pill');
+        const popover = document.getElementById('student-quick-popover');
+        const btnClosePopover = document.getElementById('btn-close-popover');
+
+        if (btnStudentPill && popover) {
+            btnStudentPill.addEventListener('click', (e) => {
+                e.stopPropagation();
+                popover.style.display = popover.style.display === 'none' ? 'block' : 'none';
+            });
+        }
+
+        if (btnClosePopover && popover) {
+            btnClosePopover.addEventListener('click', (e) => {
+                e.stopPropagation();
+                popover.style.display = 'none';
+            });
+        }
+
+        document.addEventListener('click', (e) => {
+            if (popover && popover.style.display !== 'none') {
+                if (!popover.contains(e.target) && e.target !== btnStudentPill && !btnStudentPill.contains(e.target)) {
+                    popover.style.display = 'none';
+                }
+            }
+        });
+
+        const popoverAddBtn = document.getElementById('btn-popover-add-student');
+        const popoverAddInput = document.getElementById('popover-new-student-input');
+        if (popoverAddBtn && popoverAddInput) {
+            const handlePopoverAdd = () => {
+                const val = popoverAddInput.value.trim();
+                if (val) {
+                    addNewStudent(val);
+                    popoverAddInput.value = '';
+                    if (popover) popover.style.display = 'none';
+                }
+            };
+            popoverAddBtn.addEventListener('click', handlePopoverAdd);
+            popoverAddInput.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter') {
+                    e.preventDefault();
+                    handlePopoverAdd();
+                }
+            });
+        }
+
+        /* ==========================================================================
+           STICKER GENERATOR, CANVAS & CAMERA LOGIC
+           ========================================================================== */
+        let cameraStream = null;
+        let capturedPhotoCanvas = null;
+
+        function renderStickerCanvas() {
+            const canvas = document.getElementById('sticker-canvas');
+            if (!canvas) return;
+            const ctx = canvas.getContext('2d');
+            const width = canvas.width;
+            const height = canvas.height;
+            const center = width / 2;
+
+            ctx.clearRect(0, 0, width, height);
+
+            // 1. Outer Starburst / Scalloped Badge Background
+            ctx.save();
+            ctx.beginPath();
+            ctx.arc(center, center, center - 10, 0, Math.PI * 2);
+            ctx.fillStyle = '#ffffff';
+            ctx.fill();
+
+            // Outer thick decorative gradient border
+            const gradient = ctx.createLinearGradient(0, 0, width, height);
+            gradient.addColorStop(0, '#3b82f6');
+            gradient.addColorStop(0.5, '#f59e0b');
+            gradient.addColorStop(1, '#ec4899');
+            ctx.lineWidth = 14;
+            ctx.strokeStyle = gradient;
+            ctx.stroke();
+
+            // Inner dotted gold circle
+            ctx.beginPath();
+            ctx.arc(center, center, center - 24, 0, Math.PI * 2);
+            ctx.lineWidth = 3;
+            ctx.setLineDash([8, 8]);
+            ctx.strokeStyle = '#f59e0b';
+            ctx.stroke();
+            ctx.setLineDash([]);
+            ctx.restore();
+
+            // 2. Soft pastel background fill
+            ctx.save();
+            ctx.beginPath();
+            ctx.arc(center, center, center - 30, 0, Math.PI * 2);
+            const bgGrad = ctx.createRadialGradient(center, center, 40, center, center, center - 30);
+            bgGrad.addColorStop(0, '#fef9c3');
+            bgGrad.addColorStop(1, '#dbeafe');
+            ctx.fillStyle = bgGrad;
+            ctx.fill();
+            ctx.restore();
+
+            // 3. Header text: Student Name & Title
+            ctx.save();
+            ctx.textAlign = 'center';
+            ctx.fillStyle = '#1e3a8a';
+            ctx.font = 'bold 28px "Comic Neue", "Kids", "Open Sans", sans-serif';
+            const studentDefault = typeof getText === 'function' ? getText('default_student_name') : 'ΜΑΘΗΤΗΣ';
+            const studentTitle = (state.currentStudent || studentDefault).toUpperCase();
+            const bravoText = typeof getText === 'function' ? getText('sticker_bravo') : 'ΜΠΡΑΒΟ';
+            ctx.fillText(`${bravoText} ${studentTitle}!`, center, 95);
+
+            ctx.font = 'bold 18px "Comic Neue", "Kids", "Open Sans", sans-serif';
+            ctx.fillStyle = '#d97706';
+            const superReaderText = typeof getText === 'function' ? getText('sticker_super_reader') : '🌟 SUPER ΑΝΑΓΝΩΣΤΗΣ 🌟';
+            ctx.fillText(superReaderText, center, 125);
+            ctx.restore();
+
+            // 4. Center Avatar: Photo if captured, otherwise large Emoji
+            if (capturedPhotoCanvas) {
+                ctx.save();
+                ctx.beginPath();
+                ctx.arc(center, center + 15, 90, 0, Math.PI * 2);
+                ctx.clip();
+                ctx.drawImage(capturedPhotoCanvas, center - 90, center + 15 - 90, 180, 180);
+                ctx.restore();
+
+                // Photo border
+                ctx.save();
+                ctx.beginPath();
+                ctx.arc(center, center + 15, 90, 0, Math.PI * 2);
+                ctx.lineWidth = 6;
+                ctx.strokeStyle = '#ffffff';
+                ctx.stroke();
+                ctx.lineWidth = 2;
+                ctx.strokeStyle = '#f59e0b';
+                ctx.stroke();
+                ctx.restore();
+            } else {
+                ctx.save();
+                ctx.font = '110px "Segoe UI Emoji", "Apple Color Emoji", sans-serif';
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+                ctx.fillText(state.activeStickerEmoji || '🏆', center, center + 20);
+                ctx.restore();
+            }
+
+            // 5. Footer: Date & Kidmedia micro-emblem
+            ctx.save();
+            ctx.textAlign = 'center';
+            ctx.fillStyle = '#64748b';
+            ctx.font = '14px "Open Sans", sans-serif';
+            const localeStr = currentLang === 'el' ? 'el-GR' : (currentLang || 'en-US');
+            const today = new Date().toLocaleDateString(localeStr);
+            ctx.fillText(`Kidmedia Sesat • ${today}`, center, height - 60);
+            ctx.restore();
+        }
+
+        async function startCamera() {
+            const video = document.getElementById('camera-stream-video');
+            const container = document.getElementById('camera-preview-container');
+            const cameraBtnText = document.getElementById('camera-btn-text');
+            if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
+                const notSuppMsg = typeof getText === 'function' ? getText('camera_not_supported') : "Η κάμερα δεν υποστηρίζεται σε αυτή τη συσκευή / πρόγραμμα περιήγησης.";
+                alert(notSuppMsg);
+                return;
+            }
+            try {
+                cameraStream = await navigator.mediaDevices.getUserMedia({
+                    video: { facingMode: 'user', width: { ideal: 400 }, height: { ideal: 400 } }
+                });
+                if (video) {
+                    video.srcObject = cameraStream;
+                    video.play();
+                }
+                if (container) container.style.display = 'flex';
+                if (cameraBtnText) cameraBtnText.textContent = typeof getText === 'function' ? getText('camera_close') : 'Κλείσιμο Κάμερας';
+            } catch (e) {
+                console.warn("Camera error:", e);
+                const accessErrMsg = typeof getText === 'function' ? getText('camera_access_error') : "Δεν ήταν δυνατή η πρόσβαση στην κάμερα.";
+                alert(accessErrMsg);
+            }
+        }
+
+        function stopCamera() {
+            if (cameraStream) {
+                cameraStream.getTracks().forEach(t => t.stop());
+                cameraStream = null;
+            }
+            const container = document.getElementById('camera-preview-container');
+            if (container) container.style.display = 'none';
+            const cameraBtnText = document.getElementById('camera-btn-text');
+            if (cameraBtnText) cameraBtnText.textContent = typeof getText === 'function' ? getText('btn_take_selfie') : 'Φωτογραφία με Κάμερα';
+        }
+
+        function capturePhoto() {
+            const video = document.getElementById('camera-stream-video');
+            if (!video) return;
+            const offCanvas = document.createElement('canvas');
+            const size = Math.min(video.videoWidth || 300, video.videoHeight || 300);
+            offCanvas.width = size;
+            offCanvas.height = size;
+            const ctx = offCanvas.getContext('2d');
+            
+            const sx = (video.videoWidth - size) / 2;
+            const sy = (video.videoHeight - size) / 2;
+            ctx.drawImage(video, sx, sy, size, size, 0, 0, size, size);
+
+            capturedPhotoCanvas = offCanvas;
+            stopCamera();
+
+            const btnRemove = document.getElementById('btn-remove-photo');
+            if (btnRemove) btnRemove.style.display = 'inline-flex';
+
+            renderStickerCanvas();
+        }
+
+        function removePhoto() {
+            capturedPhotoCanvas = null;
+            const btnRemove = document.getElementById('btn-remove-photo');
+            if (btnRemove) btnRemove.style.display = 'none';
+            renderStickerCanvas();
+        }
+
+        function printSticker() {
+            const canvas = document.getElementById('sticker-canvas');
+            if (!canvas) return;
+            const dataUrl = canvas.toDataURL('image/png');
+            const printWindow = window.open('', '_blank');
+            if (!printWindow) {
+                document.body.classList.add('printing-sticker');
+                window.print();
+                document.body.classList.remove('printing-sticker');
+                return;
+            }
+            const stickerWord = typeof getText === 'function' ? getText('modal_sticker_title') : 'Αυτοκόλλητο';
+            printWindow.document.write(`
+                <!DOCTYPE html>
+                <html>
+                <head>
+                    <title>${stickerWord} - ${escapeHtml(state.currentStudent)}</title>
+                    <style>
+                        @page { size: auto; margin: 10mm; }
+                        body { margin: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; font-family: sans-serif; }
+                        img { width: 100mm; height: 100mm; object-fit: contain; }
+                        p { margin-top: 10px; color: #666; font-size: 13px; font-weight: bold; }
+                    </style>
+                </head>
+                <body>
+                    <img src="${dataUrl}" onload="window.print();window.close();">
+                    <p>Kidmedia Reader • Erasmus+</p>
+                </body>
+                </html>
+            `);
+            printWindow.document.close();
+        }
+
+        function downloadSticker() {
+            const canvas = document.getElementById('sticker-canvas');
+            if (!canvas) return;
+            const dataUrl = canvas.toDataURL('image/png');
+            const a = document.createElement('a');
+            a.href = dataUrl;
+            a.download = `Sticker_${state.currentStudent || 'Student'}_100pts.png`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        }
+
+        function redeemStickerPoints() {
+            if (typeof deductStudentPoints === 'function') {
+                deductStudentPoints(100);
+            }
+            if (typeof playSuccessArcadeSound === 'function') {
+                playSuccessArcadeSound(1);
+            }
+            closeStickerModal();
+            let successMsg = typeof getText === 'function' ? getText('sticker_redeem_success') : '🎉 Συγχαρητήρια {name}! Εξαργύρωσες 100 πόντους και πήρες το αυτοκόλλητό σου!';
+            successMsg = successMsg.replace('{name}', state.currentStudent || '');
+            alert(successMsg);
+        }
+
+        function openStickerModal() {
+            const modal = document.getElementById('sticker-modal');
+            if (modal) {
+                modal.style.display = 'flex';
+                renderStickerCanvas();
+            }
+        }
+
+        function closeStickerModal() {
+            stopCamera();
+            const modal = document.getElementById('sticker-modal');
+            if (modal) modal.style.display = 'none';
+        }
+
+        // Sticker Modal Buttons
+        const btnClaimSticker = document.getElementById('btn-claim-sticker');
+        if (btnClaimSticker) btnClaimSticker.addEventListener('click', openStickerModal);
+
+        const btnCloseStickerCorner = document.getElementById('btn-close-sticker-corner');
+        if (btnCloseStickerCorner) btnCloseStickerCorner.addEventListener('click', closeStickerModal);
+
+        const btnPrintSticker = document.getElementById('btn-print-sticker');
+        if (btnPrintSticker) btnPrintSticker.addEventListener('click', printSticker);
+
+        const btnDownloadSticker = document.getElementById('btn-download-sticker');
+        if (btnDownloadSticker) btnDownloadSticker.addEventListener('click', downloadSticker);
+
+        const btnRedeemSticker = document.getElementById('btn-redeem-sticker');
+        if (btnRedeemSticker) btnRedeemSticker.addEventListener('click', redeemStickerPoints);
+
+        const btnToggleCamera = document.getElementById('btn-toggle-camera');
+        if (btnToggleCamera) {
+            btnToggleCamera.addEventListener('click', () => {
+                if (cameraStream) stopCamera();
+                else startCamera();
+            });
+        }
+
+        const btnCapturePhoto = document.getElementById('btn-capture-photo');
+        if (btnCapturePhoto) btnCapturePhoto.addEventListener('click', capturePhoto);
+
+        const btnRemovePhoto = document.getElementById('btn-remove-photo');
+        if (btnRemovePhoto) btnRemovePhoto.addEventListener('click', removePhoto);
+
+        // Emoji buttons
+        const emojiBtns = document.querySelectorAll('.sticker-emoji-btn:not(.dice-btn)');
+        emojiBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                emojiBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                state.activeStickerEmoji = btn.getAttribute('data-emoji') || '🏆';
+                capturedPhotoCanvas = null; // switch to emoji
+                const btnRemove = document.getElementById('btn-remove-photo');
+                if (btnRemove) btnRemove.style.display = 'none';
+                renderStickerCanvas();
+            });
+        });
+
+        const btnDice = document.getElementById('btn-random-sticker-emoji');
+        if (btnDice) {
+            btnDice.addEventListener('click', () => {
+                const emojis = ['🏆', '🚀', '🦁', '🦄', '🌟', '👑', '🎨', '🐬', '🦖', '🦉', '🍦', '🎈', '🐼', '🎸', '🥇', '🎯', '🌈'];
+                const rand = emojis[Math.floor(Math.random() * emojis.length)];
+                state.activeStickerEmoji = rand;
+                emojiBtns.forEach(b => {
+                    if (b.getAttribute('data-emoji') === rand) b.classList.add('active');
+                    else b.classList.remove('active');
+                });
+                capturedPhotoCanvas = null;
+                const btnRemove = document.getElementById('btn-remove-photo');
+                if (btnRemove) btnRemove.style.display = 'none';
+                renderStickerCanvas();
             });
         }

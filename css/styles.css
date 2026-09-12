@@ -307,24 +307,63 @@
         input[type="color"]::-webkit-color-swatch-wrapper { padding: 0; }
         input[type="color"]::-webkit-color-swatch { border: none; }
 
-        /* --- Fullscreen Button (Top Left) --- */
-        #btn-fullscreen-toggle {
+        /* --- Top Left Actions (Screen 1) --- */
+        #top-left-actions {
             position: absolute;
             top: 15px;
-            left: 20px;
+            left: 15px;
             z-index: 50;
-            width: 55px;
-            height: 55px;
-            font-size: 1.4rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        #btn-fullscreen-toggle {
+            width: 46px;
+            height: 46px;
+            font-size: 1.25rem;
             border-radius: 50%;
             background-color: #fff;
             color: #333;
             box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-            transition: transform 0.2s, background-color 0.2s;
+            cursor: pointer;
+            transition: transform 0.2s, background-color 0.2s, box-shadow 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         #btn-fullscreen-toggle:hover {
-            transform: scale(1.1);
+            transform: translateY(-2px) scale(1.05);
             background-color: #f5f5f5;
+            box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+        }
+        #btn-fullscreen-toggle:active {
+            transform: translateY(1px) scale(0.98);
+        }
+
+        .exit-btn {
+            width: 46px;
+            height: 46px;
+            font-size: 1.3rem;
+            font-weight: 900;
+            border-radius: 50%;
+            background-color: #e53935 !important;
+            color: #ffffff !important;
+            border: 2px solid #ffffff;
+            box-shadow: 0 4px 10px rgba(229, 57, 53, 0.35);
+            cursor: pointer;
+            transition: transform 0.2s, background-color 0.2s, box-shadow 0.2s;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .exit-btn:hover {
+            background-color: #c62828 !important;
+            transform: translateY(-2px) scale(1.06);
+            box-shadow: 0 6px 14px rgba(229, 57, 53, 0.45);
+        }
+        .exit-btn:active {
+            transform: translateY(1px) scale(0.98);
         }
 
         /* --- Top Right Actions (Language & PWA Install) --- */
@@ -454,7 +493,7 @@
         @media (min-width: 768px) {
             .header-area {
                 position: relative;
-                padding: 0 100px 0 230px; /* Prevent title from overlapping logos */
+                padding: 0 100px 0 295px; /* Prevent title from overlapping logos */
                 min-height: 70px;
                 display: flex;
                 flex-direction: column;
@@ -467,7 +506,13 @@
                 transform: translateY(-50%);
             }
             .logo-left {
-                left: 0;
+                left: 65px; /* Safe clearance from top-left actions button */
+            }
+            #screen-teacher.has-return-hub .header-area {
+                padding: 0 100px 0 350px;
+            }
+            #screen-teacher.has-return-hub .logo-left {
+                left: 120px; /* Safe clearance when both exit and fullscreen buttons exist */
             }
         }
 
@@ -803,17 +848,48 @@
             width: 50px; height: 50px; border-radius: 12px; font-size: 1.4rem;
             display: flex; align-items: center; justify-content: center;
             border: 2px solid rgba(0,0,0,0.05); color: #444;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+            transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease, color 0.2s ease, filter 0.2s ease;
+        }
+        .student-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 12px rgba(0,0,0,0.18);
+        }
+        .student-btn:active {
+            transform: translateY(1px) scale(0.98);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.12);
         }
         
-        #btn-back { background-color: #e0e0e0; }
-        #btn-fullscreen-student { background-color: #e0e0e0; cursor: pointer; }
-        #btn-fullscreen-student:hover { background-color: #d5d5d5; }
+        #btn-back, #btn-fullscreen-student, #btn-stt-settings {
+            background-color: #e0e0e0;
+            color: #444;
+        }
+        #btn-back:hover, #btn-fullscreen-student:hover, #btn-stt-settings:hover {
+            background-color: #d5d5d5;
+            color: #111;
+        }
         
         #btn-toggle-veil {
             color: white; width: 45px; height: 45px; border-radius: 50%; font-size: 1.2rem;
+            cursor: pointer;
+            border: none;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+            transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease, filter 0.2s ease;
+        }
+        #btn-toggle-veil:hover {
+            transform: translateY(-2px) scale(1.05);
+            box-shadow: 0 5px 12px rgba(0,0,0,0.22);
+            filter: brightness(0.92);
+        }
+        #btn-toggle-veil:active {
+            transform: translateY(1px) scale(0.98);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.15);
         }
         .veil-on { background-color: #4caf50; } 
         .veil-off { background-color: #f44336; }
+        .veil-on:hover { background-color: #388e3c; }
+        .veil-off:hover { background-color: #d32f2f; }
 
         .flow-companion-slot {
             display: inline-flex;
@@ -829,8 +905,20 @@
             width: 100%;
             height: 50px;
             font-size: 1.3rem;
+            cursor: pointer;
+            border: 2px solid rgba(0,0,0,0.05);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+            transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease, filter 0.2s ease;
         }
-        #btn-read-all:hover { background-color: #ffca28; }
+        #btn-read-all:hover {
+            background-color: #ffca28;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 12px rgba(0,0,0,0.18);
+        }
+        #btn-read-all:active {
+            transform: translateY(1px) scale(0.98);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.12);
+        }
         #btn-read-all.reading {
             background-color: #ff7043; color: white; animation: pulse 1.5s infinite;
         }
@@ -841,7 +929,22 @@
             100% { transform: scale(1); }
         }
 
-        .student-btn-wide { padding: 0 15px; width: auto; min-width: 105px; height: 50px; color: white; font-size: 0.95rem; }
+        .student-btn-wide {
+            padding: 0 15px; width: auto; min-width: 105px; height: 50px; color: white; font-size: 0.95rem;
+            cursor: pointer;
+            border: 2px solid rgba(0,0,0,0.05);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+            transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease, filter 0.2s ease;
+        }
+        .student-btn-wide:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 12px rgba(0,0,0,0.18);
+            filter: brightness(0.92);
+        }
+        .student-btn-wide:active {
+            transform: translateY(1px) scale(0.98);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.12);
+        }
         .mode-word { background-color: #9c27b0; } 
         .mode-syllable { background-color: #ff9800; } 
         .mode-sentence { background-color: #2196f3; } 
@@ -974,32 +1077,105 @@
         .nav-btn {
             width: 52px; height: 50px; font-size: 1.4rem; color: #555;
             background: #fff; border: 2px solid #ddd; border-radius: 12px;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+            position: relative;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
         }
-        .nav-btn:hover { background: #f5f5f5; color: #000; }
-
-        .nav-spacer {
-            width: 40px;
-            flex-shrink: 0;
+        .nav-btn:hover {
+            background-color: #f0f7ff;
+            border-color: #90caf9;
+            color: #1565c0;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 12px rgba(0,0,0,0.15);
+        }
+        .nav-btn:active {
+            transform: translateY(1px) scale(0.98);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.12);
         }
 
         .btn-speaker { 
             background-color: var(--accent-dark); color: #ffffff;
             width: 50px; height: 50px; border-radius: 50%; font-size: 1.4rem;
             box-shadow: 0 4px 10px rgba(0,0,0,0.25); border: 2px solid white;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
         }
-        .btn-speaker:hover { background-color: #000000; transform: scale(1.05); }
+        .btn-speaker:hover {
+            background-color: #000000;
+            transform: translateY(-2px) scale(1.05);
+            box-shadow: 0 6px 14px rgba(0,0,0,0.3);
+        }
+        .btn-speaker:active {
+            transform: translateY(1px) scale(0.98);
+        }
 
         .btn-listener { 
             background-color: #9c27b0; color: #ffffff;
             width: 50px; height: 50px; border-radius: 50%; font-size: 1.4rem;
             box-shadow: 0 4px 10px rgba(0,0,0,0.25); border: 2px solid white;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
         }
-        .btn-listener:hover { background-color: #7b1fa2; transform: scale(1.05); }
+        .btn-listener:hover {
+            background-color: #7b1fa2;
+            transform: translateY(-2px) scale(1.05);
+            box-shadow: 0 6px 14px rgba(0,0,0,0.3);
+        }
+        .btn-listener:active {
+            transform: translateY(1px) scale(0.98);
+        }
         .btn-listener.listening {
             background-color: #e53935; color: white; animation: pulse 1.5s infinite;
         }
         .btn-listener.processing {
             background-color: #f57c00; color: white;
+        }
+
+        /* --- Reset Button Long-Press (>1.5s) Countdown Styles --- */
+        #btn-reset {
+            position: relative;
+            overflow: visible;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+        }
+        .reset-progress-svg {
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            width: 52px;
+            height: 50px;
+            pointer-events: none;
+            overflow: visible;
+        }
+        .reset-progress-bar {
+            fill: none;
+            stroke: #e53935;
+            stroke-width: 3.5;
+            stroke-linecap: round;
+            stroke-dasharray: 140;
+            stroke-dashoffset: 140;
+            transform-origin: 26px 25px;
+            transform: rotate(-90deg);
+            transition: none;
+        }
+        #btn-reset.holding .reset-progress-bar {
+            stroke-dashoffset: 0;
+            transition: stroke-dashoffset 1.5s linear;
+        }
+        #btn-reset.holding i {
+            color: #e53935;
+            transform: scale(0.9) rotate(-35deg);
+            transition: transform 1.5s ease-out, color 0.3s;
+        }
+        #btn-reset.reset-complete {
+            animation: resetCompletePulse 0.5s ease;
+        }
+        @keyframes resetCompletePulse {
+            0% { transform: scale(1); background-color: #fff; }
+            50% { transform: scale(1.15); background-color: #e8f5e9; border-color: #4caf50; color: #2e7d32; }
+            100% { transform: scale(1); }
         }
 
         /* --- Responsive Styles --- */
@@ -1881,5 +2057,346 @@
             }
             #dict-grid-container {
                 min-height: 100px !important;
+            }
+        }
+
+        /* ==========================================================================
+           REWARDS SYSTEM, STUDENT PROFILES, POPOVER & STICKER MODAL
+           ========================================================================== */
+
+        /* --- Student Rewards Pill (Screen 2 Top Bar) --- */
+        .reward-pill-container {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            flex-shrink: 0;
+        }
+
+        .student-reward-pill {
+            display: inline-flex;
+            align-items: center;
+            height: 44px;
+            background: #ffffff;
+            border: 2px solid #cbd5e1;
+            border-radius: 50px;
+            padding: 0 12px;
+            font-size: 0.92rem;
+            font-weight: 700;
+            color: #334155;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+            transition: all 0.2s ease;
+            user-select: none;
+            gap: 8px;
+        }
+        .student-reward-pill:hover {
+            border-color: #94a3b8;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 12px rgba(0,0,0,0.12);
+        }
+        .student-reward-pill:active {
+            transform: translateY(1px) scale(0.98);
+        }
+        .student-reward-pill .pill-name {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            color: #1e40af;
+            max-width: 100px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .student-reward-pill .pill-divider {
+            width: 1px;
+            height: 18px;
+            background: #cbd5e1;
+        }
+        .student-reward-pill .pill-points {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            color: #b45309;
+        }
+        .student-reward-pill .pill-max {
+            font-size: 0.72rem;
+            color: #94a3b8;
+            font-weight: 500;
+        }
+
+        .reward-pill-container.can-claim .student-reward-pill {
+            border-color: #f59e0b;
+            background: #fffbeb;
+            animation: rewardGlowPulse 2s infinite;
+        }
+        @keyframes rewardGlowPulse {
+            0% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.4); }
+            70% { box-shadow: 0 0 0 10px rgba(245, 158, 11, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0); }
+        }
+
+        .btn-claim-sticker {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+            color: #ffffff;
+            font-size: 1.25rem;
+            border: 2px solid #ffffff;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(217, 119, 6, 0.4);
+            animation: giftBounce 1.2s infinite ease-in-out;
+            transition: transform 0.2s;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .btn-claim-sticker:hover {
+            transform: scale(1.15) rotate(5deg);
+        }
+        @keyframes giftBounce {
+            0%, 100% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-4px) scale(1.08); }
+        }
+
+        /* --- Quick-Switch Student Popover --- */
+        .student-popover {
+            position: absolute;
+            top: 52px;
+            left: 0;
+            width: 230px;
+            background: #ffffff;
+            border: 1px solid #cbd5e1;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            z-index: 120;
+            padding: 10px;
+            text-align: left;
+        }
+        .popover-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.82rem;
+            color: #475569;
+            margin-bottom: 8px;
+            padding-bottom: 4px;
+            border-bottom: 1px solid #f1f5f9;
+        }
+        .popover-close-btn {
+            background: none;
+            border: none;
+            font-size: 1.2rem;
+            cursor: pointer;
+            color: #94a3b8;
+            padding: 0 4px;
+            line-height: 1;
+        }
+        .popover-close-btn:hover { color: #334155; }
+        .popover-list {
+            max-height: 150px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            margin-bottom: 8px;
+        }
+        .popover-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 6px 10px;
+            border-radius: 6px;
+            font-size: 0.88rem;
+            cursor: pointer;
+            border: 1px solid transparent;
+            background: #f8fafc;
+            transition: all 0.15s;
+        }
+        .popover-item:hover {
+            background: #e0f2fe;
+            border-color: #bae6fd;
+            color: #0369a1;
+        }
+        .popover-item.active {
+            background: #eff6ff;
+            border-color: #93c5fd;
+            font-weight: bold;
+            color: #1d4ed8;
+        }
+        .popover-item .item-score {
+            font-size: 0.8rem;
+            color: #d97706;
+            font-weight: 600;
+        }
+        .popover-add-row {
+            display: flex;
+            gap: 5px;
+            padding-top: 6px;
+            border-top: 1px solid #f1f5f9;
+        }
+        .popover-add-row input {
+            flex: 1;
+            padding: 5px 8px;
+            font-size: 0.82rem;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+        }
+        .popover-add-row button {
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            padding: 0 10px;
+            cursor: pointer;
+            font-size: 0.85rem;
+        }
+        .popover-add-row button:hover { background: #1d4ed8; }
+
+        /* --- Settings Student Chips --- */
+        .student-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 4px 10px;
+            background: #ffffff;
+            border: 1px solid #cbd5e1;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: #1e293b;
+            font-weight: 500;
+        }
+        .student-chip.current {
+            border-color: #3b82f6;
+            background: #eff6ff;
+            font-weight: 700;
+            color: #1d4ed8;
+        }
+        .student-chip .chip-score {
+            font-size: 0.78rem;
+            color: #d97706;
+            background: #fef3c7;
+            padding: 1px 6px;
+            border-radius: 10px;
+        }
+        .student-chip .btn-del-chip {
+            background: none;
+            border: none;
+            color: #94a3b8;
+            cursor: pointer;
+            font-size: 0.85rem;
+            padding: 0;
+            margin-left: 2px;
+            line-height: 1;
+        }
+        .student-chip .btn-del-chip:hover { color: #dc2626; }
+
+        /* --- Flying Points Animation --- */
+        .flying-point-tag {
+            position: fixed;
+            z-index: 9999;
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: #f59e0b;
+            text-shadow: 0 2px 5px rgba(0,0,0,0.35);
+            pointer-events: none;
+            animation: floatPointsUp 1.2s ease-out forwards;
+        }
+        @keyframes floatPointsUp {
+            0% { transform: translateY(0) scale(0.6); opacity: 0; }
+            20% { transform: translateY(-12px) scale(1.3); opacity: 1; }
+            70% { transform: translateY(-38px) scale(1.1); opacity: 1; }
+            100% { transform: translateY(-60px) scale(0.9); opacity: 0; }
+        }
+
+        /* --- Sticker Modal Styles --- */
+        .sticker-emoji-bar {
+            display: flex;
+            gap: 8px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 12px;
+        }
+        .sticker-emoji-btn {
+            width: 40px;
+            height: 40px;
+            font-size: 1.3rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 10px;
+            background: #ffffff;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .sticker-emoji-btn:hover {
+            transform: scale(1.15);
+            border-color: #f59e0b;
+            background: #fffbeb;
+        }
+        .sticker-emoji-btn.active {
+            border-color: #d97706;
+            background: #fef3c7;
+            transform: scale(1.12);
+            box-shadow: 0 4px 8px rgba(217, 119, 6, 0.2);
+        }
+        .sticker-emoji-btn.dice-btn {
+            color: #7c3aed;
+            font-size: 1.1rem;
+        }
+
+        .sticker-canvas-wrapper {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            margin: 0 auto;
+            border-radius: 50%;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+            overflow: hidden;
+            background: #f8fafc;
+        }
+        #sticker-canvas {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+        #camera-preview-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.85);
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+        }
+        #camera-stream-video {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 3px solid #ffffff;
+        }
+
+        /* Print Media Style for Sticker */
+        @media print {
+            body.printing-sticker * {
+                visibility: hidden !important;
+            }
+            body.printing-sticker #sticker-canvas {
+                visibility: visible !important;
+                position: fixed !important;
+                left: 50% !important;
+                top: 50% !important;
+                transform: translate(-50%, -50%) scale(1.5) !important;
+                width: 120mm !important;
+                height: 120mm !important;
+                box-shadow: none !important;
             }
         }

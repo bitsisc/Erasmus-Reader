@@ -1058,6 +1058,20 @@ function handleSpeechResult(transcript, targetText) {
 
     if (isSuccess) {
         state.failedCurrentTarget = false;
+
+        // Calculate points (1 point per correct letter in matched words)
+        let lettersRead = 0;
+        correctIndices.forEach(idx => {
+            const w = targetWords[idx] || "";
+            const cleanWord = w.replace(/[^a-zA-Z\u0370-\u03FF\u1F00-\u1FFF]/g, '');
+            lettersRead += cleanWord.length;
+        });
+
+        if (lettersRead > 0 && typeof addStudentPoints === 'function' && state.rewardsEnabled) {
+            addStudentPoints(lettersRead);
+            showFlyingPoints(lettersRead);
+        }
+
         // Success: Play success arcade sound
         const snd = getNextSuccessSound();
         playSuccessArcadeSound(snd);
@@ -1088,6 +1102,26 @@ function handleSpeechResult(transcript, targetText) {
         // Color matched words green and missed words red, show restore prompt
         colorActiveWords(correctIndices, false);
         showRestorePrompt();
+    }
+}
+
+// Visual flying points feedback on STT correct reading
+function showFlyingPoints(points) {
+    try {
+        const btn = document.getElementById('btn-listen');
+        if (!btn) return;
+        const rect = btn.getBoundingClientRect();
+        const tag = document.createElement('div');
+        tag.className = 'flying-point-tag';
+        tag.textContent = `+${points} ⭐`;
+        tag.style.left = `${Math.max(10, rect.left + rect.width / 2 - 30)}px`;
+        tag.style.top = `${Math.max(10, rect.top - 25)}px`;
+        document.body.appendChild(tag);
+        setTimeout(() => {
+            if (tag.parentNode) tag.parentNode.removeChild(tag);
+        }, 1200);
+    } catch (e) {
+        console.warn("Could not display flying points:", e);
     }
 }
 
@@ -1639,4 +1673,40 @@ function playDissonantBuzz(freq1, freq2, duration, startTime) {
     osc2.start(startTime);
     osc1.stop(startTime + duration);
     osc2.stop(startTime + duration);
+}
+
+// Play a pleasant ascending two-tone chime when reset-to-beginning is triggered (>1.5s long-press)
+function playResetChime() {
+    try {
+        const ctx = getAudioContext();
+        if (!ctx) return;
+        if (ctx.state === 'suspended') ctx.resume();
+        const now = ctx.currentTime;
+        
+        // Note 1: C5 (523.25 Hz)
+        const osc1 = ctx.createOscillator();
+        const gain1 = ctx.createGain();
+        osc1.type = 'sine';
+        osc1.frequency.setValueAtTime(523.25, now);
+        gain1.gain.setValueAtTime(0.14, now);
+        gain1.gain.exponentialRampToValueAtTime(0.001, now + 0.18);
+        osc1.connect(gain1);
+        gain1.connect(ctx.destination);
+        osc1.start(now);
+        osc1.stop(now + 0.18);
+
+        // Note 2: G5 (783.99 Hz)
+        const osc2 = ctx.createOscillator();
+        const gain2 = ctx.createGain();
+        osc2.type = 'sine';
+        osc2.frequency.setValueAtTime(783.99, now + 0.11);
+        gain2.gain.setValueAtTime(0.16, now + 0.11);
+        gain2.gain.exponentialRampToValueAtTime(0.001, now + 0.32);
+        osc2.connect(gain2);
+        gain2.connect(ctx.destination);
+        osc2.start(now + 0.11);
+        osc2.stop(now + 0.32);
+    } catch (e) {
+        console.warn('Audio reset chime failed:', e);
+    }
 }

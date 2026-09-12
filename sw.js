@@ -1,5 +1,5 @@
 // sw.js - Kidmedia Erasmus+ Reading Tool Offline Service Worker
-const CACHE_NAME = 'erasmus-reader-v5';
+const CACHE_NAME = 'erasmus-reader-v8';
 
 const STATIC_ASSETS = [
   './',

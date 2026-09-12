@@ -299,3 +299,213 @@ if (btnConfirmPin) {
         }
     });
 }
+
+/* ==========================================================================
+   REWARDS SYSTEM & STUDENT PROFILES STORAGE & UI MANAGEMENT
+   ========================================================================== */
+
+function loadRewardsData() {
+    try {
+        const raw = localStorage.getItem('kidmedia_reader_rewards');
+        if (raw) {
+            const data = JSON.parse(raw);
+            if (typeof data.enabled === 'boolean') state.rewardsEnabled = data.enabled;
+            if (data.currentStudent) state.currentStudent = data.currentStudent;
+            if (Array.isArray(data.studentsList) && data.studentsList.length > 0) {
+                state.studentsList = data.studentsList;
+            }
+            if (data.studentProfiles && typeof data.studentProfiles === 'object') {
+                state.studentProfiles = data.studentProfiles;
+            }
+        }
+    } catch (e) {
+        console.warn("Could not parse saved rewards data:", e);
+    }
+
+    // Ensure current student exists in list & profiles
+    if (!state.studentsList.includes(state.currentStudent)) {
+        state.studentsList.push(state.currentStudent);
+    }
+    if (!state.studentProfiles[state.currentStudent]) {
+        state.studentProfiles[state.currentStudent] = { score: 0, stickers: 0 };
+    }
+
+    updateRewardsUI();
+}
+
+function saveRewardsData() {
+    try {
+        const data = {
+            enabled: state.rewardsEnabled,
+            currentStudent: state.currentStudent,
+            studentsList: state.studentsList,
+            studentProfiles: state.studentProfiles
+        };
+        localStorage.setItem('kidmedia_reader_rewards', JSON.stringify(data));
+    } catch (e) {
+        console.warn("Could not save rewards data:", e);
+    }
+}
+
+function getCurrentStudentScore() {
+    const profile = state.studentProfiles[state.currentStudent];
+    return profile ? (profile.score || 0) : 0;
+}
+
+function addStudentPoints(points) {
+    if (!state.rewardsEnabled || !points || points <= 0) return;
+    if (!state.studentProfiles[state.currentStudent]) {
+        state.studentProfiles[state.currentStudent] = { score: 0, stickers: 0 };
+    }
+    
+    state.studentProfiles[state.currentStudent].score = (state.studentProfiles[state.currentStudent].score || 0) + points;
+    saveRewardsData();
+    updateRewardsUI();
+
+    // Check if reached 100 points
+    if (state.studentProfiles[state.currentStudent].score >= 100) {
+        if (typeof playSuccessArcadeSound === 'function') {
+            playSuccessArcadeSound(0); // Celebrate
+        }
+    }
+}
+
+function deductStudentPoints(points) {
+    if (!state.studentProfiles[state.currentStudent]) return;
+    state.studentProfiles[state.currentStudent].score = Math.max(0, (state.studentProfiles[state.currentStudent].score || 0) - points);
+    state.studentProfiles[state.currentStudent].stickers = (state.studentProfiles[state.currentStudent].stickers || 0) + 1;
+    saveRewardsData();
+    updateRewardsUI();
+}
+
+function addNewStudent(name) {
+    const cleanName = (name || '').trim();
+    if (!cleanName) return;
+    if (!state.studentsList.includes(cleanName)) {
+        state.studentsList.push(cleanName);
+    }
+    if (!state.studentProfiles[cleanName]) {
+        state.studentProfiles[cleanName] = { score: 0, stickers: 0 };
+    }
+    state.currentStudent = cleanName;
+    saveRewardsData();
+    updateRewardsUI();
+}
+
+function removeStudent(name) {
+    if (state.studentsList.length <= 1) {
+        const minAlert = typeof getText === 'function' ? getText('sticker_min_students_alert') : "Πρέπει να υπάρχει τουλάχιστον ένας μαθητής.";
+        alert(minAlert);
+        return;
+    }
+    state.studentsList = state.studentsList.filter(s => s !== name);
+    delete state.studentProfiles[name];
+    if (state.currentStudent === name) {
+        state.currentStudent = state.studentsList[0];
+    }
+    saveRewardsData();
+    updateRewardsUI();
+}
+
+function switchStudent(name) {
+    if (state.studentsList.includes(name)) {
+        state.currentStudent = name;
+        saveRewardsData();
+        updateRewardsUI();
+    }
+}
+
+function updateRewardsUI() {
+    // 1. Settings Checkbox
+    const setRewardsCheckbox = document.getElementById('set-rewards-enabled');
+    if (setRewardsCheckbox) {
+        setRewardsCheckbox.checked = state.rewardsEnabled;
+    }
+
+    const studentsManager = document.getElementById('rewards-students-manager');
+    if (studentsManager) {
+        studentsManager.style.display = state.rewardsEnabled ? 'block' : 'none';
+    }
+
+    // 2. Settings Chips
+    renderStudentChips();
+
+    // 3. Screen 2 Top-Bar Pill
+    const pillContainer = document.getElementById('student-reward-container');
+    const nameLabel = document.getElementById('reward-name-label');
+    const scoreLabel = document.getElementById('reward-score-label');
+    const btnClaim = document.getElementById('btn-claim-sticker');
+
+    if (pillContainer) {
+        pillContainer.style.display = state.rewardsEnabled ? 'inline-flex' : 'none';
+        
+        const currentScore = getCurrentStudentScore();
+        const defName = typeof getText === 'function' ? getText('default_student_name') : 'Μαθητής';
+        if (nameLabel) nameLabel.textContent = state.currentStudent || defName;
+        if (scoreLabel) scoreLabel.textContent = currentScore;
+
+        if (currentScore >= 100) {
+            pillContainer.classList.add('can-claim');
+            if (btnClaim) btnClaim.style.display = 'inline-flex';
+        } else {
+            pillContainer.classList.remove('can-claim');
+            if (btnClaim) btnClaim.style.display = 'none';
+        }
+    }
+
+    // 4. Popover list
+    renderPopoverStudentsList();
+}
+
+function renderStudentChips() {
+    const listEl = document.getElementById('students-chips-list');
+    if (!listEl) return;
+    listEl.innerHTML = '';
+
+    const delTitle = typeof getText === 'function' ? getText('title_delete_student') : 'Διαγραφή μαθητή';
+    state.studentsList.forEach(name => {
+        const profile = state.studentProfiles[name] || { score: 0, stickers: 0 };
+        const chip = document.createElement('div');
+        chip.className = 'student-chip' + (name === state.currentStudent ? ' current' : '');
+        chip.innerHTML = `
+            <span>👤 ${escapeHtml(name)}</span>
+            <span class="chip-score">⭐ ${profile.score || 0}</span>
+            <button type="button" class="btn-del-chip" title="${escapeHtml(delTitle)}" data-name="${escapeHtml(name)}">&times;</button>
+        `;
+        chip.querySelector('.btn-del-chip').addEventListener('click', (e) => {
+            e.stopPropagation();
+            removeStudent(name);
+        });
+        chip.addEventListener('click', () => {
+            switchStudent(name);
+        });
+        listEl.appendChild(chip);
+    });
+}
+
+function renderPopoverStudentsList() {
+    const listEl = document.getElementById('popover-students-list');
+    if (!listEl) return;
+    listEl.innerHTML = '';
+
+    state.studentsList.forEach(name => {
+        const profile = state.studentProfiles[name] || { score: 0, stickers: 0 };
+        const item = document.createElement('div');
+        item.className = 'popover-item' + (name === state.currentStudent ? ' active' : '');
+        item.innerHTML = `
+            <span>👤 ${escapeHtml(name)}${name === state.currentStudent ? ' ✓' : ''}</span>
+            <span class="item-score">⭐ ${profile.score || 0}</span>
+        `;
+        item.addEventListener('click', () => {
+            switchStudent(name);
+            const pop = document.getElementById('student-quick-popover');
+            if (pop) pop.style.display = 'none';
+        });
+        listEl.appendChild(item);
+    });
+}
+
+function escapeHtml(text) {
+    if (!text) return '';
+    return String(text).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
