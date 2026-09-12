@@ -2084,11 +2084,14 @@
             font-size: 0.92rem;
             font-weight: 700;
             color: #334155;
-            cursor: pointer;
+            cursor: pointer !important;
             box-shadow: 0 2px 5px rgba(0,0,0,0.08);
             transition: all 0.2s ease;
             user-select: none;
             gap: 8px;
+        }
+        .student-reward-pill * {
+            cursor: pointer !important;
         }
         .student-reward-pill:hover {
             border-color: #94a3b8;
@@ -2107,6 +2110,7 @@
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
+            cursor: pointer !important;
         }
         .student-reward-pill .pill-divider {
             width: 1px;
@@ -2266,6 +2270,16 @@
             font-size: 0.85rem;
             color: #1e293b;
             font-weight: 500;
+            cursor: pointer !important;
+            user-select: none;
+            transition: all 0.15s ease;
+        }
+        .student-chip * {
+            cursor: pointer !important;
+        }
+        .student-chip:hover {
+            border-color: #94a3b8;
+            transform: translateY(-1px);
         }
         .student-chip.current {
             border-color: #3b82f6;
