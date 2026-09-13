@@ -396,6 +396,48 @@ function addNewStudent(name) {
     updateRewardsUI();
 }
 
+function renameStudent(oldName, newName) {
+    const cleanOld = (oldName || '').trim();
+    const cleanNew = (newName || '').trim();
+    if (!cleanOld || !cleanNew || cleanOld === cleanNew) return;
+    
+    // Check if new name already exists
+    if (state.studentsList.includes(cleanNew)) {
+        const existsAlert = typeof getText === 'function' ? getText('alert_student_exists') : "Υπάρχει ήδη μαθητής με αυτό το όνομα.";
+        alert(existsAlert);
+        return;
+    }
+
+    // Preserve index position in list
+    const idx = state.studentsList.indexOf(cleanOld);
+    if (idx !== -1) {
+        state.studentsList[idx] = cleanNew;
+    } else {
+        state.studentsList.push(cleanNew);
+    }
+
+    // Migrate profile data safely
+    const existingProfile = state.studentProfiles[cleanOld] || { score: 0, stickers: 0 };
+    state.studentProfiles[cleanNew] = existingProfile;
+    delete state.studentProfiles[cleanOld];
+
+    // Update active student if current
+    if (state.currentStudent === cleanOld) {
+        state.currentStudent = cleanNew;
+    }
+
+    saveRewardsData();
+    updateRewardsUI();
+}
+
+function promptEditStudent(oldName) {
+    const promptMsg = (typeof getText === 'function' ? getText('prompt_edit_student') : "Εισάγετε το νέο όνομα για τον μαθητή {name}:").replace('{name}', oldName);
+    const newName = prompt(promptMsg, oldName);
+    if (newName && newName.trim() && newName.trim() !== oldName) {
+        renameStudent(oldName, newName.trim());
+    }
+}
+
 function removeStudent(name) {
     if (state.studentsList.length <= 1) {
         const minAlert = typeof getText === 'function' ? getText('sticker_min_students_alert') : "Πρέπει να υπάρχει τουλάχιστον ένας μαθητής.";
@@ -466,19 +508,29 @@ function renderStudentChips() {
     if (!listEl) return;
     listEl.innerHTML = '';
 
+    const editTitle = typeof getText === 'function' ? getText('title_edit_student') : 'Επεξεργασία ονόματος';
     const delTitle = typeof getText === 'function' ? getText('title_delete_student') : 'Διαγραφή μαθητή';
     state.studentsList.forEach(name => {
         const profile = state.studentProfiles[name] || { score: 0, stickers: 0 };
         const chip = document.createElement('div');
         chip.className = 'student-chip' + (name === state.currentStudent ? ' current' : '');
         chip.innerHTML = `
-            <span>👤 ${escapeHtml(name)}</span>
+            <span class="chip-name" title="${escapeHtml(editTitle)} (διπλό κλικ)">👤 ${escapeHtml(name)}</span>
             <span class="chip-score">⭐ ${profile.score || 0}</span>
+            <button type="button" class="btn-edit-chip" title="${escapeHtml(editTitle)}" data-name="${escapeHtml(name)}"><i class="fa-solid fa-pen"></i></button>
             <button type="button" class="btn-del-chip" title="${escapeHtml(delTitle)}" data-name="${escapeHtml(name)}">&times;</button>
         `;
+        chip.querySelector('.btn-edit-chip').addEventListener('click', (e) => {
+            e.stopPropagation();
+            promptEditStudent(name);
+        });
         chip.querySelector('.btn-del-chip').addEventListener('click', (e) => {
             e.stopPropagation();
             removeStudent(name);
+        });
+        chip.querySelector('.chip-name').addEventListener('dblclick', (e) => {
+            e.stopPropagation();
+            promptEditStudent(name);
         });
         chip.addEventListener('click', () => {
             switchStudent(name);
@@ -492,14 +544,20 @@ function renderPopoverStudentsList() {
     if (!listEl) return;
     listEl.innerHTML = '';
 
+    const editTitle = typeof getText === 'function' ? getText('title_edit_student') : 'Επεξεργασία ονόματος';
     state.studentsList.forEach(name => {
         const profile = state.studentProfiles[name] || { score: 0, stickers: 0 };
         const item = document.createElement('div');
         item.className = 'popover-item' + (name === state.currentStudent ? ' active' : '');
         item.innerHTML = `
-            <span>👤 ${escapeHtml(name)}${name === state.currentStudent ? ' ✓' : ''}</span>
+            <span style="flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">👤 ${escapeHtml(name)}${name === state.currentStudent ? ' ✓' : ''}</span>
             <span class="item-score">⭐ ${profile.score || 0}</span>
+            <button type="button" class="btn-popover-edit" title="${escapeHtml(editTitle)}" style="background: none; border: none; color: #64748b; cursor: pointer; padding: 2px 5px; font-size: 0.78rem; border-radius: 4px;"><i class="fa-solid fa-pen"></i></button>
         `;
+        item.querySelector('.btn-popover-edit').addEventListener('click', (e) => {
+            e.stopPropagation();
+            promptEditStudent(name);
+        });
         item.addEventListener('click', () => {
             switchStudent(name);
             const pop = document.getElementById('student-quick-popover');

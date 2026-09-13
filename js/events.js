@@ -1725,12 +1725,25 @@
                 return;
             }
             try {
-                cameraStream = await navigator.mediaDevices.getUserMedia({
-                    video: { facingMode: 'user', width: { ideal: 400 }, height: { ideal: 400 } }
-                });
+                // Try facingMode: 'user' first, fallback to generic video for laptop/desktop webcams
+                try {
+                    cameraStream = await navigator.mediaDevices.getUserMedia({
+                        video: { facingMode: 'user', width: { ideal: 640 }, height: { ideal: 640 } },
+                        audio: false
+                    });
+                } catch (constraintErr) {
+                    console.warn("Retrying camera with generic constraints:", constraintErr);
+                    cameraStream = await navigator.mediaDevices.getUserMedia({
+                        video: true,
+                        audio: false
+                    });
+                }
+
                 if (video) {
                     video.srcObject = cameraStream;
-                    video.play();
+                    video.muted = true;
+                    video.setAttribute('playsinline', '');
+                    await video.play().catch(e => console.warn("Video play error:", e));
                 }
                 if (container) container.style.display = 'flex';
                 if (cameraBtnText) cameraBtnText.textContent = typeof getText === 'function' ? getText('camera_close') : 'Κλείσιμο Κάμερας';
@@ -1746,6 +1759,10 @@
                 cameraStream.getTracks().forEach(t => t.stop());
                 cameraStream = null;
             }
+            const video = document.getElementById('camera-stream-video');
+            if (video) {
+                video.srcObject = null;
+            }
             const container = document.getElementById('camera-preview-container');
             if (container) container.style.display = 'none';
             const cameraBtnText = document.getElementById('camera-btn-text');
@@ -1755,14 +1772,16 @@
         function capturePhoto() {
             const video = document.getElementById('camera-stream-video');
             if (!video) return;
+            const vWidth = video.videoWidth || 400;
+            const vHeight = video.videoHeight || 400;
             const offCanvas = document.createElement('canvas');
-            const size = Math.min(video.videoWidth || 300, video.videoHeight || 300);
+            const size = Math.min(vWidth, vHeight);
             offCanvas.width = size;
             offCanvas.height = size;
             const ctx = offCanvas.getContext('2d');
             
-            const sx = (video.videoWidth - size) / 2;
-            const sy = (video.videoHeight - size) / 2;
+            const sx = (vWidth - size) / 2;
+            const sy = (vHeight - size) / 2;
             ctx.drawImage(video, sx, sy, size, size, 0, 0, size, size);
 
             capturedPhotoCanvas = offCanvas;
@@ -1868,7 +1887,7 @@
         const btnRedeemSticker = document.getElementById('btn-redeem-sticker');
         if (btnRedeemSticker) btnRedeemSticker.addEventListener('click', redeemStickerPoints);
 
-        const btnToggleCamera = document.getElementById('btn-toggle-camera');
+        const btnToggleCamera = document.getElementById('btn-take-selfie') || document.getElementById('btn-toggle-camera');
         if (btnToggleCamera) {
             btnToggleCamera.addEventListener('click', () => {
                 if (cameraStream) stopCamera();

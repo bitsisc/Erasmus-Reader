@@ -7,6 +7,19 @@
 - **GitHub Repo**: https://github.com/bitsisc/Erasmus-Reader
 
 ## What Was Completed in This Session
+- **Student Name Editing & Profile Preservation**:
+  - Added `renameStudent(oldName, newName)` and `promptEditStudent(oldName)` in `js/storage.js`.
+  - Added edit pencil button (`.btn-edit-chip`) and double-click trigger on all student chips in Screen 1.
+  - Added quick edit pencil button (`.btn-popover-edit`) in Screen 2 student popover.
+  - Full preservation of student scores (⭐) and reward history upon renaming.
+  - Added multilingual translations across all 24 EU languages in `i18n/translations.json`.
+- **Service Worker**: Bumped offline cache version to `erasmus-reader-v15` (`sw.js`).
+- **Camera & Laptop Selfie Support Fix**:
+  - Fixed event listener ID mismatch (`btn-take-selfie`).
+  - Added robust constraint fallback for laptops / desktop webcams (`facingMode: 'user'` -> `video: true`).
+  - Added `muted` and `playsinline` attributes to avoid browser video autoplay blockages.
+- **Service Worker**: Bumped offline cache version to `erasmus-reader-v14` (`sw.js`).
+- **Screen 1 Logo Centering**: Moved SESAT & KIDMEDIA.NET logo (`images/Sesat-kidmedia-net.png`) to be cleanly centered directly above the application title ("Εργαλείο Ανάγνωσης") in both PC and Mobile views (`.header-title > .header-logo`).
 - **Screen 1 Logo Restoration**: Removed `display: none;` on `.header-area` and positioned `.header-logo.logo-left` (`top: 15px; left: 70px;` or `left: 125px;` when exit button active) with crisp white card framing and active link to `https://kidmedia.net/`.
 - **Top-Right Language Button Overlap Fix**:
   - Resized `#btn-lang-selector` and top-right action circle buttons to `46px` to match `#btn-fullscreen-toggle`.

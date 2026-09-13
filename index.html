@@ -495,7 +495,7 @@
             
             <!-- Live Video Preview (hidden by default) -->
             <div id="camera-preview-container" style="display: none; justify-content: center; margin-top: 15px; position: relative;">
-                <video id="camera-stream-video" style="width: 250px; height: 250px; object-fit: cover; border-radius: 50%; border: 4px solid #f59e0b;" autoplay playsinline></video>
+                <video id="camera-stream-video" style="width: 250px; height: 250px; object-fit: cover; border-radius: 50%; border: 4px solid #f59e0b;" autoplay playsinline muted></video>
                 <button type="button" id="btn-capture-photo" class="btn-primary" style="position: absolute; bottom: -15px; background-color: #e11d48; box-shadow: 0 4px 6px rgba(0,0,0,0.2);">
                     <i class="fa-solid fa-camera"></i> <span data-i18n="btn_snap_photo">Λήψη Φωτογραφίας!</span>
                 </button>
@@ -535,17 +535,14 @@
             </button>
         </div>
 
-        <div class="header-area">
-            <div class="header-logo logo-left">
-                <a href="https://kidmedia.net/" target="_blank" rel="noopener noreferrer">
-                    <img src="images/Sesat-kidmedia-net.png" alt="SESAT Ltd & KIDMEDIA.NET" style="max-height: 48px; width: auto;">
-                </a>
-            </div>
-        </div>
-        
         <div class="main-layout">
             <div class="input-section">
                 <div class="header-title" style="text-align: center; margin-bottom: 8px; margin-top: -10px;">
+                    <div class="header-logo">
+                        <a href="https://kidmedia.net/" target="_blank" rel="noopener noreferrer">
+                            <img src="images/Sesat-kidmedia-net.png" alt="SESAT Ltd & KIDMEDIA.NET">
+                        </a>
+                    </div>
                     <h1 data-i18n="main_title" style="margin: 0 0 2px 0;">Εργαλείο Ανάγνωσης</h1>
                     <p style="margin:0; opacity: 0.7; font-size: 0.95rem;" data-i18n="main_subtitle">Διαμόρφωση κειμένου και ρυθμίσεις</p>
                 </div>

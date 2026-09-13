@@ -225,7 +225,10 @@
     "award_title_500": "Αργυρό Μετάλλιο Ανάγνωσης!",
     "award_title_1000": "Χρυσό Μετάλλιο Ανάγνωσης!",
     "award_title_9999": "Παγκόσμιο Ρεκόρ Ανάγνωσης!",
-    "award_main_title": "ΒΡΑΒΕΙΟ ΑΝΑΓΝΩΣΗΣ"
+    "award_main_title": "ΒΡΑΒΕΙΟ ΑΝΑΓΝΩΣΗΣ",
+    "title_edit_student": "Επεξεργασία ονόματος μαθητή",
+    "prompt_edit_student": "Εισάγετε το νέο όνομα για τον μαθητή {name}:",
+    "alert_student_exists": "Υπάρχει ήδη μαθητής με αυτό το όνομα."
   },
   "en": {
     "modal_lang_title": "🌍 Select Language",
@@ -453,7 +456,10 @@
     "award_title_500": "Silver Reading Medal!",
     "award_title_1000": "Gold Reading Medal!",
     "award_title_9999": "World Reading Record!",
-    "award_main_title": "READING AWARD"
+    "award_main_title": "READING AWARD",
+    "title_edit_student": "Edit student name",
+    "prompt_edit_student": "Enter the new name for student {name}:",
+    "alert_student_exists": "A student with this name already exists."
   },
   "fr": {
     "modal_lang_title": "🌍 Choisir la langue",
@@ -681,7 +687,10 @@
     "award_title_500": "Silver Reading Medal!",
     "award_title_1000": "Gold Reading Medal!",
     "award_title_9999": "World Reading Record!",
-    "award_main_title": "READING AWARD"
+    "award_main_title": "READING AWARD",
+    "title_edit_student": "Modifier le nom de l'élève",
+    "prompt_edit_student": "Entrez le nouveau nom pour l'élève {name} :",
+    "alert_student_exists": "Un élève portant ce nom existe déjà."
   },
   "de": {
     "modal_lang_title": "🌍 Sprache auswählen",
@@ -909,7 +918,10 @@
     "award_title_500": "Silver Reading Medal!",
     "award_title_1000": "Gold Reading Medal!",
     "award_title_9999": "World Reading Record!",
-    "award_main_title": "READING AWARD"
+    "award_main_title": "READING AWARD",
+    "title_edit_student": "Schülernamen bearbeiten",
+    "prompt_edit_student": "Geben Sie den neuen Namen für Schüler {name} ein:",
+    "alert_student_exists": "Ein Schüler mit diesem Namen existiert bereits."
   },
   "es": {
     "modal_lang_title": "🌍 Seleccionar Idioma",
@@ -1137,7 +1149,10 @@
     "award_title_500": "Silver Reading Medal!",
     "award_title_1000": "Gold Reading Medal!",
     "award_title_9999": "World Reading Record!",
-    "award_main_title": "READING AWARD"
+    "award_main_title": "READING AWARD",
+    "title_edit_student": "Editar nombre del alumno",
+    "prompt_edit_student": "Introduce el nuevo nombre para el alumno {name}:",
+    "alert_student_exists": "Ya existe un alumno con este nombre."
   },
   "it": {
     "modal_lang_title": "🌍 Seleziona Lingua",
@@ -1365,7 +1380,10 @@
     "award_title_500": "Silver Reading Medal!",
     "award_title_1000": "Gold Reading Medal!",
     "award_title_9999": "World Reading Record!",
-    "award_main_title": "READING AWARD"
+    "award_main_title": "READING AWARD",
+    "title_edit_student": "Modifica nome dello studente",
+    "prompt_edit_student": "Inserisci il nuovo nome per lo studente {name}:",
+    "alert_student_exists": "Esiste già uno studente con questo nome."
   },
   "pt": {
     "modal_lang_title": "🌍 Selecionar Idioma",
@@ -1593,7 +1611,10 @@
     "award_title_500": "Silver Reading Medal!",
     "award_title_1000": "Gold Reading Medal!",
     "award_title_9999": "World Reading Record!",
-    "award_main_title": "READING AWARD"
+    "award_main_title": "READING AWARD",
+    "title_edit_student": "Editar nome do aluno",
+    "prompt_edit_student": "Introduza o novo nome para o aluno {name}:",
+    "alert_student_exists": "Já existe um aluno com este nome."
   },
   "nl": {
     "modal_lang_title": "🌍 Taal",
@@ -1821,7 +1842,10 @@
     "award_title_500": "Silver Reading Medal!",
     "award_title_1000": "Gold Reading Medal!",
     "award_title_9999": "World Reading Record!",
-    "award_main_title": "READING AWARD"
+    "award_main_title": "READING AWARD",
+    "title_edit_student": "Naam van leerling bewerken",
+    "prompt_edit_student": "Voer de nieuwe naam in voor leerling {name}:",
+    "alert_student_exists": "Er bestaat al een leerling met deze naam."
   },
   "pl": {
     "modal_lang_title": "🌍 Język",
@@ -2049,7 +2073,10 @@
     "award_title_500": "Silver Reading Medal!",
     "award_title_1000": "Gold Reading Medal!",
     "award_title_9999": "World Reading Record!",
-    "award_main_title": "READING AWARD"
+    "award_main_title": "READING AWARD",
+    "title_edit_student": "Edytuj imię ucznia",
+    "prompt_edit_student": "Wpisz nowe imię dla ucznia {name}:",
+    "alert_student_exists": "Uczeń o tym imieniu już istnieje."
   },
   "ro": {
     "modal_lang_title": "🌍 Limbă",
@@ -2277,7 +2304,10 @@
     "award_title_500": "Silver Reading Medal!",
     "award_title_1000": "Gold Reading Medal!",
     "award_title_9999": "World Reading Record!",
-    "award_main_title": "READING AWARD"
+    "award_main_title": "READING AWARD",
+    "title_edit_student": "Editează numele elevului",
+    "prompt_edit_student": "Introduceți noul nume pentru elevul {name}:",
+    "alert_student_exists": "Există deja un elev cu acest nume."
   },
   "sv": {
     "modal_lang_title": "🌍 Språk",
@@ -2505,7 +2535,10 @@
     "award_title_500": "Silver Reading Medal!",
     "award_title_1000": "Gold Reading Medal!",
     "award_title_9999": "World Reading Record!",
-    "award_main_title": "READING AWARD"
+    "award_main_title": "READING AWARD",
+    "title_edit_student": "Redigera elevens namn",
+    "prompt_edit_student": "Ange det nya namnet för elev {name}:",
+    "alert_student_exists": "En elev med detta namn finns redan."
   },
   "da": {
     "modal_lang_title": "🌍 Sprog",
@@ -2733,7 +2766,10 @@
     "award_title_500": "Silver Reading Medal!",
     "award_title_1000": "Gold Reading Medal!",
     "award_title_9999": "World Reading Record!",
-    "award_main_title": "READING AWARD"
+    "award_main_title": "READING AWARD",
+    "title_edit_student": "Rediger elevens navn",
+    "prompt_edit_student": "Indtast det nye navn til eleven {name}:",
+    "alert_student_exists": "Der findes allerede en elev med dette navn."
   },
   "fi": {
     "modal_lang_title": "🌍 Kieli",
@@ -2961,7 +2997,10 @@
     "award_title_500": "Hopeinen lukumitali!",
     "award_title_1000": "Kultainen lukumitali!",
     "award_title_9999": "Maailman lukuennätys!",
-    "award_main_title": "LUKUPALKINTO"
+    "award_main_title": "LUKUPALKINTO",
+    "title_edit_student": "Muokkaa oppilaan nimeä",
+    "prompt_edit_student": "Kirjoita oppilaan {name} uusi nimi:",
+    "alert_student_exists": "Tämän niminen oppilas on jo olemassa."
   },
   "cs": {
     "modal_lang_title": "🌍 Jazyk",
@@ -3189,7 +3228,10 @@
     "award_title_500": "Silver Reading Medal!",
     "award_title_1000": "Gold Reading Medal!",
     "award_title_9999": "World Reading Record!",
-    "award_main_title": "READING AWARD"
+    "award_main_title": "READING AWARD",
+    "title_edit_student": "Upravit jméno žáka",
+    "prompt_edit_student": "Zadejte nové jméno pro žáka {name}:",
+    "alert_student_exists": "Žák s tímto jménem již existuje."
   },
   "hu": {
     "modal_lang_title": "🌍 Nyelv",
@@ -3417,7 +3459,10 @@
     "award_title_500": "Silver Reading Medal!",
     "award_title_1000": "Gold Reading Medal!",
     "award_title_9999": "World Reading Record!",
-    "award_main_title": "OLVASÁSI DÍJ"
+    "award_main_title": "OLVASÁSI DÍJ",
+    "title_edit_student": "Tanuló nevének szerkesztése",
+    "prompt_edit_student": "Adja meg az új nevet {name} tanuló számára:",
+    "alert_student_exists": "Már létezik ilyen nevű tanuló."
   },
   "sk": {
     "modal_lang_title": "🌍 Jazyk",
@@ -3645,7 +3690,10 @@
     "award_title_500": "Silver Reading Medal!",
     "award_title_1000": "Gold Reading Medal!",
     "award_title_9999": "World Reading Record!",
-    "award_main_title": "READING AWARD"
+    "award_main_title": "READING AWARD",
+    "title_edit_student": "Upraviť meno žiaka",
+    "prompt_edit_student": "Zadajte nové meno pre žiaka {name}:",
+    "alert_student_exists": "Žiak s týmto menom už existuje."
   },
   "bg": {
     "modal_lang_title": "🌍 Избор на език",
@@ -3873,7 +3921,10 @@
     "award_title_500": "Silver Reading Medal!",
     "award_title_1000": "Gold Reading Medal!",
     "award_title_9999": "World Reading Record!",
-    "award_main_title": "READING AWARD"
+    "award_main_title": "READING AWARD",
+    "title_edit_student": "Редактиране на името на ученика",
+    "prompt_edit_student": "Въведете новото име за ученик {name}:",
+    "alert_student_exists": "Вече съществува ученик с това име."
   },
   "hr": {
     "modal_lang_title": "🌍 Odabir jezika",
@@ -4101,7 +4152,10 @@
     "award_title_500": "Silver Reading Medal!",
     "award_title_1000": "Gold Reading Medal!",
     "award_title_9999": "World Reading Record!",
-    "award_main_title": "READING AWARD"
+    "award_main_title": "READING AWARD",
+    "title_edit_student": "Uredi ime učenika",
+    "prompt_edit_student": "Unesite novo ime za učenika {name}:",
+    "alert_student_exists": "Učenik s ovim imenom već postoji."
   },
   "lt": {
     "modal_lang_title": "🌍 Kalba",
@@ -4329,7 +4383,10 @@
     "award_title_500": "Silver Reading Medal!",
     "award_title_1000": "Gold Reading Medal!",
     "award_title_9999": "World Reading Record!",
-    "award_main_title": "READING AWARD"
+    "award_main_title": "READING AWARD",
+    "title_edit_student": "Redaguoti mokinio vardą",
+    "prompt_edit_student": "Įveskite naują mokinio {name} vardą:",
+    "alert_student_exists": "Mokinys tokiu vardu jau yra."
   },
   "lv": {
     "modal_lang_title": "🌍 Valoda",
@@ -4557,7 +4614,10 @@
     "award_title_500": "Silver Reading Medal!",
     "award_title_1000": "Gold Reading Medal!",
     "award_title_9999": "World Reading Record!",
-    "award_main_title": "READING AWARD"
+    "award_main_title": "READING AWARD",
+    "title_edit_student": "Rediģēt skolēna vārdu",
+    "prompt_edit_student": "Ievadiet jaunu vārdu skolēnam {name}:",
+    "alert_student_exists": "Skolēns ar šādu vārdu jau pastāv."
   },
   "et": {
     "modal_lang_title": "🌍 Keel",
@@ -4785,7 +4845,10 @@
     "award_title_500": "Silver Reading Medal!",
     "award_title_1000": "Gold Reading Medal!",
     "award_title_9999": "World Reading Record!",
-    "award_main_title": "READING AWARD"
+    "award_main_title": "READING AWARD",
+    "title_edit_student": "Muuda õpilase nime",
+    "prompt_edit_student": "Sisestage õpilasele {name} uus nimi:",
+    "alert_student_exists": "Selle nimega õpilane on juba olemas."
   },
   "mt": {
     "modal_lang_title": "🌍 Lingwa",
@@ -5013,7 +5076,10 @@
     "award_title_500": "Silver Reading Medal!",
     "award_title_1000": "Gold Reading Medal!",
     "award_title_9999": "World Reading Record!",
-    "award_main_title": "READING AWARD"
+    "award_main_title": "READING AWARD",
+    "title_edit_student": "Editja l-isem tal-istudent",
+    "prompt_edit_student": "Daħħal l-isem il-ġdid għall-istudent {name}:",
+    "alert_student_exists": "Diġà jeżisti student b'dan l-isem."
   },
   "ga": {
     "modal_lang_title": "🌍 Teanga",
@@ -5241,7 +5307,10 @@
     "award_title_500": "Silver Reading Medal!",
     "award_title_1000": "Gold Reading Medal!",
     "award_title_9999": "World Reading Record!",
-    "award_main_title": "READING AWARD"
+    "award_main_title": "READING AWARD",
+    "title_edit_student": "Cuir ainm an mhic léinn in eagar",
+    "prompt_edit_student": "Iontráil an t-ainm nua don mhac léinn {name}:",
+    "alert_student_exists": "Tá mac léinn leis an ainm seo ann cheana féin."
   },
   "sl": {
     "modal_lang_title": "🌍 Izberite jezik",
@@ -5469,6 +5538,9 @@
     "award_title_500": "Silver Reading Medal!",
     "award_title_1000": "Gold Reading Medal!",
     "award_title_9999": "World Reading Record!",
-    "award_main_title": "READING AWARD"
+    "award_main_title": "READING AWARD",
+    "title_edit_student": "Uredi ime učenca",
+    "prompt_edit_student": "Vnesite novo ime za učenca {name}:",
+    "alert_student_exists": "Učenec s tem imenom že obstaja."
   }
 }

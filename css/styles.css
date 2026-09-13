@@ -468,38 +468,23 @@
         /* --- Screen 1: Teacher Input & Settings --- */
         #screen-teacher {
             display: flex; flex-direction: column; height: 100%; overflow: hidden; 
-            padding-top: 75px; /* Space for top action buttons & logo */
-        }
-
-        .header-area {
-            display: block;
+            padding-top: 68px; /* Space for top action buttons */
         }
 
         /* Logos Styles with White Container Frames */
         .header-logo {
             background: #ffffff;
-            padding: 5px 12px;
-            border-radius: 14px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+            padding: 4px 12px;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
             border: 1.5px solid rgba(0,0,0,0.08);
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            z-index: 50;
-            position: absolute;
-            top: 15px;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-        .header-logo.logo-left {
-            left: 70px;
-            transform: none;
-        }
-        #screen-teacher.has-return-hub .header-logo.logo-left {
-            left: 125px;
+            margin: 0 auto 8px auto;
         }
         .header-logo img {
-            max-height: 46px;
+            max-height: 44px;
             max-width: 210px;
             object-fit: contain;
             display: block;
@@ -515,14 +500,13 @@
         }
 
         @media (max-width: 767px) {
-            .header-logo.logo-left {
-                left: 60px;
-                top: 12px;
-                padding: 4px 8px;
+            .header-logo {
+                padding: 3px 8px;
+                margin-bottom: 6px;
             }
             .header-logo img {
-                max-height: 36px;
-                max-width: 160px;
+                max-height: 34px;
+                max-width: 150px;
             }
             .header-title {
                 text-align: center;
@@ -2288,6 +2272,18 @@
             padding: 1px 6px;
             border-radius: 10px;
         }
+        .student-chip .btn-edit-chip {
+            background: none;
+            border: none;
+            color: #94a3b8;
+            cursor: pointer;
+            font-size: 0.75rem;
+            padding: 0 3px;
+            margin-left: 2px;
+            line-height: 1;
+            transition: color 0.15s ease;
+        }
+        .student-chip .btn-edit-chip:hover { color: #2563eb; }
         .student-chip .btn-del-chip {
             background: none;
             border: none;
@@ -2297,8 +2293,10 @@
             padding: 0;
             margin-left: 2px;
             line-height: 1;
+            transition: color 0.15s ease;
         }
         .student-chip .btn-del-chip:hover { color: #dc2626; }
+        .popover-item .btn-popover-edit:hover { color: #2563eb !important; }
 
         /* --- Flying Points Animation --- */
         .flying-point-tag {
