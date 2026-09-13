@@ -212,7 +212,7 @@
             const topRight = document.getElementById('top-right-actions');
             if (topRight) topRight.style.display = 'none';
             else document.getElementById('btn-lang-selector').style.display = 'none'; 
-            state.currentIndex = -1;
+            state.currentIndex = 0;
             
             const btnMode = document.getElementById('btn-mode-toggle');
             btnMode.disabled = false;
@@ -1455,106 +1455,263 @@
         let cameraStream = null;
         let capturedPhotoCanvas = null;
 
-        function renderStickerCanvas() {
+        
+        
+        
+        const AWARD_EMOJIS = ['📚', '🚀', '🌟', '🎈', '🎨', '🏆', '🧩', '🌈', '🎓', '🥇', '⭐️', '💡', '🔍', '🥇', '⚡️'];
+        const AWARD_COLORS = [
+            ['#3b82f6', '#f59e0b', '#ec4899'], // Blue/Orange/Pink
+            ['#10b981', '#f59e0b', '#ef4444'], // Green/Orange/Red
+            ['#8b5cf6', '#ec4899', '#3b82f6'], // Purple/Pink/Blue
+            ['#f59e0b', '#10b981', '#06b6d4'], // Orange/Green/Cyan
+        ];
+
+        function getAwardTitle(score) {
+            if (score >= 9999) return typeof getText === 'function' ? getText('award_title_9999') : 'Παγκόσμιο Ρεκόρ Ανάγνωσης!';
+            if (score >= 1000) return typeof getText === 'function' ? getText('award_title_1000') : 'Χρυσό Μετάλλιο Ανάγνωσης!';
+            if (score >= 500) return typeof getText === 'function' ? getText('award_title_500') : 'Αργυρό Μετάλλιο Ανάγνωσης!';
+            if (score >= 250) return typeof getText === 'function' ? getText('award_title_250') : 'Αστέρι της Ανάγνωσης!';
+            return typeof getText === 'function' ? getText('award_title_100') : 'Το 1ο μου Βραβείο!';
+        }
+
+        function loadImage(src) {
+            return new Promise((resolve) => {
+                const img = new Image();
+                img.onload = () => resolve(img);
+                img.onerror = () => resolve(null);
+                img.src = src;
+            });
+        }
+
+        async function renderStickerCanvas() {
             const canvas = document.getElementById('sticker-canvas');
             if (!canvas) return;
             const ctx = canvas.getContext('2d');
             const width = canvas.width;
             const height = canvas.height;
-            const center = width / 2;
+            const footerHeight = 90;
+            const canvasMainHeight = height - footerHeight;
+            const centerW = width / 2;
 
             ctx.clearRect(0, 0, width, height);
 
-            // 1. Outer Starburst / Scalloped Badge Background
-            ctx.save();
-            ctx.beginPath();
-            ctx.arc(center, center, center - 10, 0, Math.PI * 2);
+            // 1. Background Fill (Soft pastel) for main area
+            ctx.fillStyle = '#fefce8';
+            ctx.fillRect(0, 0, width, canvasMainHeight);
+            
+            // White footer
             ctx.fillStyle = '#ffffff';
-            ctx.fill();
+            ctx.fillRect(0, canvasMainHeight, width, footerHeight);
 
-            // Outer thick decorative gradient border
-            const gradient = ctx.createLinearGradient(0, 0, width, height);
-            gradient.addColorStop(0, '#3b82f6');
-            gradient.addColorStop(0.5, '#f59e0b');
-            gradient.addColorStop(1, '#ec4899');
-            ctx.lineWidth = 14;
-            ctx.strokeStyle = gradient;
-            ctx.stroke();
-
-            // Inner dotted gold circle
-            ctx.beginPath();
-            ctx.arc(center, center, center - 24, 0, Math.PI * 2);
-            ctx.lineWidth = 3;
-            ctx.setLineDash([8, 8]);
-            ctx.strokeStyle = '#f59e0b';
-            ctx.stroke();
-            ctx.setLineDash([]);
-            ctx.restore();
-
-            // 2. Soft pastel background fill
+            // Subtle divider between main area and footer
             ctx.save();
+            ctx.strokeStyle = 'rgba(0, 0, 0, 0.08)';
+            ctx.lineWidth = 1;
             ctx.beginPath();
-            ctx.arc(center, center, center - 30, 0, Math.PI * 2);
-            const bgGrad = ctx.createRadialGradient(center, center, 40, center, center, center - 30);
-            bgGrad.addColorStop(0, '#fef9c3');
-            bgGrad.addColorStop(1, '#dbeafe');
-            ctx.fillStyle = bgGrad;
-            ctx.fill();
+            ctx.moveTo(0, canvasMainHeight);
+            ctx.lineTo(width, canvasMainHeight);
+            ctx.stroke();
             ctx.restore();
 
-            // 3. Header text: Student Name & Title
+            // 2. The 3-Line Official Frame Illusion
+            const colorTheme = AWARD_COLORS[Math.floor(Math.random() * AWARD_COLORS.length)];
+            
+            // Outer thick line (Darkest)
+            ctx.lineWidth = 14;
+            ctx.strokeStyle = colorTheme[0]; // e.g., Blue
+            ctx.strokeRect(16, 16, width - 32, canvasMainHeight - 32);
+
+            // Middle thin line (Lightest)
+            ctx.lineWidth = 4;
+            ctx.strokeStyle = '#ffffff'; // White separator
+            ctx.strokeRect(25, 25, width - 50, canvasMainHeight - 50);
+
+            // Inner medium line
+            ctx.lineWidth = 8;
+            ctx.strokeStyle = colorTheme[1]; // e.g., Orange
+            ctx.strokeRect(31, 31, width - 62, canvasMainHeight - 62);
+
+            // 3. Emoji Perimeter Frame (Balanced distribution)
+            ctx.save();
+            ctx.font = '40px "Segoe UI Emoji", "Apple Color Emoji", sans-serif';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            
+            const emMargin = 62; // Distance from edge
+            const rectW = width - (emMargin * 2);
+            const rectH = canvasMainHeight - (emMargin * 2);
+            
+            const gap = 90;
+            const nx = Math.floor(rectW / gap);
+            const ny = Math.floor(rectH / gap);
+            
+            const stepX = rectW / nx;
+            const stepY = rectH / ny;
+            
+            const emojiPositions = [];
+            
+            // Top edge
+            for (let i = 0; i <= nx; i++) emojiPositions.push({x: emMargin + i * stepX, y: emMargin});
+            // Right edge (exclude corners)
+            for (let i = 1; i < ny; i++) emojiPositions.push({x: emMargin + rectW, y: emMargin + i * stepY});
+            // Bottom edge
+            for (let i = nx; i >= 0; i--) emojiPositions.push({x: emMargin + i * stepX, y: emMargin + rectH});
+            // Left edge (exclude corners)
+            for (let i = ny - 1; i > 0; i--) emojiPositions.push({x: emMargin, y: emMargin + i * stepY});
+            
+            emojiPositions.forEach(pos => {
+                const emoji = AWARD_EMOJIS[Math.floor(Math.random() * AWARD_EMOJIS.length)];
+                ctx.fillText(emoji, pos.x, pos.y);
+            });
+            ctx.restore();
+
+            // 4. Header text: BΡΑΒΕΙΟ ΑΝΑΓΝΩΣΗΣ (Harmonious Top Placement)
             ctx.save();
             ctx.textAlign = 'center';
-            ctx.fillStyle = '#1e3a8a';
-            ctx.font = 'bold 28px "Comic Neue", "Kids", "Open Sans", sans-serif';
-            const studentDefault = typeof getText === 'function' ? getText('default_student_name') : 'ΜΑΘΗΤΗΣ';
-            const studentTitle = (state.currentStudent || studentDefault).toUpperCase();
-            const bravoText = typeof getText === 'function' ? getText('sticker_bravo') : 'ΜΠΡΑΒΟ';
-            ctx.fillText(`${bravoText} ${studentTitle}!`, center, 95);
-
-            ctx.font = 'bold 18px "Comic Neue", "Kids", "Open Sans", sans-serif';
-            ctx.fillStyle = '#d97706';
-            const superReaderText = typeof getText === 'function' ? getText('sticker_super_reader') : '🌟 SUPER ΑΝΑΓΝΩΣΤΗΣ 🌟';
-            ctx.fillText(superReaderText, center, 125);
+            ctx.fillStyle = colorTheme[0]; 
+            ctx.font = 'bold 58px "Comic Neue", "Kids", "Open Sans", sans-serif';
+            const isEl = (typeof currentLang !== 'undefined' && currentLang === 'el') || !currentLang;
+            const mainTitleText = (typeof getText === 'function' && getText('award_main_title') !== 'award_main_title') ? getText('award_main_title') : (isEl ? 'ΒΡΑΒΕΙΟ ΑΝΑΓΝΩΣΗΣ' : 'READING AWARD');
+            ctx.fillText(mainTitleText, centerW, 145);
             ctx.restore();
 
-            // 4. Center Avatar: Photo if captured, otherwise large Emoji
+            // 5. Center Avatar / Photo / Emoji (Shifted up to y=310 for golden vertical balance)
+            const photoY = 310;
             if (capturedPhotoCanvas) {
                 ctx.save();
                 ctx.beginPath();
-                ctx.arc(center, center + 15, 90, 0, Math.PI * 2);
+                ctx.arc(centerW, photoY, 110, 0, Math.PI * 2);
                 ctx.clip();
-                ctx.drawImage(capturedPhotoCanvas, center - 90, center + 15 - 90, 180, 180);
+                ctx.drawImage(capturedPhotoCanvas, centerW - 110, photoY - 110, 220, 220);
                 ctx.restore();
 
-                // Photo border
                 ctx.save();
                 ctx.beginPath();
-                ctx.arc(center, center + 15, 90, 0, Math.PI * 2);
+                ctx.arc(centerW, photoY, 110, 0, Math.PI * 2);
                 ctx.lineWidth = 6;
                 ctx.strokeStyle = '#ffffff';
                 ctx.stroke();
-                ctx.lineWidth = 2;
-                ctx.strokeStyle = '#f59e0b';
+                ctx.lineWidth = 4;
+                ctx.strokeStyle = colorTheme[1];
                 ctx.stroke();
                 ctx.restore();
             } else {
                 ctx.save();
-                ctx.font = '110px "Segoe UI Emoji", "Apple Color Emoji", sans-serif';
+                ctx.font = '150px "Segoe UI Emoji", "Apple Color Emoji", sans-serif';
                 ctx.textAlign = 'center';
                 ctx.textBaseline = 'middle';
-                ctx.fillText(state.activeStickerEmoji || '🏆', center, center + 20);
+                ctx.fillText(state.activeStickerEmoji || '🏆', centerW, photoY);
                 ctx.restore();
             }
 
-            // 5. Footer: Date & Kidmedia micro-emblem
+            // 6. Student Name (Centered at y=475)
+            const nameY = 475;
             ctx.save();
             ctx.textAlign = 'center';
-            ctx.fillStyle = '#64748b';
-            ctx.font = '14px "Open Sans", sans-serif';
-            const localeStr = currentLang === 'el' ? 'el-GR' : (currentLang || 'en-US');
-            const today = new Date().toLocaleDateString(localeStr);
-            ctx.fillText(`Kidmedia Sesat • ${today}`, center, height - 60);
+            ctx.font = 'bold 70px "Comic Neue", "Kids", "Open Sans", sans-serif';
+            const studentTitle = state.currentStudent || (typeof getText === 'function' ? getText('default_student_name') : 'Μαθητής');
+            
+            ctx.lineWidth = 12;
+            ctx.strokeStyle = '#ffffff';
+            ctx.lineJoin = 'round';
+            ctx.strokeText(studentTitle, centerW, nameY);
+            
+            // Text Shadow & Color
+            ctx.shadowColor = "rgba(0,0,0,0.18)";
+            ctx.shadowBlur = 4;
+            ctx.shadowOffsetX = 2;
+            ctx.shadowOffsetY = 2;
+            ctx.fillStyle = '#d97706';
+            ctx.fillText(studentTitle, centerW, nameY);
+            ctx.restore();
+
+            // 7. Dynamic Award Milestone Subtitle (Centered at y=560)
+            const subtitleY = 560;
+            ctx.save();
+            ctx.textAlign = 'center';
+            ctx.font = 'bold 42px "Comic Neue", "Kids", "Open Sans", sans-serif';
+            ctx.fillStyle = colorTheme[2];
+            
+            let profile = state.studentProfiles[state.currentStudent];
+            let currentScore = profile ? (profile.score || 0) : 0;
+            const awardTitleStr = getAwardTitle(currentScore);
+            
+            ctx.fillText(awardTitleStr, centerW, subtitleY);
+            ctx.restore();
+
+            // 8. Erasmus+ & SESAT KIDMEDIA Dual Logo Footer (Strict Compliance)
+            const langCode = (typeof currentLang !== 'undefined' && currentLang) ? currentLang.toUpperCase() : 'EL';
+            const euSrc = 'images/' + langCode + '_Co-fundedbytheEU_RGB_POS.png';
+            const sesatSrc = 'images/Sesat-kidmedia-net.png';
+
+            const [euLogo, sesatLogo] = await Promise.all([loadImage(euSrc), loadImage(sesatSrc)]);
+
+            let euWidth = 0;
+            let euX = 25;
+            if (euLogo) {
+                const euH = 60;
+                const aspect = euLogo.width / euLogo.height;
+                euWidth = euH * aspect;
+                const euY = canvasMainHeight + (footerHeight - euH) / 2;
+                ctx.drawImage(euLogo, euX, euY, euWidth, euH);
+            }
+
+            let sesatWidth = 0;
+            let sesatX = width - 25;
+            if (sesatLogo) {
+                const sesatH = 50;
+                const aspect = sesatLogo.width / sesatLogo.height;
+                sesatWidth = sesatH * aspect;
+                sesatX = width - sesatWidth - 25;
+                const sesatY = canvasMainHeight + (footerHeight - sesatH) / 2;
+                ctx.drawImage(sesatLogo, sesatX, sesatY, sesatWidth, sesatH);
+            }
+
+            // Disclaimer text in middle
+            ctx.save();
+            ctx.fillStyle = '#475569';
+            ctx.font = '10px "Open Sans", sans-serif';
+            ctx.textAlign = 'left';
+            ctx.textBaseline = 'middle';
+            
+            let disclaimerText = '';
+            if (typeof euDisclaimers !== 'undefined' && typeof currentLang !== 'undefined') {
+                disclaimerText = euDisclaimers[currentLang] || euDisclaimers['el'] || '';
+            }
+            
+            if (!disclaimerText) {
+                if (langCode === 'EL') {
+                    disclaimerText = "Με τη χρηματοδότηση της Ευρωπαϊκής Ένωσης. Ωστόσο, οι απόψεις και οι γνώμες που διατυπώνονται εκφράζουν αποκλειστικά τις απόψεις των συντακτών και δεν αντιπροσωπεύουν κατ' ανάγκη τις απόψεις της Ευρωπαϊκής Ένωσης ή του Ευρωπαϊκού Εκτελεστικού Οργανισμού Εκπαίδευσης και Πολιτισμού (EACEA). Η Ευρωπαϊκή Ένωση και ο EACEA δεν μπορούν να θεωρηθούν υπεύθυνοι για τις εκφραζόμενες απόψεις. [Αριθμός Έργου: 2026-1-CY01-KA210-SCH-000460493]";
+                } else {
+                    disclaimerText = "Funded by the European Union. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Education and Culture Executive Agency (EACEA). Neither the European Union nor EACEA can be held responsible for them. [Project: 2026-1-CY01-KA210-SCH-000460493]";
+                }
+            }
+            
+            const textStartX = euX + (euWidth ? euWidth + 18 : 0);
+            const textEndX = sesatLogo ? sesatX - 18 : width - 25;
+            const maxWidth = textEndX - textStartX;
+            
+            const words = disclaimerText.split(' ');
+            let line = '';
+            let lines = [];
+            
+            for (let n = 0; n < words.length; n++) {
+                let testLine = line + words[n] + ' ';
+                let metrics = ctx.measureText(testLine);
+                if (metrics.width > maxWidth && n > 0) {
+                    lines.push(line.trim());
+                    line = words[n] + ' ';
+                } else {
+                    line = testLine;
+                }
+            }
+            if (line.trim()) lines.push(line.trim());
+            
+            const lineHeight = 13;
+            const textYStart = canvasMainHeight + (footerHeight - (lines.length * lineHeight)) / 2 + (lineHeight / 2);
+            for (let i = 0; i < lines.length; i++) {
+                ctx.fillText(lines[i], textStartX, textYStart + (i * lineHeight));
+            }
             ctx.restore();
         }
 
@@ -1635,22 +1792,23 @@
                 document.body.classList.remove('printing-sticker');
                 return;
             }
-            const stickerWord = typeof getText === 'function' ? getText('modal_sticker_title') : 'Αυτοκόλλητο';
+            const awardWord = typeof getText === 'function' ? getText('modal_sticker_title') : 'Βραβείο';
             printWindow.document.write(`
                 <!DOCTYPE html>
                 <html>
                 <head>
-                    <title>${stickerWord} - ${escapeHtml(state.currentStudent)}</title>
+                    <meta charset="UTF-8">
+                    <title>${awardWord} - ${escapeHtml(state.currentStudent || '')}</title>
                     <style>
-                        @page { size: auto; margin: 10mm; }
-                        body { margin: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; font-family: sans-serif; }
-                        img { width: 100mm; height: 100mm; object-fit: contain; }
-                        p { margin-top: 10px; color: #666; font-size: 13px; font-weight: bold; }
+                        @page { size: A4 landscape; margin: 0; }
+                        * { box-sizing: border-box; margin: 0; padding: 0; }
+                        html, body { width: 100%; height: 100%; overflow: hidden; background: #fff; }
+                        body { display: flex; align-items: center; justify-content: center; }
+                        img { width: 100vw; height: 100vh; max-width: 297mm; max-height: 210mm; object-fit: contain; display: block; }
                     </style>
                 </head>
                 <body>
-                    <img src="${dataUrl}" onload="window.print();window.close();">
-                    <p>Kidmedia Reader • Erasmus+</p>
+                    <img src="${dataUrl}" onload="setTimeout(() => { window.print(); window.close(); }, 300);">
                 </body>
                 </html>
             `);
@@ -1663,16 +1821,14 @@
             const dataUrl = canvas.toDataURL('image/png');
             const a = document.createElement('a');
             a.href = dataUrl;
-            a.download = `Sticker_${state.currentStudent || 'Student'}_100pts.png`;
+            a.download = `Award_${state.currentStudent || 'Student'}.png`;
             document.body.appendChild(a);
             a.click();
             document.body.removeChild(a);
         }
 
         function redeemStickerPoints() {
-            if (typeof deductStudentPoints === 'function') {
-                deductStudentPoints(100);
-            }
+            
             if (typeof playSuccessArcadeSound === 'function') {
                 playSuccessArcadeSound(1);
             }

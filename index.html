@@ -489,39 +489,36 @@
             </div>
 
             <!-- Canvas & Camera Container -->
-            <div class="sticker-canvas-wrapper">
-                <canvas id="sticker-canvas" width="500" height="500"></canvas>
-                
-                <!-- Live Video Preview (hidden by default) -->
-                <div id="camera-preview-container" style="display: none;">
-                    <video id="camera-stream-video" autoplay playsinline muted></video>
-                    <button type="button" id="btn-capture-photo" class="btn-primary" style="margin-top: 8px; background-color: #e11d48;">
-                        <i class="fa-solid fa-camera"></i> <span data-i18n="btn_snap_photo">Λήψη Φωτογραφίας!</span>
-                    </button>
-                </div>
+            <div class="sticker-canvas-wrapper" style="width: 100%; max-width: 800px; aspect-ratio: 1.414; margin: 0 auto; overflow: hidden; background: #fff; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-radius: 8px;">
+                <canvas id="sticker-canvas" width="1123" height="794" style="width: 100%; height: 100%; display: block;"></canvas>
+            </div>
+            
+            <!-- Live Video Preview (hidden by default) -->
+            <div id="camera-preview-container" style="display: none; justify-content: center; margin-top: 15px; position: relative;">
+                <video id="camera-stream-video" style="width: 250px; height: 250px; object-fit: cover; border-radius: 50%; border: 4px solid #f59e0b;" autoplay playsinline></video>
+                <button type="button" id="btn-capture-photo" class="btn-primary" style="position: absolute; bottom: -15px; background-color: #e11d48; box-shadow: 0 4px 6px rgba(0,0,0,0.2);">
+                    <i class="fa-solid fa-camera"></i> <span data-i18n="btn_snap_photo">Λήψη Φωτογραφίας!</span>
+                </button>
             </div>
 
             <!-- Camera Controls Bar -->
-            <div style="margin: 10px 0; display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;">
-                <button type="button" id="btn-toggle-camera" class="btn-secondary" style="font-size: 0.88rem; padding: 6px 12px;">
+            <div style="display: flex; gap: 15px; margin-top: 25px; flex-wrap: wrap; justify-content: center;">
+                <button type="button" id="btn-take-selfie" class="btn-primary" style="background-color: #ec4899; flex: 1; min-width: 140px;">
                     <i class="fa-solid fa-camera"></i> <span id="camera-btn-text" data-i18n="btn_take_selfie">Φωτογραφία με Κάμερα</span>
                 </button>
-                <button type="button" id="btn-remove-photo" class="btn-secondary" style="display: none; font-size: 0.88rem; padding: 6px 12px; color: #dc2626;">
+                <button type="button" id="btn-remove-photo" class="btn-primary" style="background-color: #64748b; flex: 1; min-width: 140px; display: none;">
                     <i class="fa-solid fa-trash"></i> <span data-i18n="btn_remove_photo">Αφαίρεση Φωτογραφίας</span>
                 </button>
             </div>
 
-            <!-- Modal Action Buttons -->
-            <div style="display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-top: 15px;">
-                <button type="button" id="btn-print-sticker" class="btn-primary" style="background-color: #00897b; flex: 1; min-width: 140px;">
-                    <i class="fa-solid fa-print"></i> <span data-i18n="btn_print_sticker">Εκτύπωση</span>
+            <div style="display: flex; gap: 15px; margin-top: 15px; flex-wrap: wrap; justify-content: center; padding-top: 20px; border-top: 1px solid #e2e8f0;">
+                <button type="button" id="btn-print-sticker" class="btn-primary" style="background-color: #00897b; flex: 1; min-width: 140px; font-size: 1.1rem; padding: 12px;">
+                    <i class="fa-solid fa-print"></i> <span data-i18n="btn_print_sticker">Εκτύπωση Βραβείου</span>
                 </button>
-                <button type="button" id="btn-download-sticker" class="btn-primary" style="background-color: #2563eb; flex: 1; min-width: 140px;">
+                <button type="button" id="btn-download-sticker" class="btn-primary" style="background-color: #2563eb; flex: 1; min-width: 140px; font-size: 1.1rem; padding: 12px;">
                     <i class="fa-solid fa-download"></i> <span data-i18n="btn_save_sticker">Λήψη Εικόνας</span>
                 </button>
-                <button type="button" id="btn-redeem-sticker" class="btn-primary" style="background-color: #d97706; flex: 1; min-width: 140px;">
-                    <i class="fa-solid fa-gift"></i> <span data-i18n="btn_redeem_100">Εξαργύρωση (-100⭐)</span>
-                </button>
+                <!-- Removed redeem button since points are cumulative now -->
             </div>
         </div>
     </div>
@@ -544,14 +541,14 @@
                     <img src="images/Sesat-kidmedia-net.png" alt="SESAT Ltd & KIDMEDIA.NET" style="max-height: 48px; width: auto;">
                 </a>
             </div>
-            <div class="header-title">
-                <h1 data-i18n="main_title">Εργαλείο Ανάγνωσης</h1>
-                <p style="margin:0; opacity: 0.7;" data-i18n="main_subtitle">Διαμόρφωση κειμένου και ρυθμίσεις</p>
-            </div>
         </div>
         
         <div class="main-layout">
             <div class="input-section">
+                <div class="header-title" style="text-align: center; margin-bottom: 8px; margin-top: -10px;">
+                    <h1 data-i18n="main_title" style="margin: 0 0 2px 0;">Εργαλείο Ανάγνωσης</h1>
+                    <p style="margin:0; opacity: 0.7; font-size: 0.95rem;" data-i18n="main_subtitle">Διαμόρφωση κειμένου και ρυθμίσεις</p>
+                </div>
 
                 <textarea id="input-text" data-i18n-ph="textarea_ph" placeholder="Γράψτε ή επικολλήστε το κείμενο εδώ...">Να η Με|λί|να και ο Μά|νος.</textarea>
                 
@@ -768,6 +765,8 @@
                             </div>
                         </div>
                     </div>
+                </div>
+
                 <!-- REWARDS & STUDENTS GROUP -->
                 <div class="setting-group" id="group-rewards-settings">
                     <h3 data-i18n="set_rewards_title">🏆 Σύστημα Αμοιβών & Μαθητές</h3>

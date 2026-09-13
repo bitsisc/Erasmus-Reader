@@ -358,12 +358,16 @@ function addStudentPoints(points) {
         state.studentProfiles[state.currentStudent] = { score: 0, stickers: 0 };
     }
     
-    state.studentProfiles[state.currentStudent].score = (state.studentProfiles[state.currentStudent].score || 0) + points;
+    // Cumulative scoring capped at 9999
+    let currentScore = state.studentProfiles[state.currentStudent].score || 0;
+    let newScore = Math.min(9999, currentScore + points);
+    state.studentProfiles[state.currentStudent].score = newScore;
+
     saveRewardsData();
     updateRewardsUI();
 
-    // Check if reached 100 points
-    if (state.studentProfiles[state.currentStudent].score >= 100) {
+    // Check if reached a milestone (100) - only play once when crossing it
+    if (newScore >= 100 && currentScore < 100) {
         if (typeof playSuccessArcadeSound === 'function') {
             playSuccessArcadeSound(0); // Celebrate
         }
@@ -371,8 +375,8 @@ function addStudentPoints(points) {
 }
 
 function deductStudentPoints(points) {
-    if (!state.studentProfiles[state.currentStudent]) return;
-    state.studentProfiles[state.currentStudent].score = Math.max(0, (state.studentProfiles[state.currentStudent].score || 0) - points);
+    // Deprecated for Award system - points are now cumulative.
+    // Kept function signature for compatibility.
     state.studentProfiles[state.currentStudent].stickers = (state.studentProfiles[state.currentStudent].stickers || 0) + 1;
     saveRewardsData();
     updateRewardsUI();

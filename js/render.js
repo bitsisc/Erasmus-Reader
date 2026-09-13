@@ -12,12 +12,25 @@
         function scrollIfNeeded(target) {
             const container = document.getElementById('reading-area');
             if (!container) return;
+            
+            if (state.currentIndex === 0) {
+                container.scrollTop = 0;
+                return;
+            }
+
             const targetRect = target.getBoundingClientRect();
             const containerRect = container.getBoundingClientRect();
             
+            // Avoid scroll bug if layout is not fully resolved yet (all zeros)
+            if (containerRect.height === 0 && containerRect.top === 0) return;
+
             if (targetRect.bottom > containerRect.bottom - (containerRect.height * 0.2) || 
                 targetRect.top < containerRect.top + (containerRect.height * 0.1)) {
-                target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                
+                // Use a slight delay to allow display:flex to paint before smooth scrolling
+                setTimeout(() => {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }, 50);
             }
         }
 
@@ -210,7 +223,9 @@
                 display.area.appendChild(paragraphDiv);
             });
             
-            state.currentIndex = -1;
+            if (state.currentIndex < 0) {
+                state.currentIndex = 0;
+            }
             updateHighlight();
         }
 
