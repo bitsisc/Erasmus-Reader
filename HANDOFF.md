@@ -7,6 +7,12 @@
 - **GitHub Repo**: https://github.com/bitsisc/Erasmus-Reader
 
 ## What Was Completed in This Session
+- **Compact Header & Vertical Space Optimization**:
+  - Aligned logo top edge to `top: 15px`, creating a unified horizontal baseline with top-left/top-right action buttons.
+  - Reduced `#screen-teacher` `padding-top` from `68px` to `15px`, gaining ~55–65px extra vertical space for the text editing area and settings panel.
+  - Tightened vertical spacing between logo, title (`h1`), and subtitle (`p`).
+  - Added clean margin-top for `.settings-panel` on desktop to prevent overlap with the top-right language button.
+- **Service Worker**: Bumped offline cache version to `erasmus-reader-v16` (`sw.js`).
 - **Student Name Editing & Profile Preservation**:
   - Added `renameStudent(oldName, newName)` and `promptEditStudent(oldName)` in `js/storage.js`.
   - Added edit pencil button (`.btn-edit-chip`) and double-click trigger on all student chips in Screen 1.

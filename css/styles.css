@@ -468,24 +468,47 @@
         /* --- Screen 1: Teacher Input & Settings --- */
         #screen-teacher {
             display: flex; flex-direction: column; height: 100%; overflow: hidden; 
-            padding-top: 68px; /* Space for top action buttons */
+            padding-top: 15px; /* Aligns exactly with top action buttons */
+        }
+
+        .header-title {
+            text-align: center;
+            margin: 0 0 4px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .header-title h1 {
+            color: #2c3e50;
+            margin: 0 0 1px 0;
+            font-size: 1.55rem;
+            line-height: 1.15;
+            font-family: 'OpenDyslexic', sans-serif;
+        }
+
+        .header-title p {
+            margin: 0 0 4px 0;
+            opacity: 0.75;
+            font-size: 0.88rem;
+            line-height: 1.15;
         }
 
         /* Logos Styles with White Container Frames */
         .header-logo {
             background: #ffffff;
-            padding: 4px 12px;
-            border-radius: 12px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            padding: 3px 10px;
+            border-radius: 11px;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.1);
             border: 1.5px solid rgba(0,0,0,0.08);
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 8px auto;
+            margin: 0 auto 3px auto;
         }
         .header-logo img {
-            max-height: 44px;
-            max-width: 210px;
+            max-height: 40px;
+            max-width: 195px;
             object-fit: contain;
             display: block;
             transition: transform 0.2s ease;
@@ -496,20 +519,28 @@
         }
 
         @media (min-width: 768px) {
-            /* Kept for structure if needed */
+            .settings-panel {
+                margin-top: 48px; /* Clearance for top-right action buttons */
+            }
         }
 
         @media (max-width: 767px) {
+            #screen-teacher {
+                padding-top: 12px;
+            }
             .header-logo {
-                padding: 3px 8px;
-                margin-bottom: 6px;
+                padding: 2px 7px;
+                margin-bottom: 2px;
             }
             .header-logo img {
-                max-height: 34px;
-                max-width: 150px;
+                max-height: 32px;
+                max-width: 140px;
             }
-            .header-title {
-                text-align: center;
+            .header-title h1 {
+                font-size: 1.3rem;
+            }
+            .header-title p {
+                font-size: 0.8rem;
             }
         }
         h1 { color: #2c3e50; margin: 0 0 10px 0; font-family: 'OpenDyslexic', sans-serif; }
